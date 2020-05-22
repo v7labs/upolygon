@@ -124,6 +124,10 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
     cdef int edges_so_far = 0
     for path in paths:
         edges_so_far += find_edges(edges + edges_so_far, path)
+    # no point in continuing if there are no edges
+    if edges_so_far == 0:
+        free(edges)
+        return img
     # edges_so_far can be smaller than edges_length if there are straight lines
     edges_length = edges_so_far
     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
