@@ -135,9 +135,10 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
     cdef int active_edge_length = 0
     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
     cdef int scanline_y = <int>round(edges[0].y_min)
+    cdef int max_scanline_y = img.shape[0]
     cdef int i
     cdef int ymin
-    while edges_length > 0 or active_edge_length > 0:
+    while (edges_length > 0 or active_edge_length > 0) and scanline_y < max_scanline_y:
         for i in range(edges_length):
             if edges[i].y_min == scanline_y:
                 active_edges[active_edge_length].y_max = edges[i].y_max
