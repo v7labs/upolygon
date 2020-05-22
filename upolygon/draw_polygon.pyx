@@ -73,8 +73,10 @@ cdef int find_edges(s_edge *edges, list path):
     cdef int i
     cdef int idx = 0
     x1, y1 = path[length-2:]
+    y1 = round(y1)
     for i in range(0, length, 2):
         x2, y2 = path[i], path[i+1]
+        y2 = round(y2)
         if y1 == y2:
             x1, y1 = x2, y2
             continue

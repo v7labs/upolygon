@@ -28,6 +28,12 @@ def test_square():
     draw_polygon(mask, [square], 1)
     assert np.sum(mask) == 11 * 11
 
+def test_decimals_in_path():
+    square = [0.5, 0.5, 0.5, 10.5, 10.5, 10.5, 10.5, 0.5]
+    mask = np.zeros((100, 100), dtype=np.int32)
+    draw_polygon(mask, [square], 1)
+    print(np.sum(mask))
+    assert np.sum(mask) == 11 * 11
 
 def test_out_of_bound():
     square = [0, 0, 0, 10, 10, 10, 10, 0]
