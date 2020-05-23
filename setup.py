@@ -7,8 +7,11 @@ with open("README.md", "r") as f:
 
 extensions = [
     setuptools.Extension(
-        "draw_polygon", ["upolygon/draw_polygon.pyx"], extra_compile_args=["-O3", "-Wall"]
-    )
+        "draw_polygon", ["upolygon/draw_polygon.pyx"], extra_compile_args=["-O3", "-Wall", "-g"]
+    ),
+    setuptools.Extension(
+        "find_contours", ["upolygon/find_contours.pyx"], extra_compile_args=["-O3", "-Wall", "-g"]
+    ),
 ]
 
 setuptools.setup(

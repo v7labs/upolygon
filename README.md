@@ -5,9 +5,9 @@ It was born as a replacement for `cv2.drawContours` when generating masks for in
 
 ## TODO
 - [x] draw_polygon
+- [x] find_contours
 - [ ] polygon_area
 - [ ] point_in_polygon
-- [ ] find_contours
 
 
 ## Usage
@@ -22,6 +22,9 @@ Complex polygons (holes and/or disjoints) follow the even-odd rule.
 
 
 ## draw_polygon
+
+`draw_polygon(mask: array[:, :], paths: path[]) -> array[:, :]`
+
 ```python
 from upolygon import draw_polygon 
 import numpy as np
@@ -33,3 +36,27 @@ draw_polygon(mask, [[50,50, 100,0, 0,0]], 1)
 Equivalent of calling `cv2.drawContours(mask, [np.array([[50,50], [100,0], [0,0]])], -1, 1, cv2.FILLED)` when using opencv. 
 
 uPolygon is ~ 6 times faster than opencv for larger polygons. (TODO: add benchmarks)
+
+## find_contours
+`find_contours(mask: array[:, :]) -> (array[:, :], path[:], path[:])`
+
+0 is treated as background, 1 is treated as foreground. 
+```python
+from upolygon import find_contours
+import numpy as np
+
+mask = np.array([
+        [0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 0],
+        [0, 1, 1, 1, 0],
+        [0, 1, 1, 1, 0]
+    ], dtype=np.uint8)
+
+_labels, external_paths, internal_paths = find_contours(mask)
+```
+
+Similar to OpenCV's `cv2.findContours` but lacking hierarchies. Also similar to BoofCV's `LinearContourLabelChang2004` which is based on the same [algorithm](https://www.iis.sinica.edu.tw/papers/fchang/1362-F.pdf).
+
+
+Note that currently the input mask to find_contour needs to be uint8.
+
