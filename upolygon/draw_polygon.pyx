@@ -70,14 +70,14 @@ cdef void draw_edge_line(data_type [:,:] img, int x1, int y1, int x2, int y2, da
     
     # special case for vertical lines
     if dx == 0:
-        y1, y2 = min(y1, y2), max(y1, y2)
+        y1, y2 = min(y1, y2), max(y1, y2)+1
         for y in range(y1, y2):
             img[y][x1] = value
         return
     
     # special case for horizontal lines
     if dy == 0:
-        x1, x2 = min(x1, x2), max(x1, x2)
+        x1, x2 = min(x1, x2), max(x1, x2)+1
         for x in range(x1, x2):
             img[y1][x] = value
         return
@@ -226,18 +226,24 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
             elif edges[i].y_min > scanline_y:
                 break
         
+        for i in reversed(range(active_edge_length)):
+            if active_edges[i].y_max == scanline_y:
+                move_active_down(active_edges, i, active_edge_length)
+                active_edge_length -= 1
         qsort(active_edges, active_edge_length, sizeof(s_active_edge), &cmp_active_edges)
         
-        a = 0
-        b = 1
-        while b < active_edge_length:
-            draw_straight_line(active_edges[a].x_val, active_edges[b].x_val, scanline_y, img, value)
-            if active_edges[a].y_max == scanline_y:
-                a = b 
-                b = b+1 
-            else:
-                a = b+1
-                b = b+2
+        for i in range(0, active_edge_length, 2):
+            draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, img, value)
+        #a = 0
+        #b = 1
+        #while b < active_edge_length:
+        #    draw_straight_line(active_edges[a].x_val, active_edges[b].x_val, scanline_y, img, value)
+        #    if active_edges[a].y_max == scanline_y:
+        #        a = b 
+        #        b = b+1 
+        #    else:
+        #        a = b+1
+        #        b = b+2
 
         for i in range(0,active_edge_length):
             active_edges[i].x_val += active_edges[i].m_inv
@@ -246,10 +252,6 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
             if edges[i].y_min == scanline_y:
                 move_down(edges, i, edges_length)
                 edges_length -= 1
-        for i in reversed(range(active_edge_length)):
-            if active_edges[i].y_max == scanline_y:
-                move_active_down(active_edges, i, active_edge_length)
-                active_edge_length -= 1
         scanline_y += 1
 
     free(edges)

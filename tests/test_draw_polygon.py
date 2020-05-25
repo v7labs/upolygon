@@ -3,7 +3,7 @@ import numpy as np
 from upolygon import draw_polygon
 
 triangle = [5, 5, 8, 1, 0, 0]
-triangle_sum = 27
+triangle_sum = 270
 triangle_result = np.array(
     [
         [1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
@@ -33,7 +33,6 @@ def test_writes_the_given_value():
     mask_2 = np.zeros((100, 100), dtype=np.int32)
     draw_polygon(mask_1, [triangle], 1)
     draw_polygon(mask_2, [triangle], 2)
-    print(mask_1[0:10, 0:10])
     assert np.sum(mask_1) * 2 == np.sum(mask_2)
 
 
@@ -108,7 +107,6 @@ def test_rectangle_tiny_segments():
 
     mask = np.zeros((7, 7), dtype=np.int32)
     draw_polygon(mask, [square], 1)
-    print(mask, expected)
     assert np.all(mask == expected)
 
 
@@ -116,7 +114,6 @@ def test_decimals_in_path():
     square = [0.5, 0.5, 0.5, 10.5, 10.5, 10.5, 10.5, 0.5]
     mask = np.zeros((100, 100), dtype=np.int32)
     draw_polygon(mask, [square], 1)
-    print(np.sum(mask))
     assert np.sum(mask) == 11 * 11
 
 
