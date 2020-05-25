@@ -113,7 +113,7 @@ cdef void draw_edge_line(data_type [:,:] img, int x1, int y1, int x2, int y2, da
     if flip:
         y = max(0, y1)
         x = max(0, x1)
-        for i in range(count):
+        for _i in range(count):
             img[y][x] = value
             if err <= 0:
                 err  = err + minus_err
@@ -124,7 +124,7 @@ cdef void draw_edge_line(data_type [:,:] img, int x1, int y1, int x2, int y2, da
     else:
         y = max(0, y1)
         x = max(0, x1)
-        for x in range(count):
+        for _i in range(count):
             img[y][x] = value
             if err <= 0:
                 err  = err + minus_err
