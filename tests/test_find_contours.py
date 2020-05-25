@@ -10,8 +10,10 @@ def test_finds_singular_outer_path():
     _labels, external_paths, internal_paths = find_contours(mask)
     assert len(external_paths) == 1
     assert len(internal_paths) == 0
-    # TODO why is this not working?
-    # assert np.all(mask == draw_polygon(mask.copy() * 0, external_paths, 1))
+    print(mask)
+    print(np.array(draw_polygon(mask.copy() * 0, external_paths, 1)))
+    print(external_paths)
+    assert np.all(mask == draw_polygon(mask.copy() * 0, external_paths, 1))
 
 
 def test_finds_two_outer_path():

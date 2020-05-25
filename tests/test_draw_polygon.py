@@ -3,7 +3,23 @@ import numpy as np
 from upolygon import draw_polygon
 
 triangle = [5, 5, 8, 1, 0, 0]
-triangle_sum = 25
+triangle_sum = 27
+triangle_result = np.array(
+    [
+        [1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
+        [0, 1, 1, 1, 1, 1, 1, 1, 1, 0],
+        [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+        [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+        [0, 0, 0, 0, 1, 1, 1, 0, 0, 0],
+        [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    ],
+    dtype=np.int32,
+)
+triangle_mask_size = triangle_result.shape
 
 
 def test_does_nothing_for_empty_an_empty_polygon():
@@ -21,12 +37,79 @@ def test_writes_the_given_value():
     assert np.sum(mask_1) * 2 == np.sum(mask_2)
 
 
-def test_square():
-    # straight lines can be tricky
-    square = [0, 0, 0, 10, 10, 10, 10, 0]
-    mask = np.zeros((100, 100), dtype=np.int32)
+def test_rectangle_large_segments():
+    square = [1, 1, 5, 1, 5, 5, 1, 5]
+    expected = np.array(
+        [
+            [0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0],
+        ],
+        dtype=np.uint8,
+    )
+
+    mask = np.zeros((7, 7), dtype=np.int32)
     draw_polygon(mask, [square], 1)
-    assert np.sum(mask) == 11 * 11
+    assert np.all(mask == expected)
+
+
+def test_rectangle_tiny_segments():
+    square = [
+        1,
+        1,
+        2,
+        1,
+        3,
+        1,
+        4,
+        1,
+        5,
+        1,
+        5,
+        2,
+        5,
+        3,
+        5,
+        4,
+        5,
+        5,
+        4,
+        5,
+        3,
+        5,
+        2,
+        5,
+        1,
+        5,
+        1,
+        4,
+        1,
+        3,
+        1,
+        2,
+    ]
+
+    expected = np.array(
+        [
+            [0, 0, 0, 0, 0, 0, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 1, 1, 1, 1, 1, 0],
+            [0, 0, 0, 0, 0, 0, 0],
+        ],
+        dtype=np.uint8,
+    )
+
+    mask = np.zeros((7, 7), dtype=np.int32)
+    draw_polygon(mask, [square], 1)
+    print(mask, expected)
+    assert np.all(mask == expected)
 
 
 def test_decimals_in_path():
@@ -45,24 +128,24 @@ def test_out_of_bound():
 
 
 def test_supports_uint8():
-    mask = np.zeros((100, 100), dtype=np.uint8)
+    mask = np.zeros(triangle_mask_size, dtype=np.uint8)
     draw_polygon(mask, [triangle], 1)
-    assert np.sum(mask) == triangle_sum
+    assert np.all(mask == triangle_result)
 
 
 def test_supports_int8():
-    mask = np.zeros((100, 100), dtype=np.int8)
+    mask = np.zeros(triangle_mask_size, dtype=np.int8)
     draw_polygon(mask, [triangle], 1)
-    assert np.sum(mask) == triangle_sum
+    assert np.all(mask == triangle_result)
 
 
 def test_supports_int32():
-    mask = np.zeros((100, 100), dtype=np.int32)
+    mask = np.zeros(triangle_mask_size, dtype=np.int32)
     draw_polygon(mask, [triangle], 1)
-    assert np.sum(mask) == triangle_sum
+    assert np.all(mask == triangle_result)
 
 
 def test_supports_float():
-    mask = np.zeros((100, 100), dtype=np.float)
+    mask = np.zeros(triangle_mask_size, dtype=np.float)
     draw_polygon(mask, [triangle], 1)
-    assert np.sum(mask) == triangle_sum
+    assert np.all(mask == triangle_result)

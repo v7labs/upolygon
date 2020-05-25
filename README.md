@@ -1,7 +1,7 @@
 # uPolygon (WIP)
 Library of handy polygon related functions to speed up machine learning projects.
 
-It was born as a replacement for `cv2.drawContours` when generating masks for instance segmentation, without having to bring in all of opencv.
+It was born as a replacement for `cv2.fillPoly` when generating masks for instance segmentation, without having to bring in all of opencv.
 
 ## TODO
 - [x] draw_polygon
@@ -33,7 +33,7 @@ mask = np.zeros((100,100), dtype=np.int32)
 draw_polygon(mask, [[50,50, 100,0, 0,0]], 1)
 ```
 
-Equivalent of calling `cv2.drawContours(mask, [np.array([[50,50], [100,0], [0,0]])], -1, 1, cv2.FILLED)` when using opencv. 
+Equivalent of calling `cv2.fillPoly(mask, [np.array([[50,50], [100,0], [0,0]])], 1)` or `cv2.drawContours(mask, [np.array([[50,50], [100,0], [0,0]])], -1, 1, cv2.FILLED)` when using opencv. 
 
 uPolygon is ~ 6 times faster than opencv for larger polygons. (TODO: add benchmarks)
 
