@@ -1,7 +1,8 @@
 #cython: language_level=3
 cimport cython
 from libc.stdlib cimport malloc, free, qsort
-from libc.math cimport ceil, floor
+from libc.math cimport ceil, floor, round
+from array import array
 
 cdef struct s_edge:
     float    y_min
@@ -25,7 +26,7 @@ ctypedef fused data_type:
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cdef draw_straight_line(float x1, float x2, int y, data_type[:, :] img, data_type value):
+cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] img, data_type value) nogil:
     cdef int x = max(<int>ceil(x1),0)
     cdef int max_x = min(<int>floor(x2), img.shape[1]-1)
     while x <= max_x:
@@ -63,6 +64,7 @@ cdef int cmp_active_edges(const void* a, const void* b) nogil:
 # @cython.boundscheck(False)
 # @cython.wraparound(False)
 # @cython.nonecheck(False)
+# @cython.cdivision(True)
 cdef void draw_edge_line(data_type [:,:] img, int x1, int y1, int x2, int y2, data_type value):
     cdef int dx = x2 - x1
     cdef int dy = y2 - y1
@@ -138,18 +140,20 @@ cdef void draw_edge_line(data_type [:,:] img, int x1, int y1, int x2, int y2, da
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
+@cython.cdivision(True)
 cdef int find_edges(s_edge *edges, list path, data_type [:,:] img, data_type value):
     cdef int length = len(path)
+    cdef float[:] path_mv = memoryview(array('f', path))
     cdef float x1
     cdef float y1
     cdef float x2
     cdef float y2
     cdef int i
     cdef int idx = 0
-    x1, y1 = path[length-2:]
+    x1, y1 = path_mv[length-2], path_mv[length-1]
     y1 = round(y1)
     for i in range(0, length, 2):
-        x2, y2 = path[i], path[i+1]
+        x2, y2 = path_mv[i], path_mv[i+1]
         y2 = round(y2)
         draw_edge_line(img, <int>x1, <int>y1, <int>x2, <int>y2, value)
 
@@ -212,9 +216,10 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
 
     cdef int active_edge_length = 0
     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
+    cdef s_active_edge edge
     cdef int scanline_y = <int>round(edges[0].y_min)
     cdef int max_scanline_y = img.shape[0]
-    cdef int i, a, b
+    cdef int i, j, a, b, x
     cdef int ymin
     while (edges_length > 0 or active_edge_length > 0) and scanline_y < max_scanline_y:
         for i in range(edges_length):
@@ -230,7 +235,16 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
             if active_edges[i].y_max == scanline_y:
                 move_active_down(active_edges, i, active_edge_length)
                 active_edge_length -= 1
-        qsort(active_edges, active_edge_length, sizeof(s_active_edge), &cmp_active_edges)
+
+        #qsort(active_edges, active_edge_length, sizeof(s_active_edge), &cmp_active_edges)
+        for i in range(1, active_edge_length):
+            edge = active_edges[i]
+            j = i - 1
+            while j >= 0 and edge.x_val < active_edges[j].x_val:
+                active_edges[j+1] = active_edges[j]
+                j -= 1
+            active_edges[j+1] = edge
+
         
         for i in range(0, active_edge_length, 2):
             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, img, value)
