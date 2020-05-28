@@ -234,16 +234,6 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
         
         for i in range(0, active_edge_length, 2):
             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, img, value)
-        #a = 0
-        #b = 1
-        #while b < active_edge_length:
-        #    draw_straight_line(active_edges[a].x_val, active_edges[b].x_val, scanline_y, img, value)
-        #    if active_edges[a].y_max == scanline_y:
-        #        a = b 
-        #        b = b+1 
-        #    else:
-        #        a = b+1
-        #        b = b+2
 
         for i in range(0,active_edge_length):
             active_edges[i].x_val += active_edges[i].m_inv
@@ -256,4 +246,4 @@ def draw_polygon(data_type[:, :] img, list paths, data_type value):
 
     free(edges)
     free(active_edges)
-    return img
+    return img.base
