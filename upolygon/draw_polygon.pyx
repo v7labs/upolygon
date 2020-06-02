@@ -171,10 +171,10 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
 
         
     cdef int flip = dy > dx
-    cdef int count = abs(max(0,min(mask.shape[1], x2)) - max(0, x1)) +1
+    cdef int count =  abs(clip(x1, 0, mask.shape[1]) - clip(x2, 0, mask.shape[1]))#    abs(max(0,min(mask.shape[1], x2)) - max(0, x1)) +1
     if flip:
         dx, dy = dy, dx
-        count = abs(max(0,min(mask.shape[0], y2)) - max(0, y1)) +1
+        count = abs(clip(y1, 0, mask.shape[0]) - clip(y2, 0, mask.shape[0])) # abs(max(0,min(mask.shape[0], y2)) - max(0, y1)) +1
            
     cdef int minus_err = 2 * dy
     cdef int plus_err = 2 * (dy - dx)
