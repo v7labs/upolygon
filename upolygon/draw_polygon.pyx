@@ -27,6 +27,63 @@ ctypedef fused data_type:
     double
     long long
 
+# Clip the lines inside a rectangle (0,0) (w,h)
+# For details see https://arxiv.org/pdf/1908.01350.pdf
+@cython.boundscheck(False)
+@cython.wraparound(False)
+@cython.nonecheck(False)
+@cython.cdivision(True)
+cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogil:
+    cdef double _x1 = x1[0]
+    cdef double _x2 = x2[0]
+    cdef double _y1 = y1[0]
+    cdef double _y2 = y2[0]
+
+    # first check if both point are outside the viewpoint on the same side
+    # if so skip them
+    if _x1 < 0 and _x2 < 0:
+        return 0
+    if _x1 > w and _x2 > w:
+        return 0
+    if _y1 < 0 and _y2 < 0:
+        return 0
+    if _y1 > h and _y2 > 0:
+        return 0
+    
+    if _x1 < 0:
+        _x1 = 0
+        _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+    elif _x1 > w:
+        _x1 = w
+        _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+
+    if _y1 < 0:
+        _y1 = 0 
+        _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+    elif _y1 > h:
+        _y1 = h 
+        _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+
+    if _x2 < 0:
+        _x2 = 0
+        _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+    elif _x2 > w:
+        _x2 = w
+        _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+
+    if _y2 < 0:
+        _y2 = 0 
+        _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+    elif _y2 > h:
+        _y2 = h 
+        _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+
+    x1[0] = <int>_x1
+    x2[0] = <int>_x2
+    y1[0] = <int>_y1
+    y2[0] = <int>_y2
+    return 1
+
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
@@ -54,10 +111,10 @@ cdef int cmp_edges(const void* a, const void* b) nogil:
         return 1
     
 # draw Bresenham 8-connected line 
-# @cython.boundscheck(False)
-# @cython.wraparound(False)
-# @cython.nonecheck(False)
-# @cython.cdivision(True)
+@cython.boundscheck(False)
+@cython.wraparound(False)
+@cython.nonecheck(False)
+@cython.cdivision(True)
 cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
     cdef int dx = x2 - x1
     cdef int dy = y2 - y1
@@ -65,20 +122,29 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
     
     # special case for vertical lines
     if dx == 0:
+        if x1 < 0 or x1 >= mask.shape[1]:
+            return
         y1, y2 = min(y1, y2), max(y1, y2)+1
+        y1, y2 = max(0, y1), min(y2, mask.shape[0])
         for y in range(y1, y2):
             mask[y][x1] = value
         return
     
     # special case for horizontal lines
     if dy == 0:
+        if y1 < 0 or y1 >= mask.shape[0]:
+            return
         x1, x2 = min(x1, x2), max(x1, x2)+1
+        x1, x2 = max(0, x1), min(x2, mask.shape[1])
         for x in range(x1, x2):
             mask[y1][x] = value
         return
-    
-    if x1 > mask.shape[1] or x2 < 0 or y1 > mask.shape[0] or y2 < 0:
+
+    if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
         return
+
+    dx = x2 - x1
+    dy = y2 - y1
 
     cdef int delta_x = 1
     cdef int delta_y = 1
@@ -93,7 +159,7 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
         dy = -dy
 
         
-    cdef int flip = dy/dx > 1
+    cdef int flip = dy > dx
     cdef int count = abs(max(0,min(mask.shape[1], x2)) - max(0, x1)) +1
     if flip:
         dx, dy = dy, dx
@@ -224,12 +290,16 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
             elif edges[i].y_min > scanline_y:
                 break
         
+        # When an active edge is outside the scanline it can be retired
+        # TODO: this could probably fused with the insert sort. 
         for i in reversed(range(active_edge_length)):
             if active_edges[i].y_max == scanline_y:
                 move_active_down(active_edges, i, active_edge_length)
                 active_edge_length -= 1
 
-        #qsort(active_edges, active_edge_length, sizeof(s_active_edge), &cmp_active_edges)
+        # Sort the active edges by x_val.
+        # This is implemented as insertion sort since the list is mostly sorted
+        # only edges that cross at this specific scanline will swap places. 
         for i in range(1, active_edge_length):
             edge = active_edges[i]
             j = i - 1
@@ -247,7 +317,6 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
        
         scanline_y += 1
     
-
     free(edges)
     free(active_edges)
     return mask.base

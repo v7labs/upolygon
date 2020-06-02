@@ -36,6 +36,11 @@ def test_writes_the_given_value():
     assert np.sum(mask_1) * 2 == np.sum(mask_2)
 
 
+def test_crops_negative_coordinates():
+    mask = np.zeros((100, 100), dtype=np.int32)
+    draw_polygon(mask, [[-50, 0, 50, 50, 200, 200]], 1)
+
+
 def test_rectangle_large_segments():
     square = [1, 1, 5, 1, 5, 5, 1, 5]
     expected = np.array(
