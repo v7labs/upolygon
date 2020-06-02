@@ -27,6 +27,14 @@ ctypedef fused data_type:
     double
     long long
 
+cdef int clip(int value, int min_value, int max_value) nogil:
+    if value < min_value:
+        return min_value
+    elif value > max_value:
+        return max_value
+    else:
+        return value
+
 # Clip the lines inside a rectangle (0,0) (w,h)
 # For details see https://arxiv.org/pdf/1908.01350.pdf
 @cython.boundscheck(False)
@@ -51,32 +59,32 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
         return 0
     
     if _x1 < 0:
-        _x1 = 0
         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+        _x1 = 0
     elif _x1 > w:
-        _x1 = w
         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
-
+        _x1 = w
+        
     if _y1 < 0:
-        _y1 = 0 
         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+        _y1 = 0 
     elif _y1 > h:
-        _y1 = h 
         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+        _y1 = h 
 
     if _x2 < 0:
-        _x2 = 0
         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+        _x2 = 0
     elif _x2 > w:
-        _x2 = w
         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+        _x2 = w
 
     if _y2 < 0:
-        _y2 = 0 
         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+        _y2 = 0 
     elif _y2 > h:
-        _y2 = h 
         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+        _y2 = h 
 
     x1[0] = <int>_x1
     x2[0] = <int>_x2
@@ -124,9 +132,9 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
     if dx == 0:
         if x1 < 0 or x1 >= mask.shape[1]:
             return
-        y1, y2 = min(y1, y2), max(y1, y2)+1
-        y1, y2 = max(0, y1), min(y2, mask.shape[0])
-        for y in range(y1, y2):
+        y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
+        y1, y2 = min(y1, y2), max(y1, y2)
+        for y in range(y1, y2+1):
             mask[y][x1] = value
         return
     
@@ -134,9 +142,9 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
     if dy == 0:
         if y1 < 0 or y1 >= mask.shape[0]:
             return
-        x1, x2 = min(x1, x2), max(x1, x2)+1
-        x1, x2 = max(0, x1), min(x2, mask.shape[1])
-        for x in range(x1, x2):
+        x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
+        x1, x2 = min(x1, x2), max(x1, x2)
+        for x in range(x1, x2+1):
             mask[y1][x] = value
         return
 
@@ -227,6 +235,17 @@ cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type va
             edges[idx].y_max = y1
             edges[idx].x_val = x2
         
+        if edges[idx].y_max < 0:
+            x1, y1 = x2, y2
+            continue 
+
+        if edges[idx].y_min < 0:
+            edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
+            edges[idx].y_min = 0
+
+        if edges[idx].y_max >= mask.shape[0]:
+            edges[idx].y_max = mask.shape[0]
+
         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
         idx += 1
         x1, y1 = x2, y2
@@ -264,7 +283,7 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
     # no point in continuing if there are no edges
     if edges_so_far == 0:
         free(edges)
-        return mask
+        return mask.base
     # edges_so_far can be smaller than edges_length if there are straight lines
     edges_length = edges_so_far
     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)

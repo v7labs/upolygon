@@ -41,6 +41,16 @@ def test_crops_negative_coordinates():
     draw_polygon(mask, [[-50, 0, 50, 50, 200, 200]], 1)
 
 
+def test_crop_out_of_bound_horizontal_line():
+    mask = np.zeros((100, 100), dtype=np.int32)
+    draw_polygon(mask, [[-50, 0, 200, 0]], 1)
+
+
+def test_crop_out_of_bound_vertical_line():
+    mask = np.zeros((100, 100), dtype=np.int32)
+    draw_polygon(mask, [[0, -50, 0, -200]], 1)
+
+
 def test_rectangle_large_segments():
     square = [1, 1, 5, 1, 5, 5, 1, 5]
     expected = np.array(
