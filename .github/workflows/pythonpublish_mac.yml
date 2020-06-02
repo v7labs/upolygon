@@ -1,4 +1,4 @@
-name: Upload Python Package
+name: Upload Python Package (macOS)
 
 on:
   release:
@@ -18,14 +18,15 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-          python-version: "3.x"
+          architecture: ${{ matrix.architecture }}
+          python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install setuptools wheel twine cython
       - name: Build Mac
         run: |
-          python setup.py sdist bdist_wheel
+          python setup.py bdist_wheel
         shell: bash
         env:
           USE_CYTHON: True
