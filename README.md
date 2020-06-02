@@ -35,7 +35,8 @@ draw_polygon(mask, [[50,50, 100,0, 0,0]], 1)
 
 Equivalent of calling `cv2.fillPoly(mask, [np.array([[50,50], [100,0], [0,0]])], 1)` or `cv2.drawContours(mask, [np.array([[50,50], [100,0], [0,0]])], -1, 1, cv2.FILLED)` when using opencv. 
 
-uPolygon is ~ 6 times faster than opencv for larger polygons. (TODO: add benchmarks)
+uPolygon is ~ 6 times faster than opencv for large random polygons with many intersecting lines.
+For smaller polygons or few intersections, uPolygon is half as fast as opencv. 
 
 ## find_contours
 `find_contours(mask: array[:, :]) -> (array[:, :], path[:], path[:])`
