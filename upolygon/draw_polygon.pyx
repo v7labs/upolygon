@@ -214,7 +214,7 @@ cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type va
     cdef int length = len(path)
     cdef float[:] path_mv = memoryview(array('f', path))
     cdef float x1
-    cdef float yench1
+    cdef float y1
     cdef float x2
     cdef float y2
     cdef int i
@@ -298,8 +298,7 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
     cdef s_active_edge edge
     cdef int scanline_y = <int>round(edges[0].y_min)
     cdef int max_scanline_y = mask.shape[0]
-    cdef int i, j, a, b, x
-    cdef int ymin
+    cdef int i, j
 
     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
         for i in range(edge_dead_offset, edges_length):
