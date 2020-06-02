@@ -51,42 +51,42 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
     # if so skip them
     if _x1 < 0 and _x2 < 0:
         return 0
-    if _x1 > w and _x2 > w:
+    if _x1 > w and _x2 >= w:
         return 0
     if _y1 < 0 and _y2 < 0:
         return 0
-    if _y1 > h and _y2 > 0:
+    if _y1 > h and _y2 >= h:
         return 0
     
     if _x1 < 0:
         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
         _x1 = 0
-    elif _x1 > w:
+    elif _x1 >= w:
         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
         _x1 = w
         
     if _y1 < 0:
         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
         _y1 = 0 
-    elif _y1 > h:
+    elif _y1 >= h:
         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
         _y1 = h 
 
     if _x2 < 0:
         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
         _x2 = 0
-    elif _x2 > w:
+    elif _x2 >= w:
         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
         _x2 = w
 
     if _y2 < 0:
         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
         _y2 = 0 
-    elif _y2 > h:
+    elif _y2 >= h:
         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
         _y2 = h 
 
-    if (_x1 < 0 and _x2 < 0) or (_x1 > w and _x2 > w):
+    if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):
         return 0
     
     x1[0] = <int>_x1
@@ -171,10 +171,10 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
 
         
     cdef int flip = dy > dx
-    cdef int count = abs(clip(x1, 0, mask.shape[1]) - clip(x2, 0, mask.shape[1]))
+    cdef int count = abs(x1 - x2)
     if flip:
         dx, dy = dy, dx
-        count = abs(clip(y1, 0, mask.shape[0]) - clip(y2, 0, mask.shape[0]))
+        count = abs(y1 - y2)
            
     cdef int minus_err = 2 * dy
     cdef int plus_err = 2 * (dy - dx)
