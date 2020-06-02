@@ -86,6 +86,9 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
         _y2 = h 
 
+    if (_x1 < 0 and _x2 < 0) or (_x1 > w and _x2 > w):
+        return 0
+    
     x1[0] = <int>_x1
     x2[0] = <int>_x2
     y1[0] = <int>_y1
@@ -119,7 +122,7 @@ cdef int cmp_edges(const void* a, const void* b) nogil:
         return 1
     
 # draw Bresenham 8-connected line 
-@cython.boundscheck(False)
+#@cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
 @cython.cdivision(True)
