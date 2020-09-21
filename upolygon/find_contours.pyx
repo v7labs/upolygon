@@ -21,6 +21,8 @@ cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:
     cdef int start_index = (old_index + 2) % 8
     cdef int i
     cdef int tmpx, tmpy
+    nx[0] = px
+    ny[0] = py
     for i in range(start_index, start_index + 8):
         i = i % 8
         tmpx = directions_x[i] + px 
