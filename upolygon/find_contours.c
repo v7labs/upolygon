@@ -1150,13 +1150,6 @@ static PyObject *__Pyx_GetBuiltinName(PyObject *name);
 /* None.proto */
 static CYTHON_INLINE long __Pyx_mod_long(long, long);
 
-/* PyObjectCall.proto */
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw);
-#else
-#define __Pyx_PyObject_Call(func, arg, kw) PyObject_Call(func, arg, kw)
-#endif
-
 /* ListAppend.proto */
 #if CYTHON_USE_PYLIST_INTERNALS && CYTHON_ASSUME_SAFE_MACROS
 static CYTHON_INLINE int __Pyx_PyList_Append(PyObject* list, PyObject* x) {
@@ -1219,6 +1212,13 @@ static PyObject *__Pyx__GetModuleGlobalName(PyObject *name, PY_UINT64_T *dict_ve
 #define __Pyx_GetModuleGlobalName(var, name)  (var) = __Pyx__GetModuleGlobalName(name)
 #define __Pyx_GetModuleGlobalNameUncached(var, name)  (var) = __Pyx__GetModuleGlobalName(name)
 static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name);
+#endif
+
+/* PyObjectCall.proto */
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw);
+#else
+#define __Pyx_PyObject_Call(func, arg, kw) PyObject_Call(func, arg, kw)
 #endif
 
 /* MemviewSliceInit.proto */
@@ -1662,16 +1662,16 @@ static CYTHON_INLINE PyObject* __Pyx_PyInt_From_long(long value);
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_unsigned_char(unsigned char value);
 
+/* MemviewDtypeToObject.proto */
+static CYTHON_INLINE PyObject *__pyx_memview_get_unsigned_char(const char *itemp);
+static CYTHON_INLINE int __pyx_memview_set_unsigned_char(const char *itemp, PyObject *obj);
+
 /* CIntToPy.proto */
 static CYTHON_INLINE PyObject* __Pyx_PyInt_From_char(char value);
 
 /* MemviewDtypeToObject.proto */
 static CYTHON_INLINE PyObject *__pyx_memview_get_char(const char *itemp);
 static CYTHON_INLINE int __pyx_memview_set_char(const char *itemp, PyObject *obj);
-
-/* MemviewDtypeToObject.proto */
-static CYTHON_INLINE PyObject *__pyx_memview_get_unsigned_char(const char *itemp);
-static CYTHON_INLINE int __pyx_memview_set_unsigned_char(const char *itemp, PyObject *obj);
 
 /* MemviewSliceCopyTemplate.proto */
 static __Pyx_memviewslice
@@ -1684,10 +1684,10 @@ __pyx_memoryview_copy_new_contig(const __Pyx_memviewslice *from_mvs,
 static CYTHON_INLINE int __Pyx_PyInt_As_int(PyObject *);
 
 /* CIntFromPy.proto */
-static CYTHON_INLINE char __Pyx_PyInt_As_char(PyObject *);
+static CYTHON_INLINE unsigned char __Pyx_PyInt_As_unsigned_char(PyObject *);
 
 /* CIntFromPy.proto */
-static CYTHON_INLINE unsigned char __Pyx_PyInt_As_unsigned_char(PyObject *);
+static CYTHON_INLINE char __Pyx_PyInt_As_char(PyObject *);
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE long __Pyx_PyInt_As_long(PyObject *);
@@ -1773,7 +1773,6 @@ int __pyx_module_is_main_upolygon__find_contours = 0;
 
 /* Implementation of 'upolygon.find_contours' */
 static PyObject *__pyx_builtin_range;
-static PyObject *__pyx_builtin_print;
 static PyObject *__pyx_builtin_ValueError;
 static PyObject *__pyx_builtin_MemoryError;
 static PyObject *__pyx_builtin_enumerate;
@@ -1793,7 +1792,6 @@ static const char __pyx_k_pad[] = "pad";
 static const char __pyx_k_base[] = "base";
 static const char __pyx_k_dict[] = "__dict__";
 static const char __pyx_k_int8[] = "int8";
-static const char __pyx_k_loop[] = "loop";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_mode[] = "mode";
 static const char __pyx_k_name[] = "name";
@@ -1811,7 +1809,6 @@ static const char __pyx_k_error[] = "error";
 static const char __pyx_k_flags[] = "flags";
 static const char __pyx_k_image[] = "image";
 static const char __pyx_k_numpy[] = "numpy";
-static const char __pyx_k_print[] = "print";
 static const char __pyx_k_range[] = "range";
 static const char __pyx_k_shape[] = "shape";
 static const char __pyx_k_start[] = "start";
@@ -1844,14 +1841,12 @@ static const char __pyx_k_pyx_state[] = "__pyx_state";
 static const char __pyx_k_reduce_ex[] = "__reduce_ex__";
 static const char __pyx_k_IndexError[] = "IndexError";
 static const char __pyx_k_ValueError[] = "ValueError";
-static const char __pyx_k_end_tracer[] = "end tracer";
 static const char __pyx_k_pyx_result[] = "__pyx_result";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
 static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_inner_paths[] = "inner_paths";
 static const char __pyx_k_outer_paths[] = "outer_paths";
-static const char __pyx_k_begin_tracer[] = "begin tracer";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
 static const char __pyx_k_stringsource[] = "stringsource";
 static const char __pyx_k_find_contours[] = "find_contours";
@@ -1916,7 +1911,6 @@ static PyObject *__pyx_n_s_ValueError;
 static PyObject *__pyx_n_s_View_MemoryView;
 static PyObject *__pyx_n_s_allocate_buffer;
 static PyObject *__pyx_n_s_base;
-static PyObject *__pyx_kp_u_begin_tracer;
 static PyObject *__pyx_n_s_c;
 static PyObject *__pyx_n_u_c;
 static PyObject *__pyx_n_s_class;
@@ -1929,7 +1923,6 @@ static PyObject *__pyx_n_s_dict;
 static PyObject *__pyx_n_s_dtype;
 static PyObject *__pyx_n_s_dtype_is_object;
 static PyObject *__pyx_n_s_encode;
-static PyObject *__pyx_kp_u_end_tracer;
 static PyObject *__pyx_n_s_enumerate;
 static PyObject *__pyx_n_s_error;
 static PyObject *__pyx_n_s_find_contours;
@@ -1949,7 +1942,6 @@ static PyObject *__pyx_n_s_int8;
 static PyObject *__pyx_n_s_itemsize;
 static PyObject *__pyx_kp_s_itemsize_0_for_cython_array;
 static PyObject *__pyx_n_s_labels;
-static PyObject *__pyx_n_u_loop;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_memview;
 static PyObject *__pyx_n_s_mode;
@@ -1967,7 +1959,6 @@ static PyObject *__pyx_n_s_pad;
 static PyObject *__pyx_n_s_pad_width;
 static PyObject *__pyx_n_s_path;
 static PyObject *__pyx_n_s_pickle;
-static PyObject *__pyx_n_s_print;
 static PyObject *__pyx_n_s_px;
 static PyObject *__pyx_n_s_py;
 static PyObject *__pyx_n_s_pyx_PickleError;
@@ -1987,7 +1978,6 @@ static PyObject *__pyx_n_s_setstate_cython;
 static PyObject *__pyx_n_s_shape;
 static PyObject *__pyx_n_s_size;
 static PyObject *__pyx_n_s_start;
-static PyObject *__pyx_n_u_start;
 static PyObject *__pyx_n_s_step;
 static PyObject *__pyx_n_s_stop;
 static PyObject *__pyx_kp_s_strided_and_direct;
@@ -2272,16 +2262,11 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
   PyObject *__pyx_t_2 = NULL;
   PyObject *__pyx_t_3 = NULL;
   PyObject *__pyx_t_4 = NULL;
-  Py_ssize_t __pyx_t_5;
-  Py_ssize_t __pyx_t_6;
-  PyObject *__pyx_t_7 = NULL;
-  PyObject *__pyx_t_8 = NULL;
-  PyObject *__pyx_t_9 = NULL;
-  int __pyx_t_10;
-  int __pyx_t_11;
-  int __pyx_t_12;
-  PyObject *__pyx_t_13 = NULL;
-  PyObject *__pyx_t_14 = NULL;
+  int __pyx_t_5;
+  int __pyx_t_6;
+  int __pyx_t_7;
+  Py_ssize_t __pyx_t_8;
+  Py_ssize_t __pyx_t_9;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
@@ -2324,7 +2309,7 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
  *         cdef int index = 1 if inner else 5
  *         cdef int last_point_was_s = False             # <<<<<<<<<<<<<<
  *         path = [px-1, py-1]
- *         print("begin tracer", px, py, image[py][px], labels[py][px])
+ *         index = tracer(px, py, index, &nx, &ny, image, labels)
  */
   __pyx_v_last_point_was_s = 0;
 
@@ -2332,8 +2317,8 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
  *         cdef int index = 1 if inner else 5
  *         cdef int last_point_was_s = False
  *         path = [px-1, py-1]             # <<<<<<<<<<<<<<
- *         print("begin tracer", px, py, image[py][px], labels[py][px])
  *         index = tracer(px, py, index, &nx, &ny, image, labels)
+ *         tx = nx
  */
   __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_px - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 47, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
@@ -2353,173 +2338,49 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
   /* "upolygon/find_contours.pyx":48
  *         cdef int last_point_was_s = False
  *         path = [px-1, py-1]
- *         print("begin tracer", px, py, image[py][px], labels[py][px])             # <<<<<<<<<<<<<<
- *         index = tracer(px, py, index, &nx, &ny, image, labels)
- *         print("end tracer", index, nx, ny, image[ny][nx], labels[ny][nx])
- */
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_px); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_py); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_5 = __pyx_v_py;
-  __pyx_t_6 = __pyx_v_px;
-  __pyx_t_2 = __Pyx_PyInt_From_unsigned_char((*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_image.data + __pyx_t_5 * __pyx_v_image.strides[0]) ) + __pyx_t_6 * __pyx_v_image.strides[1]) )))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_6 = __pyx_v_py;
-  __pyx_t_5 = __pyx_v_px;
-  __pyx_t_7 = __Pyx_PyInt_From_char((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_6 * __pyx_v_labels.strides[0]) ) + __pyx_t_5 * __pyx_v_labels.strides[1]) )))); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = PyTuple_New(5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __Pyx_INCREF(__pyx_kp_u_begin_tracer);
-  __Pyx_GIVEREF(__pyx_kp_u_begin_tracer);
-  PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_kp_u_begin_tracer);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_8, 2, __pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_8, 3, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_8, 4, __pyx_t_7);
-  __pyx_t_4 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_2 = 0;
-  __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_8, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 48, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-
-  /* "upolygon/find_contours.pyx":49
- *         path = [px-1, py-1]
- *         print("begin tracer", px, py, image[py][px], labels[py][px])
  *         index = tracer(px, py, index, &nx, &ny, image, labels)             # <<<<<<<<<<<<<<
- *         print("end tracer", index, nx, ny, image[ny][nx], labels[ny][nx])
- *         tx = nx
- */
-  __pyx_v_index = __pyx_f_8upolygon_13find_contours_tracer(__pyx_v_px, __pyx_v_py, __pyx_v_index, (&__pyx_v_nx), (&__pyx_v_ny), __pyx_v_image, __pyx_v_labels);
-
-  /* "upolygon/find_contours.pyx":50
- *         print("begin tracer", px, py, image[py][px], labels[py][px])
- *         index = tracer(px, py, index, &nx, &ny, image, labels)
- *         print("end tracer", index, nx, ny, image[ny][nx], labels[ny][nx])             # <<<<<<<<<<<<<<
  *         tx = nx
  *         ty = ny
  */
-  __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_index); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_nx); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_ny); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_5 = __pyx_v_ny;
-  __pyx_t_6 = __pyx_v_nx;
-  __pyx_t_3 = __Pyx_PyInt_From_unsigned_char((*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_image.data + __pyx_t_5 * __pyx_v_image.strides[0]) ) + __pyx_t_6 * __pyx_v_image.strides[1]) )))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_6 = __pyx_v_ny;
-  __pyx_t_5 = __pyx_v_nx;
-  __pyx_t_4 = __Pyx_PyInt_From_char((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_6 * __pyx_v_labels.strides[0]) ) + __pyx_t_5 * __pyx_v_labels.strides[1]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = PyTuple_New(6); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
-  __Pyx_INCREF(__pyx_kp_u_end_tracer);
-  __Pyx_GIVEREF(__pyx_kp_u_end_tracer);
-  PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_kp_u_end_tracer);
-  __Pyx_GIVEREF(__pyx_t_7);
-  PyTuple_SET_ITEM(__pyx_t_9, 1, __pyx_t_7);
-  __Pyx_GIVEREF(__pyx_t_8);
-  PyTuple_SET_ITEM(__pyx_t_9, 2, __pyx_t_8);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_9, 3, __pyx_t_2);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_9, 4, __pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_9, 5, __pyx_t_4);
-  __pyx_t_7 = 0;
-  __pyx_t_8 = 0;
-  __pyx_t_2 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_9, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 50, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_v_index = __pyx_f_8upolygon_13find_contours_tracer(__pyx_v_px, __pyx_v_py, __pyx_v_index, (&__pyx_v_nx), (&__pyx_v_ny), __pyx_v_image, __pyx_v_labels);
 
-  /* "upolygon/find_contours.pyx":51
+  /* "upolygon/find_contours.pyx":49
+ *         path = [px-1, py-1]
  *         index = tracer(px, py, index, &nx, &ny, image, labels)
- *         print("end tracer", index, nx, ny, image[ny][nx], labels[ny][nx])
  *         tx = nx             # <<<<<<<<<<<<<<
  *         ty = ny
  * 
  */
   __pyx_v_tx = __pyx_v_nx;
 
-  /* "upolygon/find_contours.pyx":52
- *         print("end tracer", index, nx, ny, image[ny][nx], labels[ny][nx])
+  /* "upolygon/find_contours.pyx":50
+ *         index = tracer(px, py, index, &nx, &ny, image, labels)
  *         tx = nx
  *         ty = ny             # <<<<<<<<<<<<<<
  * 
- *         print("start", sx, sy, tx , ty)
+ *         # S was a single point
  */
   __pyx_v_ty = __pyx_v_ny;
 
-  /* "upolygon/find_contours.pyx":54
- *         ty = ny
+  /* "upolygon/find_contours.pyx":53
  * 
- *         print("start", sx, sy, tx , ty)             # <<<<<<<<<<<<<<
- *         # S was a single point
- *         if tx == sx and ty == sy:
- */
-  __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_sx); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_sy); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_9);
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_tx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_ty); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_8 = PyTuple_New(5); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_8);
-  __Pyx_INCREF(__pyx_n_u_start);
-  __Pyx_GIVEREF(__pyx_n_u_start);
-  PyTuple_SET_ITEM(__pyx_t_8, 0, __pyx_n_u_start);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_8, 1, __pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_9);
-  PyTuple_SET_ITEM(__pyx_t_8, 2, __pyx_t_9);
-  __Pyx_GIVEREF(__pyx_t_3);
-  PyTuple_SET_ITEM(__pyx_t_8, 3, __pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_2);
-  PyTuple_SET_ITEM(__pyx_t_8, 4, __pyx_t_2);
-  __pyx_t_4 = 0;
-  __pyx_t_9 = 0;
-  __pyx_t_3 = 0;
-  __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_8, NULL); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 54, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_DECREF(__pyx_t_8); __pyx_t_8 = 0;
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-
-  /* "upolygon/find_contours.pyx":56
- *         print("start", sx, sy, tx , ty)
  *         # S was a single point
  *         if tx == sx and ty == sy:             # <<<<<<<<<<<<<<
  *             return path
  * 
  */
-  __pyx_t_11 = ((__pyx_v_tx == __pyx_v_sx) != 0);
-  if (__pyx_t_11) {
+  __pyx_t_6 = ((__pyx_v_tx == __pyx_v_sx) != 0);
+  if (__pyx_t_6) {
   } else {
-    __pyx_t_10 = __pyx_t_11;
+    __pyx_t_5 = __pyx_t_6;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_11 = ((__pyx_v_ty == __pyx_v_sy) != 0);
-  __pyx_t_10 = __pyx_t_11;
+  __pyx_t_6 = ((__pyx_v_ty == __pyx_v_sy) != 0);
+  __pyx_t_5 = __pyx_t_6;
   __pyx_L4_bool_binop_done:;
-  if (__pyx_t_10) {
+  if (__pyx_t_5) {
 
-    /* "upolygon/find_contours.pyx":57
+    /* "upolygon/find_contours.pyx":54
  *         # S was a single point
  *         if tx == sx and ty == sy:
  *             return path             # <<<<<<<<<<<<<<
@@ -2531,8 +2392,8 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
     __pyx_r = __pyx_v_path;
     goto __pyx_L0;
 
-    /* "upolygon/find_contours.pyx":56
- *         print("start", sx, sy, tx , ty)
+    /* "upolygon/find_contours.pyx":53
+ * 
  *         # S was a single point
  *         if tx == sx and ty == sy:             # <<<<<<<<<<<<<<
  *             return path
@@ -2540,136 +2401,84 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
  */
   }
 
-  /* "upolygon/find_contours.pyx":59
+  /* "upolygon/find_contours.pyx":56
  *             return path
  * 
  *         path.append(tx-1)             # <<<<<<<<<<<<<<
  *         path.append(ty-1)
  * 
  */
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_tx - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 59, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 59, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_tx - 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_4); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 56, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "upolygon/find_contours.pyx":60
+  /* "upolygon/find_contours.pyx":57
  * 
  *         path.append(tx-1)
  *         path.append(ty-1)             # <<<<<<<<<<<<<<
  * 
  *         labels[ny][nx] = c
  */
-  __pyx_t_2 = __Pyx_PyInt_From_long((__pyx_v_ty - 1)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 60, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_2); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 60, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
+  __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_ty - 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 57, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_4); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 57, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "upolygon/find_contours.pyx":62
+  /* "upolygon/find_contours.pyx":59
  *         path.append(ty-1)
  * 
  *         labels[ny][nx] = c             # <<<<<<<<<<<<<<
  *         while True:
- *             print(path, labels, ny, nx, tx, ty, sx, ty)
+ *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
  */
-  __pyx_t_5 = __pyx_v_ny;
-  __pyx_t_6 = __pyx_v_nx;
-  *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_5 * __pyx_v_labels.strides[0]) ) + __pyx_t_6 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
+  __pyx_t_8 = __pyx_v_ny;
+  __pyx_t_9 = __pyx_v_nx;
+  *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_8 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
-  /* "upolygon/find_contours.pyx":63
+  /* "upolygon/find_contours.pyx":60
  * 
  *         labels[ny][nx] = c
  *         while True:             # <<<<<<<<<<<<<<
- *             print(path, labels, ny, nx, tx, ty, sx, ty)
- *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
- */
-  while (1) {
-
-    /* "upolygon/find_contours.pyx":64
- *         labels[ny][nx] = c
- *         while True:
- *             print(path, labels, ny, nx, tx, ty, sx, ty)             # <<<<<<<<<<<<<<
  *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
  *             if last_point_was_s and nx == tx and ny == ty:
  */
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_labels, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_8 = __Pyx_PyInt_From_int(__pyx_v_ny); if (unlikely(!__pyx_t_8)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_8);
-    __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_nx); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_9 = __Pyx_PyInt_From_int(__pyx_v_tx); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_9);
-    __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_ty); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_7 = __Pyx_PyInt_From_int(__pyx_v_sx); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
-    __pyx_t_13 = __Pyx_PyInt_From_int(__pyx_v_ty); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_14 = PyTuple_New(8); if (unlikely(!__pyx_t_14)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_14);
-    __Pyx_INCREF(__pyx_v_path);
-    __Pyx_GIVEREF(__pyx_v_path);
-    PyTuple_SET_ITEM(__pyx_t_14, 0, __pyx_v_path);
-    __Pyx_GIVEREF(__pyx_t_2);
-    PyTuple_SET_ITEM(__pyx_t_14, 1, __pyx_t_2);
-    __Pyx_GIVEREF(__pyx_t_8);
-    PyTuple_SET_ITEM(__pyx_t_14, 2, __pyx_t_8);
-    __Pyx_GIVEREF(__pyx_t_3);
-    PyTuple_SET_ITEM(__pyx_t_14, 3, __pyx_t_3);
-    __Pyx_GIVEREF(__pyx_t_9);
-    PyTuple_SET_ITEM(__pyx_t_14, 4, __pyx_t_9);
-    __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_14, 5, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_7);
-    PyTuple_SET_ITEM(__pyx_t_14, 6, __pyx_t_7);
-    __Pyx_GIVEREF(__pyx_t_13);
-    PyTuple_SET_ITEM(__pyx_t_14, 7, __pyx_t_13);
-    __pyx_t_2 = 0;
-    __pyx_t_8 = 0;
-    __pyx_t_3 = 0;
-    __pyx_t_9 = 0;
-    __pyx_t_4 = 0;
-    __pyx_t_7 = 0;
-    __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_14, NULL); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 64, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __Pyx_DECREF(__pyx_t_14); __pyx_t_14 = 0;
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+  while (1) {
 
-    /* "upolygon/find_contours.pyx":65
+    /* "upolygon/find_contours.pyx":61
+ *         labels[ny][nx] = c
  *         while True:
- *             print(path, labels, ny, nx, tx, ty, sx, ty)
  *             index = tracer(nx, ny, index, &nx, &ny, image, labels)             # <<<<<<<<<<<<<<
  *             if last_point_was_s and nx == tx and ny == ty:
  *                 return path
  */
     __pyx_v_index = __pyx_f_8upolygon_13find_contours_tracer(__pyx_v_nx, __pyx_v_ny, __pyx_v_index, (&__pyx_v_nx), (&__pyx_v_ny), __pyx_v_image, __pyx_v_labels);
 
-    /* "upolygon/find_contours.pyx":66
- *             print(path, labels, ny, nx, tx, ty, sx, ty)
+    /* "upolygon/find_contours.pyx":62
+ *         while True:
  *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
  *             if last_point_was_s and nx == tx and ny == ty:             # <<<<<<<<<<<<<<
  *                 return path
  *             path.append(nx-1)
  */
-    __pyx_t_11 = (__pyx_v_last_point_was_s != 0);
-    if (__pyx_t_11) {
+    __pyx_t_6 = (__pyx_v_last_point_was_s != 0);
+    if (__pyx_t_6) {
     } else {
-      __pyx_t_10 = __pyx_t_11;
+      __pyx_t_5 = __pyx_t_6;
       goto __pyx_L9_bool_binop_done;
     }
-    __pyx_t_11 = ((__pyx_v_nx == __pyx_v_tx) != 0);
-    if (__pyx_t_11) {
+    __pyx_t_6 = ((__pyx_v_nx == __pyx_v_tx) != 0);
+    if (__pyx_t_6) {
     } else {
-      __pyx_t_10 = __pyx_t_11;
+      __pyx_t_5 = __pyx_t_6;
       goto __pyx_L9_bool_binop_done;
     }
-    __pyx_t_11 = ((__pyx_v_ny == __pyx_v_ty) != 0);
-    __pyx_t_10 = __pyx_t_11;
+    __pyx_t_6 = ((__pyx_v_ny == __pyx_v_ty) != 0);
+    __pyx_t_5 = __pyx_t_6;
     __pyx_L9_bool_binop_done:;
-    if (__pyx_t_10) {
+    if (__pyx_t_5) {
 
-      /* "upolygon/find_contours.pyx":67
+      /* "upolygon/find_contours.pyx":63
  *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
  *             if last_point_was_s and nx == tx and ny == ty:
  *                 return path             # <<<<<<<<<<<<<<
@@ -2681,8 +2490,8 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
       __pyx_r = __pyx_v_path;
       goto __pyx_L0;
 
-      /* "upolygon/find_contours.pyx":66
- *             print(path, labels, ny, nx, tx, ty, sx, ty)
+      /* "upolygon/find_contours.pyx":62
+ *         while True:
  *             index = tracer(nx, ny, index, &nx, &ny, image, labels)
  *             if last_point_was_s and nx == tx and ny == ty:             # <<<<<<<<<<<<<<
  *                 return path
@@ -2690,56 +2499,56 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
  */
     }
 
-    /* "upolygon/find_contours.pyx":68
+    /* "upolygon/find_contours.pyx":64
  *             if last_point_was_s and nx == tx and ny == ty:
  *                 return path
  *             path.append(nx-1)             # <<<<<<<<<<<<<<
  *             path.append(ny-1)
  *             labels[ny][nx] = c
  */
-    __pyx_t_13 = __Pyx_PyInt_From_long((__pyx_v_nx - 1)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 68, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_13); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 68, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_nx - 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 64, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_4); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 64, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "upolygon/find_contours.pyx":69
+    /* "upolygon/find_contours.pyx":65
  *                 return path
  *             path.append(nx-1)
  *             path.append(ny-1)             # <<<<<<<<<<<<<<
  *             labels[ny][nx] = c
  *             last_point_was_s = nx == sx and ny == sy
  */
-    __pyx_t_13 = __Pyx_PyInt_From_long((__pyx_v_ny - 1)); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 69, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_13); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 69, __pyx_L1_error)
-    __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
+    __pyx_t_4 = __Pyx_PyInt_From_long((__pyx_v_ny - 1)); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 65, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_4);
+    __pyx_t_7 = __Pyx_PyList_Append(__pyx_v_path, __pyx_t_4); if (unlikely(__pyx_t_7 == ((int)-1))) __PYX_ERR(0, 65, __pyx_L1_error)
+    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-    /* "upolygon/find_contours.pyx":70
+    /* "upolygon/find_contours.pyx":66
  *             path.append(nx-1)
  *             path.append(ny-1)
  *             labels[ny][nx] = c             # <<<<<<<<<<<<<<
  *             last_point_was_s = nx == sx and ny == sy
  * 
  */
-    __pyx_t_6 = __pyx_v_ny;
-    __pyx_t_5 = __pyx_v_nx;
-    *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_6 * __pyx_v_labels.strides[0]) ) + __pyx_t_5 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
+    __pyx_t_9 = __pyx_v_ny;
+    __pyx_t_8 = __pyx_v_nx;
+    *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_8 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
-    /* "upolygon/find_contours.pyx":71
+    /* "upolygon/find_contours.pyx":67
  *             path.append(ny-1)
  *             labels[ny][nx] = c
  *             last_point_was_s = nx == sx and ny == sy             # <<<<<<<<<<<<<<
  * 
  * @cython.boundscheck(False)
  */
-    __pyx_t_10 = (__pyx_v_nx == __pyx_v_sx);
-    if (__pyx_t_10) {
+    __pyx_t_5 = (__pyx_v_nx == __pyx_v_sx);
+    if (__pyx_t_5) {
     } else {
-      __pyx_t_1 = __pyx_t_10;
+      __pyx_t_1 = __pyx_t_5;
       goto __pyx_L12_bool_binop_done;
     }
-    __pyx_t_10 = (__pyx_v_ny == __pyx_v_sy);
-    __pyx_t_1 = __pyx_t_10;
+    __pyx_t_5 = (__pyx_v_ny == __pyx_v_sy);
+    __pyx_t_1 = __pyx_t_5;
     __pyx_L12_bool_binop_done:;
     __pyx_v_last_point_was_s = __pyx_t_1;
   }
@@ -2759,11 +2568,6 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
   __Pyx_XDECREF(__pyx_t_2);
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
-  __Pyx_XDECREF(__pyx_t_7);
-  __Pyx_XDECREF(__pyx_t_8);
-  __Pyx_XDECREF(__pyx_t_9);
-  __Pyx_XDECREF(__pyx_t_13);
-  __Pyx_XDECREF(__pyx_t_14);
   __Pyx_AddTraceback("upolygon.find_contours.contour_trace", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
@@ -2773,7 +2577,7 @@ static PyObject *__pyx_f_8upolygon_13find_contours_contour_trace(int __pyx_v_px,
   return __pyx_r;
 }
 
-/* "upolygon/find_contours.pyx":76
+/* "upolygon/find_contours.pyx":72
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def find_contours(unsigned char[:,:] image):             # <<<<<<<<<<<<<<
@@ -2793,7 +2597,7 @@ static PyObject *__pyx_pw_8upolygon_13find_contours_1find_contours(PyObject *__p
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("find_contours (wrapper)", 0);
   assert(__pyx_arg_image); {
-    __pyx_v_image = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_arg_image, PyBUF_WRITABLE); if (unlikely(!__pyx_v_image.memview)) __PYX_ERR(0, 76, __pyx_L3_error)
+    __pyx_v_image = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_arg_image, PyBUF_WRITABLE); if (unlikely(!__pyx_v_image.memview)) __PYX_ERR(0, 72, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L3_error:;
@@ -2832,17 +2636,15 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
   Py_ssize_t __pyx_t_9;
   Py_ssize_t __pyx_t_10;
   int __pyx_t_11;
-  PyObject *__pyx_t_12 = NULL;
-  PyObject *__pyx_t_13 = NULL;
-  int __pyx_t_14;
-  Py_ssize_t __pyx_t_15;
-  Py_ssize_t __pyx_t_16;
+  int __pyx_t_12;
+  Py_ssize_t __pyx_t_13;
+  Py_ssize_t __pyx_t_14;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("find_contours", 0);
 
-  /* "upolygon/find_contours.pyx":77
+  /* "upolygon/find_contours.pyx":73
  * @cython.nonecheck(False)
  * def find_contours(unsigned char[:,:] image):
  *     cdef int px = 1             # <<<<<<<<<<<<<<
@@ -2851,7 +2653,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
   __pyx_v_px = 1;
 
-  /* "upolygon/find_contours.pyx":78
+  /* "upolygon/find_contours.pyx":74
  * def find_contours(unsigned char[:,:] image):
  *     cdef int px = 1
  *     cdef int py = 1             # <<<<<<<<<<<<<<
@@ -2860,7 +2662,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
   __pyx_v_py = 1;
 
-  /* "upolygon/find_contours.pyx":79
+  /* "upolygon/find_contours.pyx":75
  *     cdef int px = 1
  *     cdef int py = 1
  *     cdef int c  = 1             # <<<<<<<<<<<<<<
@@ -2869,7 +2671,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
   __pyx_v_c = 1;
 
-  /* "upolygon/find_contours.pyx":80
+  /* "upolygon/find_contours.pyx":76
  *     cdef int py = 1
  *     cdef int c  = 1
  *     cdef int width = image.shape[1] - 1             # <<<<<<<<<<<<<<
@@ -2878,7 +2680,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
   __pyx_v_width = ((__pyx_v_image.shape[1]) - 1);
 
-  /* "upolygon/find_contours.pyx":81
+  /* "upolygon/find_contours.pyx":77
  *     cdef int c  = 1
  *     cdef int width = image.shape[1] - 1
  *     cdef int height = image.shape[0] - 1             # <<<<<<<<<<<<<<
@@ -2887,59 +2689,59 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
   __pyx_v_height = ((__pyx_v_image.shape[0]) - 1);
 
-  /* "upolygon/find_contours.pyx":82
+  /* "upolygon/find_contours.pyx":78
  *     cdef int width = image.shape[1] - 1
  *     cdef int height = image.shape[0] - 1
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)             # <<<<<<<<<<<<<<
  *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_pad); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_image, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_image, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_1);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
   __pyx_t_1 = 0;
-  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_pad_width, __pyx_int_1) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_mode, __pyx_n_u_constant) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
-  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_constant_values, __pyx_int_0) < 0) __PYX_ERR(0, 82, __pyx_L1_error)
-  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 82, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_pad_width, __pyx_int_1) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_mode, __pyx_n_u_constant) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_constant_values, __pyx_int_0) < 0) __PYX_ERR(0, 78, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_2, __pyx_t_3, __pyx_t_1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 82, __pyx_L1_error)
+  __pyx_t_5 = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_5.memview)) __PYX_ERR(0, 78, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __PYX_XDEC_MEMVIEW(&__pyx_v_image, 1);
   __pyx_v_image = __pyx_t_5;
   __pyx_t_5.memview = NULL;
   __pyx_t_5.data = NULL;
 
-  /* "upolygon/find_contours.pyx":83
+  /* "upolygon/find_contours.pyx":79
  *     cdef int height = image.shape[0] - 1
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
  *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)             # <<<<<<<<<<<<<<
  *     inner_paths = []
  *     outer_paths = []
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_zeros); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = PyInt_FromSsize_t((__pyx_v_image.shape[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_4 = PyInt_FromSsize_t((__pyx_v_image.shape[0])); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_3 = PyInt_FromSsize_t((__pyx_v_image.shape[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = PyInt_FromSsize_t((__pyx_v_image.shape[1])); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_2 = PyTuple_New(2); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_GIVEREF(__pyx_t_4);
   PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_4);
@@ -2947,72 +2749,72 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
   PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_t_3);
   __pyx_t_4 = 0;
   __pyx_t_3 = 0;
-  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_3 = PyTuple_New(1); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_GIVEREF(__pyx_t_2);
   PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_2);
   __pyx_t_2 = 0;
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int8); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_t_4, __pyx_n_s_int8); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 83, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_dtype, __pyx_t_6) < 0) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_6 = __Pyx_PyObject_Call(__pyx_t_1, __pyx_t_3, __pyx_t_2); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
-  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_char(__pyx_t_6, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 83, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_to_MemoryviewSlice_dsds_char(__pyx_t_6, PyBUF_WRITABLE); if (unlikely(!__pyx_t_7.memview)) __PYX_ERR(0, 79, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_v_labels = __pyx_t_7;
   __pyx_t_7.memview = NULL;
   __pyx_t_7.data = NULL;
 
-  /* "upolygon/find_contours.pyx":84
+  /* "upolygon/find_contours.pyx":80
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
  *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []             # <<<<<<<<<<<<<<
  *     outer_paths = []
  * 
  */
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 84, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_inner_paths = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "upolygon/find_contours.pyx":85
+  /* "upolygon/find_contours.pyx":81
  *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []
  *     outer_paths = []             # <<<<<<<<<<<<<<
  * 
  *     while py < height:
  */
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 85, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 81, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_outer_paths = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
 
-  /* "upolygon/find_contours.pyx":87
+  /* "upolygon/find_contours.pyx":83
  *     outer_paths = []
  * 
  *     while py < height:             # <<<<<<<<<<<<<<
  *         while image[py][px] == 0 and px < width:
- *             print("loop", px, py, image[py][px], labels[py][px], width, height)
+ *             px += 1
  */
   while (1) {
     __pyx_t_8 = ((__pyx_v_py < __pyx_v_height) != 0);
     if (!__pyx_t_8) break;
 
-    /* "upolygon/find_contours.pyx":88
+    /* "upolygon/find_contours.pyx":84
  * 
  *     while py < height:
  *         while image[py][px] == 0 and px < width:             # <<<<<<<<<<<<<<
- *             print("loop", px, py, image[py][px], labels[py][px], width, height)
  *             px += 1
+ *         if image[py][px] == 1:
  */
     while (1) {
       __pyx_t_9 = __pyx_v_py;
@@ -3028,108 +2830,19 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
       __pyx_L7_bool_binop_done:;
       if (!__pyx_t_8) break;
 
-      /* "upolygon/find_contours.pyx":89
+      /* "upolygon/find_contours.pyx":85
  *     while py < height:
  *         while image[py][px] == 0 and px < width:
- *             print("loop", px, py, image[py][px], labels[py][px], width, height)             # <<<<<<<<<<<<<<
- *             px += 1
- *         print(px, py, image[py][px], labels[py][px])
- */
-      __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_px); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_6);
-      __pyx_t_2 = __Pyx_PyInt_From_int(__pyx_v_py); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_2);
-      __pyx_t_10 = __pyx_v_py;
-      __pyx_t_9 = __pyx_v_px;
-      __pyx_t_3 = __Pyx_PyInt_From_unsigned_char((*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_image.data + __pyx_t_10 * __pyx_v_image.strides[0]) ) + __pyx_t_9 * __pyx_v_image.strides[1]) )))); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_9 = __pyx_v_py;
-      __pyx_t_10 = __pyx_v_px;
-      __pyx_t_1 = __Pyx_PyInt_From_char((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_10 * __pyx_v_labels.strides[1]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_1);
-      __pyx_t_4 = __Pyx_PyInt_From_int(__pyx_v_width); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_4);
-      __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_height); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __pyx_t_13 = PyTuple_New(7); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_13);
-      __Pyx_INCREF(__pyx_n_u_loop);
-      __Pyx_GIVEREF(__pyx_n_u_loop);
-      PyTuple_SET_ITEM(__pyx_t_13, 0, __pyx_n_u_loop);
-      __Pyx_GIVEREF(__pyx_t_6);
-      PyTuple_SET_ITEM(__pyx_t_13, 1, __pyx_t_6);
-      __Pyx_GIVEREF(__pyx_t_2);
-      PyTuple_SET_ITEM(__pyx_t_13, 2, __pyx_t_2);
-      __Pyx_GIVEREF(__pyx_t_3);
-      PyTuple_SET_ITEM(__pyx_t_13, 3, __pyx_t_3);
-      __Pyx_GIVEREF(__pyx_t_1);
-      PyTuple_SET_ITEM(__pyx_t_13, 4, __pyx_t_1);
-      __Pyx_GIVEREF(__pyx_t_4);
-      PyTuple_SET_ITEM(__pyx_t_13, 5, __pyx_t_4);
-      __Pyx_GIVEREF(__pyx_t_12);
-      PyTuple_SET_ITEM(__pyx_t_13, 6, __pyx_t_12);
-      __pyx_t_6 = 0;
-      __pyx_t_2 = 0;
-      __pyx_t_3 = 0;
-      __pyx_t_1 = 0;
-      __pyx_t_4 = 0;
-      __pyx_t_12 = 0;
-      __pyx_t_12 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_13, NULL); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 89, __pyx_L1_error)
-      __Pyx_GOTREF(__pyx_t_12);
-      __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-      __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
-
-      /* "upolygon/find_contours.pyx":90
- *         while image[py][px] == 0 and px < width:
- *             print("loop", px, py, image[py][px], labels[py][px], width, height)
  *             px += 1             # <<<<<<<<<<<<<<
- *         print(px, py, image[py][px], labels[py][px])
  *         if image[py][px] == 1:
+ *             handled = False
  */
       __pyx_v_px = (__pyx_v_px + 1);
     }
 
-    /* "upolygon/find_contours.pyx":91
- *             print("loop", px, py, image[py][px], labels[py][px], width, height)
+    /* "upolygon/find_contours.pyx":86
+ *         while image[py][px] == 0 and px < width:
  *             px += 1
- *         print(px, py, image[py][px], labels[py][px])             # <<<<<<<<<<<<<<
- *         if image[py][px] == 1:
- *             handled = False
- */
-    __pyx_t_12 = __Pyx_PyInt_From_int(__pyx_v_px); if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_12);
-    __pyx_t_13 = __Pyx_PyInt_From_int(__pyx_v_py); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_13);
-    __pyx_t_10 = __pyx_v_py;
-    __pyx_t_9 = __pyx_v_px;
-    __pyx_t_4 = __Pyx_PyInt_From_unsigned_char((*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_image.data + __pyx_t_10 * __pyx_v_image.strides[0]) ) + __pyx_t_9 * __pyx_v_image.strides[1]) )))); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_9 = __pyx_v_py;
-    __pyx_t_10 = __pyx_v_px;
-    __pyx_t_1 = __Pyx_PyInt_From_char((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_10 * __pyx_v_labels.strides[1]) )))); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_3 = PyTuple_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_3);
-    __Pyx_GIVEREF(__pyx_t_12);
-    PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_12);
-    __Pyx_GIVEREF(__pyx_t_13);
-    PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_t_13);
-    __Pyx_GIVEREF(__pyx_t_4);
-    PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_t_4);
-    __Pyx_GIVEREF(__pyx_t_1);
-    PyTuple_SET_ITEM(__pyx_t_3, 3, __pyx_t_1);
-    __pyx_t_12 = 0;
-    __pyx_t_13 = 0;
-    __pyx_t_4 = 0;
-    __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_t_3, NULL); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 91, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_1);
-    __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-    /* "upolygon/find_contours.pyx":92
- *             px += 1
- *         print(px, py, image[py][px], labels[py][px])
  *         if image[py][px] == 1:             # <<<<<<<<<<<<<<
  *             handled = False
  *             # STEP 1
@@ -3139,8 +2852,8 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
     __pyx_t_8 = (((*((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_image.data + __pyx_t_10 * __pyx_v_image.strides[0]) ) + __pyx_t_9 * __pyx_v_image.strides[1]) ))) == 1) != 0);
     if (__pyx_t_8) {
 
-      /* "upolygon/find_contours.pyx":93
- *         print(px, py, image[py][px], labels[py][px])
+      /* "upolygon/find_contours.pyx":87
+ *             px += 1
  *         if image[py][px] == 1:
  *             handled = False             # <<<<<<<<<<<<<<
  *             # STEP 1
@@ -3148,7 +2861,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       __pyx_v_handled = 0;
 
-      /* "upolygon/find_contours.pyx":95
+      /* "upolygon/find_contours.pyx":89
  *             handled = False
  *             # STEP 1
  *             if labels[py][px] == 0 and image[py-1][px] == 0:             # <<<<<<<<<<<<<<
@@ -3170,7 +2883,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
       __pyx_L11_bool_binop_done:;
       if (__pyx_t_8) {
 
-        /* "upolygon/find_contours.pyx":96
+        /* "upolygon/find_contours.pyx":90
  *             # STEP 1
  *             if labels[py][px] == 0 and image[py-1][px] == 0:
  *                 labels[py][px] = c             # <<<<<<<<<<<<<<
@@ -3181,28 +2894,28 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
         __pyx_t_10 = __pyx_v_px;
         *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_10 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
-        /* "upolygon/find_contours.pyx":97
+        /* "upolygon/find_contours.pyx":91
  *             if labels[py][px] == 0 and image[py-1][px] == 0:
  *                 labels[py][px] = c
  *                 path = contour_trace(px, py, c, image, labels, 0)             # <<<<<<<<<<<<<<
  *                 outer_paths.append(path)
  *                 c += 1
  */
-        __pyx_t_1 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, __pyx_v_c, __pyx_v_image, __pyx_v_labels, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 97, __pyx_L1_error)
-        __Pyx_GOTREF(__pyx_t_1);
-        __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
-        __pyx_t_1 = 0;
+        __pyx_t_6 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, __pyx_v_c, __pyx_v_image, __pyx_v_labels, 0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 91, __pyx_L1_error)
+        __Pyx_GOTREF(__pyx_t_6);
+        __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_6);
+        __pyx_t_6 = 0;
 
-        /* "upolygon/find_contours.pyx":98
+        /* "upolygon/find_contours.pyx":92
  *                 labels[py][px] = c
  *                 path = contour_trace(px, py, c, image, labels, 0)
  *                 outer_paths.append(path)             # <<<<<<<<<<<<<<
  *                 c += 1
  *                 handled = True
  */
-        __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_outer_paths, __pyx_v_path); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 98, __pyx_L1_error)
+        __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_outer_paths, __pyx_v_path); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 92, __pyx_L1_error)
 
-        /* "upolygon/find_contours.pyx":99
+        /* "upolygon/find_contours.pyx":93
  *                 path = contour_trace(px, py, c, image, labels, 0)
  *                 outer_paths.append(path)
  *                 c += 1             # <<<<<<<<<<<<<<
@@ -3211,7 +2924,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
         __pyx_v_c = (__pyx_v_c + 1);
 
-        /* "upolygon/find_contours.pyx":100
+        /* "upolygon/find_contours.pyx":94
  *                 outer_paths.append(path)
  *                 c += 1
  *                 handled = True             # <<<<<<<<<<<<<<
@@ -3220,7 +2933,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
         __pyx_v_handled = 1;
 
-        /* "upolygon/find_contours.pyx":95
+        /* "upolygon/find_contours.pyx":89
  *             handled = False
  *             # STEP 1
  *             if labels[py][px] == 0 and image[py-1][px] == 0:             # <<<<<<<<<<<<<<
@@ -3229,7 +2942,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       }
 
-      /* "upolygon/find_contours.pyx":102
+      /* "upolygon/find_contours.pyx":96
  *                 handled = True
  *             # STEP 2
  *             if labels[py+1][px] != -1 and image[py+1][px] == 0:             # <<<<<<<<<<<<<<
@@ -3251,7 +2964,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
       __pyx_L14_bool_binop_done:;
       if (__pyx_t_8) {
 
-        /* "upolygon/find_contours.pyx":103
+        /* "upolygon/find_contours.pyx":97
  *             # STEP 2
  *             if labels[py+1][px] != -1 and image[py+1][px] == 0:
  *                 handled = True             # <<<<<<<<<<<<<<
@@ -3260,7 +2973,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
         __pyx_v_handled = 1;
 
-        /* "upolygon/find_contours.pyx":105
+        /* "upolygon/find_contours.pyx":99
  *                 handled = True
  *                 # unlabeled
  *                 if labels[py][px] == 0:             # <<<<<<<<<<<<<<
@@ -3272,7 +2985,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
         __pyx_t_8 = (((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_10 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) ))) == 0) != 0);
         if (__pyx_t_8) {
 
-          /* "upolygon/find_contours.pyx":106
+          /* "upolygon/find_contours.pyx":100
  *                 # unlabeled
  *                 if labels[py][px] == 0:
  *                     path = contour_trace(px, py, labels[py][px-1], image, labels, 1)             # <<<<<<<<<<<<<<
@@ -3281,12 +2994,12 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
           __pyx_t_9 = __pyx_v_py;
           __pyx_t_10 = (__pyx_v_px - 1);
-          __pyx_t_1 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_10 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 106, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
-          __pyx_t_1 = 0;
+          __pyx_t_6 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_10 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 100, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_6);
+          __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_6);
+          __pyx_t_6 = 0;
 
-          /* "upolygon/find_contours.pyx":105
+          /* "upolygon/find_contours.pyx":99
  *                 handled = True
  *                 # unlabeled
  *                 if labels[py][px] == 0:             # <<<<<<<<<<<<<<
@@ -3296,7 +3009,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
           goto __pyx_L16;
         }
 
-        /* "upolygon/find_contours.pyx":108
+        /* "upolygon/find_contours.pyx":102
  *                     path = contour_trace(px, py, labels[py][px-1], image, labels, 1)
  *                 else:
  *                     path = contour_trace(px, py, labels[py][px], image, labels, 1)             # <<<<<<<<<<<<<<
@@ -3306,23 +3019,23 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
         /*else*/ {
           __pyx_t_10 = __pyx_v_py;
           __pyx_t_9 = __pyx_v_px;
-          __pyx_t_1 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_10 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 108, __pyx_L1_error)
-          __Pyx_GOTREF(__pyx_t_1);
-          __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
-          __pyx_t_1 = 0;
+          __pyx_t_6 = __pyx_f_8upolygon_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_10 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 102, __pyx_L1_error)
+          __Pyx_GOTREF(__pyx_t_6);
+          __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_6);
+          __pyx_t_6 = 0;
         }
         __pyx_L16:;
 
-        /* "upolygon/find_contours.pyx":109
+        /* "upolygon/find_contours.pyx":103
  *                 else:
  *                     path = contour_trace(px, py, labels[py][px], image, labels, 1)
  *                 inner_paths.append(path)             # <<<<<<<<<<<<<<
  *             # STEP 3
  *             if not handled and labels[py][px] == 0:
  */
-        __pyx_t_14 = __Pyx_PyList_Append(__pyx_v_inner_paths, __pyx_v_path); if (unlikely(__pyx_t_14 == ((int)-1))) __PYX_ERR(0, 109, __pyx_L1_error)
+        __pyx_t_12 = __Pyx_PyList_Append(__pyx_v_inner_paths, __pyx_v_path); if (unlikely(__pyx_t_12 == ((int)-1))) __PYX_ERR(0, 103, __pyx_L1_error)
 
-        /* "upolygon/find_contours.pyx":102
+        /* "upolygon/find_contours.pyx":96
  *                 handled = True
  *             # STEP 2
  *             if labels[py+1][px] != -1 and image[py+1][px] == 0:             # <<<<<<<<<<<<<<
@@ -3331,7 +3044,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       }
 
-      /* "upolygon/find_contours.pyx":111
+      /* "upolygon/find_contours.pyx":105
  *                 inner_paths.append(path)
  *             # STEP 3
  *             if not handled and labels[py][px] == 0:             # <<<<<<<<<<<<<<
@@ -3351,7 +3064,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
       __pyx_L18_bool_binop_done:;
       if (__pyx_t_8) {
 
-        /* "upolygon/find_contours.pyx":112
+        /* "upolygon/find_contours.pyx":106
  *             # STEP 3
  *             if not handled and labels[py][px] == 0:
  *                 labels[py][px] = labels[py][px-1]             # <<<<<<<<<<<<<<
@@ -3360,11 +3073,11 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
         __pyx_t_10 = __pyx_v_py;
         __pyx_t_9 = (__pyx_v_px - 1);
-        __pyx_t_15 = __pyx_v_py;
-        __pyx_t_16 = __pyx_v_px;
-        *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_15 * __pyx_v_labels.strides[0]) ) + __pyx_t_16 * __pyx_v_labels.strides[1]) )) = (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_10 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) )));
+        __pyx_t_13 = __pyx_v_py;
+        __pyx_t_14 = __pyx_v_px;
+        *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_13 * __pyx_v_labels.strides[0]) ) + __pyx_t_14 * __pyx_v_labels.strides[1]) )) = (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_10 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) )));
 
-        /* "upolygon/find_contours.pyx":111
+        /* "upolygon/find_contours.pyx":105
  *                 inner_paths.append(path)
  *             # STEP 3
  *             if not handled and labels[py][px] == 0:             # <<<<<<<<<<<<<<
@@ -3373,16 +3086,16 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       }
 
-      /* "upolygon/find_contours.pyx":92
+      /* "upolygon/find_contours.pyx":86
+ *         while image[py][px] == 0 and px < width:
  *             px += 1
- *         print(px, py, image[py][px], labels[py][px])
  *         if image[py][px] == 1:             # <<<<<<<<<<<<<<
  *             handled = False
  *             # STEP 1
  */
     }
 
-    /* "upolygon/find_contours.pyx":113
+    /* "upolygon/find_contours.pyx":107
  *             if not handled and labels[py][px] == 0:
  *                 labels[py][px] = labels[py][px-1]
  *         px += 1             # <<<<<<<<<<<<<<
@@ -3391,7 +3104,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
     __pyx_v_px = (__pyx_v_px + 1);
 
-    /* "upolygon/find_contours.pyx":114
+    /* "upolygon/find_contours.pyx":108
  *                 labels[py][px] = labels[py][px-1]
  *         px += 1
  *         if px > width-1:             # <<<<<<<<<<<<<<
@@ -3401,7 +3114,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
     __pyx_t_8 = ((__pyx_v_px > (__pyx_v_width - 1)) != 0);
     if (__pyx_t_8) {
 
-      /* "upolygon/find_contours.pyx":115
+      /* "upolygon/find_contours.pyx":109
  *         px += 1
  *         if px > width-1:
  *             px = 1             # <<<<<<<<<<<<<<
@@ -3410,7 +3123,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       __pyx_v_px = 1;
 
-      /* "upolygon/find_contours.pyx":116
+      /* "upolygon/find_contours.pyx":110
  *         if px > width-1:
  *             px = 1
  *             py = py + 1             # <<<<<<<<<<<<<<
@@ -3418,7 +3131,7 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
  */
       __pyx_v_py = (__pyx_v_py + 1);
 
-      /* "upolygon/find_contours.pyx":114
+      /* "upolygon/find_contours.pyx":108
  *                 labels[py][px] = labels[py][px-1]
  *         px += 1
  *         if px > width-1:             # <<<<<<<<<<<<<<
@@ -3428,30 +3141,30 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
     }
   }
 
-  /* "upolygon/find_contours.pyx":117
+  /* "upolygon/find_contours.pyx":111
  *             px = 1
  *             py = py + 1
  *     return labels, outer_paths, inner_paths             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_labels, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 117, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_3 = PyTuple_New(3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 117, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __Pyx_GIVEREF(__pyx_t_1);
-  PyTuple_SET_ITEM(__pyx_t_3, 0, __pyx_t_1);
+  __pyx_t_6 = __pyx_memoryview_fromslice(__pyx_v_labels, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_6);
+  __pyx_t_2 = PyTuple_New(3); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 111, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __Pyx_GIVEREF(__pyx_t_6);
+  PyTuple_SET_ITEM(__pyx_t_2, 0, __pyx_t_6);
   __Pyx_INCREF(__pyx_v_outer_paths);
   __Pyx_GIVEREF(__pyx_v_outer_paths);
-  PyTuple_SET_ITEM(__pyx_t_3, 1, __pyx_v_outer_paths);
+  PyTuple_SET_ITEM(__pyx_t_2, 1, __pyx_v_outer_paths);
   __Pyx_INCREF(__pyx_v_inner_paths);
   __Pyx_GIVEREF(__pyx_v_inner_paths);
-  PyTuple_SET_ITEM(__pyx_t_3, 2, __pyx_v_inner_paths);
-  __pyx_t_1 = 0;
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
+  PyTuple_SET_ITEM(__pyx_t_2, 2, __pyx_v_inner_paths);
+  __pyx_t_6 = 0;
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/find_contours.pyx":76
+  /* "upolygon/find_contours.pyx":72
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def find_contours(unsigned char[:,:] image):             # <<<<<<<<<<<<<<
@@ -3468,8 +3181,6 @@ static PyObject *__pyx_pf_8upolygon_13find_contours_find_contours(CYTHON_UNUSED 
   __PYX_XDEC_MEMVIEW(&__pyx_t_5, 1);
   __Pyx_XDECREF(__pyx_t_6);
   __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
-  __Pyx_XDECREF(__pyx_t_12);
-  __Pyx_XDECREF(__pyx_t_13);
   __Pyx_AddTraceback("upolygon.find_contours.find_contours", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
@@ -17287,7 +16998,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_View_MemoryView, __pyx_k_View_MemoryView, sizeof(__pyx_k_View_MemoryView), 0, 0, 1, 1},
   {&__pyx_n_s_allocate_buffer, __pyx_k_allocate_buffer, sizeof(__pyx_k_allocate_buffer), 0, 0, 1, 1},
   {&__pyx_n_s_base, __pyx_k_base, sizeof(__pyx_k_base), 0, 0, 1, 1},
-  {&__pyx_kp_u_begin_tracer, __pyx_k_begin_tracer, sizeof(__pyx_k_begin_tracer), 0, 1, 0, 0},
   {&__pyx_n_s_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 0, 1, 1},
   {&__pyx_n_u_c, __pyx_k_c, sizeof(__pyx_k_c), 0, 1, 0, 1},
   {&__pyx_n_s_class, __pyx_k_class, sizeof(__pyx_k_class), 0, 0, 1, 1},
@@ -17300,7 +17010,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_dtype, __pyx_k_dtype, sizeof(__pyx_k_dtype), 0, 0, 1, 1},
   {&__pyx_n_s_dtype_is_object, __pyx_k_dtype_is_object, sizeof(__pyx_k_dtype_is_object), 0, 0, 1, 1},
   {&__pyx_n_s_encode, __pyx_k_encode, sizeof(__pyx_k_encode), 0, 0, 1, 1},
-  {&__pyx_kp_u_end_tracer, __pyx_k_end_tracer, sizeof(__pyx_k_end_tracer), 0, 1, 0, 0},
   {&__pyx_n_s_enumerate, __pyx_k_enumerate, sizeof(__pyx_k_enumerate), 0, 0, 1, 1},
   {&__pyx_n_s_error, __pyx_k_error, sizeof(__pyx_k_error), 0, 0, 1, 1},
   {&__pyx_n_s_find_contours, __pyx_k_find_contours, sizeof(__pyx_k_find_contours), 0, 0, 1, 1},
@@ -17320,7 +17029,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_itemsize, __pyx_k_itemsize, sizeof(__pyx_k_itemsize), 0, 0, 1, 1},
   {&__pyx_kp_s_itemsize_0_for_cython_array, __pyx_k_itemsize_0_for_cython_array, sizeof(__pyx_k_itemsize_0_for_cython_array), 0, 0, 1, 0},
   {&__pyx_n_s_labels, __pyx_k_labels, sizeof(__pyx_k_labels), 0, 0, 1, 1},
-  {&__pyx_n_u_loop, __pyx_k_loop, sizeof(__pyx_k_loop), 0, 1, 0, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_memview, __pyx_k_memview, sizeof(__pyx_k_memview), 0, 0, 1, 1},
   {&__pyx_n_s_mode, __pyx_k_mode, sizeof(__pyx_k_mode), 0, 0, 1, 1},
@@ -17338,7 +17046,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_pad_width, __pyx_k_pad_width, sizeof(__pyx_k_pad_width), 0, 0, 1, 1},
   {&__pyx_n_s_path, __pyx_k_path, sizeof(__pyx_k_path), 0, 0, 1, 1},
   {&__pyx_n_s_pickle, __pyx_k_pickle, sizeof(__pyx_k_pickle), 0, 0, 1, 1},
-  {&__pyx_n_s_print, __pyx_k_print, sizeof(__pyx_k_print), 0, 0, 1, 1},
   {&__pyx_n_s_px, __pyx_k_px, sizeof(__pyx_k_px), 0, 0, 1, 1},
   {&__pyx_n_s_py, __pyx_k_py, sizeof(__pyx_k_py), 0, 0, 1, 1},
   {&__pyx_n_s_pyx_PickleError, __pyx_k_pyx_PickleError, sizeof(__pyx_k_pyx_PickleError), 0, 0, 1, 1},
@@ -17358,7 +17065,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_shape, __pyx_k_shape, sizeof(__pyx_k_shape), 0, 0, 1, 1},
   {&__pyx_n_s_size, __pyx_k_size, sizeof(__pyx_k_size), 0, 0, 1, 1},
   {&__pyx_n_s_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 0, 1, 1},
-  {&__pyx_n_u_start, __pyx_k_start, sizeof(__pyx_k_start), 0, 1, 0, 1},
   {&__pyx_n_s_step, __pyx_k_step, sizeof(__pyx_k_step), 0, 0, 1, 1},
   {&__pyx_n_s_stop, __pyx_k_stop, sizeof(__pyx_k_stop), 0, 0, 1, 1},
   {&__pyx_kp_s_strided_and_direct, __pyx_k_strided_and_direct, sizeof(__pyx_k_strided_and_direct), 0, 0, 1, 0},
@@ -17379,7 +17085,6 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
   __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 26, __pyx_L1_error)
-  __pyx_builtin_print = __Pyx_GetBuiltinName(__pyx_n_s_print); if (!__pyx_builtin_print) __PYX_ERR(0, 48, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
@@ -17588,17 +17293,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__18);
   __Pyx_GIVEREF(__pyx_tuple__18);
 
-  /* "upolygon/find_contours.pyx":76
+  /* "upolygon/find_contours.pyx":72
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def find_contours(unsigned char[:,:] image):             # <<<<<<<<<<<<<<
  *     cdef int px = 1
  *     cdef int py = 1
  */
-  __pyx_tuple__19 = PyTuple_Pack(12, __pyx_n_s_image, __pyx_n_s_image, __pyx_n_s_px, __pyx_n_s_py, __pyx_n_s_c, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_labels, __pyx_n_s_inner_paths, __pyx_n_s_outer_paths, __pyx_n_s_handled, __pyx_n_s_path); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_tuple__19 = PyTuple_Pack(12, __pyx_n_s_image, __pyx_n_s_image, __pyx_n_s_px, __pyx_n_s_py, __pyx_n_s_c, __pyx_n_s_width, __pyx_n_s_height, __pyx_n_s_labels, __pyx_n_s_inner_paths, __pyx_n_s_outer_paths, __pyx_n_s_handled, __pyx_n_s_path); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_find_contours_pyx, __pyx_n_s_find_contours, 76, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 12, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_find_contours_pyx, __pyx_n_s_find_contours, 72, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 72, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -18059,16 +17764,16 @@ if (!__Pyx_RefNanny) {
   __pyx_t_3[7] = -1;
   __pyx_v_8upolygon_13find_contours_directions_y = __pyx_t_3;
 
-  /* "upolygon/find_contours.pyx":76
+  /* "upolygon/find_contours.pyx":72
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def find_contours(unsigned char[:,:] image):             # <<<<<<<<<<<<<<
  *     cdef int px = 1
  *     cdef int py = 1
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_13find_contours_1find_contours, NULL, __pyx_n_s_upolygon_find_contours); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 76, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_13find_contours_1find_contours, NULL, __pyx_n_s_upolygon_find_contours); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_contours, __pyx_t_1) < 0) __PYX_ERR(0, 76, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_find_contours, __pyx_t_1) < 0) __PYX_ERR(0, 72, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "upolygon/find_contours.pyx":1
@@ -18311,26 +18016,6 @@ static CYTHON_INLINE long __Pyx_mod_long(long a, long b) {
     return r;
 }
 
-/* PyObjectCall */
-#if CYTHON_COMPILING_IN_CPYTHON
-static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw) {
-    PyObject *result;
-    ternaryfunc call = func->ob_type->tp_call;
-    if (unlikely(!call))
-        return PyObject_Call(func, arg, kw);
-    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
-        return NULL;
-    result = (*call)(func, arg, kw);
-    Py_LeaveRecursiveCall();
-    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
-        PyErr_SetString(
-            PyExc_SystemError,
-            "NULL result without error in PyObject_Call");
-    }
-    return result;
-}
-#endif
-
 /* PyDictVersioning */
 #if CYTHON_USE_DICT_VERSIONS && CYTHON_USE_TYPE_SLOTS
 static CYTHON_INLINE PY_UINT64_T __Pyx_get_tp_dict_version(PyObject *obj) {
@@ -18391,6 +18076,26 @@ static CYTHON_INLINE PyObject *__Pyx__GetModuleGlobalName(PyObject *name)
 #endif
     return __Pyx_GetBuiltinName(name);
 }
+
+/* PyObjectCall */
+#if CYTHON_COMPILING_IN_CPYTHON
+static CYTHON_INLINE PyObject* __Pyx_PyObject_Call(PyObject *func, PyObject *arg, PyObject *kw) {
+    PyObject *result;
+    ternaryfunc call = func->ob_type->tp_call;
+    if (unlikely(!call))
+        return PyObject_Call(func, arg, kw);
+    if (unlikely(Py_EnterRecursiveCall((char*)" while calling a Python object")))
+        return NULL;
+    result = (*call)(func, arg, kw);
+    Py_LeaveRecursiveCall();
+    if (unlikely(!result) && unlikely(!PyErr_Occurred())) {
+        PyErr_SetString(
+            PyExc_SystemError,
+            "NULL result without error in PyObject_Call");
+    }
+    return result;
+}
+#endif
 
 /* MemviewSliceInit */
 static int
@@ -21337,6 +21042,18 @@ __pyx_fail:
     }
 }
 
+/* MemviewDtypeToObject */
+  static CYTHON_INLINE PyObject *__pyx_memview_get_unsigned_char(const char *itemp) {
+    return (PyObject *) __Pyx_PyInt_From_unsigned_char(*(unsigned char *) itemp);
+}
+static CYTHON_INLINE int __pyx_memview_set_unsigned_char(const char *itemp, PyObject *obj) {
+    unsigned char value = __Pyx_PyInt_As_unsigned_char(obj);
+    if ((value == (unsigned char)-1) && PyErr_Occurred())
+        return 0;
+    *(unsigned char *) itemp = value;
+    return 1;
+}
+
 /* CIntToPy */
   static CYTHON_INLINE PyObject* __Pyx_PyInt_From_char(char value) {
     const char neg_one = (char) ((char) 0 - (char) 1), const_zero = (char) 0;
@@ -21377,18 +21094,6 @@ static CYTHON_INLINE int __pyx_memview_set_char(const char *itemp, PyObject *obj
     if ((value == (char)-1) && PyErr_Occurred())
         return 0;
     *(char *) itemp = value;
-    return 1;
-}
-
-/* MemviewDtypeToObject */
-  static CYTHON_INLINE PyObject *__pyx_memview_get_unsigned_char(const char *itemp) {
-    return (PyObject *) __Pyx_PyInt_From_unsigned_char(*(unsigned char *) itemp);
-}
-static CYTHON_INLINE int __pyx_memview_set_unsigned_char(const char *itemp, PyObject *obj) {
-    unsigned char value = __Pyx_PyInt_As_unsigned_char(obj);
-    if ((value == (unsigned char)-1) && PyErr_Occurred())
-        return 0;
-    *(unsigned char *) itemp = value;
     return 1;
 }
 
@@ -21649,195 +21354,6 @@ raise_neg_overflow:
 }
 
 /* CIntFromPy */
-  static CYTHON_INLINE char __Pyx_PyInt_As_char(PyObject *x) {
-    const char neg_one = (char) ((char) 0 - (char) 1), const_zero = (char) 0;
-    const int is_unsigned = neg_one > const_zero;
-#if PY_MAJOR_VERSION < 3
-    if (likely(PyInt_Check(x))) {
-        if (sizeof(char) < sizeof(long)) {
-            __PYX_VERIFY_RETURN_INT(char, long, PyInt_AS_LONG(x))
-        } else {
-            long val = PyInt_AS_LONG(x);
-            if (is_unsigned && unlikely(val < 0)) {
-                goto raise_neg_overflow;
-            }
-            return (char) val;
-        }
-    } else
-#endif
-    if (likely(PyLong_Check(x))) {
-        if (is_unsigned) {
-#if CYTHON_USE_PYLONG_INTERNALS
-            const digit* digits = ((PyLongObject*)x)->ob_digit;
-            switch (Py_SIZE(x)) {
-                case  0: return (char) 0;
-                case  1: __PYX_VERIFY_RETURN_INT(char, digit, digits[0])
-                case 2:
-                    if (8 * sizeof(char) > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) >= 2 * PyLong_SHIFT) {
-                            return (char) (((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
-                        }
-                    }
-                    break;
-                case 3:
-                    if (8 * sizeof(char) > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) >= 3 * PyLong_SHIFT) {
-                            return (char) (((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
-                        }
-                    }
-                    break;
-                case 4:
-                    if (8 * sizeof(char) > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) >= 4 * PyLong_SHIFT) {
-                            return (char) (((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
-                        }
-                    }
-                    break;
-            }
-#endif
-#if CYTHON_COMPILING_IN_CPYTHON
-            if (unlikely(Py_SIZE(x) < 0)) {
-                goto raise_neg_overflow;
-            }
-#else
-            {
-                int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
-                if (unlikely(result < 0))
-                    return (char) -1;
-                if (unlikely(result == 1))
-                    goto raise_neg_overflow;
-            }
-#endif
-            if (sizeof(char) <= sizeof(unsigned long)) {
-                __PYX_VERIFY_RETURN_INT_EXC(char, unsigned long, PyLong_AsUnsignedLong(x))
-#ifdef HAVE_LONG_LONG
-            } else if (sizeof(char) <= sizeof(unsigned PY_LONG_LONG)) {
-                __PYX_VERIFY_RETURN_INT_EXC(char, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
-#endif
-            }
-        } else {
-#if CYTHON_USE_PYLONG_INTERNALS
-            const digit* digits = ((PyLongObject*)x)->ob_digit;
-            switch (Py_SIZE(x)) {
-                case  0: return (char) 0;
-                case -1: __PYX_VERIFY_RETURN_INT(char, sdigit, (sdigit) (-(sdigit)digits[0]))
-                case  1: __PYX_VERIFY_RETURN_INT(char,  digit, +digits[0])
-                case -2:
-                    if (8 * sizeof(char) - 1 > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
-                            return (char) (((char)-1)*(((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-                case 2:
-                    if (8 * sizeof(char) > 1 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
-                            return (char) ((((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-                case -3:
-                    if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
-                            return (char) (((char)-1)*(((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-                case 3:
-                    if (8 * sizeof(char) > 2 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
-                            return (char) ((((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-                case -4:
-                    if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 4 * PyLong_SHIFT) {
-                            return (char) (((char)-1)*(((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-                case 4:
-                    if (8 * sizeof(char) > 3 * PyLong_SHIFT) {
-                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
-                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                        } else if (8 * sizeof(char) - 1 > 4 * PyLong_SHIFT) {
-                            return (char) ((((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
-                        }
-                    }
-                    break;
-            }
-#endif
-            if (sizeof(char) <= sizeof(long)) {
-                __PYX_VERIFY_RETURN_INT_EXC(char, long, PyLong_AsLong(x))
-#ifdef HAVE_LONG_LONG
-            } else if (sizeof(char) <= sizeof(PY_LONG_LONG)) {
-                __PYX_VERIFY_RETURN_INT_EXC(char, PY_LONG_LONG, PyLong_AsLongLong(x))
-#endif
-            }
-        }
-        {
-#if CYTHON_COMPILING_IN_PYPY && !defined(_PyLong_AsByteArray)
-            PyErr_SetString(PyExc_RuntimeError,
-                            "_PyLong_AsByteArray() not available in PyPy, cannot convert large numbers");
-#else
-            char val;
-            PyObject *v = __Pyx_PyNumber_IntOrLong(x);
- #if PY_MAJOR_VERSION < 3
-            if (likely(v) && !PyLong_Check(v)) {
-                PyObject *tmp = v;
-                v = PyNumber_Long(tmp);
-                Py_DECREF(tmp);
-            }
- #endif
-            if (likely(v)) {
-                int one = 1; int is_little = (int)*(unsigned char *)&one;
-                unsigned char *bytes = (unsigned char *)&val;
-                int ret = _PyLong_AsByteArray((PyLongObject *)v,
-                                              bytes, sizeof(val),
-                                              is_little, !is_unsigned);
-                Py_DECREF(v);
-                if (likely(!ret))
-                    return val;
-            }
-#endif
-            return (char) -1;
-        }
-    } else {
-        char val;
-        PyObject *tmp = __Pyx_PyNumber_IntOrLong(x);
-        if (!tmp) return (char) -1;
-        val = __Pyx_PyInt_As_char(tmp);
-        Py_DECREF(tmp);
-        return val;
-    }
-raise_overflow:
-    PyErr_SetString(PyExc_OverflowError,
-        "value too large to convert to char");
-    return (char) -1;
-raise_neg_overflow:
-    PyErr_SetString(PyExc_OverflowError,
-        "can't convert negative value to char");
-    return (char) -1;
-}
-
-/* CIntFromPy */
   static CYTHON_INLINE unsigned char __Pyx_PyInt_As_unsigned_char(PyObject *x) {
     const unsigned char neg_one = (unsigned char) ((unsigned char) 0 - (unsigned char) 1), const_zero = (unsigned char) 0;
     const int is_unsigned = neg_one > const_zero;
@@ -22024,6 +21540,195 @@ raise_neg_overflow:
     PyErr_SetString(PyExc_OverflowError,
         "can't convert negative value to unsigned char");
     return (unsigned char) -1;
+}
+
+/* CIntFromPy */
+  static CYTHON_INLINE char __Pyx_PyInt_As_char(PyObject *x) {
+    const char neg_one = (char) ((char) 0 - (char) 1), const_zero = (char) 0;
+    const int is_unsigned = neg_one > const_zero;
+#if PY_MAJOR_VERSION < 3
+    if (likely(PyInt_Check(x))) {
+        if (sizeof(char) < sizeof(long)) {
+            __PYX_VERIFY_RETURN_INT(char, long, PyInt_AS_LONG(x))
+        } else {
+            long val = PyInt_AS_LONG(x);
+            if (is_unsigned && unlikely(val < 0)) {
+                goto raise_neg_overflow;
+            }
+            return (char) val;
+        }
+    } else
+#endif
+    if (likely(PyLong_Check(x))) {
+        if (is_unsigned) {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (char) 0;
+                case  1: __PYX_VERIFY_RETURN_INT(char, digit, digits[0])
+                case 2:
+                    if (8 * sizeof(char) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) >= 2 * PyLong_SHIFT) {
+                            return (char) (((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(char) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) >= 3 * PyLong_SHIFT) {
+                            return (char) (((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(char) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) >= 4 * PyLong_SHIFT) {
+                            return (char) (((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                        }
+                    }
+                    break;
+            }
+#endif
+#if CYTHON_COMPILING_IN_CPYTHON
+            if (unlikely(Py_SIZE(x) < 0)) {
+                goto raise_neg_overflow;
+            }
+#else
+            {
+                int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
+                if (unlikely(result < 0))
+                    return (char) -1;
+                if (unlikely(result == 1))
+                    goto raise_neg_overflow;
+            }
+#endif
+            if (sizeof(char) <= sizeof(unsigned long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(char, unsigned long, PyLong_AsUnsignedLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(char) <= sizeof(unsigned PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(char, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
+#endif
+            }
+        } else {
+#if CYTHON_USE_PYLONG_INTERNALS
+            const digit* digits = ((PyLongObject*)x)->ob_digit;
+            switch (Py_SIZE(x)) {
+                case  0: return (char) 0;
+                case -1: __PYX_VERIFY_RETURN_INT(char, sdigit, (sdigit) (-(sdigit)digits[0]))
+                case  1: __PYX_VERIFY_RETURN_INT(char,  digit, +digits[0])
+                case -2:
+                    if (8 * sizeof(char) - 1 > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
+                            return (char) (((char)-1)*(((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+                case 2:
+                    if (8 * sizeof(char) > 1 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 2 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
+                            return (char) ((((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+                case -3:
+                    if (8 * sizeof(char) - 1 > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
+                            return (char) (((char)-1)*(((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+                case 3:
+                    if (8 * sizeof(char) > 2 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 3 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
+                            return (char) ((((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+                case -4:
+                    if (8 * sizeof(char) - 1 > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 4 * PyLong_SHIFT) {
+                            return (char) (((char)-1)*(((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+                case 4:
+                    if (8 * sizeof(char) > 3 * PyLong_SHIFT) {
+                        if (8 * sizeof(unsigned long) > 4 * PyLong_SHIFT) {
+                            __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                        } else if (8 * sizeof(char) - 1 > 4 * PyLong_SHIFT) {
+                            return (char) ((((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                        }
+                    }
+                    break;
+            }
+#endif
+            if (sizeof(char) <= sizeof(long)) {
+                __PYX_VERIFY_RETURN_INT_EXC(char, long, PyLong_AsLong(x))
+#ifdef HAVE_LONG_LONG
+            } else if (sizeof(char) <= sizeof(PY_LONG_LONG)) {
+                __PYX_VERIFY_RETURN_INT_EXC(char, PY_LONG_LONG, PyLong_AsLongLong(x))
+#endif
+            }
+        }
+        {
+#if CYTHON_COMPILING_IN_PYPY && !defined(_PyLong_AsByteArray)
+            PyErr_SetString(PyExc_RuntimeError,
+                            "_PyLong_AsByteArray() not available in PyPy, cannot convert large numbers");
+#else
+            char val;
+            PyObject *v = __Pyx_PyNumber_IntOrLong(x);
+ #if PY_MAJOR_VERSION < 3
+            if (likely(v) && !PyLong_Check(v)) {
+                PyObject *tmp = v;
+                v = PyNumber_Long(tmp);
+                Py_DECREF(tmp);
+            }
+ #endif
+            if (likely(v)) {
+                int one = 1; int is_little = (int)*(unsigned char *)&one;
+                unsigned char *bytes = (unsigned char *)&val;
+                int ret = _PyLong_AsByteArray((PyLongObject *)v,
+                                              bytes, sizeof(val),
+                                              is_little, !is_unsigned);
+                Py_DECREF(v);
+                if (likely(!ret))
+                    return val;
+            }
+#endif
+            return (char) -1;
+        }
+    } else {
+        char val;
+        PyObject *tmp = __Pyx_PyNumber_IntOrLong(x);
+        if (!tmp) return (char) -1;
+        val = __Pyx_PyInt_As_char(tmp);
+        Py_DECREF(tmp);
+        return val;
+    }
+raise_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "value too large to convert to char");
+    return (char) -1;
+raise_neg_overflow:
+    PyErr_SetString(PyExc_OverflowError,
+        "can't convert negative value to char");
+    return (char) -1;
 }
 
 /* CIntFromPy */
