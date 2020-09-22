@@ -13,7 +13,7 @@ def test_empty_sub_path():
 
 def test_removes_linear_points():
     path = [0, 0, 0, 5, 0, 10, 0, 15]
-    assert simplify_polygon([path], 1) == [[0, 0, 0, 15]]
+    assert simplify_polygon([path], 0) == [[0, 0, 0, 15]]
 
 
 def test_keeps_non_linear_points():
@@ -24,4 +24,9 @@ def test_keeps_non_linear_points():
 def test_respects_epsilon():
     path = [0, 0, 1, 1, 0, 10]
     assert simplify_polygon([path], 1) == [[0, 0, 0, 10]]
-    assert simplify_polygon([path], 0.9) == [[0, 0, 1, 1, 0, 10]]
+    assert simplify_polygon([path], 0.1) == [[0, 0, 1, 1, 0, 10]]
+
+
+def test_handles_repeats():
+    path = [0, 0, 0, 0, 0, 0, 1, 1]
+    assert simplify_polygon([path], 1) == [[0, 0, 1, 1]]

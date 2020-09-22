@@ -1080,9 +1080,6 @@ static CYTHON_INLINE int __Pyx_ListComp_Append(PyObject* list, PyObject* x) {
 #define __Pyx_ListComp_Append(L,x) PyList_Append(L,x)
 #endif
 
-/* Import.proto */
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level);
-
 /* PyThreadStateGet.proto */
 #if CYTHON_FAST_THREAD_STATE
 #define __Pyx_PyThreadState_declare  PyThreadState *__pyx_tstate;
@@ -1190,7 +1187,6 @@ int __pyx_module_is_main_upolygon__simplify_polygon = 0;
 /* Implementation of 'upolygon.simplify_polygon' */
 static PyObject *__pyx_builtin_range;
 static const char __pyx_k_i[] = "i";
-static const char __pyx_k_np[] = "np";
 static const char __pyx_k_end[] = "end";
 static const char __pyx_k_main[] = "__main__";
 static const char __pyx_k_name[] = "__name__";
@@ -1199,10 +1195,8 @@ static const char __pyx_k_res1[] = "res1";
 static const char __pyx_k_res2[] = "res2";
 static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_index[] = "index";
-static const char __pyx_k_numpy[] = "numpy";
 static const char __pyx_k_paths[] = "paths";
 static const char __pyx_k_range[] = "range";
-static const char __pyx_k_import[] = "__import__";
 static const char __pyx_k_epsilon[] = "epsilon";
 static const char __pyx_k_distance[] = "distance";
 static const char __pyx_k_max_distance[] = "max_distance";
@@ -1216,13 +1210,10 @@ static PyObject *__pyx_n_s_distance;
 static PyObject *__pyx_n_s_end;
 static PyObject *__pyx_n_s_epsilon;
 static PyObject *__pyx_n_s_i;
-static PyObject *__pyx_n_s_import;
 static PyObject *__pyx_n_s_index;
 static PyObject *__pyx_n_s_main;
 static PyObject *__pyx_n_s_max_distance;
 static PyObject *__pyx_n_s_name;
-static PyObject *__pyx_n_s_np;
-static PyObject *__pyx_n_s_numpy;
 static PyObject *__pyx_n_s_path;
 static PyObject *__pyx_n_s_paths;
 static PyObject *__pyx_n_s_range;
@@ -1243,56 +1234,98 @@ static PyObject *__pyx_codeobj__2;
 static PyObject *__pyx_codeobj__4;
 /* Late includes */
 
-/* "upolygon/simplify_polygon.pyx":8
+/* "upolygon/simplify_polygon.pyx":7
  * 
  * 
  * cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):             # <<<<<<<<<<<<<<
- *   return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
- * 
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+ *     if dist < 0.0001:
  */
 
 static PyObject *__pyx_f_8upolygon_16simplify_polygon_perpendicular_distance(float __pyx_v_px, float __pyx_v_py, float __pyx_v_ax, float __pyx_v_ay, float __pyx_v_bx, float __pyx_v_by) {
+  float __pyx_v_dist;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
-  float __pyx_t_1;
-  double __pyx_t_2;
-  PyObject *__pyx_t_3 = NULL;
+  int __pyx_t_1;
+  PyObject *__pyx_t_2 = NULL;
+  float __pyx_t_3;
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("perpendicular_distance", 0);
 
-  /* "upolygon/simplify_polygon.pyx":9
+  /* "upolygon/simplify_polygon.pyx":8
  * 
  * cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):
- *   return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))             # <<<<<<<<<<<<<<
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))             # <<<<<<<<<<<<<<
+ *     if dist < 0.0001:
+ *         return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))
+ */
+  __pyx_v_dist = sqrt((((__pyx_v_by - __pyx_v_ay) * (__pyx_v_by - __pyx_v_ay)) + ((__pyx_v_bx - __pyx_v_ax) * (__pyx_v_bx - __pyx_v_ax))));
+
+  /* "upolygon/simplify_polygon.pyx":9
+ * cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+ *     if dist < 0.0001:             # <<<<<<<<<<<<<<
+ *         return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))
+ *     return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / dist
+ */
+  __pyx_t_1 = ((__pyx_v_dist < 0.0001) != 0);
+  if (__pyx_t_1) {
+
+    /* "upolygon/simplify_polygon.pyx":10
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+ *     if dist < 0.0001:
+ *         return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))             # <<<<<<<<<<<<<<
+ *     return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / dist
+ * 
+ */
+    __Pyx_XDECREF(__pyx_r);
+    __pyx_t_2 = PyFloat_FromDouble(sqrt((((__pyx_v_py - __pyx_v_ay) * (__pyx_v_py - __pyx_v_ay)) + ((__pyx_v_px - __pyx_v_ax) * (__pyx_v_px - __pyx_v_ax))))); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 10, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_2);
+    __pyx_r = __pyx_t_2;
+    __pyx_t_2 = 0;
+    goto __pyx_L0;
+
+    /* "upolygon/simplify_polygon.pyx":9
+ * cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+ *     if dist < 0.0001:             # <<<<<<<<<<<<<<
+ *         return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))
+ *     return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / dist
+ */
+  }
+
+  /* "upolygon/simplify_polygon.pyx":11
+ *     if dist < 0.0001:
+ *         return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))
+ *     return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / dist             # <<<<<<<<<<<<<<
  * 
  * @cython.boundscheck(False)
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = fabsf((((((__pyx_v_by - __pyx_v_ay) * __pyx_v_px) - ((__pyx_v_bx - __pyx_v_ax) * __pyx_v_py)) + (__pyx_v_bx * __pyx_v_ay)) - (__pyx_v_by * __pyx_v_ax)));
-  __pyx_t_2 = sqrt((((__pyx_v_by - __pyx_v_ay) * (__pyx_v_by - __pyx_v_ay)) + ((__pyx_v_bx - __pyx_v_ax) * (__pyx_v_bx - __pyx_v_ax))));
-  if (unlikely(__pyx_t_2 == 0)) {
+  __pyx_t_3 = fabsf((((((__pyx_v_by - __pyx_v_ay) * __pyx_v_px) - ((__pyx_v_bx - __pyx_v_ax) * __pyx_v_py)) + (__pyx_v_bx * __pyx_v_ay)) - (__pyx_v_by * __pyx_v_ax)));
+  if (unlikely(__pyx_v_dist == 0)) {
     PyErr_SetString(PyExc_ZeroDivisionError, "float division");
-    __PYX_ERR(0, 9, __pyx_L1_error)
+    __PYX_ERR(0, 11, __pyx_L1_error)
   }
-  __pyx_t_3 = PyFloat_FromDouble((((double)__pyx_t_1) / __pyx_t_2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 9, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_3);
-  __pyx_r = __pyx_t_3;
-  __pyx_t_3 = 0;
+  __pyx_t_2 = PyFloat_FromDouble((__pyx_t_3 / __pyx_v_dist)); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 11, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_2);
+  __pyx_r = __pyx_t_2;
+  __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/simplify_polygon.pyx":8
+  /* "upolygon/simplify_polygon.pyx":7
  * 
  * 
  * cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):             # <<<<<<<<<<<<<<
- *   return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
- * 
+ *     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+ *     if dist < 0.0001:
  */
 
   /* function exit code */
   __pyx_L1_error:;
-  __Pyx_XDECREF(__pyx_t_3);
+  __Pyx_XDECREF(__pyx_t_2);
   __Pyx_AddTraceback("upolygon.simplify_polygon.perpendicular_distance", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = 0;
   __pyx_L0:;
@@ -1301,7 +1334,7 @@ static PyObject *__pyx_f_8upolygon_16simplify_polygon_perpendicular_distance(flo
   return __pyx_r;
 }
 
-/* "upolygon/simplify_polygon.pyx":14
+/* "upolygon/simplify_polygon.pyx":16
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):             # <<<<<<<<<<<<<<
@@ -1344,11 +1377,11 @@ static PyObject *__pyx_pw_8upolygon_16simplify_polygon_1simplify_single_polygon(
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_epsilon)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simplify_single_polygon", 1, 2, 2, 1); __PYX_ERR(0, 14, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simplify_single_polygon", 1, 2, 2, 1); __PYX_ERR(0, 16, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simplify_single_polygon") < 0)) __PYX_ERR(0, 14, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simplify_single_polygon") < 0)) __PYX_ERR(0, 16, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1357,17 +1390,17 @@ static PyObject *__pyx_pw_8upolygon_16simplify_polygon_1simplify_single_polygon(
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_path = ((PyObject*)values[0]);
-    __pyx_v_epsilon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_epsilon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 14, __pyx_L3_error)
+    __pyx_v_epsilon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_epsilon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 16, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("simplify_single_polygon", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 14, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("simplify_single_polygon", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 16, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.simplify_polygon.simplify_single_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_path), (&PyList_Type), 1, "path", 1))) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_path), (&PyList_Type), 1, "path", 1))) __PYX_ERR(0, 16, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(__pyx_self, __pyx_v_path, __pyx_v_epsilon);
 
   /* function exit code */
@@ -1380,7 +1413,7 @@ static PyObject *__pyx_pw_8upolygon_16simplify_polygon_1simplify_single_polygon(
 }
 
 static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_path, float __pyx_v_epsilon) {
-  int __pyx_v_max_distance;
+  float __pyx_v_max_distance;
   int __pyx_v_index;
   int __pyx_v_end;
   PyObject *__pyx_v_i = NULL;
@@ -1412,26 +1445,26 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("simplify_single_polygon", 0);
 
-  /* "upolygon/simplify_polygon.pyx":15
+  /* "upolygon/simplify_polygon.pyx":17
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):
  *     if len(path) <= 1:             # <<<<<<<<<<<<<<
  *         return path
- *     cdef int max_distance = 0
+ *     cdef float max_distance = 0
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 15, __pyx_L1_error)
+    __PYX_ERR(0, 17, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 15, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 17, __pyx_L1_error)
   __pyx_t_2 = ((__pyx_t_1 <= 1) != 0);
   if (__pyx_t_2) {
 
-    /* "upolygon/simplify_polygon.pyx":16
+    /* "upolygon/simplify_polygon.pyx":18
  * def simplify_single_polygon(list path, float epsilon):
  *     if len(path) <= 1:
  *         return path             # <<<<<<<<<<<<<<
- *     cdef int max_distance = 0
+ *     cdef float max_distance = 0
  *     cdef int index = 0
  */
     __Pyx_XDECREF(__pyx_r);
@@ -1439,35 +1472,35 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     __pyx_r = __pyx_v_path;
     goto __pyx_L0;
 
-    /* "upolygon/simplify_polygon.pyx":15
+    /* "upolygon/simplify_polygon.pyx":17
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):
  *     if len(path) <= 1:             # <<<<<<<<<<<<<<
  *         return path
- *     cdef int max_distance = 0
+ *     cdef float max_distance = 0
  */
   }
 
-  /* "upolygon/simplify_polygon.pyx":17
+  /* "upolygon/simplify_polygon.pyx":19
  *     if len(path) <= 1:
  *         return path
- *     cdef int max_distance = 0             # <<<<<<<<<<<<<<
+ *     cdef float max_distance = 0             # <<<<<<<<<<<<<<
  *     cdef int index = 0
  *     cdef int end = len(path) // 2 - 1
  */
-  __pyx_v_max_distance = 0;
+  __pyx_v_max_distance = 0.0;
 
-  /* "upolygon/simplify_polygon.pyx":18
+  /* "upolygon/simplify_polygon.pyx":20
  *         return path
- *     cdef int max_distance = 0
+ *     cdef float max_distance = 0
  *     cdef int index = 0             # <<<<<<<<<<<<<<
  *     cdef int end = len(path) // 2 - 1
  *     for i in range(1, end):
  */
   __pyx_v_index = 0;
 
-  /* "upolygon/simplify_polygon.pyx":19
- *     cdef int max_distance = 0
+  /* "upolygon/simplify_polygon.pyx":21
+ *     cdef float max_distance = 0
  *     cdef int index = 0
  *     cdef int end = len(path) // 2 - 1             # <<<<<<<<<<<<<<
  *     for i in range(1, end):
@@ -1475,21 +1508,21 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 19, __pyx_L1_error)
+    __PYX_ERR(0, 21, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 19, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 21, __pyx_L1_error)
   __pyx_v_end = (__Pyx_div_Py_ssize_t(__pyx_t_1, 2) - 1);
 
-  /* "upolygon/simplify_polygon.pyx":20
+  /* "upolygon/simplify_polygon.pyx":22
  *     cdef int index = 0
  *     cdef int end = len(path) // 2 - 1
  *     for i in range(1, end):             # <<<<<<<<<<<<<<
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
- *         if distance >= max_distance:
+ *         if distance > max_distance:
  */
-  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_From_int(__pyx_v_end); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
-  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_4 = PyTuple_New(2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_INCREF(__pyx_int_1);
   __Pyx_GIVEREF(__pyx_int_1);
@@ -1497,16 +1530,16 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
   __Pyx_GIVEREF(__pyx_t_3);
   PyTuple_SET_ITEM(__pyx_t_4, 1, __pyx_t_3);
   __pyx_t_3 = 0;
-  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyObject_Call(__pyx_builtin_range, __pyx_t_4, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_3);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   if (likely(PyList_CheckExact(__pyx_t_3)) || PyTuple_CheckExact(__pyx_t_3)) {
     __pyx_t_4 = __pyx_t_3; __Pyx_INCREF(__pyx_t_4); __pyx_t_1 = 0;
     __pyx_t_5 = NULL;
   } else {
-    __pyx_t_1 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 20, __pyx_L1_error)
+    __pyx_t_1 = -1; __pyx_t_4 = PyObject_GetIter(__pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 22, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 20, __pyx_L1_error)
+    __pyx_t_5 = Py_TYPE(__pyx_t_4)->tp_iternext; if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 22, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
   for (;;) {
@@ -1514,17 +1547,17 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
       if (likely(PyList_CheckExact(__pyx_t_4))) {
         if (__pyx_t_1 >= PyList_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_1); __Pyx_INCREF(__pyx_t_3); __pyx_t_1++; if (unlikely(0 < 0)) __PYX_ERR(0, 20, __pyx_L1_error)
+        __pyx_t_3 = PyList_GET_ITEM(__pyx_t_4, __pyx_t_1); __Pyx_INCREF(__pyx_t_3); __pyx_t_1++; if (unlikely(0 < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_1); __pyx_t_1++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_1); __pyx_t_1++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       } else {
         if (__pyx_t_1 >= PyTuple_GET_SIZE(__pyx_t_4)) break;
         #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_1); __Pyx_INCREF(__pyx_t_3); __pyx_t_1++; if (unlikely(0 < 0)) __PYX_ERR(0, 20, __pyx_L1_error)
+        __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_4, __pyx_t_1); __Pyx_INCREF(__pyx_t_3); __pyx_t_1++; if (unlikely(0 < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
         #else
-        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_1); __pyx_t_1++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 20, __pyx_L1_error)
+        __pyx_t_3 = PySequence_ITEM(__pyx_t_4, __pyx_t_1); __pyx_t_1++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_3);
         #endif
       }
@@ -1534,7 +1567,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
         PyObject* exc_type = PyErr_Occurred();
         if (exc_type) {
           if (likely(__Pyx_PyErr_GivenExceptionMatches(exc_type, PyExc_StopIteration))) PyErr_Clear();
-          else __PYX_ERR(0, 20, __pyx_L1_error)
+          else __PYX_ERR(0, 22, __pyx_L1_error)
         }
         break;
       }
@@ -1543,120 +1576,120 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     __Pyx_XDECREF_SET(__pyx_v_i, __pyx_t_3);
     __pyx_t_3 = 0;
 
-    /* "upolygon/simplify_polygon.pyx":21
+    /* "upolygon/simplify_polygon.pyx":23
  *     cdef int end = len(path) // 2 - 1
  *     for i in range(1, end):
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])             # <<<<<<<<<<<<<<
- *         if distance >= max_distance:
+ *         if distance > max_distance:
  *             max_distance = distance
  */
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
-    __pyx_t_3 = PyNumber_Multiply(__pyx_int_2, __pyx_v_i); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Multiply(__pyx_int_2, __pyx_v_i); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_path, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_path, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_6); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_7 = __pyx_PyFloat_AsFloat(__pyx_t_6); if (unlikely((__pyx_t_7 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
-    __pyx_t_6 = PyNumber_Multiply(__pyx_int_2, __pyx_v_i); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_6 = PyNumber_Multiply(__pyx_int_2, __pyx_v_i); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_6, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyInt_AddObjC(__pyx_t_6, __pyx_int_1, 1, 0, 0); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_path, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_GetItem(__pyx_v_path, __pyx_t_3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-    __pyx_t_8 = __pyx_PyFloat_AsFloat(__pyx_t_6); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_8 = __pyx_PyFloat_AsFloat(__pyx_t_6); if (unlikely((__pyx_t_8 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
-    __pyx_t_9 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, 0)); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_9 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, 0)); if (unlikely((__pyx_t_9 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
-    __pyx_t_10 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, 1)); if (unlikely((__pyx_t_10 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_10 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, 1)); if (unlikely((__pyx_t_10 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
     __pyx_t_11 = (2 * __pyx_v_end);
-    __pyx_t_12 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, __pyx_t_11)); if (unlikely((__pyx_t_12 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_12 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, __pyx_t_11)); if (unlikely((__pyx_t_12 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 21, __pyx_L1_error)
+      __PYX_ERR(0, 23, __pyx_L1_error)
     }
     __pyx_t_11 = ((2 * __pyx_v_end) + 1);
-    __pyx_t_13 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, __pyx_t_11)); if (unlikely((__pyx_t_13 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 21, __pyx_L1_error)
-    __pyx_t_6 = __pyx_f_8upolygon_16simplify_polygon_perpendicular_distance(__pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_12, __pyx_t_13); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 21, __pyx_L1_error)
+    __pyx_t_13 = __pyx_PyFloat_AsFloat(PyList_GET_ITEM(__pyx_v_path, __pyx_t_11)); if (unlikely((__pyx_t_13 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
+    __pyx_t_6 = __pyx_f_8upolygon_16simplify_polygon_perpendicular_distance(__pyx_t_7, __pyx_t_8, __pyx_t_9, __pyx_t_10, __pyx_t_12, __pyx_t_13); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 23, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_XDECREF_SET(__pyx_v_distance, __pyx_t_6);
     __pyx_t_6 = 0;
 
-    /* "upolygon/simplify_polygon.pyx":22
+    /* "upolygon/simplify_polygon.pyx":24
  *     for i in range(1, end):
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
- *         if distance >= max_distance:             # <<<<<<<<<<<<<<
+ *         if distance > max_distance:             # <<<<<<<<<<<<<<
  *             max_distance = distance
  *             index = i
  */
-    __pyx_t_6 = __Pyx_PyInt_From_int(__pyx_v_max_distance); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 22, __pyx_L1_error)
+    __pyx_t_6 = PyFloat_FromDouble(__pyx_v_max_distance); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 24, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_3 = PyObject_RichCompare(__pyx_v_distance, __pyx_t_6, Py_GE); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 22, __pyx_L1_error)
+    __pyx_t_3 = PyObject_RichCompare(__pyx_v_distance, __pyx_t_6, Py_GT); __Pyx_XGOTREF(__pyx_t_3); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 24, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 22, __pyx_L1_error)
+    __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_3); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 24, __pyx_L1_error)
     __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
     if (__pyx_t_2) {
 
-      /* "upolygon/simplify_polygon.pyx":23
+      /* "upolygon/simplify_polygon.pyx":25
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
- *         if distance >= max_distance:
+ *         if distance > max_distance:
  *             max_distance = distance             # <<<<<<<<<<<<<<
  *             index = i
  * 
  */
-      __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_v_distance); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 23, __pyx_L1_error)
-      __pyx_v_max_distance = __pyx_t_14;
+      __pyx_t_13 = __pyx_PyFloat_AsFloat(__pyx_v_distance); if (unlikely((__pyx_t_13 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 25, __pyx_L1_error)
+      __pyx_v_max_distance = __pyx_t_13;
 
-      /* "upolygon/simplify_polygon.pyx":24
- *         if distance >= max_distance:
+      /* "upolygon/simplify_polygon.pyx":26
+ *         if distance > max_distance:
  *             max_distance = distance
  *             index = i             # <<<<<<<<<<<<<<
  * 
  *     if max_distance > epsilon:
  */
-      __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_v_i); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 24, __pyx_L1_error)
+      __pyx_t_14 = __Pyx_PyInt_As_int(__pyx_v_i); if (unlikely((__pyx_t_14 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 26, __pyx_L1_error)
       __pyx_v_index = __pyx_t_14;
 
-      /* "upolygon/simplify_polygon.pyx":22
+      /* "upolygon/simplify_polygon.pyx":24
  *     for i in range(1, end):
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
- *         if distance >= max_distance:             # <<<<<<<<<<<<<<
+ *         if distance > max_distance:             # <<<<<<<<<<<<<<
  *             max_distance = distance
  *             index = i
  */
     }
 
-    /* "upolygon/simplify_polygon.pyx":20
+    /* "upolygon/simplify_polygon.pyx":22
  *     cdef int index = 0
  *     cdef int end = len(path) // 2 - 1
  *     for i in range(1, end):             # <<<<<<<<<<<<<<
  *         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
- *         if distance >= max_distance:
+ *         if distance > max_distance:
  */
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
 
-  /* "upolygon/simplify_polygon.pyx":26
+  /* "upolygon/simplify_polygon.pyx":28
  *             index = i
  * 
  *     if max_distance > epsilon:             # <<<<<<<<<<<<<<
@@ -1666,22 +1699,22 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
   __pyx_t_2 = ((__pyx_v_max_distance > __pyx_v_epsilon) != 0);
   if (__pyx_t_2) {
 
-    /* "upolygon/simplify_polygon.pyx":27
+    /* "upolygon/simplify_polygon.pyx":29
  * 
  *     if max_distance > epsilon:
  *         res1 = simplify_single_polygon(path[:2*index+2], epsilon)             # <<<<<<<<<<<<<<
  *         res2 = simplify_single_polygon(path[2*index:], epsilon)
  *         return res1[0:len(res1)-2] + res2
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 27, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 27, __pyx_L1_error)
+      __PYX_ERR(0, 29, __pyx_L1_error)
     }
-    __pyx_t_6 = __Pyx_PyList_GetSlice(__pyx_v_path, 0, ((2 * __pyx_v_index) + 2)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 27, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyList_GetSlice(__pyx_v_path, 0, ((2 * __pyx_v_index) + 2)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
-    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 27, __pyx_L1_error)
+    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 29, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __pyx_t_16 = NULL;
     __pyx_t_14 = 0;
@@ -1698,7 +1731,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_t_6, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -1708,7 +1741,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_16, __pyx_t_6, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_16); __pyx_t_16 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -1716,7 +1749,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     } else
     #endif
     {
-      __pyx_t_17 = PyTuple_New(2+__pyx_t_14); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 27, __pyx_L1_error)
+      __pyx_t_17 = PyTuple_New(2+__pyx_t_14); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_17);
       if (__pyx_t_16) {
         __Pyx_GIVEREF(__pyx_t_16); PyTuple_SET_ITEM(__pyx_t_17, 0, __pyx_t_16); __pyx_t_16 = NULL;
@@ -1727,7 +1760,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
       PyTuple_SET_ITEM(__pyx_t_17, 1+__pyx_t_14, __pyx_t_15);
       __pyx_t_6 = 0;
       __pyx_t_15 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_17, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 27, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_17, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
     }
@@ -1735,22 +1768,22 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     __pyx_v_res1 = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "upolygon/simplify_polygon.pyx":28
+    /* "upolygon/simplify_polygon.pyx":30
  *     if max_distance > epsilon:
  *         res1 = simplify_single_polygon(path[:2*index+2], epsilon)
  *         res2 = simplify_single_polygon(path[2*index:], epsilon)             # <<<<<<<<<<<<<<
  *         return res1[0:len(res1)-2] + res2
  *     else:
  */
-    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 28, __pyx_L1_error)
+      __PYX_ERR(0, 30, __pyx_L1_error)
     }
-    __pyx_t_17 = __Pyx_PyList_GetSlice(__pyx_v_path, (2 * __pyx_v_index), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_17 = __Pyx_PyList_GetSlice(__pyx_v_path, (2 * __pyx_v_index), PY_SSIZE_T_MAX); if (unlikely(!__pyx_t_17)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_17);
-    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 28, __pyx_L1_error)
+    __pyx_t_15 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_15)) __PYX_ERR(0, 30, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_15);
     __pyx_t_6 = NULL;
     __pyx_t_14 = 0;
@@ -1767,7 +1800,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     #if CYTHON_FAST_PYCALL
     if (PyFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_17, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
@@ -1777,7 +1810,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     #if CYTHON_FAST_PYCCALL
     if (__Pyx_PyFastCFunction_Check(__pyx_t_3)) {
       PyObject *__pyx_temp[3] = {__pyx_t_6, __pyx_t_17, __pyx_t_15};
-      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_3, __pyx_temp+1-__pyx_t_14, 2+__pyx_t_14); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_XDECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_17); __pyx_t_17 = 0;
@@ -1785,7 +1818,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     } else
     #endif
     {
-      __pyx_t_16 = PyTuple_New(2+__pyx_t_14); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_16 = PyTuple_New(2+__pyx_t_14); if (unlikely(!__pyx_t_16)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_16);
       if (__pyx_t_6) {
         __Pyx_GIVEREF(__pyx_t_6); PyTuple_SET_ITEM(__pyx_t_16, 0, __pyx_t_6); __pyx_t_6 = NULL;
@@ -1796,7 +1829,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
       PyTuple_SET_ITEM(__pyx_t_16, 1+__pyx_t_14, __pyx_t_15);
       __pyx_t_17 = 0;
       __pyx_t_15 = 0;
-      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_16, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 28, __pyx_L1_error)
+      __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_t_16, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 30, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_4);
       __Pyx_DECREF(__pyx_t_16); __pyx_t_16 = 0;
     }
@@ -1804,7 +1837,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     __pyx_v_res2 = __pyx_t_4;
     __pyx_t_4 = 0;
 
-    /* "upolygon/simplify_polygon.pyx":29
+    /* "upolygon/simplify_polygon.pyx":31
  *         res1 = simplify_single_polygon(path[:2*index+2], epsilon)
  *         res2 = simplify_single_polygon(path[2*index:], epsilon)
  *         return res1[0:len(res1)-2] + res2             # <<<<<<<<<<<<<<
@@ -1812,17 +1845,17 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
  *         return [path[0], path[1], path[end*2], path[end*2+1]]
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_1 = PyObject_Length(__pyx_v_res1); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 29, __pyx_L1_error)
-    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_res1, 0, (__pyx_t_1 - 2), NULL, NULL, NULL, 1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_1 = PyObject_Length(__pyx_v_res1); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_4 = __Pyx_PyObject_GetSlice(__pyx_v_res1, 0, (__pyx_t_1 - 2), NULL, NULL, NULL, 1, 1, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_4);
-    __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_v_res2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 29, __pyx_L1_error)
+    __pyx_t_3 = PyNumber_Add(__pyx_t_4, __pyx_v_res2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/simplify_polygon.pyx":26
+    /* "upolygon/simplify_polygon.pyx":28
  *             index = i
  * 
  *     if max_distance > epsilon:             # <<<<<<<<<<<<<<
@@ -1831,7 +1864,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
  */
   }
 
-  /* "upolygon/simplify_polygon.pyx":31
+  /* "upolygon/simplify_polygon.pyx":33
  *         return res1[0:len(res1)-2] + res2
  *     else:
  *         return [path[0], path[1], path[end*2], path[end*2+1]]             # <<<<<<<<<<<<<<
@@ -1842,23 +1875,23 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     __Pyx_XDECREF(__pyx_r);
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 31, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 31, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 31, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     __pyx_t_11 = (__pyx_v_end * 2);
     if (unlikely(__pyx_v_path == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 31, __pyx_L1_error)
+      __PYX_ERR(0, 33, __pyx_L1_error)
     }
     __pyx_t_18 = ((__pyx_v_end * 2) + 1);
-    __pyx_t_3 = PyList_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 31, __pyx_L1_error)
+    __pyx_t_3 = PyList_New(4); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 33, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_INCREF(PyList_GET_ITEM(__pyx_v_path, 0));
     __Pyx_GIVEREF(PyList_GET_ITEM(__pyx_v_path, 0));
@@ -1877,7 +1910,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
     goto __pyx_L0;
   }
 
-  /* "upolygon/simplify_polygon.pyx":14
+  /* "upolygon/simplify_polygon.pyx":16
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):             # <<<<<<<<<<<<<<
@@ -1905,7 +1938,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_simplify_single_polygon(C
   return __pyx_r;
 }
 
-/* "upolygon/simplify_polygon.pyx":37
+/* "upolygon/simplify_polygon.pyx":39
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_polygon(list paths, float epsilon):             # <<<<<<<<<<<<<<
@@ -1947,11 +1980,11 @@ static PyObject *__pyx_pw_8upolygon_16simplify_polygon_3simplify_polygon(PyObjec
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_epsilon)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("simplify_polygon", 1, 2, 2, 1); __PYX_ERR(0, 37, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("simplify_polygon", 1, 2, 2, 1); __PYX_ERR(0, 39, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simplify_polygon") < 0)) __PYX_ERR(0, 37, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "simplify_polygon") < 0)) __PYX_ERR(0, 39, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -1960,17 +1993,17 @@ static PyObject *__pyx_pw_8upolygon_16simplify_polygon_3simplify_polygon(PyObjec
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
     }
     __pyx_v_paths = ((PyObject*)values[0]);
-    __pyx_v_epsilon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_epsilon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 37, __pyx_L3_error)
+    __pyx_v_epsilon = __pyx_PyFloat_AsFloat(values[1]); if (unlikely((__pyx_v_epsilon == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 39, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("simplify_polygon", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 37, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("simplify_polygon", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 39, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.simplify_polygon.simplify_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 39, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(__pyx_self, __pyx_v_paths, __pyx_v_epsilon);
 
   /* function exit code */
@@ -2000,33 +2033,33 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(CYTHON_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("simplify_polygon", 0);
 
-  /* "upolygon/simplify_polygon.pyx":38
+  /* "upolygon/simplify_polygon.pyx":40
  * @cython.nonecheck(False)
  * def simplify_polygon(list paths, float epsilon):
  *     return [simplify_single_polygon(path, epsilon) for path in paths]             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
   { /* enter inner scope */
-    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 38, __pyx_L5_error)
+    __pyx_t_1 = PyList_New(0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 40, __pyx_L5_error)
     __Pyx_GOTREF(__pyx_t_1);
     if (unlikely(__pyx_v_paths == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-      __PYX_ERR(0, 38, __pyx_L5_error)
+      __PYX_ERR(0, 40, __pyx_L5_error)
     }
     __pyx_t_2 = __pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_3 = 0;
     for (;;) {
       if (__pyx_t_3 >= PyList_GET_SIZE(__pyx_t_2)) break;
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 38, __pyx_L5_error)
+      __pyx_t_4 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_3); __Pyx_INCREF(__pyx_t_4); __pyx_t_3++; if (unlikely(0 < 0)) __PYX_ERR(0, 40, __pyx_L5_error)
       #else
-      __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L5_error)
+      __pyx_t_4 = PySequence_ITEM(__pyx_t_2, __pyx_t_3); __pyx_t_3++; if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_4);
       #endif
       __Pyx_XDECREF_SET(__pyx_7genexpr__pyx_v_path, __pyx_t_4);
       __pyx_t_4 = 0;
-      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 38, __pyx_L5_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_simplify_single_polygon); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 40, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_5);
-      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 38, __pyx_L5_error)
+      __pyx_t_6 = PyFloat_FromDouble(__pyx_v_epsilon); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 40, __pyx_L5_error)
       __Pyx_GOTREF(__pyx_t_6);
       __pyx_t_7 = NULL;
       __pyx_t_8 = 0;
@@ -2043,7 +2076,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(CYTHON_
       #if CYTHON_FAST_PYCALL
       if (PyFunction_Check(__pyx_t_5)) {
         PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_7genexpr__pyx_v_path, __pyx_t_6};
-        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L5_error)
+        __pyx_t_4 = __Pyx_PyFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L5_error)
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
@@ -2052,14 +2085,14 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(CYTHON_
       #if CYTHON_FAST_PYCCALL
       if (__Pyx_PyFastCFunction_Check(__pyx_t_5)) {
         PyObject *__pyx_temp[3] = {__pyx_t_7, __pyx_7genexpr__pyx_v_path, __pyx_t_6};
-        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L5_error)
+        __pyx_t_4 = __Pyx_PyCFunction_FastCall(__pyx_t_5, __pyx_temp+1-__pyx_t_8, 2+__pyx_t_8); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L5_error)
         __Pyx_XDECREF(__pyx_t_7); __pyx_t_7 = 0;
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       } else
       #endif
       {
-        __pyx_t_9 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 38, __pyx_L5_error)
+        __pyx_t_9 = PyTuple_New(2+__pyx_t_8); if (unlikely(!__pyx_t_9)) __PYX_ERR(0, 40, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_9);
         if (__pyx_t_7) {
           __Pyx_GIVEREF(__pyx_t_7); PyTuple_SET_ITEM(__pyx_t_9, 0, __pyx_t_7); __pyx_t_7 = NULL;
@@ -2070,12 +2103,12 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(CYTHON_
         __Pyx_GIVEREF(__pyx_t_6);
         PyTuple_SET_ITEM(__pyx_t_9, 1+__pyx_t_8, __pyx_t_6);
         __pyx_t_6 = 0;
-        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_9, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 38, __pyx_L5_error)
+        __pyx_t_4 = __Pyx_PyObject_Call(__pyx_t_5, __pyx_t_9, NULL); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 40, __pyx_L5_error)
         __Pyx_GOTREF(__pyx_t_4);
         __Pyx_DECREF(__pyx_t_9); __pyx_t_9 = 0;
       }
       __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-      if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 38, __pyx_L5_error)
+      if (unlikely(__Pyx_ListComp_Append(__pyx_t_1, (PyObject*)__pyx_t_4))) __PYX_ERR(0, 40, __pyx_L5_error)
       __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
@@ -2090,7 +2123,7 @@ static PyObject *__pyx_pf_8upolygon_16simplify_polygon_2simplify_polygon(CYTHON_
   __pyx_t_1 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/simplify_polygon.pyx":37
+  /* "upolygon/simplify_polygon.pyx":39
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_polygon(list paths, float epsilon):             # <<<<<<<<<<<<<<
@@ -2166,13 +2199,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_end, __pyx_k_end, sizeof(__pyx_k_end), 0, 0, 1, 1},
   {&__pyx_n_s_epsilon, __pyx_k_epsilon, sizeof(__pyx_k_epsilon), 0, 0, 1, 1},
   {&__pyx_n_s_i, __pyx_k_i, sizeof(__pyx_k_i), 0, 0, 1, 1},
-  {&__pyx_n_s_import, __pyx_k_import, sizeof(__pyx_k_import), 0, 0, 1, 1},
   {&__pyx_n_s_index, __pyx_k_index, sizeof(__pyx_k_index), 0, 0, 1, 1},
   {&__pyx_n_s_main, __pyx_k_main, sizeof(__pyx_k_main), 0, 0, 1, 1},
   {&__pyx_n_s_max_distance, __pyx_k_max_distance, sizeof(__pyx_k_max_distance), 0, 0, 1, 1},
   {&__pyx_n_s_name, __pyx_k_name, sizeof(__pyx_k_name), 0, 0, 1, 1},
-  {&__pyx_n_s_np, __pyx_k_np, sizeof(__pyx_k_np), 0, 0, 1, 1},
-  {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
   {&__pyx_n_s_path, __pyx_k_path, sizeof(__pyx_k_path), 0, 0, 1, 1},
   {&__pyx_n_s_paths, __pyx_k_paths, sizeof(__pyx_k_paths), 0, 0, 1, 1},
   {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
@@ -2186,7 +2216,7 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 20, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 22, __pyx_L1_error)
   return 0;
   __pyx_L1_error:;
   return -1;
@@ -2196,28 +2226,28 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "upolygon/simplify_polygon.pyx":14
+  /* "upolygon/simplify_polygon.pyx":16
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):             # <<<<<<<<<<<<<<
  *     if len(path) <= 1:
  *         return path
  */
-  __pyx_tuple_ = PyTuple_Pack(9, __pyx_n_s_path, __pyx_n_s_epsilon, __pyx_n_s_max_distance, __pyx_n_s_index, __pyx_n_s_end, __pyx_n_s_i, __pyx_n_s_distance, __pyx_n_s_res1, __pyx_n_s_res2); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_tuple_ = PyTuple_Pack(9, __pyx_n_s_path, __pyx_n_s_epsilon, __pyx_n_s_max_distance, __pyx_n_s_index, __pyx_n_s_end, __pyx_n_s_i, __pyx_n_s_distance, __pyx_n_s_res1, __pyx_n_s_res2); if (unlikely(!__pyx_tuple_)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple_);
   __Pyx_GIVEREF(__pyx_tuple_);
-  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_simplify_polygon_pyx, __pyx_n_s_simplify_single_polygon, 14, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_codeobj__2 = (PyObject*)__Pyx_PyCode_New(2, 0, 9, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple_, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_simplify_polygon_pyx, __pyx_n_s_simplify_single_polygon, 16, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__2)) __PYX_ERR(0, 16, __pyx_L1_error)
 
-  /* "upolygon/simplify_polygon.pyx":37
+  /* "upolygon/simplify_polygon.pyx":39
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_polygon(list paths, float epsilon):             # <<<<<<<<<<<<<<
  *     return [simplify_single_polygon(path, epsilon) for path in paths]
  */
-  __pyx_tuple__3 = PyTuple_Pack(3, __pyx_n_s_paths, __pyx_n_s_epsilon, __pyx_n_s_path); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(3, __pyx_n_s_paths, __pyx_n_s_epsilon, __pyx_n_s_path); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_simplify_polygon_pyx, __pyx_n_s_simplify_polygon, 37, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_codeobj__4 = (PyObject*)__Pyx_PyCode_New(2, 0, 3, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__3, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_simplify_polygon_pyx, __pyx_n_s_simplify_polygon, 39, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__4)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_RefNannyFinishContext();
   return 0;
   __pyx_L1_error:;
@@ -2500,39 +2530,27 @@ if (!__Pyx_RefNanny) {
   if (__Pyx_patch_abc() < 0) __PYX_ERR(0, 1, __pyx_L1_error)
   #endif
 
-  /* "upolygon/simplify_polygon.pyx":4
- * 
- * cimport cython
- * import numpy as np             # <<<<<<<<<<<<<<
- * from libc.math cimport abs, sqrt
- * 
- */
-  __pyx_t_1 = __Pyx_Import(__pyx_n_s_numpy, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 4, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_np, __pyx_t_1) < 0) __PYX_ERR(0, 4, __pyx_L1_error)
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-
-  /* "upolygon/simplify_polygon.pyx":14
+  /* "upolygon/simplify_polygon.pyx":16
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_single_polygon(list path, float epsilon):             # <<<<<<<<<<<<<<
  *     if len(path) <= 1:
  *         return path
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_16simplify_polygon_1simplify_single_polygon, NULL, __pyx_n_s_upolygon_simplify_polygon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 14, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_16simplify_polygon_1simplify_single_polygon, NULL, __pyx_n_s_upolygon_simplify_polygon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_simplify_single_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 14, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_simplify_single_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 16, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "upolygon/simplify_polygon.pyx":37
+  /* "upolygon/simplify_polygon.pyx":39
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def simplify_polygon(list paths, float epsilon):             # <<<<<<<<<<<<<<
  *     return [simplify_single_polygon(path, epsilon) for path in paths]
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_16simplify_polygon_3simplify_polygon, NULL, __pyx_n_s_upolygon_simplify_polygon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 37, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_16simplify_polygon_3simplify_polygon, NULL, __pyx_n_s_upolygon_simplify_polygon); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_simplify_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 37, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_simplify_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 39, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "upolygon/simplify_polygon.pyx":1
@@ -3403,71 +3421,6 @@ static CYTHON_INLINE PyObject* __Pyx_PyObject_GetSlice(PyObject* obj,
         "'%.200s' object is unsliceable", Py_TYPE(obj)->tp_name);
 bad:
     return NULL;
-}
-
-/* Import */
-static PyObject *__Pyx_Import(PyObject *name, PyObject *from_list, int level) {
-    PyObject *empty_list = 0;
-    PyObject *module = 0;
-    PyObject *global_dict = 0;
-    PyObject *empty_dict = 0;
-    PyObject *list;
-    #if PY_MAJOR_VERSION < 3
-    PyObject *py_import;
-    py_import = __Pyx_PyObject_GetAttrStr(__pyx_b, __pyx_n_s_import);
-    if (!py_import)
-        goto bad;
-    #endif
-    if (from_list)
-        list = from_list;
-    else {
-        empty_list = PyList_New(0);
-        if (!empty_list)
-            goto bad;
-        list = empty_list;
-    }
-    global_dict = PyModule_GetDict(__pyx_m);
-    if (!global_dict)
-        goto bad;
-    empty_dict = PyDict_New();
-    if (!empty_dict)
-        goto bad;
-    {
-        #if PY_MAJOR_VERSION >= 3
-        if (level == -1) {
-            if ((1) && (strchr(__Pyx_MODULE_NAME, '.'))) {
-                module = PyImport_ImportModuleLevelObject(
-                    name, global_dict, empty_dict, list, 1);
-                if (!module) {
-                    if (!PyErr_ExceptionMatches(PyExc_ImportError))
-                        goto bad;
-                    PyErr_Clear();
-                }
-            }
-            level = 0;
-        }
-        #endif
-        if (!module) {
-            #if PY_MAJOR_VERSION < 3
-            PyObject *py_level = PyInt_FromLong(level);
-            if (!py_level)
-                goto bad;
-            module = PyObject_CallFunctionObjArgs(py_import,
-                name, global_dict, empty_dict, list, py_level, (PyObject *)NULL);
-            Py_DECREF(py_level);
-            #else
-            module = PyImport_ImportModuleLevelObject(
-                name, global_dict, empty_dict, list, level);
-            #endif
-        }
-    }
-bad:
-    #if PY_MAJOR_VERSION < 3
-    Py_XDECREF(py_import);
-    #endif
-    Py_XDECREF(empty_list);
-    Py_XDECREF(empty_dict);
-    return module;
 }
 
 /* PyErrFetchRestore */

@@ -1,12 +1,14 @@
 #cython: language_level=3
 
 cimport cython
-import numpy as np
 from libc.math cimport abs, sqrt
 
 
 cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):
-  return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+    cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
+    if dist < 0.0001:
+        return sqrt((py - ay) * (py - ay) + (px - ax) * (px - ax))
+    return abs((by - ay) * px - (bx - ax) * py + bx * ay - by * ax) / dist
 
 @cython.boundscheck(False)
 @cython.wraparound(False)
@@ -14,12 +16,12 @@ cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, fl
 def simplify_single_polygon(list path, float epsilon):
     if len(path) <= 1:
         return path
-    cdef int max_distance = 0
+    cdef float max_distance = 0
     cdef int index = 0
     cdef int end = len(path) // 2 - 1
     for i in range(1, end):
         distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
-        if distance >= max_distance:
+        if distance > max_distance:
             max_distance = distance 
             index = i
     

@@ -1,6 +1,6 @@
 import numpy as np
 
-from upolygon import draw_polygon, find_contours
+from upolygon import draw_polygon, find_contours, simplify_polygon
 
 
 def test_single_pixel():
