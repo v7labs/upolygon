@@ -10,6 +10,7 @@ ext = ".pyx" if USE_CYTHON else ".c"
 extensions = [
     setuptools.Extension("draw_polygon", ["upolygon/draw_polygon" + ext], extra_compile_args=["-O3", "-Wall"]),
     setuptools.Extension("find_contours", ["upolygon/find_contours" + ext], extra_compile_args=["-O3", "-Wall"]),
+    setuptools.Extension("simplify_polygon", ["upolygon/simplify_polygon" + ext], extra_compile_args=["-O3", "-Wall"]),
 ]
 
 if USE_CYTHON:

@@ -2,6 +2,7 @@
 
 cimport cython
 import numpy as np
+from simplify_polygon import simplify_polygon
 
 # This implementation is based on https://www.iis.sinica.edu.tw/papers/fchang/1362-F.pdf
 
@@ -108,4 +109,6 @@ def find_contours(unsigned char[:,:] image):
         if px > width-1:
             px = 1
             py = py + 1
-    return labels, outer_paths, inner_paths
+    
+    # return labels, outer_paths, inner_paths
+    return labels, simplify_polygon(outer_paths, 0), simplify_polygon(inner_paths, 0)
