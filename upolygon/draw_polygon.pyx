@@ -100,7 +100,7 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
 @cython.nonecheck(False)
 cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
     cdef int x = max(<int>ceil(x1),0)
-    cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+    cdef int max_x = min(<int>floor(x2), mask.shape[1])
     cdef int i
     for i in range(x, max_x):
         mask[y][i] = value

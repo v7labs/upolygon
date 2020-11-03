@@ -3497,7 +3497,7 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
 static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_straight_line(float __pyx_v_x1, float __pyx_v_x2, int __pyx_v_y, __Pyx_memviewslice __pyx_v_mask, char __pyx_v_value) {
@@ -3518,7 +3518,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3533,11 +3533,11 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3547,7 +3547,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3575,7 +3575,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
@@ -3599,7 +3599,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3614,11 +3614,11 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3628,7 +3628,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3656,7 +3656,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
@@ -3680,7 +3680,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3695,11 +3695,11 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3709,7 +3709,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3737,7 +3737,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
@@ -3761,7 +3761,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3776,11 +3776,11 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3790,7 +3790,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3818,7 +3818,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
@@ -3842,7 +3842,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3857,11 +3857,11 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3871,7 +3871,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3899,7 +3899,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
@@ -3923,7 +3923,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  */
   __pyx_t_1 = 0;
@@ -3938,11 +3938,11 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* "upolygon/draw_polygon.pyx":103
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)             # <<<<<<<<<<<<<<
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])             # <<<<<<<<<<<<<<
  *     cdef int i
  *     for i in range(x, max_x):
  */
-  __pyx_t_4 = ((__pyx_v_mask.shape[1]) - 1);
+  __pyx_t_4 = (__pyx_v_mask.shape[1]);
   __pyx_t_2 = ((int)floor(__pyx_v_x2));
   if (((__pyx_t_4 < __pyx_t_2) != 0)) {
     __pyx_t_5 = __pyx_t_4;
@@ -3952,7 +3952,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   __pyx_v_max_x = __pyx_t_5;
 
   /* "upolygon/draw_polygon.pyx":105
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
  *         mask[y][i] = value
@@ -3980,7 +3980,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
  *     cdef int x = max(<int>ceil(x1),0)
- *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1)
+ *     cdef int max_x = min(<int>floor(x2), mask.shape[1])
  */
 
   /* function exit code */
