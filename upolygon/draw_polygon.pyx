@@ -100,6 +100,16 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
 @cython.nonecheck(False)
 cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
     cdef int x = max(<int>ceil(x1),0)
+    cdef int max_x = min(<int>floor(x2), mask.shape[1])
+    cdef int i
+    for i in range(x, max_x):
+        mask[y][i] = value
+
+@cython.boundscheck(False)
+@cython.wraparound(False)
+@cython.nonecheck(False)
+cdef inline void draw_straight_line_with_edge(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
+    cdef int x = max(<int>ceil(x1),0)
     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
     cdef int i
     for i in range(x, max_x):
@@ -210,7 +220,7 @@ cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, d
 @cython.wraparound(False)
 @cython.nonecheck(False)
 @cython.cdivision(True)
-cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
+cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value, bint include_edges):
     cdef int length = len(path)
     cdef float[:] path_mv = memoryview(array('f', path))
     cdef float x1
@@ -224,7 +234,8 @@ cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type va
     for i in range(0, length, 2):
         x2, y2 = path_mv[i], path_mv[i+1]
         y2 = round(y2)
-        draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
+        if include_edges:
+            draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
 
         if y1 == y2:
             x1, y1 = x2, y2
@@ -265,7 +276,7 @@ cdef void move_active_down(s_active_edge* edges, int i, int length):
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-def draw_polygon(data_type[:, :] mask, list paths, data_type value):
+def draw_polygon(data_type[:, :] mask, list paths, data_type value, bint include_edges = True):
     """Draws a polygon with value
     Args:
         mask: 2d mask on which the polygon will be drawn, note that the mask will be modified
@@ -282,7 +293,7 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
     cdef int edges_so_far = 0
     for path in paths:
-        edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
+        edges_so_far += find_edges(edges + edges_so_far, path, mask, value, include_edges)
     # no point in continuing if there are no edges
     if edges_so_far == 0:
         free(edges)
@@ -330,8 +341,12 @@ def draw_polygon(data_type[:, :] mask, list paths, data_type value):
             active_edges[j+1] = edge
 
         
-        for i in range(0, active_edge_length, 2):
-            draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
+        if include_edges:
+            for i in range(0, active_edge_length, 2):
+                draw_straight_line_with_edge(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
+        else:
+            for i in range(0, active_edge_length, 2):
+                draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
 
         for i in range(0,active_edge_length):
             active_edges[i].x_val += active_edges[i].m_inv

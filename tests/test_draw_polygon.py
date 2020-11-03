@@ -3,7 +3,6 @@ import numpy as np
 from upolygon import draw_polygon
 
 triangle = [5, 5, 8, 1, 0, 0]
-triangle_sum = 270
 triangle_result = np.array(
     [
         [1, 1, 1, 1, 1, 0, 0, 0, 0, 0],
@@ -49,6 +48,72 @@ def test_crop_out_of_bound_horizontal_line():
 def test_crop_out_of_bound_vertical_line():
     mask = np.zeros((100, 100), dtype=np.int32)
     draw_polygon(mask, [[0, -50, 0, -200]], 1)
+
+
+def test_draw_one_pixel_tall_polygons():
+    polygon = [[0, 0, 8, 0, 8, 1, 0, 1]]
+    mask = np.zeros((10, 10), dtype=np.int32)
+    draw_polygon(mask, polygon, 1, False)
+    expected = np.array(
+        [
+            [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ],
+        dtype=np.uint8,
+    )
+    assert np.all(mask == expected)
+
+
+def test_draw_polygon_with_single_hole():
+    polygon = [[8, 4, 0, 4, 0, 0, 8, 0], [7, 1, 1, 1, 1, 3, 7, 3]]
+    mask = np.zeros((10, 10), dtype=np.int32)
+    draw_polygon(mask, polygon, 1, False)
+    expected = np.array(
+        [
+            [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+            [1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+            [1, 0, 0, 0, 0, 0, 0, 1, 0, 0],
+            [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ],
+        dtype=np.uint8,
+    )
+    assert np.all(mask == expected)
+
+
+def test_draw_polygon_on_mask_bottom_right_corner():
+    polygon = [[10, 10, 2, 10, 2, 6, 10, 6]]
+    mask = np.zeros((10, 10), dtype=np.int32)
+    draw_polygon(mask, polygon, 1, False)
+    expected = np.array(
+        [
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+            [0, 0, 1, 1, 1, 1, 1, 1, 1, 1],
+        ],
+        dtype=np.uint8,
+    )
+    assert np.all(mask == expected)
 
 
 def test_rectangle_large_segments():
@@ -161,3 +226,29 @@ def test_supports_float():
     mask = np.zeros(triangle_mask_size, dtype=np.float)
     draw_polygon(mask, [triangle], 1)
     assert np.all(mask == triangle_result)
+
+
+def test_include_edges_draw_polygon_option():
+    mask = np.zeros(triangle_mask_size, dtype=np.float)
+    draw_polygon(mask, [triangle], 1, False)
+    assert np.any(mask != triangle_result)
+
+    assert np.all(
+        mask
+        == np.array(
+            [
+                [0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+                [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+                [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+                [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            ],
+            dtype=np.int32,
+        )
+    )
+
