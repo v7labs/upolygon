@@ -54,7 +54,7 @@ def test_crop_out_of_bound_vertical_line():
 def test_1px_tall_polygons():
     polygon = [[0, 0, 8, 0, 8, 1, 0, 1]]
     mask = np.zeros((10, 10), dtype=np.int32)
-    draw_polygon(mask, polygon, 1)
+    draw_polygon(mask, polygon, 1, False)
     expected = np.array(
         [
             [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
@@ -66,7 +66,7 @@ def test_1px_tall_polygons():
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         ],
         dtype=np.uint8,
     )
@@ -76,7 +76,7 @@ def test_1px_tall_polygons():
 def test_holes_in_polygons():
     polygon = [[8, 4, 0, 4, 0, 0, 8, 0], [7, 1, 1, 1, 1, 3, 7, 3]]
     mask = np.zeros((10, 10), dtype=np.int32)
-    draw_polygon(mask, polygon, 1)
+    draw_polygon(mask, polygon, 1, False)
     expected = np.array(
         [
             [1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
@@ -88,11 +88,12 @@ def test_holes_in_polygons():
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         ],
         dtype=np.uint8,
     )
     assert np.all(mask == expected)
+
 
 def test_rectangle_large_segments():
     square = [1, 1, 5, 1, 5, 5, 1, 5]
