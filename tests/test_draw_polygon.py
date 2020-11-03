@@ -226,3 +226,25 @@ def test_supports_float():
     mask = np.zeros(triangle_mask_size, dtype=np.float)
     draw_polygon(mask, [triangle], 1)
     assert np.all(mask == triangle_result)
+
+
+def test_include_edges_draw_polygon_option():
+    mask = np.zeros(triangle_mask_size, dtype=np.float)
+    draw_polygon(mask, [triangle], 1, False)
+    assert np.any(mask != triangle_result)
+    
+    assert np.all(mask == np.array(
+        [
+            [0, 1, 1, 1, 0, 0, 0, 0, 0, 0],
+            [0, 0, 1, 1, 1, 1, 1, 1, 0, 0],
+            [0, 0, 0, 1, 1, 1, 1, 0, 0, 0],
+            [0, 0, 0, 0, 1, 1, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 1, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        ],
+        dtype=np.int32,
+    ))
