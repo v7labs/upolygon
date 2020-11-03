@@ -66,7 +66,7 @@ def test_draw_one_pixel_tall_polygons():
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         ],
         dtype=np.uint8,
     )
@@ -88,7 +88,7 @@ def test_draw_polygon_with_single_hole():
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         ],
         dtype=np.uint8,
     )
@@ -115,6 +115,7 @@ def test_draw_polygon_on_mask_bottom_right_corner():
         dtype=np.uint8,
     )
     assert np.all(mask == expected)
+
 
 def test_rectangle_large_segments():
     square = [1, 1, 5, 1, 5, 5, 1, 5]
