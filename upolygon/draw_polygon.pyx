@@ -46,53 +46,56 @@ cdef inline int clip_line(int w, int h, int* x1, int* y1, int* x2, int* y2) nogi
     cdef double _x2 = x2[0]
     cdef double _y1 = y1[0]
     cdef double _y2 = y2[0]
-
+    cdef double __x1 = x1[0]
+    cdef double __x2 = x2[0]
+    cdef double __y1 = y1[0]
+    cdef double __y2 = y2[0]
     # first check if both point are outside the viewpoint on the same side
     # if so skip them
     if _x1 < 0 and _x2 < 0:
         return 0
-    if _x1 > w and _x2 >= w:
+    if _x1 >= w and _x2 >= w:
         return 0
     if _y1 < 0 and _y2 < 0:
         return 0
-    if _y1 > h and _y2 >= h:
+    if _y1 >= h and _y2 >= h:
         return 0
     
-    if _x1 < 0:
-        _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
-        _x1 = 0
-    elif _x1 >= w:
-        _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
-        _x1 = w
+    if __x1 < 0:
+        __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+        __x1 = 0
+    elif __x1 >= w:
+        __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+        __x1 = w - 1
         
-    if _y1 < 0:
-        _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
-        _y1 = 0 
-    elif _y1 >= h:
-        _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
-        _y1 = h 
+    if __y1 < 0:
+        __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+        __y1 = 0 
+    elif __y1 >= h:
+        __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+        __y1 = h - 1
 
-    if _x2 < 0:
-        _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
-        _x2 = 0
-    elif _x2 >= w:
-        _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
-        _x2 = w
+    if __x2 < 0:
+        __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+        __x2 = 0
+    elif __x2 >= w:
+        __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+        __x2 = w - 1
 
-    if _y2 < 0:
-        _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
-        _y2 = 0 
-    elif _y2 >= h:
-        _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
-        _y2 = h 
+    if __y2 < 0:
+        __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+        __y2 = 0
+    elif __y2 >= h:
+        __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+        __y2 = h - 1
 
-    if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):
+    if (__x1 < 0 and __x2 < 0) or (__x1 >= w and __x2 >= w):
         return 0
     
-    x1[0] = <int>_x1
-    x2[0] = <int>_x2
-    y1[0] = <int>_y1
-    y2[0] = <int>_y2
+    x1[0] = <int>__x1
+    x2[0] = <int>__x2
+    y1[0] = <int>__y1
+    y2[0] = <int>__y2
     return 1
 
 @cython.boundscheck(False)

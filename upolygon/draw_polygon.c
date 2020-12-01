@@ -6,7 +6,7 @@
         "depends": [],
         "name": "upolygon.draw_polygon",
         "sources": [
-            "/Users/simedw/Projects/v7/upolygon/upolygon/draw_polygon.pyx"
+            "/home/simedw/upolygon/upolygon/draw_polygon.pyx"
         ]
     },
     "module_name": "upolygon.draw_polygon"
@@ -991,7 +991,7 @@ struct __pyx_t_8upolygon_12draw_polygon_s_active_edge {
   float m_inv;
 };
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1004,7 +1004,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_p
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -1020,7 +1020,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr {
 };
 
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1033,7 +1033,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -1049,7 +1049,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr {
 };
 
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1062,7 +1062,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -1078,7 +1078,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr {
 };
 
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1091,7 +1091,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -1107,7 +1107,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr {
 };
 
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1120,7 +1120,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -1136,7 +1136,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr {
 };
 
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -1149,7 +1149,7 @@ struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw
 };
 
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -2817,6 +2817,10 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   double __pyx_v__x2;
   double __pyx_v__y1;
   double __pyx_v__y2;
+  double __pyx_v___x1;
+  double __pyx_v___x2;
+  double __pyx_v___y1;
+  double __pyx_v___y2;
   int __pyx_r;
   int __pyx_t_1;
   int __pyx_t_2;
@@ -2844,7 +2848,7 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
  *     cdef double _x2 = x2[0]
  *     cdef double _y1 = y1[0]             # <<<<<<<<<<<<<<
  *     cdef double _y2 = y2[0]
- * 
+ *     cdef double __x1 = x1[0]
  */
   __pyx_v__y1 = (__pyx_v_y1[0]);
 
@@ -2852,17 +2856,53 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
  *     cdef double _x2 = x2[0]
  *     cdef double _y1 = y1[0]
  *     cdef double _y2 = y2[0]             # <<<<<<<<<<<<<<
- * 
- *     # first check if both point are outside the viewpoint on the same side
+ *     cdef double __x1 = x1[0]
+ *     cdef double __x2 = x2[0]
  */
   __pyx_v__y2 = (__pyx_v_y2[0]);
 
+  /* "upolygon/draw_polygon.pyx":49
+ *     cdef double _y1 = y1[0]
+ *     cdef double _y2 = y2[0]
+ *     cdef double __x1 = x1[0]             # <<<<<<<<<<<<<<
+ *     cdef double __x2 = x2[0]
+ *     cdef double __y1 = y1[0]
+ */
+  __pyx_v___x1 = (__pyx_v_x1[0]);
+
+  /* "upolygon/draw_polygon.pyx":50
+ *     cdef double _y2 = y2[0]
+ *     cdef double __x1 = x1[0]
+ *     cdef double __x2 = x2[0]             # <<<<<<<<<<<<<<
+ *     cdef double __y1 = y1[0]
+ *     cdef double __y2 = y2[0]
+ */
+  __pyx_v___x2 = (__pyx_v_x2[0]);
+
+  /* "upolygon/draw_polygon.pyx":51
+ *     cdef double __x1 = x1[0]
+ *     cdef double __x2 = x2[0]
+ *     cdef double __y1 = y1[0]             # <<<<<<<<<<<<<<
+ *     cdef double __y2 = y2[0]
+ *     # first check if both point are outside the viewpoint on the same side
+ */
+  __pyx_v___y1 = (__pyx_v_y1[0]);
+
   /* "upolygon/draw_polygon.pyx":52
+ *     cdef double __x2 = x2[0]
+ *     cdef double __y1 = y1[0]
+ *     cdef double __y2 = y2[0]             # <<<<<<<<<<<<<<
+ *     # first check if both point are outside the viewpoint on the same side
+ *     # if so skip them
+ */
+  __pyx_v___y2 = (__pyx_v_y2[0]);
+
+  /* "upolygon/draw_polygon.pyx":55
  *     # first check if both point are outside the viewpoint on the same side
  *     # if so skip them
  *     if _x1 < 0 and _x2 < 0:             # <<<<<<<<<<<<<<
  *         return 0
- *     if _x1 > w and _x2 >= w:
+ *     if _x1 >= w and _x2 >= w:
  */
   __pyx_t_2 = ((__pyx_v__x1 < 0.0) != 0);
   if (__pyx_t_2) {
@@ -2875,33 +2915,33 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   __pyx_L4_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":53
+    /* "upolygon/draw_polygon.pyx":56
  *     # if so skip them
  *     if _x1 < 0 and _x2 < 0:
  *         return 0             # <<<<<<<<<<<<<<
- *     if _x1 > w and _x2 >= w:
+ *     if _x1 >= w and _x2 >= w:
  *         return 0
  */
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":52
+    /* "upolygon/draw_polygon.pyx":55
  *     # first check if both point are outside the viewpoint on the same side
  *     # if so skip them
  *     if _x1 < 0 and _x2 < 0:             # <<<<<<<<<<<<<<
  *         return 0
- *     if _x1 > w and _x2 >= w:
+ *     if _x1 >= w and _x2 >= w:
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":54
+  /* "upolygon/draw_polygon.pyx":57
  *     if _x1 < 0 and _x2 < 0:
  *         return 0
- *     if _x1 > w and _x2 >= w:             # <<<<<<<<<<<<<<
+ *     if _x1 >= w and _x2 >= w:             # <<<<<<<<<<<<<<
  *         return 0
  *     if _y1 < 0 and _y2 < 0:
  */
-  __pyx_t_2 = ((__pyx_v__x1 > __pyx_v_w) != 0);
+  __pyx_t_2 = ((__pyx_v__x1 >= __pyx_v_w) != 0);
   if (__pyx_t_2) {
   } else {
     __pyx_t_1 = __pyx_t_2;
@@ -2912,9 +2952,9 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":55
+    /* "upolygon/draw_polygon.pyx":58
  *         return 0
- *     if _x1 > w and _x2 >= w:
+ *     if _x1 >= w and _x2 >= w:
  *         return 0             # <<<<<<<<<<<<<<
  *     if _y1 < 0 and _y2 < 0:
  *         return 0
@@ -2922,21 +2962,21 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":54
+    /* "upolygon/draw_polygon.pyx":57
  *     if _x1 < 0 and _x2 < 0:
  *         return 0
- *     if _x1 > w and _x2 >= w:             # <<<<<<<<<<<<<<
+ *     if _x1 >= w and _x2 >= w:             # <<<<<<<<<<<<<<
  *         return 0
  *     if _y1 < 0 and _y2 < 0:
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":56
- *     if _x1 > w and _x2 >= w:
+  /* "upolygon/draw_polygon.pyx":59
+ *     if _x1 >= w and _x2 >= w:
  *         return 0
  *     if _y1 < 0 and _y2 < 0:             # <<<<<<<<<<<<<<
  *         return 0
- *     if _y1 > h and _y2 >= h:
+ *     if _y1 >= h and _y2 >= h:
  */
   __pyx_t_2 = ((__pyx_v__y1 < 0.0) != 0);
   if (__pyx_t_2) {
@@ -2949,33 +2989,33 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   __pyx_L10_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":57
+    /* "upolygon/draw_polygon.pyx":60
  *         return 0
  *     if _y1 < 0 and _y2 < 0:
  *         return 0             # <<<<<<<<<<<<<<
- *     if _y1 > h and _y2 >= h:
+ *     if _y1 >= h and _y2 >= h:
  *         return 0
  */
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":56
- *     if _x1 > w and _x2 >= w:
+    /* "upolygon/draw_polygon.pyx":59
+ *     if _x1 >= w and _x2 >= w:
  *         return 0
  *     if _y1 < 0 and _y2 < 0:             # <<<<<<<<<<<<<<
  *         return 0
- *     if _y1 > h and _y2 >= h:
+ *     if _y1 >= h and _y2 >= h:
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":58
+  /* "upolygon/draw_polygon.pyx":61
  *     if _y1 < 0 and _y2 < 0:
  *         return 0
- *     if _y1 > h and _y2 >= h:             # <<<<<<<<<<<<<<
+ *     if _y1 >= h and _y2 >= h:             # <<<<<<<<<<<<<<
  *         return 0
  * 
  */
-  __pyx_t_2 = ((__pyx_v__y1 > __pyx_v_h) != 0);
+  __pyx_t_2 = ((__pyx_v__y1 >= __pyx_v_h) != 0);
   if (__pyx_t_2) {
   } else {
     __pyx_t_1 = __pyx_t_2;
@@ -2986,417 +3026,417 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   __pyx_L13_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":59
+    /* "upolygon/draw_polygon.pyx":62
  *         return 0
- *     if _y1 > h and _y2 >= h:
+ *     if _y1 >= h and _y2 >= h:
  *         return 0             # <<<<<<<<<<<<<<
  * 
- *     if _x1 < 0:
+ *     if __x1 < 0:
  */
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":58
+    /* "upolygon/draw_polygon.pyx":61
  *     if _y1 < 0 and _y2 < 0:
  *         return 0
- *     if _y1 > h and _y2 >= h:             # <<<<<<<<<<<<<<
+ *     if _y1 >= h and _y2 >= h:             # <<<<<<<<<<<<<<
  *         return 0
  * 
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":61
+  /* "upolygon/draw_polygon.pyx":64
  *         return 0
  * 
- *     if _x1 < 0:             # <<<<<<<<<<<<<<
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x1 = 0
+ *     if __x1 < 0:             # <<<<<<<<<<<<<<
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x1 = 0
  */
-  __pyx_t_1 = ((__pyx_v__x1 < 0.0) != 0);
+  __pyx_t_1 = ((__pyx_v___x1 < 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":62
+    /* "upolygon/draw_polygon.pyx":65
  * 
- *     if _x1 < 0:
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1             # <<<<<<<<<<<<<<
- *         _x1 = 0
- *     elif _x1 >= w:
+ *     if __x1 < 0:
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1             # <<<<<<<<<<<<<<
+ *         __x1 = 0
+ *     elif __x1 >= w:
  */
-    __pyx_v__y1 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (0.0 - __pyx_v__x1)) + __pyx_v__y1);
+    __pyx_v___y1 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (0.0 - __pyx_v__x1)) + __pyx_v__y1);
 
-    /* "upolygon/draw_polygon.pyx":63
- *     if _x1 < 0:
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x1 = 0             # <<<<<<<<<<<<<<
- *     elif _x1 >= w:
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+    /* "upolygon/draw_polygon.pyx":66
+ *     if __x1 < 0:
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x1 = 0             # <<<<<<<<<<<<<<
+ *     elif __x1 >= w:
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
  */
-    __pyx_v__x1 = 0.0;
+    __pyx_v___x1 = 0.0;
 
-    /* "upolygon/draw_polygon.pyx":61
+    /* "upolygon/draw_polygon.pyx":64
  *         return 0
  * 
- *     if _x1 < 0:             # <<<<<<<<<<<<<<
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x1 = 0
+ *     if __x1 < 0:             # <<<<<<<<<<<<<<
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x1 = 0
  */
     goto __pyx_L15;
   }
 
-  /* "upolygon/draw_polygon.pyx":64
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x1 = 0
- *     elif _x1 >= w:             # <<<<<<<<<<<<<<
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x1 = w
+  /* "upolygon/draw_polygon.pyx":67
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x1 = 0
+ *     elif __x1 >= w:             # <<<<<<<<<<<<<<
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x1 = w - 1
  */
-  __pyx_t_1 = ((__pyx_v__x1 >= __pyx_v_w) != 0);
+  __pyx_t_1 = ((__pyx_v___x1 >= __pyx_v_w) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":65
- *         _x1 = 0
- *     elif _x1 >= w:
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1             # <<<<<<<<<<<<<<
- *         _x1 = w
+    /* "upolygon/draw_polygon.pyx":68
+ *         __x1 = 0
+ *     elif __x1 >= w:
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1             # <<<<<<<<<<<<<<
+ *         __x1 = w - 1
  * 
  */
-    __pyx_v__y1 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (__pyx_v_w - __pyx_v__x1)) + __pyx_v__y1);
+    __pyx_v___y1 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (__pyx_v_w - __pyx_v__x1)) + __pyx_v__y1);
 
-    /* "upolygon/draw_polygon.pyx":66
- *     elif _x1 >= w:
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x1 = w             # <<<<<<<<<<<<<<
+    /* "upolygon/draw_polygon.pyx":69
+ *     elif __x1 >= w:
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x1 = w - 1             # <<<<<<<<<<<<<<
  * 
- *     if _y1 < 0:
+ *     if __y1 < 0:
  */
-    __pyx_v__x1 = __pyx_v_w;
+    __pyx_v___x1 = (__pyx_v_w - 1);
 
-    /* "upolygon/draw_polygon.pyx":64
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x1 = 0
- *     elif _x1 >= w:             # <<<<<<<<<<<<<<
- *         _y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x1 = w
+    /* "upolygon/draw_polygon.pyx":67
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x1 = 0
+ *     elif __x1 >= w:             # <<<<<<<<<<<<<<
+ *         __y1 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x1 = w - 1
  */
   }
   __pyx_L15:;
 
-  /* "upolygon/draw_polygon.pyx":68
- *         _x1 = w
+  /* "upolygon/draw_polygon.pyx":71
+ *         __x1 = w - 1
  * 
- *     if _y1 < 0:             # <<<<<<<<<<<<<<
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y1 = 0
+ *     if __y1 < 0:             # <<<<<<<<<<<<<<
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y1 = 0
  */
-  __pyx_t_1 = ((__pyx_v__y1 < 0.0) != 0);
+  __pyx_t_1 = ((__pyx_v___y1 < 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":69
+    /* "upolygon/draw_polygon.pyx":72
  * 
- *     if _y1 < 0:
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1             # <<<<<<<<<<<<<<
- *         _y1 = 0
- *     elif _y1 >= h:
+ *     if __y1 < 0:
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1             # <<<<<<<<<<<<<<
+ *         __y1 = 0
+ *     elif __y1 >= h:
  */
-    __pyx_v__x1 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (0.0 - __pyx_v__y1)) + __pyx_v__x1);
+    __pyx_v___x1 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (0.0 - __pyx_v__y1)) + __pyx_v__x1);
 
-    /* "upolygon/draw_polygon.pyx":70
- *     if _y1 < 0:
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y1 = 0             # <<<<<<<<<<<<<<
- *     elif _y1 >= h:
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+    /* "upolygon/draw_polygon.pyx":73
+ *     if __y1 < 0:
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y1 = 0             # <<<<<<<<<<<<<<
+ *     elif __y1 >= h:
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
  */
-    __pyx_v__y1 = 0.0;
+    __pyx_v___y1 = 0.0;
 
-    /* "upolygon/draw_polygon.pyx":68
- *         _x1 = w
+    /* "upolygon/draw_polygon.pyx":71
+ *         __x1 = w - 1
  * 
- *     if _y1 < 0:             # <<<<<<<<<<<<<<
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y1 = 0
+ *     if __y1 < 0:             # <<<<<<<<<<<<<<
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y1 = 0
  */
     goto __pyx_L16;
   }
 
-  /* "upolygon/draw_polygon.pyx":71
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y1 = 0
- *     elif _y1 >= h:             # <<<<<<<<<<<<<<
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y1 = h
+  /* "upolygon/draw_polygon.pyx":74
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y1 = 0
+ *     elif __y1 >= h:             # <<<<<<<<<<<<<<
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y1 = h - 1
  */
-  __pyx_t_1 = ((__pyx_v__y1 >= __pyx_v_h) != 0);
+  __pyx_t_1 = ((__pyx_v___y1 >= __pyx_v_h) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":72
- *         _y1 = 0
- *     elif _y1 >= h:
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1             # <<<<<<<<<<<<<<
- *         _y1 = h
+    /* "upolygon/draw_polygon.pyx":75
+ *         __y1 = 0
+ *     elif __y1 >= h:
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1             # <<<<<<<<<<<<<<
+ *         __y1 = h - 1
  * 
  */
-    __pyx_v__x1 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (__pyx_v_h - __pyx_v__y1)) + __pyx_v__x1);
+    __pyx_v___x1 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (__pyx_v_h - __pyx_v__y1)) + __pyx_v__x1);
 
-    /* "upolygon/draw_polygon.pyx":73
- *     elif _y1 >= h:
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y1 = h             # <<<<<<<<<<<<<<
+    /* "upolygon/draw_polygon.pyx":76
+ *     elif __y1 >= h:
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y1 = h - 1             # <<<<<<<<<<<<<<
  * 
- *     if _x2 < 0:
+ *     if __x2 < 0:
  */
-    __pyx_v__y1 = __pyx_v_h;
+    __pyx_v___y1 = (__pyx_v_h - 1);
 
-    /* "upolygon/draw_polygon.pyx":71
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y1 = 0
- *     elif _y1 >= h:             # <<<<<<<<<<<<<<
- *         _x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y1 = h
+    /* "upolygon/draw_polygon.pyx":74
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y1 = 0
+ *     elif __y1 >= h:             # <<<<<<<<<<<<<<
+ *         __x1 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y1 = h - 1
  */
   }
   __pyx_L16:;
 
-  /* "upolygon/draw_polygon.pyx":75
- *         _y1 = h
+  /* "upolygon/draw_polygon.pyx":78
+ *         __y1 = h - 1
  * 
- *     if _x2 < 0:             # <<<<<<<<<<<<<<
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x2 = 0
+ *     if __x2 < 0:             # <<<<<<<<<<<<<<
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x2 = 0
  */
-  __pyx_t_1 = ((__pyx_v__x2 < 0.0) != 0);
+  __pyx_t_1 = ((__pyx_v___x2 < 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":76
+    /* "upolygon/draw_polygon.pyx":79
  * 
- *     if _x2 < 0:
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1             # <<<<<<<<<<<<<<
- *         _x2 = 0
- *     elif _x2 >= w:
+ *     if __x2 < 0:
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1             # <<<<<<<<<<<<<<
+ *         __x2 = 0
+ *     elif __x2 >= w:
  */
-    __pyx_v__y2 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (0.0 - __pyx_v__x1)) + __pyx_v__y1);
+    __pyx_v___y2 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (0.0 - __pyx_v__x1)) + __pyx_v__y1);
 
-    /* "upolygon/draw_polygon.pyx":77
- *     if _x2 < 0:
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x2 = 0             # <<<<<<<<<<<<<<
- *     elif _x2 >= w:
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+    /* "upolygon/draw_polygon.pyx":80
+ *     if __x2 < 0:
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x2 = 0             # <<<<<<<<<<<<<<
+ *     elif __x2 >= w:
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
  */
-    __pyx_v__x2 = 0.0;
+    __pyx_v___x2 = 0.0;
 
-    /* "upolygon/draw_polygon.pyx":75
- *         _y1 = h
+    /* "upolygon/draw_polygon.pyx":78
+ *         __y1 = h - 1
  * 
- *     if _x2 < 0:             # <<<<<<<<<<<<<<
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x2 = 0
+ *     if __x2 < 0:             # <<<<<<<<<<<<<<
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x2 = 0
  */
     goto __pyx_L17;
   }
 
-  /* "upolygon/draw_polygon.pyx":78
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x2 = 0
- *     elif _x2 >= w:             # <<<<<<<<<<<<<<
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x2 = w
+  /* "upolygon/draw_polygon.pyx":81
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x2 = 0
+ *     elif __x2 >= w:             # <<<<<<<<<<<<<<
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x2 = w - 1
  */
-  __pyx_t_1 = ((__pyx_v__x2 >= __pyx_v_w) != 0);
+  __pyx_t_1 = ((__pyx_v___x2 >= __pyx_v_w) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":79
- *         _x2 = 0
- *     elif _x2 >= w:
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1             # <<<<<<<<<<<<<<
- *         _x2 = w
+    /* "upolygon/draw_polygon.pyx":82
+ *         __x2 = 0
+ *     elif __x2 >= w:
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1             # <<<<<<<<<<<<<<
+ *         __x2 = w - 1
  * 
  */
-    __pyx_v__y2 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (__pyx_v_w - __pyx_v__x1)) + __pyx_v__y1);
+    __pyx_v___y2 = ((((__pyx_v__y2 - __pyx_v__y1) / (__pyx_v__x2 - __pyx_v__x1)) * (__pyx_v_w - __pyx_v__x1)) + __pyx_v__y1);
 
-    /* "upolygon/draw_polygon.pyx":80
- *     elif _x2 >= w:
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x2 = w             # <<<<<<<<<<<<<<
+    /* "upolygon/draw_polygon.pyx":83
+ *     elif __x2 >= w:
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x2 = w - 1             # <<<<<<<<<<<<<<
  * 
- *     if _y2 < 0:
+ *     if __y2 < 0:
  */
-    __pyx_v__x2 = __pyx_v_w;
+    __pyx_v___x2 = (__pyx_v_w - 1);
 
-    /* "upolygon/draw_polygon.pyx":78
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
- *         _x2 = 0
- *     elif _x2 >= w:             # <<<<<<<<<<<<<<
- *         _y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
- *         _x2 = w
+    /* "upolygon/draw_polygon.pyx":81
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (0-_x1) + _y1
+ *         __x2 = 0
+ *     elif __x2 >= w:             # <<<<<<<<<<<<<<
+ *         __y2 = (_y2-_y1) / (_x2 - _x1)  * (w-_x1) + _y1
+ *         __x2 = w - 1
  */
   }
   __pyx_L17:;
 
-  /* "upolygon/draw_polygon.pyx":82
- *         _x2 = w
+  /* "upolygon/draw_polygon.pyx":85
+ *         __x2 = w - 1
  * 
- *     if _y2 < 0:             # <<<<<<<<<<<<<<
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y2 = 0
+ *     if __y2 < 0:             # <<<<<<<<<<<<<<
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y2 = 0
  */
-  __pyx_t_1 = ((__pyx_v__y2 < 0.0) != 0);
+  __pyx_t_1 = ((__pyx_v___y2 < 0.0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":83
+    /* "upolygon/draw_polygon.pyx":86
  * 
- *     if _y2 < 0:
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1             # <<<<<<<<<<<<<<
- *         _y2 = 0
- *     elif _y2 >= h:
+ *     if __y2 < 0:
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1             # <<<<<<<<<<<<<<
+ *         __y2 = 0
+ *     elif __y2 >= h:
  */
-    __pyx_v__x2 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (0.0 - __pyx_v__y1)) + __pyx_v__x1);
+    __pyx_v___x2 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (0.0 - __pyx_v__y1)) + __pyx_v__x1);
 
-    /* "upolygon/draw_polygon.pyx":84
- *     if _y2 < 0:
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y2 = 0             # <<<<<<<<<<<<<<
- *     elif _y2 >= h:
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+    /* "upolygon/draw_polygon.pyx":87
+ *     if __y2 < 0:
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y2 = 0             # <<<<<<<<<<<<<<
+ *     elif __y2 >= h:
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
  */
-    __pyx_v__y2 = 0.0;
+    __pyx_v___y2 = 0.0;
 
-    /* "upolygon/draw_polygon.pyx":82
- *         _x2 = w
+    /* "upolygon/draw_polygon.pyx":85
+ *         __x2 = w - 1
  * 
- *     if _y2 < 0:             # <<<<<<<<<<<<<<
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y2 = 0
+ *     if __y2 < 0:             # <<<<<<<<<<<<<<
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y2 = 0
  */
     goto __pyx_L18;
   }
 
-  /* "upolygon/draw_polygon.pyx":85
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y2 = 0
- *     elif _y2 >= h:             # <<<<<<<<<<<<<<
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y2 = h
+  /* "upolygon/draw_polygon.pyx":88
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y2 = 0
+ *     elif __y2 >= h:             # <<<<<<<<<<<<<<
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y2 = h - 1
  */
-  __pyx_t_1 = ((__pyx_v__y2 >= __pyx_v_h) != 0);
+  __pyx_t_1 = ((__pyx_v___y2 >= __pyx_v_h) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":86
- *         _y2 = 0
- *     elif _y2 >= h:
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1             # <<<<<<<<<<<<<<
- *         _y2 = h
+    /* "upolygon/draw_polygon.pyx":89
+ *         __y2 = 0
+ *     elif __y2 >= h:
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1             # <<<<<<<<<<<<<<
+ *         __y2 = h - 1
  * 
  */
-    __pyx_v__x2 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (__pyx_v_h - __pyx_v__y1)) + __pyx_v__x1);
+    __pyx_v___x2 = ((((__pyx_v__x2 - __pyx_v__x1) / (__pyx_v__y2 - __pyx_v__y1)) * (__pyx_v_h - __pyx_v__y1)) + __pyx_v__x1);
 
-    /* "upolygon/draw_polygon.pyx":87
- *     elif _y2 >= h:
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y2 = h             # <<<<<<<<<<<<<<
+    /* "upolygon/draw_polygon.pyx":90
+ *     elif __y2 >= h:
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y2 = h - 1             # <<<<<<<<<<<<<<
  * 
- *     if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):
+ *     if (__x1 < 0 and __x2 < 0) or (__x1 >= w and __x2 >= w):
  */
-    __pyx_v__y2 = __pyx_v_h;
+    __pyx_v___y2 = (__pyx_v_h - 1);
 
-    /* "upolygon/draw_polygon.pyx":85
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
- *         _y2 = 0
- *     elif _y2 >= h:             # <<<<<<<<<<<<<<
- *         _x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
- *         _y2 = h
+    /* "upolygon/draw_polygon.pyx":88
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (0-_y1) + _x1
+ *         __y2 = 0
+ *     elif __y2 >= h:             # <<<<<<<<<<<<<<
+ *         __x2 = (_x2-_x1) / (_y2 - _y1)  * (h-_y1) + _x1
+ *         __y2 = h - 1
  */
   }
   __pyx_L18:;
 
-  /* "upolygon/draw_polygon.pyx":89
- *         _y2 = h
+  /* "upolygon/draw_polygon.pyx":92
+ *         __y2 = h - 1
  * 
- *     if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):             # <<<<<<<<<<<<<<
+ *     if (__x1 < 0 and __x2 < 0) or (__x1 >= w and __x2 >= w):             # <<<<<<<<<<<<<<
  *         return 0
  * 
  */
-  __pyx_t_2 = ((__pyx_v__x1 < 0.0) != 0);
+  __pyx_t_2 = ((__pyx_v___x1 < 0.0) != 0);
   if (!__pyx_t_2) {
     goto __pyx_L21_next_or;
   } else {
   }
-  __pyx_t_2 = ((__pyx_v__x2 < 0.0) != 0);
+  __pyx_t_2 = ((__pyx_v___x2 < 0.0) != 0);
   if (!__pyx_t_2) {
   } else {
     __pyx_t_1 = __pyx_t_2;
     goto __pyx_L20_bool_binop_done;
   }
   __pyx_L21_next_or:;
-  __pyx_t_2 = ((__pyx_v__x1 >= __pyx_v_w) != 0);
+  __pyx_t_2 = ((__pyx_v___x1 >= __pyx_v_w) != 0);
   if (__pyx_t_2) {
   } else {
     __pyx_t_1 = __pyx_t_2;
     goto __pyx_L20_bool_binop_done;
   }
-  __pyx_t_2 = ((__pyx_v__x2 >= __pyx_v_w) != 0);
+  __pyx_t_2 = ((__pyx_v___x2 >= __pyx_v_w) != 0);
   __pyx_t_1 = __pyx_t_2;
   __pyx_L20_bool_binop_done:;
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":90
+    /* "upolygon/draw_polygon.pyx":93
  * 
- *     if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):
+ *     if (__x1 < 0 and __x2 < 0) or (__x1 >= w and __x2 >= w):
  *         return 0             # <<<<<<<<<<<<<<
  * 
- *     x1[0] = <int>_x1
+ *     x1[0] = <int>__x1
  */
     __pyx_r = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":89
- *         _y2 = h
+    /* "upolygon/draw_polygon.pyx":92
+ *         __y2 = h - 1
  * 
- *     if (_x1 < 0 and _x2 < 0) or (_x1 >= w and _x2 >= w):             # <<<<<<<<<<<<<<
+ *     if (__x1 < 0 and __x2 < 0) or (__x1 >= w and __x2 >= w):             # <<<<<<<<<<<<<<
  *         return 0
  * 
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":92
+  /* "upolygon/draw_polygon.pyx":95
  *         return 0
  * 
- *     x1[0] = <int>_x1             # <<<<<<<<<<<<<<
- *     x2[0] = <int>_x2
- *     y1[0] = <int>_y1
+ *     x1[0] = <int>__x1             # <<<<<<<<<<<<<<
+ *     x2[0] = <int>__x2
+ *     y1[0] = <int>__y1
  */
-  (__pyx_v_x1[0]) = ((int)__pyx_v__x1);
-
-  /* "upolygon/draw_polygon.pyx":93
- * 
- *     x1[0] = <int>_x1
- *     x2[0] = <int>_x2             # <<<<<<<<<<<<<<
- *     y1[0] = <int>_y1
- *     y2[0] = <int>_y2
- */
-  (__pyx_v_x2[0]) = ((int)__pyx_v__x2);
-
-  /* "upolygon/draw_polygon.pyx":94
- *     x1[0] = <int>_x1
- *     x2[0] = <int>_x2
- *     y1[0] = <int>_y1             # <<<<<<<<<<<<<<
- *     y2[0] = <int>_y2
- *     return 1
- */
-  (__pyx_v_y1[0]) = ((int)__pyx_v__y1);
-
-  /* "upolygon/draw_polygon.pyx":95
- *     x2[0] = <int>_x2
- *     y1[0] = <int>_y1
- *     y2[0] = <int>_y2             # <<<<<<<<<<<<<<
- *     return 1
- * 
- */
-  (__pyx_v_y2[0]) = ((int)__pyx_v__y2);
+  (__pyx_v_x1[0]) = ((int)__pyx_v___x1);
 
   /* "upolygon/draw_polygon.pyx":96
- *     y1[0] = <int>_y1
- *     y2[0] = <int>_y2
+ * 
+ *     x1[0] = <int>__x1
+ *     x2[0] = <int>__x2             # <<<<<<<<<<<<<<
+ *     y1[0] = <int>__y1
+ *     y2[0] = <int>__y2
+ */
+  (__pyx_v_x2[0]) = ((int)__pyx_v___x2);
+
+  /* "upolygon/draw_polygon.pyx":97
+ *     x1[0] = <int>__x1
+ *     x2[0] = <int>__x2
+ *     y1[0] = <int>__y1             # <<<<<<<<<<<<<<
+ *     y2[0] = <int>__y2
+ *     return 1
+ */
+  (__pyx_v_y1[0]) = ((int)__pyx_v___y1);
+
+  /* "upolygon/draw_polygon.pyx":98
+ *     x2[0] = <int>__x2
+ *     y1[0] = <int>__y1
+ *     y2[0] = <int>__y2             # <<<<<<<<<<<<<<
+ *     return 1
+ * 
+ */
+  (__pyx_v_y2[0]) = ((int)__pyx_v___y2);
+
+  /* "upolygon/draw_polygon.pyx":99
+ *     y1[0] = <int>__y1
+ *     y2[0] = <int>__y2
  *     return 1             # <<<<<<<<<<<<<<
  * 
  * @cython.boundscheck(False)
@@ -3417,7 +3457,7 @@ static CYTHON_INLINE int __pyx_f_8upolygon_12draw_polygon_clip_line(int __pyx_v_
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":101
+/* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3439,7 +3479,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3455,7 +3495,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3471,7 +3511,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3483,7 +3523,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3495,7 +3535,7 @@ static CYTHON_INLINE void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3520,7 +3560,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3536,7 +3576,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3552,7 +3592,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3564,7 +3604,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3576,7 +3616,7 @@ static CYTHON_INLINE void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3601,7 +3641,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3617,7 +3657,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3633,7 +3673,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3645,7 +3685,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3657,7 +3697,7 @@ static CYTHON_INLINE void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3682,7 +3722,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3698,7 +3738,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3714,7 +3754,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3726,7 +3766,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3738,7 +3778,7 @@ static CYTHON_INLINE void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((unsigned int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3763,7 +3803,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3779,7 +3819,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3795,7 +3835,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3807,7 +3847,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3819,7 +3859,7 @@ static CYTHON_INLINE void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3844,7 +3884,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   Py_ssize_t __pyx_t_8;
   Py_ssize_t __pyx_t_9;
 
-  /* "upolygon/draw_polygon.pyx":102
+  /* "upolygon/draw_polygon.pyx":105
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)             # <<<<<<<<<<<<<<
@@ -3860,7 +3900,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_x = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":103
+  /* "upolygon/draw_polygon.pyx":106
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:
  *     cdef int x = max(<int>ceil(x1),0)
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1             # <<<<<<<<<<<<<<
@@ -3876,7 +3916,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   }
   __pyx_v_max_x = (__pyx_t_5 + 1);
 
-  /* "upolygon/draw_polygon.pyx":105
+  /* "upolygon/draw_polygon.pyx":108
  *     cdef int max_x = min(<int>floor(x2), mask.shape[1]-1) + 1
  *     cdef int i
  *     for i in range(x, max_x):             # <<<<<<<<<<<<<<
@@ -3888,7 +3928,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   for (__pyx_t_7 = __pyx_v_x; __pyx_t_7 < __pyx_t_6; __pyx_t_7+=1) {
     __pyx_v_i = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":106
+    /* "upolygon/draw_polygon.pyx":109
  *     cdef int i
  *     for i in range(x, max_x):
  *         mask[y][i] = value             # <<<<<<<<<<<<<<
@@ -3900,7 +3940,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
     *((PY_LONG_LONG *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_8 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
   }
 
-  /* "upolygon/draw_polygon.pyx":101
+  /* "upolygon/draw_polygon.pyx":104
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] mask, data_type value) nogil:             # <<<<<<<<<<<<<<
@@ -3911,7 +3951,7 @@ static CYTHON_INLINE void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_stra
   /* function exit code */
 }
 
-/* "upolygon/draw_polygon.pyx":109
+/* "upolygon/draw_polygon.pyx":112
  * 
  * # Sort edges first by y_min and then by x_val
  * cdef int cmp_edges(const void* a, const void* b) nogil:             # <<<<<<<<<<<<<<
@@ -3925,7 +3965,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
   int __pyx_r;
   int __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":110
+  /* "upolygon/draw_polygon.pyx":113
  * # Sort edges first by y_min and then by x_val
  * cdef int cmp_edges(const void* a, const void* b) nogil:
  *     cdef s_edge a_v = (<s_edge*>a)[0]             # <<<<<<<<<<<<<<
@@ -3934,7 +3974,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
   __pyx_v_a_v = (((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)__pyx_v_a)[0]);
 
-  /* "upolygon/draw_polygon.pyx":111
+  /* "upolygon/draw_polygon.pyx":114
  * cdef int cmp_edges(const void* a, const void* b) nogil:
  *     cdef s_edge a_v = (<s_edge*>a)[0]
  *     cdef s_edge b_v = (<s_edge*>b)[0]             # <<<<<<<<<<<<<<
@@ -3943,7 +3983,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
   __pyx_v_b_v = (((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)__pyx_v_b)[0]);
 
-  /* "upolygon/draw_polygon.pyx":112
+  /* "upolygon/draw_polygon.pyx":115
  *     cdef s_edge a_v = (<s_edge*>a)[0]
  *     cdef s_edge b_v = (<s_edge*>b)[0]
  *     if a_v.y_min < b_v.y_min:             # <<<<<<<<<<<<<<
@@ -3953,7 +3993,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
   __pyx_t_1 = ((__pyx_v_a_v.y_min < __pyx_v_b_v.y_min) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":113
+    /* "upolygon/draw_polygon.pyx":116
  *     cdef s_edge b_v = (<s_edge*>b)[0]
  *     if a_v.y_min < b_v.y_min:
  *         return -1             # <<<<<<<<<<<<<<
@@ -3963,7 +4003,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
     __pyx_r = -1;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":112
+    /* "upolygon/draw_polygon.pyx":115
  *     cdef s_edge a_v = (<s_edge*>a)[0]
  *     cdef s_edge b_v = (<s_edge*>b)[0]
  *     if a_v.y_min < b_v.y_min:             # <<<<<<<<<<<<<<
@@ -3972,7 +4012,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":114
+  /* "upolygon/draw_polygon.pyx":117
  *     if a_v.y_min < b_v.y_min:
  *         return -1
  *     elif a_v.y_min == b_v.y_min:             # <<<<<<<<<<<<<<
@@ -3982,7 +4022,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
   __pyx_t_1 = ((__pyx_v_a_v.y_min == __pyx_v_b_v.y_min) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":115
+    /* "upolygon/draw_polygon.pyx":118
  *         return -1
  *     elif a_v.y_min == b_v.y_min:
  *         if a_v.x_val < b_v.x_val:             # <<<<<<<<<<<<<<
@@ -3992,7 +4032,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
     __pyx_t_1 = ((__pyx_v_a_v.x_val < __pyx_v_b_v.x_val) != 0);
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":116
+      /* "upolygon/draw_polygon.pyx":119
  *     elif a_v.y_min == b_v.y_min:
  *         if a_v.x_val < b_v.x_val:
  *             return -1             # <<<<<<<<<<<<<<
@@ -4002,7 +4042,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
       __pyx_r = -1;
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":115
+      /* "upolygon/draw_polygon.pyx":118
  *         return -1
  *     elif a_v.y_min == b_v.y_min:
  *         if a_v.x_val < b_v.x_val:             # <<<<<<<<<<<<<<
@@ -4011,7 +4051,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":117
+    /* "upolygon/draw_polygon.pyx":120
  *         if a_v.x_val < b_v.x_val:
  *             return -1
  *         elif a_v.x_val == b_v.x_val:             # <<<<<<<<<<<<<<
@@ -4021,7 +4061,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
     __pyx_t_1 = ((__pyx_v_a_v.x_val == __pyx_v_b_v.x_val) != 0);
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":118
+      /* "upolygon/draw_polygon.pyx":121
  *             return -1
  *         elif a_v.x_val == b_v.x_val:
  *             return 0             # <<<<<<<<<<<<<<
@@ -4031,7 +4071,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
       __pyx_r = 0;
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":117
+      /* "upolygon/draw_polygon.pyx":120
  *         if a_v.x_val < b_v.x_val:
  *             return -1
  *         elif a_v.x_val == b_v.x_val:             # <<<<<<<<<<<<<<
@@ -4040,7 +4080,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":120
+    /* "upolygon/draw_polygon.pyx":123
  *             return 0
  *         else:
  *             return 1             # <<<<<<<<<<<<<<
@@ -4052,7 +4092,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
       goto __pyx_L0;
     }
 
-    /* "upolygon/draw_polygon.pyx":114
+    /* "upolygon/draw_polygon.pyx":117
  *     if a_v.y_min < b_v.y_min:
  *         return -1
  *     elif a_v.y_min == b_v.y_min:             # <<<<<<<<<<<<<<
@@ -4061,7 +4101,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":122
+  /* "upolygon/draw_polygon.pyx":125
  *             return 1
  *     else:
  *         return 1             # <<<<<<<<<<<<<<
@@ -4073,7 +4113,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
     goto __pyx_L0;
   }
 
-  /* "upolygon/draw_polygon.pyx":109
+  /* "upolygon/draw_polygon.pyx":112
  * 
  * # Sort edges first by y_min and then by x_val
  * cdef int cmp_edges(const void* a, const void* b) nogil:             # <<<<<<<<<<<<<<
@@ -4086,7 +4126,7 @@ static int __pyx_f_8upolygon_12draw_polygon_cmp_edges(void const *__pyx_v_a, voi
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":129
+/* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -4123,7 +4163,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_0draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -4132,7 +4172,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -4141,7 +4181,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -4151,7 +4191,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -4169,7 +4209,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -4178,7 +4218,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -4187,7 +4227,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -4199,7 +4239,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -4225,7 +4265,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -4237,7 +4277,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -4249,7 +4289,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -4258,7 +4298,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -4267,7 +4307,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -4277,7 +4317,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -4295,7 +4335,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -4304,7 +4344,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -4313,7 +4353,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -4325,7 +4365,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -4351,7 +4391,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -4363,7 +4403,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -4375,7 +4415,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -4384,7 +4424,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -4393,7 +4433,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -4403,7 +4443,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -4412,7 +4452,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -4421,7 +4461,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -4430,7 +4470,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -4439,7 +4479,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -4448,7 +4488,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -4457,7 +4497,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -4467,7 +4507,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -4476,7 +4516,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -4485,7 +4525,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -4501,7 +4541,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -4510,7 +4550,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -4520,7 +4560,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -4529,7 +4569,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -4538,7 +4578,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -4547,7 +4587,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -4556,17 +4596,17 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -4576,7 +4616,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -4588,17 +4628,17 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -4607,7 +4647,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -4616,7 +4656,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -4625,7 +4665,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -4634,7 +4674,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -4644,7 +4684,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -4660,7 +4700,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -4676,7 +4716,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -4688,7 +4728,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -4699,7 +4739,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -4709,7 +4749,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -4718,7 +4758,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -4728,7 +4768,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -4738,7 +4778,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -4749,7 +4789,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -4759,7 +4799,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -4769,7 +4809,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -4786,7 +4826,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -4802,7 +4842,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -4814,7 +4854,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -4825,7 +4865,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -4835,7 +4875,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -4844,7 +4884,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -4854,7 +4894,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -4864,7 +4904,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -4875,7 +4915,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -4887,7 +4927,7 @@ static void __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -4932,7 +4972,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_1draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -4941,7 +4981,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -4950,7 +4990,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -4960,7 +5000,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -4978,7 +5018,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -4987,7 +5027,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -4996,7 +5036,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -5008,7 +5048,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -5034,7 +5074,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -5046,7 +5086,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -5058,7 +5098,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -5067,7 +5107,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -5076,7 +5116,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -5086,7 +5126,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -5104,7 +5144,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -5113,7 +5153,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -5122,7 +5162,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -5134,7 +5174,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -5160,7 +5200,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -5172,7 +5212,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -5184,7 +5224,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -5193,7 +5233,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -5202,7 +5242,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -5212,7 +5252,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -5221,7 +5261,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -5230,7 +5270,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -5239,7 +5279,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -5248,7 +5288,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -5257,7 +5297,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -5266,7 +5306,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -5276,7 +5316,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -5285,7 +5325,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -5294,7 +5334,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -5310,7 +5350,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -5319,7 +5359,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -5329,7 +5369,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -5338,7 +5378,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -5347,7 +5387,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -5356,7 +5396,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -5365,17 +5405,17 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -5385,7 +5425,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -5397,17 +5437,17 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -5416,7 +5456,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -5425,7 +5465,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -5434,7 +5474,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -5443,7 +5483,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -5453,7 +5493,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -5469,7 +5509,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -5485,7 +5525,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -5497,7 +5537,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -5508,7 +5548,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -5518,7 +5558,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -5527,7 +5567,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -5537,7 +5577,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -5547,7 +5587,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -5558,7 +5598,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -5568,7 +5608,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -5578,7 +5618,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -5595,7 +5635,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -5611,7 +5651,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -5623,7 +5663,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -5634,7 +5674,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((unsigned char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -5644,7 +5684,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -5653,7 +5693,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -5663,7 +5703,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -5673,7 +5713,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -5684,7 +5724,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -5696,7 +5736,7 @@ static void __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -5741,7 +5781,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_2draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -5750,7 +5790,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -5759,7 +5799,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -5769,7 +5809,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -5787,7 +5827,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -5796,7 +5836,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -5805,7 +5845,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -5817,7 +5857,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -5843,7 +5883,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -5855,7 +5895,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -5867,7 +5907,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -5876,7 +5916,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -5885,7 +5925,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -5895,7 +5935,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -5913,7 +5953,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -5922,7 +5962,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -5931,7 +5971,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -5943,7 +5983,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -5969,7 +6009,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -5981,7 +6021,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -5993,7 +6033,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -6002,7 +6042,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -6011,7 +6051,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -6021,7 +6061,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -6030,7 +6070,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -6039,7 +6079,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -6048,7 +6088,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -6057,7 +6097,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -6066,7 +6106,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -6075,7 +6115,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -6085,7 +6125,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -6094,7 +6134,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -6103,7 +6143,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -6119,7 +6159,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -6128,7 +6168,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -6138,7 +6178,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -6147,7 +6187,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -6156,7 +6196,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -6165,7 +6205,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -6174,17 +6214,17 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6194,7 +6234,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -6206,17 +6246,17 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6225,7 +6265,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -6234,7 +6274,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -6243,7 +6283,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -6252,7 +6292,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6262,7 +6302,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -6278,7 +6318,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -6294,7 +6334,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -6306,7 +6346,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -6317,7 +6357,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -6327,7 +6367,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -6336,7 +6376,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -6346,7 +6386,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -6356,7 +6396,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -6367,7 +6407,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -6377,7 +6417,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -6387,7 +6427,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -6404,7 +6444,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -6420,7 +6460,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -6432,7 +6472,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -6443,7 +6483,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -6453,7 +6493,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -6462,7 +6502,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -6472,7 +6512,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -6482,7 +6522,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -6493,7 +6533,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -6505,7 +6545,7 @@ static void __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -6550,7 +6590,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_3draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -6559,7 +6599,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -6568,7 +6608,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -6578,7 +6618,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -6596,7 +6636,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -6605,7 +6645,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -6614,7 +6654,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -6626,7 +6666,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -6652,7 +6692,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -6664,7 +6704,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -6676,7 +6716,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((unsigned int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -6685,7 +6725,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -6694,7 +6734,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -6704,7 +6744,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -6722,7 +6762,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -6731,7 +6771,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -6740,7 +6780,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -6752,7 +6792,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -6778,7 +6818,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -6790,7 +6830,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -6802,7 +6842,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((unsigned int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -6811,7 +6851,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -6820,7 +6860,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -6830,7 +6870,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -6839,7 +6879,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -6848,7 +6888,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -6857,7 +6897,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -6866,7 +6906,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -6875,7 +6915,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -6884,7 +6924,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -6894,7 +6934,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -6903,7 +6943,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -6912,7 +6952,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -6928,7 +6968,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -6937,7 +6977,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -6947,7 +6987,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -6956,7 +6996,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -6965,7 +7005,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -6974,7 +7014,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -6983,17 +7023,17 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7003,7 +7043,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -7015,17 +7055,17 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7034,7 +7074,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -7043,7 +7083,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -7052,7 +7092,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -7061,7 +7101,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7071,7 +7111,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -7087,7 +7127,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -7103,7 +7143,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -7115,7 +7155,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -7126,7 +7166,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((unsigned int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7136,7 +7176,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -7145,7 +7185,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7155,7 +7195,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -7165,7 +7205,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -7176,7 +7216,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -7186,7 +7226,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7196,7 +7236,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -7213,7 +7253,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -7229,7 +7269,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -7241,7 +7281,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -7252,7 +7292,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((unsigned int *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7262,7 +7302,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -7271,7 +7311,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7281,7 +7321,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -7291,7 +7331,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -7302,7 +7342,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -7314,7 +7354,7 @@ static void __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -7359,7 +7399,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_4draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -7368,7 +7408,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -7377,7 +7417,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -7387,7 +7427,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -7405,7 +7445,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -7414,7 +7454,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -7423,7 +7463,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -7435,7 +7475,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -7461,7 +7501,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -7473,7 +7513,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -7485,7 +7525,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -7494,7 +7534,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -7503,7 +7543,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -7513,7 +7553,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -7531,7 +7571,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -7540,7 +7580,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -7549,7 +7589,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -7561,7 +7601,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -7587,7 +7627,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -7599,7 +7639,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -7611,7 +7651,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -7620,7 +7660,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -7629,7 +7669,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -7639,7 +7679,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -7648,7 +7688,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -7657,7 +7697,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -7666,7 +7706,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -7675,7 +7715,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -7684,7 +7724,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -7693,7 +7733,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -7703,7 +7743,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -7712,7 +7752,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -7721,7 +7761,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -7737,7 +7777,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -7746,7 +7786,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -7756,7 +7796,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -7765,7 +7805,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -7774,7 +7814,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -7783,7 +7823,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -7792,17 +7832,17 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7812,7 +7852,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -7824,17 +7864,17 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7843,7 +7883,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -7852,7 +7892,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -7861,7 +7901,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -7870,7 +7910,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -7880,7 +7920,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -7896,7 +7936,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -7912,7 +7952,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -7924,7 +7964,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -7935,7 +7975,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7945,7 +7985,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -7954,7 +7994,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -7964,7 +8004,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -7974,7 +8014,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -7985,7 +8025,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -7995,7 +8035,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -8005,7 +8045,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -8022,7 +8062,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -8038,7 +8078,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -8050,7 +8090,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -8061,7 +8101,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((double *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8071,7 +8111,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -8080,7 +8120,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8090,7 +8130,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -8100,7 +8140,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -8111,7 +8151,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -8123,7 +8163,7 @@ static void __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -8168,7 +8208,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_5draw_edge_line", 0);
 
-  /* "upolygon/draw_polygon.pyx":130
+  /* "upolygon/draw_polygon.pyx":133
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -8177,7 +8217,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":131
+  /* "upolygon/draw_polygon.pyx":134
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):
  *     cdef int dx = x2 - x1
  *     cdef int dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -8186,7 +8226,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":135
+  /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -8196,7 +8236,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":136
+    /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -8214,7 +8254,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L5_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":137
+      /* "upolygon/draw_polygon.pyx":140
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return             # <<<<<<<<<<<<<<
@@ -8223,7 +8263,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":136
+      /* "upolygon/draw_polygon.pyx":139
  *     # special case for vertical lines
  *     if dx == 0:
  *         if x1 < 0 or x1 >= mask.shape[1]:             # <<<<<<<<<<<<<<
@@ -8232,7 +8272,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":138
+    /* "upolygon/draw_polygon.pyx":141
  *         if x1 < 0 or x1 >= mask.shape[1]:
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)             # <<<<<<<<<<<<<<
@@ -8244,7 +8284,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":139
+    /* "upolygon/draw_polygon.pyx":142
  *             return
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)             # <<<<<<<<<<<<<<
@@ -8270,7 +8310,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_y1 = __pyx_t_4;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":140
+    /* "upolygon/draw_polygon.pyx":143
  *         y1, y2 = clip(y1, 0, mask.shape[0]-1), clip(y2, 0, mask.shape[0]-1)
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):             # <<<<<<<<<<<<<<
@@ -8282,7 +8322,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_5 = __pyx_v_y1; __pyx_t_5 < __pyx_t_8; __pyx_t_5+=1) {
       __pyx_v_y = __pyx_t_5;
 
-      /* "upolygon/draw_polygon.pyx":141
+      /* "upolygon/draw_polygon.pyx":144
  *         y1, y2 = min(y1, y2), max(y1, y2)
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value             # <<<<<<<<<<<<<<
@@ -8294,7 +8334,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((PY_LONG_LONG *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":142
+    /* "upolygon/draw_polygon.pyx":145
  *         for y in range(y1, y2+1):
  *             mask[y][x1] = value
  *         return             # <<<<<<<<<<<<<<
@@ -8303,7 +8343,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":135
+    /* "upolygon/draw_polygon.pyx":138
  * 
  *     # special case for vertical lines
  *     if dx == 0:             # <<<<<<<<<<<<<<
@@ -8312,7 +8352,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":145
+  /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -8322,7 +8362,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":146
+    /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -8340,7 +8380,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_L11_bool_binop_done:;
     if (__pyx_t_1) {
 
-      /* "upolygon/draw_polygon.pyx":147
+      /* "upolygon/draw_polygon.pyx":150
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return             # <<<<<<<<<<<<<<
@@ -8349,7 +8389,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
       goto __pyx_L0;
 
-      /* "upolygon/draw_polygon.pyx":146
+      /* "upolygon/draw_polygon.pyx":149
  *     # special case for horizontal lines
  *     if dy == 0:
  *         if y1 < 0 or y1 >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -8358,7 +8398,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":148
+    /* "upolygon/draw_polygon.pyx":151
  *         if y1 < 0 or y1 >= mask.shape[0]:
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)             # <<<<<<<<<<<<<<
@@ -8370,7 +8410,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_5;
     __pyx_v_x2 = __pyx_t_4;
 
-    /* "upolygon/draw_polygon.pyx":149
+    /* "upolygon/draw_polygon.pyx":152
  *             return
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)             # <<<<<<<<<<<<<<
@@ -8396,7 +8436,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x1 = __pyx_t_4;
     __pyx_v_x2 = __pyx_t_6;
 
-    /* "upolygon/draw_polygon.pyx":150
+    /* "upolygon/draw_polygon.pyx":153
  *         x1, x2 = clip(x1, 0, mask.shape[1]-1), clip(x2, 0, mask.shape[1]-1)
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):             # <<<<<<<<<<<<<<
@@ -8408,7 +8448,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_6 = __pyx_v_x1; __pyx_t_6 < __pyx_t_8; __pyx_t_6+=1) {
       __pyx_v_x = __pyx_t_6;
 
-      /* "upolygon/draw_polygon.pyx":151
+      /* "upolygon/draw_polygon.pyx":154
  *         x1, x2 = min(x1, x2), max(x1, x2)
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value             # <<<<<<<<<<<<<<
@@ -8420,7 +8460,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       *((PY_LONG_LONG *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
     }
 
-    /* "upolygon/draw_polygon.pyx":152
+    /* "upolygon/draw_polygon.pyx":155
  *         for x in range(x1, x2+1):
  *             mask[y1][x] = value
  *         return             # <<<<<<<<<<<<<<
@@ -8429,7 +8469,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":145
+    /* "upolygon/draw_polygon.pyx":148
  * 
  *     # special case for horizontal lines
  *     if dy == 0:             # <<<<<<<<<<<<<<
@@ -8438,7 +8478,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":154
+  /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -8448,7 +8488,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_f_8upolygon_12draw_polygon_clip_line((__pyx_v_mask.shape[1]), (__pyx_v_mask.shape[0]), (&__pyx_v_x1), (&__pyx_v_y1), (&__pyx_v_x2), (&__pyx_v_y2)) == 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":155
+    /* "upolygon/draw_polygon.pyx":158
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:
  *         return             # <<<<<<<<<<<<<<
@@ -8457,7 +8497,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":154
+    /* "upolygon/draw_polygon.pyx":157
  *         return
  * 
  *     if clip_line(mask.shape[1], mask.shape[0], &x1, &y1, &x2, &y2) == 0:             # <<<<<<<<<<<<<<
@@ -8466,7 +8506,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":157
+  /* "upolygon/draw_polygon.pyx":160
  *         return
  * 
  *     dx = x2 - x1             # <<<<<<<<<<<<<<
@@ -8475,7 +8515,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dx = (__pyx_v_x2 - __pyx_v_x1);
 
-  /* "upolygon/draw_polygon.pyx":158
+  /* "upolygon/draw_polygon.pyx":161
  * 
  *     dx = x2 - x1
  *     dy = y2 - y1             # <<<<<<<<<<<<<<
@@ -8484,7 +8524,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_dy = (__pyx_v_y2 - __pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":160
+  /* "upolygon/draw_polygon.pyx":163
  *     dy = y2 - y1
  * 
  *     cdef int delta_x = 1             # <<<<<<<<<<<<<<
@@ -8493,7 +8533,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_x = 1;
 
-  /* "upolygon/draw_polygon.pyx":161
+  /* "upolygon/draw_polygon.pyx":164
  * 
  *     cdef int delta_x = 1
  *     cdef int delta_y = 1             # <<<<<<<<<<<<<<
@@ -8502,7 +8542,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_delta_y = 1;
 
-  /* "upolygon/draw_polygon.pyx":163
+  /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -8512,7 +8552,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dx < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":164
+    /* "upolygon/draw_polygon.pyx":167
  * 
  *     if dx < 0:
  *         dx = -dx             # <<<<<<<<<<<<<<
@@ -8521,7 +8561,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dx = (-__pyx_v_dx);
 
-    /* "upolygon/draw_polygon.pyx":165
+    /* "upolygon/draw_polygon.pyx":168
  *     if dx < 0:
  *         dx = -dx
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -8530,7 +8570,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":166
+    /* "upolygon/draw_polygon.pyx":169
  *         dx = -dx
  *         dy = -dy
  *         x1, y1, x2, y2 = x2, y2, x1, y1             # <<<<<<<<<<<<<<
@@ -8546,7 +8586,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_x2 = __pyx_t_3;
     __pyx_v_y2 = __pyx_t_5;
 
-    /* "upolygon/draw_polygon.pyx":163
+    /* "upolygon/draw_polygon.pyx":166
  *     cdef int delta_y = 1
  * 
  *     if dx < 0:             # <<<<<<<<<<<<<<
@@ -8555,7 +8595,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":168
+  /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -8565,7 +8605,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = ((__pyx_v_dy < 0) != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":169
+    /* "upolygon/draw_polygon.pyx":172
  * 
  *     if dy < 0:
  *         delta_y = -1             # <<<<<<<<<<<<<<
@@ -8574,7 +8614,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_delta_y = -1;
 
-    /* "upolygon/draw_polygon.pyx":170
+    /* "upolygon/draw_polygon.pyx":173
  *     if dy < 0:
  *         delta_y = -1
  *         dy = -dy             # <<<<<<<<<<<<<<
@@ -8583,7 +8623,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
     __pyx_v_dy = (-__pyx_v_dy);
 
-    /* "upolygon/draw_polygon.pyx":168
+    /* "upolygon/draw_polygon.pyx":171
  *         x1, y1, x2, y2 = x2, y2, x1, y1
  * 
  *     if dy < 0:             # <<<<<<<<<<<<<<
@@ -8592,7 +8632,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":173
+  /* "upolygon/draw_polygon.pyx":176
  * 
  * 
  *     cdef int flip = dy > dx             # <<<<<<<<<<<<<<
@@ -8601,17 +8641,17 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_flip = (__pyx_v_dy > __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":174
+  /* "upolygon/draw_polygon.pyx":177
  * 
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)             # <<<<<<<<<<<<<<
  *     if flip:
  *         dx, dy = dy, dx
  */
-  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 174, __pyx_L1_error)
+  __pyx_t_5 = abs((__pyx_v_x1 - __pyx_v_x2)); if (unlikely(__pyx_t_5 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
   __pyx_v_count = __pyx_t_5;
 
-  /* "upolygon/draw_polygon.pyx":175
+  /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -8621,7 +8661,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":176
+    /* "upolygon/draw_polygon.pyx":179
  *     cdef int count = abs(x1 - x2)
  *     if flip:
  *         dx, dy = dy, dx             # <<<<<<<<<<<<<<
@@ -8633,17 +8673,17 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     __pyx_v_dx = __pyx_t_5;
     __pyx_v_dy = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":177
+    /* "upolygon/draw_polygon.pyx":180
  *     if flip:
  *         dx, dy = dy, dx
  *         count = abs(y1 - y2)             # <<<<<<<<<<<<<<
  * 
  *     cdef int minus_err = 2 * dy
  */
-    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 177, __pyx_L1_error)
+    __pyx_t_3 = abs((__pyx_v_y1 - __pyx_v_y2)); if (unlikely(__pyx_t_3 == ((int)-1))) __PYX_ERR(0, 180, __pyx_L1_error)
     __pyx_v_count = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":175
+    /* "upolygon/draw_polygon.pyx":178
  *     cdef int flip = dy > dx
  *     cdef int count = abs(x1 - x2)
  *     if flip:             # <<<<<<<<<<<<<<
@@ -8652,7 +8692,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":179
+  /* "upolygon/draw_polygon.pyx":182
  *         count = abs(y1 - y2)
  * 
  *     cdef int minus_err = 2 * dy             # <<<<<<<<<<<<<<
@@ -8661,7 +8701,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_minus_err = (2 * __pyx_v_dy);
 
-  /* "upolygon/draw_polygon.pyx":180
+  /* "upolygon/draw_polygon.pyx":183
  * 
  *     cdef int minus_err = 2 * dy
  *     cdef int plus_err = 2 * (dy - dx)             # <<<<<<<<<<<<<<
@@ -8670,7 +8710,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_plus_err = (2 * (__pyx_v_dy - __pyx_v_dx));
 
-  /* "upolygon/draw_polygon.pyx":182
+  /* "upolygon/draw_polygon.pyx":185
  *     cdef int plus_err = 2 * (dy - dx)
  * 
  *     cdef int err = (dy + dy) - dx             # <<<<<<<<<<<<<<
@@ -8679,7 +8719,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
   __pyx_v_err = ((__pyx_v_dy + __pyx_v_dy) - __pyx_v_dx);
 
-  /* "upolygon/draw_polygon.pyx":184
+  /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -8689,7 +8729,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __pyx_t_1 = (__pyx_v_flip != 0);
   if (__pyx_t_1) {
 
-    /* "upolygon/draw_polygon.pyx":185
+    /* "upolygon/draw_polygon.pyx":188
  * 
  *     if flip:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -8705,7 +8745,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":186
+    /* "upolygon/draw_polygon.pyx":189
  *     if flip:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -8721,7 +8761,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":187
+    /* "upolygon/draw_polygon.pyx":190
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -8733,7 +8773,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":188
+      /* "upolygon/draw_polygon.pyx":191
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -8744,7 +8784,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_10 = __pyx_v_x;
       *((PY_LONG_LONG *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_9 * __pyx_v_mask.strides[0]) ) + __pyx_t_10 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":189
+      /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8754,7 +8794,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":190
+        /* "upolygon/draw_polygon.pyx":193
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -8763,7 +8803,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":189
+        /* "upolygon/draw_polygon.pyx":192
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8773,7 +8813,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L22;
       }
 
-      /* "upolygon/draw_polygon.pyx":192
+      /* "upolygon/draw_polygon.pyx":195
  *                 err  = err + minus_err
  *             else:
  *                 x = x + delta_x             # <<<<<<<<<<<<<<
@@ -8783,7 +8823,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_x = (__pyx_v_x + __pyx_v_delta_x);
 
-        /* "upolygon/draw_polygon.pyx":193
+        /* "upolygon/draw_polygon.pyx":196
  *             else:
  *                 x = x + delta_x
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -8794,7 +8834,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L22:;
 
-      /* "upolygon/draw_polygon.pyx":194
+      /* "upolygon/draw_polygon.pyx":197
  *                 x = x + delta_x
  *                 err = err + plus_err
  *             y = y + delta_y             # <<<<<<<<<<<<<<
@@ -8804,7 +8844,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
     }
 
-    /* "upolygon/draw_polygon.pyx":184
+    /* "upolygon/draw_polygon.pyx":187
  *     cdef int err = (dy + dy) - dx
  * 
  *     if flip:             # <<<<<<<<<<<<<<
@@ -8814,7 +8854,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     goto __pyx_L19;
   }
 
-  /* "upolygon/draw_polygon.pyx":196
+  /* "upolygon/draw_polygon.pyx":199
  *             y = y + delta_y
  *     else:
  *         y = max(0, y1)             # <<<<<<<<<<<<<<
@@ -8831,7 +8871,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_y = __pyx_t_8;
 
-    /* "upolygon/draw_polygon.pyx":197
+    /* "upolygon/draw_polygon.pyx":200
  *     else:
  *         y = max(0, y1)
  *         x = max(0, x1)             # <<<<<<<<<<<<<<
@@ -8847,7 +8887,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     }
     __pyx_v_x = __pyx_t_7;
 
-    /* "upolygon/draw_polygon.pyx":198
+    /* "upolygon/draw_polygon.pyx":201
  *         y = max(0, y1)
  *         x = max(0, x1)
  *         for _i in range(count):             # <<<<<<<<<<<<<<
@@ -8859,7 +8899,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
     for (__pyx_t_4 = 0; __pyx_t_4 < __pyx_t_5; __pyx_t_4+=1) {
       __pyx_v__i = __pyx_t_4;
 
-      /* "upolygon/draw_polygon.pyx":199
+      /* "upolygon/draw_polygon.pyx":202
  *         x = max(0, x1)
  *         for _i in range(count):
  *             mask[y][x] = value             # <<<<<<<<<<<<<<
@@ -8870,7 +8910,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_9 = __pyx_v_x;
       *((PY_LONG_LONG *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_mask.data + __pyx_t_10 * __pyx_v_mask.strides[0]) ) + __pyx_t_9 * __pyx_v_mask.strides[1]) )) = __pyx_v_value;
 
-      /* "upolygon/draw_polygon.pyx":200
+      /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8880,7 +8920,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       __pyx_t_1 = ((__pyx_v_err <= 0) != 0);
       if (__pyx_t_1) {
 
-        /* "upolygon/draw_polygon.pyx":201
+        /* "upolygon/draw_polygon.pyx":204
  *             mask[y][x] = value
  *             if err <= 0:
  *                 err  = err + minus_err             # <<<<<<<<<<<<<<
@@ -8889,7 +8929,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
  */
         __pyx_v_err = (__pyx_v_err + __pyx_v_minus_err);
 
-        /* "upolygon/draw_polygon.pyx":200
+        /* "upolygon/draw_polygon.pyx":203
  *         for _i in range(count):
  *             mask[y][x] = value
  *             if err <= 0:             # <<<<<<<<<<<<<<
@@ -8899,7 +8939,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
         goto __pyx_L25;
       }
 
-      /* "upolygon/draw_polygon.pyx":203
+      /* "upolygon/draw_polygon.pyx":206
  *                 err  = err + minus_err
  *             else:
  *                 y = y + delta_y             # <<<<<<<<<<<<<<
@@ -8909,7 +8949,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       /*else*/ {
         __pyx_v_y = (__pyx_v_y + __pyx_v_delta_y);
 
-        /* "upolygon/draw_polygon.pyx":204
+        /* "upolygon/draw_polygon.pyx":207
  *             else:
  *                 y = y + delta_y
  *                 err = err + plus_err             # <<<<<<<<<<<<<<
@@ -8920,7 +8960,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
       }
       __pyx_L25:;
 
-      /* "upolygon/draw_polygon.pyx":205
+      /* "upolygon/draw_polygon.pyx":208
  *                 y = y + delta_y
  *                 err = err + plus_err
  *             x = x + delta_x             # <<<<<<<<<<<<<<
@@ -8932,7 +8972,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   }
   __pyx_L19:;
 
-  /* "upolygon/draw_polygon.pyx":129
+  /* "upolygon/draw_polygon.pyx":132
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef void draw_edge_line(data_type [:,:] mask, int x1, int y1, int x2, int y2, data_type value):             # <<<<<<<<<<<<<<
@@ -8948,7 +8988,7 @@ static void __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__Pyx_me
   __Pyx_RefNannyFinishContext();
 }
 
-/* "upolygon/draw_polygon.pyx":213
+/* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -8986,7 +9026,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_0find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -8995,21 +9035,21 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -9026,7 +9066,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -9034,13 +9074,13 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9051,22 +9091,22 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -9075,7 +9115,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -9089,7 +9129,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -9098,7 +9138,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -9110,7 +9150,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -9124,7 +9164,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -9133,7 +9173,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -9142,7 +9182,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -9152,7 +9192,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9164,7 +9204,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -9173,7 +9213,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -9182,7 +9222,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -9192,7 +9232,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -9201,7 +9241,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -9210,7 +9250,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -9219,7 +9259,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -9229,7 +9269,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -9239,7 +9279,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -9248,7 +9288,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -9259,7 +9299,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -9269,7 +9309,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9281,7 +9321,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -9290,7 +9330,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -9299,7 +9339,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -9309,7 +9349,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -9318,7 +9358,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -9327,7 +9367,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -9336,7 +9376,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -9346,7 +9386,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -9355,7 +9395,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -9364,7 +9404,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -9373,7 +9413,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -9382,7 +9422,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9396,7 +9436,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -9406,7 +9446,7 @@ static int __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -9460,7 +9500,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_1find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -9469,21 +9509,21 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -9500,7 +9540,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -9508,13 +9548,13 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9525,22 +9565,22 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -9549,7 +9589,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -9563,7 +9603,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -9572,7 +9612,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -9584,7 +9624,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -9598,7 +9638,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -9607,7 +9647,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -9616,7 +9656,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -9626,7 +9666,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9638,7 +9678,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -9647,7 +9687,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -9656,7 +9696,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -9666,7 +9706,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -9675,7 +9715,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -9684,7 +9724,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -9693,7 +9733,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -9703,7 +9743,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -9713,7 +9753,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -9722,7 +9762,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -9733,7 +9773,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -9743,7 +9783,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9755,7 +9795,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -9764,7 +9804,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -9773,7 +9813,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -9783,7 +9823,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -9792,7 +9832,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -9801,7 +9841,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -9810,7 +9850,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -9820,7 +9860,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -9829,7 +9869,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -9838,7 +9878,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -9847,7 +9887,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -9856,7 +9896,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -9870,7 +9910,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -9880,7 +9920,7 @@ static int __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -9934,7 +9974,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_2find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -9943,21 +9983,21 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -9974,7 +10014,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -9982,13 +10022,13 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -9999,22 +10039,22 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -10023,7 +10063,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -10037,7 +10077,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -10046,7 +10086,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -10058,7 +10098,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -10072,7 +10112,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -10081,7 +10121,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -10090,7 +10130,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -10100,7 +10140,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10112,7 +10152,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -10121,7 +10161,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -10130,7 +10170,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -10140,7 +10180,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -10149,7 +10189,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -10158,7 +10198,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -10167,7 +10207,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -10177,7 +10217,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -10187,7 +10227,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -10196,7 +10236,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -10207,7 +10247,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -10217,7 +10257,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10229,7 +10269,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -10238,7 +10278,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -10247,7 +10287,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -10257,7 +10297,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -10266,7 +10306,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -10275,7 +10315,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -10284,7 +10324,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -10294,7 +10334,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -10303,7 +10343,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -10312,7 +10352,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -10321,7 +10361,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -10330,7 +10370,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10344,7 +10384,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -10354,7 +10394,7 @@ static int __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -10408,7 +10448,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_3find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -10417,21 +10457,21 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -10448,7 +10488,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -10456,13 +10496,13 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -10473,22 +10513,22 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -10497,7 +10537,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -10511,7 +10551,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -10520,7 +10560,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -10532,7 +10572,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -10546,7 +10586,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -10555,7 +10595,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -10564,7 +10604,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -10574,7 +10614,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10586,7 +10626,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -10595,7 +10635,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -10604,7 +10644,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -10614,7 +10654,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -10623,7 +10663,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -10632,7 +10672,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -10641,7 +10681,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -10651,7 +10691,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -10661,7 +10701,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -10670,7 +10710,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -10681,7 +10721,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -10691,7 +10731,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10703,7 +10743,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -10712,7 +10752,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -10721,7 +10761,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -10731,7 +10771,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -10740,7 +10780,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -10749,7 +10789,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -10758,7 +10798,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -10768,7 +10808,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -10777,7 +10817,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -10786,7 +10826,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -10795,7 +10835,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -10804,7 +10844,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -10818,7 +10858,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -10828,7 +10868,7 @@ static int __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -10882,7 +10922,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_4find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -10891,21 +10931,21 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -10922,7 +10962,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -10930,13 +10970,13 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -10947,22 +10987,22 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -10971,7 +11011,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -10985,7 +11025,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -10994,7 +11034,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -11006,7 +11046,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -11020,7 +11060,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -11029,7 +11069,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -11038,7 +11078,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -11048,7 +11088,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11060,7 +11100,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -11069,7 +11109,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -11078,7 +11118,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -11088,7 +11128,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -11097,7 +11137,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -11106,7 +11146,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -11115,7 +11155,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -11125,7 +11165,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -11135,7 +11175,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -11144,7 +11184,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -11155,7 +11195,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -11165,7 +11205,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11177,7 +11217,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -11186,7 +11226,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -11195,7 +11235,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -11205,7 +11245,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -11214,7 +11254,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -11223,7 +11263,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -11232,7 +11272,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -11242,7 +11282,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -11251,7 +11291,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -11260,7 +11300,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -11269,7 +11309,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -11278,7 +11318,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11292,7 +11332,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -11302,7 +11342,7 @@ static int __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -11356,7 +11396,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__pyx_fuse_5find_edges", 0);
 
-  /* "upolygon/draw_polygon.pyx":214
+  /* "upolygon/draw_polygon.pyx":217
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)             # <<<<<<<<<<<<<<
@@ -11365,21 +11405,21 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   if (unlikely(__pyx_v_path == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 214, __pyx_L1_error)
+    __PYX_ERR(0, 217, __pyx_L1_error)
   }
-  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 214, __pyx_L1_error)
+  __pyx_t_1 = PyList_GET_SIZE(__pyx_v_path); if (unlikely(__pyx_t_1 == ((Py_ssize_t)-1))) __PYX_ERR(0, 217, __pyx_L1_error)
   __pyx_v_length = __pyx_t_1;
 
-  /* "upolygon/draw_polygon.pyx":215
+  /* "upolygon/draw_polygon.pyx":218
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):
  *     cdef int length = len(path)
  *     cdef float[:] path_mv = memoryview(array('f', path))             # <<<<<<<<<<<<<<
  *     cdef float x1
  *     cdef float y1
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_memoryview); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_array); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
@@ -11396,7 +11436,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCALL
   if (PyFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
@@ -11404,13 +11444,13 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   #if CYTHON_FAST_PYCCALL
   if (__Pyx_PyFastCFunction_Check(__pyx_t_4)) {
     PyObject *__pyx_temp[3] = {__pyx_t_5, __pyx_n_u_f, __pyx_v_path};
-    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyCFunction_FastCall(__pyx_t_4, __pyx_temp+1-__pyx_t_6, 2+__pyx_t_6); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_GOTREF(__pyx_t_3);
   } else
   #endif
   {
-    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_7 = PyTuple_New(2+__pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
     if (__pyx_t_5) {
       __Pyx_GIVEREF(__pyx_t_5); PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_t_5); __pyx_t_5 = NULL;
@@ -11421,22 +11461,22 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __Pyx_INCREF(__pyx_v_path);
     __Pyx_GIVEREF(__pyx_v_path);
     PyTuple_SET_ITEM(__pyx_t_7, 1+__pyx_t_6, __pyx_v_path);
-    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 215, __pyx_L1_error)
+    __pyx_t_3 = __Pyx_PyObject_Call(__pyx_t_4, __pyx_t_7, NULL); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 218, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
-  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 215, __pyx_L1_error)
+  __pyx_t_8 = __Pyx_PyObject_to_MemoryviewSlice_ds_float(__pyx_t_4, PyBUF_WRITABLE); if (unlikely(!__pyx_t_8.memview)) __PYX_ERR(0, 218, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_v_path_mv = __pyx_t_8;
   __pyx_t_8.memview = NULL;
   __pyx_t_8.data = NULL;
 
-  /* "upolygon/draw_polygon.pyx":221
+  /* "upolygon/draw_polygon.pyx":224
  *     cdef float y2
  *     cdef int i
  *     cdef int idx = 0             # <<<<<<<<<<<<<<
@@ -11445,7 +11485,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_idx = 0;
 
-  /* "upolygon/draw_polygon.pyx":222
+  /* "upolygon/draw_polygon.pyx":225
  *     cdef int i
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]             # <<<<<<<<<<<<<<
@@ -11459,7 +11499,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_v_x1 = __pyx_t_10;
   __pyx_v_y1 = __pyx_t_11;
 
-  /* "upolygon/draw_polygon.pyx":223
+  /* "upolygon/draw_polygon.pyx":226
  *     cdef int idx = 0
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)             # <<<<<<<<<<<<<<
@@ -11468,7 +11508,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
   __pyx_v_y1 = round(__pyx_v_y1);
 
-  /* "upolygon/draw_polygon.pyx":224
+  /* "upolygon/draw_polygon.pyx":227
  *     x1, y1 = path_mv[length-2], path_mv[length-1]
  *     y1 = round(y1)
  *     for i in range(0, length, 2):             # <<<<<<<<<<<<<<
@@ -11480,7 +11520,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   for (__pyx_t_13 = 0; __pyx_t_13 < __pyx_t_12; __pyx_t_13+=2) {
     __pyx_v_i = __pyx_t_13;
 
-    /* "upolygon/draw_polygon.pyx":225
+    /* "upolygon/draw_polygon.pyx":228
  *     y1 = round(y1)
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]             # <<<<<<<<<<<<<<
@@ -11494,7 +11534,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_v_x2 = __pyx_t_11;
     __pyx_v_y2 = __pyx_t_10;
 
-    /* "upolygon/draw_polygon.pyx":226
+    /* "upolygon/draw_polygon.pyx":229
  *     for i in range(0, length, 2):
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)             # <<<<<<<<<<<<<<
@@ -11503,7 +11543,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_y2 = round(__pyx_v_y2);
 
-    /* "upolygon/draw_polygon.pyx":227
+    /* "upolygon/draw_polygon.pyx":230
  *         x2, y2 = path_mv[i], path_mv[i+1]
  *         y2 = round(y2)
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)             # <<<<<<<<<<<<<<
@@ -11512,7 +11552,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_edge_line(__pyx_v_mask, ((int)__pyx_v_x1), ((int)__pyx_v_y1), ((int)__pyx_v_x2), ((int)__pyx_v_y2), __pyx_v_value);
 
-    /* "upolygon/draw_polygon.pyx":229
+    /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -11522,7 +11562,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 == __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":230
+      /* "upolygon/draw_polygon.pyx":233
  * 
  *         if y1 == y2:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11534,7 +11574,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_10;
       __pyx_v_y1 = __pyx_t_11;
 
-      /* "upolygon/draw_polygon.pyx":231
+      /* "upolygon/draw_polygon.pyx":234
  *         if y1 == y2:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -11543,7 +11583,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":229
+      /* "upolygon/draw_polygon.pyx":232
  *         draw_edge_line(mask, <int>x1, <int>y1, <int>x2, <int>y2, value)
  * 
  *         if y1 == y2:             # <<<<<<<<<<<<<<
@@ -11552,7 +11592,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":232
+    /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -11562,7 +11602,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = ((__pyx_v_y1 < __pyx_v_y2) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":233
+      /* "upolygon/draw_polygon.pyx":236
  *             continue
  *         elif y1 < y2:
  *             edges[idx].y_min = y1             # <<<<<<<<<<<<<<
@@ -11571,7 +11611,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":234
+      /* "upolygon/draw_polygon.pyx":237
  *         elif y1 < y2:
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2             # <<<<<<<<<<<<<<
@@ -11580,7 +11620,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":235
+      /* "upolygon/draw_polygon.pyx":238
  *             edges[idx].y_min = y1
  *             edges[idx].y_max = y2
  *             edges[idx].x_val = x1             # <<<<<<<<<<<<<<
@@ -11589,7 +11629,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = __pyx_v_x1;
 
-      /* "upolygon/draw_polygon.pyx":232
+      /* "upolygon/draw_polygon.pyx":235
  *             x1, y1 = x2, y2
  *             continue
  *         elif y1 < y2:             # <<<<<<<<<<<<<<
@@ -11599,7 +11639,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       goto __pyx_L5;
     }
 
-    /* "upolygon/draw_polygon.pyx":237
+    /* "upolygon/draw_polygon.pyx":240
  *             edges[idx].x_val = x1
  *         else:
  *             edges[idx].y_min = y2             # <<<<<<<<<<<<<<
@@ -11609,7 +11649,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     /*else*/ {
       (__pyx_v_edges[__pyx_v_idx]).y_min = __pyx_v_y2;
 
-      /* "upolygon/draw_polygon.pyx":238
+      /* "upolygon/draw_polygon.pyx":241
  *         else:
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1             # <<<<<<<<<<<<<<
@@ -11618,7 +11658,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = __pyx_v_y1;
 
-      /* "upolygon/draw_polygon.pyx":239
+      /* "upolygon/draw_polygon.pyx":242
  *             edges[idx].y_min = y2
  *             edges[idx].y_max = y1
  *             edges[idx].x_val = x2             # <<<<<<<<<<<<<<
@@ -11629,7 +11669,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     }
     __pyx_L5:;
 
-    /* "upolygon/draw_polygon.pyx":241
+    /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -11639,7 +11679,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":242
+      /* "upolygon/draw_polygon.pyx":245
  * 
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11651,7 +11691,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
       __pyx_v_x1 = __pyx_t_11;
       __pyx_v_y1 = __pyx_t_10;
 
-      /* "upolygon/draw_polygon.pyx":243
+      /* "upolygon/draw_polygon.pyx":246
  *         if edges[idx].y_max < 0:
  *             x1, y1 = x2, y2
  *             continue             # <<<<<<<<<<<<<<
@@ -11660,7 +11700,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       goto __pyx_L3_continue;
 
-      /* "upolygon/draw_polygon.pyx":241
+      /* "upolygon/draw_polygon.pyx":244
  *             edges[idx].x_val = x2
  * 
  *         if edges[idx].y_max < 0:             # <<<<<<<<<<<<<<
@@ -11669,7 +11709,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":245
+    /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -11679,7 +11719,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_min < 0.0) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":246
+      /* "upolygon/draw_polygon.pyx":249
  * 
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1             # <<<<<<<<<<<<<<
@@ -11688,7 +11728,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).x_val = ((((__pyx_v_x2 - __pyx_v_x1) / (__pyx_v_y2 - __pyx_v_y1)) * (0.0 - __pyx_v_y1)) + __pyx_v_x1);
 
-      /* "upolygon/draw_polygon.pyx":247
+      /* "upolygon/draw_polygon.pyx":250
  *         if edges[idx].y_min < 0:
  *             edges[idx].x_val = (x2-x1) / (y2 - y1)  * (0-y1) + x1
  *             edges[idx].y_min = 0             # <<<<<<<<<<<<<<
@@ -11697,7 +11737,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_min = 0.0;
 
-      /* "upolygon/draw_polygon.pyx":245
+      /* "upolygon/draw_polygon.pyx":248
  *             continue
  * 
  *         if edges[idx].y_min < 0:             # <<<<<<<<<<<<<<
@@ -11706,7 +11746,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":249
+    /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -11716,7 +11756,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_t_14 = (((__pyx_v_edges[__pyx_v_idx]).y_max >= (__pyx_v_mask.shape[0])) != 0);
     if (__pyx_t_14) {
 
-      /* "upolygon/draw_polygon.pyx":250
+      /* "upolygon/draw_polygon.pyx":253
  * 
  *         if edges[idx].y_max >= mask.shape[0]:
  *             edges[idx].y_max = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -11725,7 +11765,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
       (__pyx_v_edges[__pyx_v_idx]).y_max = (__pyx_v_mask.shape[0]);
 
-      /* "upolygon/draw_polygon.pyx":249
+      /* "upolygon/draw_polygon.pyx":252
  *             edges[idx].y_min = 0
  * 
  *         if edges[idx].y_max >= mask.shape[0]:             # <<<<<<<<<<<<<<
@@ -11734,7 +11774,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     }
 
-    /* "upolygon/draw_polygon.pyx":252
+    /* "upolygon/draw_polygon.pyx":255
  *             edges[idx].y_max = mask.shape[0]
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)             # <<<<<<<<<<<<<<
@@ -11743,7 +11783,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     (__pyx_v_edges[__pyx_v_idx]).m_inv = ((__pyx_v_x1 - __pyx_v_x2) / (__pyx_v_y1 - __pyx_v_y2));
 
-    /* "upolygon/draw_polygon.pyx":253
+    /* "upolygon/draw_polygon.pyx":256
  * 
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1             # <<<<<<<<<<<<<<
@@ -11752,7 +11792,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
  */
     __pyx_v_idx = (__pyx_v_idx + 1);
 
-    /* "upolygon/draw_polygon.pyx":254
+    /* "upolygon/draw_polygon.pyx":257
  *         edges[idx].m_inv = (x1 - x2) / (y1 -y2)
  *         idx += 1
  *         x1, y1 = x2, y2             # <<<<<<<<<<<<<<
@@ -11766,7 +11806,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
     __pyx_L3_continue:;
   }
 
-  /* "upolygon/draw_polygon.pyx":255
+  /* "upolygon/draw_polygon.pyx":258
  *         idx += 1
  *         x1, y1 = x2, y2
  *     return idx             # <<<<<<<<<<<<<<
@@ -11776,7 +11816,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   __pyx_r = __pyx_v_idx;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":213
+  /* "upolygon/draw_polygon.pyx":216
  * @cython.nonecheck(False)
  * @cython.cdivision(True)
  * cdef int find_edges(s_edge *edges, list path, data_type [:,:] mask, data_type value):             # <<<<<<<<<<<<<<
@@ -11800,7 +11840,7 @@ static int __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges(struct __pyx_
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":260
+/* "upolygon/draw_polygon.pyx":263
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef void move_active_down(s_active_edge* edges, int i, int length):             # <<<<<<<<<<<<<<
@@ -11816,7 +11856,7 @@ static void __pyx_f_8upolygon_12draw_polygon_move_active_down(struct __pyx_t_8up
   int __pyx_t_3;
   __Pyx_RefNannySetupContext("move_active_down", 0);
 
-  /* "upolygon/draw_polygon.pyx":262
+  /* "upolygon/draw_polygon.pyx":265
  * cdef void move_active_down(s_active_edge* edges, int i, int length):
  *     cdef int j
  *     for j in range(i, length-1):             # <<<<<<<<<<<<<<
@@ -11828,7 +11868,7 @@ static void __pyx_f_8upolygon_12draw_polygon_move_active_down(struct __pyx_t_8up
   for (__pyx_t_3 = __pyx_v_i; __pyx_t_3 < __pyx_t_2; __pyx_t_3+=1) {
     __pyx_v_j = __pyx_t_3;
 
-    /* "upolygon/draw_polygon.pyx":263
+    /* "upolygon/draw_polygon.pyx":266
  *     cdef int j
  *     for j in range(i, length-1):
  *         edges[j] = edges[j+1]             # <<<<<<<<<<<<<<
@@ -11838,7 +11878,7 @@ static void __pyx_f_8upolygon_12draw_polygon_move_active_down(struct __pyx_t_8up
     (__pyx_v_edges[__pyx_v_j]) = (__pyx_v_edges[(__pyx_v_j + 1)]);
   }
 
-  /* "upolygon/draw_polygon.pyx":260
+  /* "upolygon/draw_polygon.pyx":263
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * cdef void move_active_down(s_active_edge* edges, int i, int length):             # <<<<<<<<<<<<<<
@@ -11850,7 +11890,7 @@ static void __pyx_f_8upolygon_12draw_polygon_move_active_down(struct __pyx_t_8up
   __Pyx_RefNannyFinishContext();
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -11900,23 +11940,23 @@ static PyObject *__pyx_pw_8upolygon_12draw_polygon_1draw_polygon(PyObject *__pyx
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_args)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_kwargs)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  3:
         if (likely((values[3] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_defaults)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, 3); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "__pyx_fused_cpdef") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 4) {
       goto __pyx_L5_argtuple_error;
@@ -11933,7 +11973,7 @@ static PyObject *__pyx_pw_8upolygon_12draw_polygon_1draw_polygon(PyObject *__pyx
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("__pyx_fused_cpdef", 1, 4, 4, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.__pyx_fused_cpdef", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
@@ -11992,7 +12032,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("draw_polygon", 0);
   __Pyx_INCREF(__pyx_v_kwargs);
-  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = PyList_New(1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_INCREF(Py_None);
   __Pyx_GIVEREF(Py_None);
@@ -12006,7 +12046,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     __pyx_t_2 = __pyx_t_4;
     goto __pyx_L4_bool_binop_done;
   }
-  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyObject_IsTrue(__pyx_v_kwargs); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_t_3 = ((!__pyx_t_4) != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L4_bool_binop_done:;
@@ -12014,7 +12054,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     __Pyx_INCREF(Py_None);
     __Pyx_DECREF_SET(__pyx_v_kwargs, Py_None);
   }
-  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = ((PyObject *)__Pyx_ImportNumPyArrayTypeIfAvailable()); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_v_ndarray = ((PyTypeObject*)__pyx_t_1);
   __pyx_t_1 = 0;
@@ -12026,14 +12066,14 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
   __pyx_v_long_long_is_signed = (!((((PY_LONG_LONG)-1L) > 0) != 0));
   if (unlikely(__pyx_v_args == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
-  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_t_2 = ((0 < __pyx_t_5) != 0);
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 268, __pyx_L1_error)
+      __PYX_ERR(0, 271, __pyx_L1_error)
     }
     __pyx_t_1 = PyTuple_GET_ITEM(((PyObject*)__pyx_v_args), 0);
     __Pyx_INCREF(__pyx_t_1);
@@ -12050,18 +12090,18 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
   }
   if (unlikely(__pyx_v_kwargs == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
-  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_mask, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyDict_ContainsTF(__pyx_n_s_mask, ((PyObject*)__pyx_v_kwargs), Py_EQ)); if (unlikely(__pyx_t_4 < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_t_3 = (__pyx_t_4 != 0);
   __pyx_t_2 = __pyx_t_3;
   __pyx_L7_bool_binop_done:;
   if (__pyx_t_2) {
     if (unlikely(__pyx_v_kwargs == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 268, __pyx_L1_error)
+      __PYX_ERR(0, 271, __pyx_L1_error)
     }
-    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_mask); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_kwargs), __pyx_n_s_mask); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __pyx_v_arg = __pyx_t_1;
     __pyx_t_1 = 0;
@@ -12070,12 +12110,12 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
   /*else*/ {
     if (unlikely(__pyx_v_args == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "object of type 'NoneType' has no len()");
-      __PYX_ERR(0, 268, __pyx_L1_error)
+      __PYX_ERR(0, 271, __pyx_L1_error)
     }
-    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
-    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_5 = PyTuple_GET_SIZE(((PyObject*)__pyx_v_args)); if (unlikely(__pyx_t_5 == ((Py_ssize_t)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
+    __pyx_t_1 = PyInt_FromSsize_t(__pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
-    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_6 = PyTuple_New(3); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_INCREF(__pyx_int_3);
     __Pyx_GIVEREF(__pyx_int_3);
@@ -12086,15 +12126,15 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     __Pyx_GIVEREF(__pyx_t_1);
     PyTuple_SET_ITEM(__pyx_t_6, 2, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyString_Format(__pyx_kp_s_Expected_at_least_d_argument_s_g, __pyx_t_6); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_CallOneArg(__pyx_builtin_TypeError, __pyx_t_1); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
   __pyx_L6:;
   while (1) {
@@ -12104,7 +12144,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg, __pyx_v_ndarray); 
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_dtype = __pyx_t_6;
         __pyx_t_6 = 0;
@@ -12113,14 +12153,14 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_2 = __pyx_memoryview_check(__pyx_v_arg); 
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_base); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
         __pyx_v_arg_base = __pyx_t_6;
         __pyx_t_6 = 0;
         __pyx_t_3 = __Pyx_TypeCheck(__pyx_v_arg_base, __pyx_v_ndarray); 
         __pyx_t_2 = (__pyx_t_3 != 0);
         if (__pyx_t_2) {
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg_base, __pyx_n_s_dtype); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
           __pyx_v_dtype = __pyx_t_6;
           __pyx_t_6 = 0;
@@ -12142,14 +12182,14 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_2 = (__pyx_v_dtype != Py_None);
       __pyx_t_3 = (__pyx_t_2 != 0);
       if (__pyx_t_3) {
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_itemsize); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_itemsize = __pyx_t_5;
-        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_dtype, __pyx_n_s_kind); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_6);
-        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_7 = __Pyx_PyObject_Ord(__pyx_t_6); if (unlikely(__pyx_t_7 == ((long)(long)(Py_UCS4)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
         __pyx_v_kind = __pyx_t_7;
         __pyx_v_dtype_signed = (__pyx_v_kind == 'i');
@@ -12162,9 +12202,9 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L16_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           if (__pyx_t_2) {
@@ -12176,7 +12216,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_2;
           __pyx_L16_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(unsigned char)) == __pyx_v_itemsize) != 0);
@@ -12185,9 +12225,9 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L20_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           if (__pyx_t_2) {
@@ -12199,7 +12239,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_2;
           __pyx_L20_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(int)) == __pyx_v_itemsize) != 0);
@@ -12208,9 +12248,9 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L24_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           if (__pyx_t_2) {
@@ -12222,7 +12262,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_2;
           __pyx_L24_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(unsigned int)) == __pyx_v_itemsize) != 0);
@@ -12231,9 +12271,9 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L28_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           if (__pyx_t_2) {
@@ -12245,7 +12285,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_2;
           __pyx_L28_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           __pyx_t_2 = (((sizeof(PY_LONG_LONG)) == __pyx_v_itemsize) != 0);
@@ -12254,9 +12294,9 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L32_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           if (__pyx_t_2) {
@@ -12268,7 +12308,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
           __pyx_t_3 = __pyx_t_2;
           __pyx_L32_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_long_long, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_long_long, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -12279,15 +12319,15 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
             __pyx_t_3 = __pyx_t_2;
             goto __pyx_L36_bool_binop_done;
           }
-          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_6 = __Pyx_PyObject_GetAttrStr(__pyx_v_arg, __pyx_n_s_ndim); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_6);
-          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L1_error)
+          __pyx_t_5 = __Pyx_PyIndex_AsSsize_t(__pyx_t_6); if (unlikely((__pyx_t_5 == (Py_ssize_t)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L1_error)
           __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
           __pyx_t_2 = ((((Py_ssize_t)__pyx_t_5) == 2) != 0);
           __pyx_t_3 = __pyx_t_2;
           __pyx_L36_bool_binop_done:;
           if (__pyx_t_3) {
-            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_double, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+            if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_double, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
             goto __pyx_L10_break;
           }
           break;
@@ -12314,7 +12354,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -12336,7 +12376,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_char, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -12358,7 +12398,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -12380,7 +12420,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_unsigned_int, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -12402,7 +12442,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_double, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_n_s_double, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
@@ -12424,27 +12464,27 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_memslice.memview != 0);
       if (__pyx_t_3) {
         __PYX_XDEC_MEMVIEW((&__pyx_v_memslice), 1); 
-        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_long_long, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, __pyx_kp_s_long_long, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         goto __pyx_L10_break;
       }
       /*else*/ {
         PyErr_Clear(); 
       }
     }
-    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+    if (unlikely(__Pyx_SetItemInt(__pyx_v_dest_sig, 0, Py_None, long, 1, __Pyx_PyInt_From_long, 1, 0, 0) < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
     goto __pyx_L10_break;
   }
   __pyx_L10_break:;
-  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_6 = PyList_New(0); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_6);
   __pyx_v_candidates = ((PyObject*)__pyx_t_6);
   __pyx_t_6 = 0;
   __pyx_t_5 = 0;
   if (unlikely(__pyx_v_signatures == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
-  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_dict_iterator(((PyObject*)__pyx_v_signatures), 1, ((PyObject *)NULL), (&__pyx_t_9), (&__pyx_t_10)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_XDECREF(__pyx_t_6);
   __pyx_t_6 = __pyx_t_1;
@@ -12452,12 +12492,12 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
   while (1) {
     __pyx_t_11 = __Pyx_dict_iter_next(__pyx_t_6, __pyx_t_9, &__pyx_t_5, &__pyx_t_1, NULL, NULL, __pyx_t_10);
     if (unlikely(__pyx_t_11 == 0)) break;
-    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    if (unlikely(__pyx_t_11 == -1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_XDECREF_SET(__pyx_v_sig, __pyx_t_1);
     __pyx_t_1 = 0;
     __pyx_v_match_found = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_v_sig, __pyx_n_s_strip); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __pyx_t_14 = NULL;
     if (CYTHON_UNPACK_METHODS && likely(PyMethod_Check(__pyx_t_13))) {
@@ -12471,10 +12511,10 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     }
     __pyx_t_12 = (__pyx_t_14) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_14, __pyx_kp_s_) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s_);
     __Pyx_XDECREF(__pyx_t_14); __pyx_t_14 = 0;
-    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 268, __pyx_L1_error)
+    if (unlikely(!__pyx_t_12)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_12);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
-    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_13 = __Pyx_PyObject_GetAttrStr(__pyx_t_12, __pyx_n_s_split); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_13);
     __Pyx_DECREF(__pyx_t_12); __pyx_t_12 = 0;
     __pyx_t_12 = NULL;
@@ -12489,12 +12529,12 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     }
     __pyx_t_1 = (__pyx_t_12) ? __Pyx_PyObject_Call2Args(__pyx_t_13, __pyx_t_12, __pyx_kp_s__2) : __Pyx_PyObject_CallOneArg(__pyx_t_13, __pyx_kp_s__2);
     __Pyx_XDECREF(__pyx_t_12); __pyx_t_12 = 0;
-    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
     __Pyx_XDECREF_SET(__pyx_v_src_sig, __pyx_t_1);
     __pyx_t_1 = 0;
-    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_15 = PyList_GET_SIZE(__pyx_v_dest_sig); if (unlikely(__pyx_t_15 == ((Py_ssize_t)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
     __pyx_t_16 = __pyx_t_15;
     for (__pyx_t_17 = 0; __pyx_t_17 < __pyx_t_16; __pyx_t_17+=1) {
       __pyx_v_i = __pyx_t_17;
@@ -12505,11 +12545,11 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
       __pyx_t_3 = (__pyx_v_dst_type != Py_None);
       __pyx_t_2 = (__pyx_t_3 != 0);
       if (__pyx_t_2) {
-        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_1 = __Pyx_GetItemInt(__pyx_v_src_sig, __pyx_v_i, Py_ssize_t, 1, PyInt_FromSsize_t, 0, 0, 0); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_GOTREF(__pyx_t_1);
-        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_13 = PyObject_RichCompare(__pyx_t_1, __pyx_v_dst_type, Py_EQ); __Pyx_XGOTREF(__pyx_t_13); if (unlikely(!__pyx_t_13)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 268, __pyx_L1_error)
+        __pyx_t_2 = __Pyx_PyObject_IsTrue(__pyx_t_13); if (unlikely(__pyx_t_2 < 0)) __PYX_ERR(0, 271, __pyx_L1_error)
         __Pyx_DECREF(__pyx_t_13); __pyx_t_13 = 0;
         if (__pyx_t_2) {
           __pyx_v_match_found = 1;
@@ -12525,35 +12565,35 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_draw_polygon(CYTHON_UNUSED Py
     __pyx_L65_break:;
     __pyx_t_2 = (__pyx_v_match_found != 0);
     if (__pyx_t_2) {
-      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
+      __pyx_t_18 = __Pyx_PyList_Append(__pyx_v_candidates, __pyx_v_sig); if (unlikely(__pyx_t_18 == ((int)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
     }
   }
   __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
   __pyx_t_2 = (PyList_GET_SIZE(__pyx_v_candidates) != 0);
   __pyx_t_3 = ((!__pyx_t_2) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__3, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
-  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_9 = PyList_GET_SIZE(__pyx_v_candidates); if (unlikely(__pyx_t_9 == ((Py_ssize_t)-1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_t_3 = ((__pyx_t_9 > 1) != 0);
   if (__pyx_t_3) {
-    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyObject_Call(__pyx_builtin_TypeError, __pyx_tuple__4, NULL); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __Pyx_Raise(__pyx_t_6, 0, 0, 0);
     __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   }
   /*else*/ {
     __Pyx_XDECREF(__pyx_r);
     if (unlikely(__pyx_v_signatures == Py_None)) {
       PyErr_SetString(PyExc_TypeError, "'NoneType' object is not subscriptable");
-      __PYX_ERR(0, 268, __pyx_L1_error)
+      __PYX_ERR(0, 271, __pyx_L1_error)
     }
-    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 268, __pyx_L1_error)
+    __pyx_t_6 = __Pyx_PyDict_GetItem(((PyObject*)__pyx_v_signatures), PyList_GET_ITEM(__pyx_v_candidates, 0)); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 271, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_6);
     __pyx_r = __pyx_t_6;
     __pyx_t_6 = 0;
@@ -12623,17 +12663,17 @@ static PyObject *__pyx_fuse_0__pyx_pw_8upolygon_12draw_polygon_3draw_polygon(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -12642,19 +12682,19 @@ static PyObject *__pyx_fuse_0__pyx_pw_8upolygon_12draw_polygon_3draw_polygon(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __Pyx_PyInt_As_char(values[2]); if (unlikely((__pyx_v_value == (char)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __Pyx_PyInt_As_char(values[2]); if (unlikely((__pyx_v_value == (char)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_2draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -12667,7 +12707,7 @@ static PyObject *__pyx_fuse_0__pyx_pw_8upolygon_12draw_polygon_3draw_polygon(PyO
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -12687,7 +12727,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_genexpr(PyObje
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -12695,7 +12735,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_genexpr(PyObje
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_0draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_0draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -12732,27 +12772,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator(__p
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -12770,7 +12810,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator(__p
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -12793,7 +12833,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_2generator(__p
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -12835,7 +12875,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -12843,23 +12883,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -12868,7 +12908,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -12877,7 +12917,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -12886,31 +12926,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -12920,7 +12960,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -12930,7 +12970,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -12939,7 +12979,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -12947,16 +12987,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -12965,7 +13005,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -12974,7 +13014,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -12983,7 +13023,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -12992,7 +13032,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -13001,7 +13041,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -13010,7 +13050,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -13019,7 +13059,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -13028,7 +13068,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -13053,7 +13093,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -13065,7 +13105,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -13075,7 +13115,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -13085,7 +13125,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -13095,7 +13135,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -13105,7 +13145,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -13114,7 +13154,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -13123,7 +13163,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -13133,7 +13173,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -13143,7 +13183,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -13152,7 +13192,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -13164,7 +13204,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -13174,7 +13214,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -13184,7 +13224,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -13193,7 +13233,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -13202,7 +13242,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -13212,7 +13252,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -13224,7 +13264,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -13233,7 +13273,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -13242,7 +13282,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -13261,7 +13301,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -13270,7 +13310,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -13280,7 +13320,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -13290,7 +13330,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -13302,7 +13342,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -13312,7 +13352,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       __pyx_fuse_0__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -13324,7 +13364,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -13335,7 +13375,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -13345,7 +13385,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -13354,7 +13394,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -13362,22 +13402,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_2draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -13438,17 +13478,17 @@ static PyObject *__pyx_fuse_1__pyx_pw_8upolygon_12draw_polygon_5draw_polygon(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -13457,19 +13497,19 @@ static PyObject *__pyx_fuse_1__pyx_pw_8upolygon_12draw_polygon_5draw_polygon(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_char(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_value == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __Pyx_PyInt_As_unsigned_char(values[2]); if (unlikely((__pyx_v_value == (unsigned char)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_4draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -13482,7 +13522,7 @@ static PyObject *__pyx_fuse_1__pyx_pw_8upolygon_12draw_polygon_5draw_polygon(PyO
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -13502,7 +13542,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_3genexpr(PyObj
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -13510,7 +13550,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_3genexpr(PyObj
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_1draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_1draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -13547,27 +13587,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1(__
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -13585,7 +13625,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1(__
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -13608,7 +13648,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_5generator1(__
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -13650,7 +13690,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -13658,23 +13698,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_3genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_3genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -13683,7 +13723,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -13692,7 +13732,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -13701,31 +13741,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -13735,7 +13775,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -13745,7 +13785,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -13754,7 +13794,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -13762,16 +13802,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -13780,7 +13820,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -13789,7 +13829,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -13798,7 +13838,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -13807,7 +13847,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -13816,7 +13856,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -13825,7 +13865,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -13834,7 +13874,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -13843,7 +13883,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -13868,7 +13908,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -13880,7 +13920,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -13890,7 +13930,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -13900,7 +13940,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -13910,7 +13950,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -13920,7 +13960,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -13929,7 +13969,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -13938,7 +13978,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -13948,7 +13988,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -13958,7 +13998,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -13967,7 +14007,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -13979,7 +14019,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -13989,7 +14029,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -13999,7 +14039,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -14008,7 +14048,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -14017,7 +14057,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -14027,7 +14067,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -14039,7 +14079,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -14048,7 +14088,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -14057,7 +14097,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -14076,7 +14116,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -14085,7 +14125,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -14095,7 +14135,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -14105,7 +14145,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -14117,7 +14157,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -14127,7 +14167,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       __pyx_fuse_1__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -14139,7 +14179,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -14150,7 +14190,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -14160,7 +14200,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -14169,7 +14209,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -14177,22 +14217,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_4draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_char, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -14253,17 +14293,17 @@ static PyObject *__pyx_fuse_2__pyx_pw_8upolygon_12draw_polygon_7draw_polygon(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -14272,19 +14312,19 @@ static PyObject *__pyx_fuse_2__pyx_pw_8upolygon_12draw_polygon_7draw_polygon(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_int(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_int(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_value == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __Pyx_PyInt_As_int(values[2]); if (unlikely((__pyx_v_value == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_6draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -14297,7 +14337,7 @@ static PyObject *__pyx_fuse_2__pyx_pw_8upolygon_12draw_polygon_7draw_polygon(PyO
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -14317,7 +14357,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_6genexpr(PyObj
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -14325,7 +14365,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_6genexpr(PyObj
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_2draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_2draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -14362,27 +14402,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2(__
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -14400,7 +14440,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2(__
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -14423,7 +14463,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_8generator2(__
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -14465,7 +14505,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -14473,23 +14513,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_6genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_6genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -14498,7 +14538,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -14507,7 +14547,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -14516,31 +14556,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -14550,7 +14590,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -14560,7 +14600,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -14569,7 +14609,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -14577,16 +14617,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_int, (int (*)(char *, PyObject *)) __pyx_memview_set_int, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_int, (int (*)(char *, PyObject *)) __pyx_memview_set_int, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -14595,7 +14635,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -14604,7 +14644,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -14613,7 +14653,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -14622,7 +14662,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -14631,7 +14671,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -14640,7 +14680,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -14649,7 +14689,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -14658,7 +14698,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -14683,7 +14723,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -14695,7 +14735,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -14705,7 +14745,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -14715,7 +14755,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -14725,7 +14765,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -14735,7 +14775,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -14744,7 +14784,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -14753,7 +14793,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -14763,7 +14803,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -14773,7 +14813,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -14782,7 +14822,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -14794,7 +14834,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -14804,7 +14844,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -14814,7 +14854,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -14823,7 +14863,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -14832,7 +14872,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -14842,7 +14882,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -14854,7 +14894,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -14863,7 +14903,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -14872,7 +14912,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -14891,7 +14931,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -14900,7 +14940,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -14910,7 +14950,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -14920,7 +14960,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -14932,7 +14972,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -14942,7 +14982,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       __pyx_fuse_2__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -14954,7 +14994,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -14965,7 +15005,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -14975,7 +15015,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -14984,7 +15024,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -14992,22 +15032,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_6draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_int, (int (*)(char *, PyObject *)) __pyx_memview_set_int, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_int, (int (*)(char *, PyObject *)) __pyx_memview_set_int, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -15068,17 +15108,17 @@ static PyObject *__pyx_fuse_3__pyx_pw_8upolygon_12draw_polygon_9draw_polygon(PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -15087,19 +15127,19 @@ static PyObject *__pyx_fuse_3__pyx_pw_8upolygon_12draw_polygon_9draw_polygon(PyO
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_int(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_unsigned_int(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __Pyx_PyInt_As_unsigned_int(values[2]); if (unlikely((__pyx_v_value == (unsigned int)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_8draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -15112,7 +15152,7 @@ static PyObject *__pyx_fuse_3__pyx_pw_8upolygon_12draw_polygon_9draw_polygon(PyO
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -15132,7 +15172,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_9genexpr(PyObj
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -15140,7 +15180,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_9genexpr(PyObj
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_3draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_3draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -15177,27 +15217,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3(_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -15215,7 +15255,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3(_
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -15238,7 +15278,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_11generator3(_
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -15280,7 +15320,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -15288,23 +15328,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_9genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_9genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -15313,7 +15353,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -15322,7 +15362,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -15331,31 +15371,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -15365,7 +15405,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -15375,7 +15415,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -15384,7 +15424,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -15392,16 +15432,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_int, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_int, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_int, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_int, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -15410,7 +15450,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -15419,7 +15459,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -15428,7 +15468,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -15437,7 +15477,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -15446,7 +15486,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -15455,7 +15495,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -15464,7 +15504,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -15473,7 +15513,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -15498,7 +15538,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -15510,7 +15550,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -15520,7 +15560,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -15530,7 +15570,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -15540,7 +15580,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -15550,7 +15590,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -15559,7 +15599,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -15568,7 +15608,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -15578,7 +15618,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -15588,7 +15628,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -15597,7 +15637,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -15609,7 +15649,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -15619,7 +15659,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -15629,7 +15669,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -15638,7 +15678,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -15647,7 +15687,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -15657,7 +15697,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -15669,7 +15709,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -15678,7 +15718,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -15687,7 +15727,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -15706,7 +15746,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -15715,7 +15755,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -15725,7 +15765,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -15735,7 +15775,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -15747,7 +15787,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -15757,7 +15797,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       __pyx_fuse_3__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -15769,7 +15809,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -15780,7 +15820,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -15790,7 +15830,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -15799,7 +15839,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -15807,22 +15847,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_8draw_polygon(CYTHON_UNUSED P
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_int, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_int, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_unsigned_int, (int (*)(char *, PyObject *)) __pyx_memview_set_unsigned_int, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -15883,17 +15923,17 @@ static PyObject *__pyx_fuse_4__pyx_pw_8upolygon_12draw_polygon_11draw_polygon(Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -15902,19 +15942,19 @@ static PyObject *__pyx_fuse_4__pyx_pw_8upolygon_12draw_polygon_11draw_polygon(Py
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_double(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __pyx_PyFloat_AsDouble(values[2]); if (unlikely((__pyx_v_value == (double)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_10draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -15927,7 +15967,7 @@ static PyObject *__pyx_fuse_4__pyx_pw_8upolygon_12draw_polygon_11draw_polygon(Py
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -15947,7 +15987,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_12genexpr(PyOb
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -15955,7 +15995,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_12genexpr(PyOb
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_4draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_4draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -15992,27 +16032,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4(_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -16030,7 +16070,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4(_
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -16053,7 +16093,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_14generator4(_
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -16095,7 +16135,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16103,23 +16143,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_12genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_12genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -16128,7 +16168,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -16137,7 +16177,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -16146,31 +16186,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -16180,7 +16220,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -16190,7 +16230,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -16199,7 +16239,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -16207,16 +16247,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -16225,7 +16265,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -16234,7 +16274,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -16243,7 +16283,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -16252,7 +16292,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -16261,7 +16301,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -16270,7 +16310,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -16279,7 +16319,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -16288,7 +16328,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -16313,7 +16353,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -16325,7 +16365,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -16335,7 +16375,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -16345,7 +16385,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -16355,7 +16395,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -16365,7 +16405,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -16374,7 +16414,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -16383,7 +16423,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -16393,7 +16433,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -16403,7 +16443,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -16412,7 +16452,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -16424,7 +16464,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -16434,7 +16474,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -16444,7 +16484,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -16453,7 +16493,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -16462,7 +16502,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -16472,7 +16512,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -16484,7 +16524,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -16493,7 +16533,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -16502,7 +16542,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -16521,7 +16561,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -16530,7 +16570,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -16540,7 +16580,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -16550,7 +16590,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -16562,7 +16602,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -16572,7 +16612,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       __pyx_fuse_4__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -16584,7 +16624,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -16595,7 +16635,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -16605,7 +16645,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -16614,7 +16654,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -16622,22 +16662,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_10draw_polygon(CYTHON_UNUSED 
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_double, (int (*)(char *, PyObject *)) __pyx_memview_set_double, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -16698,17 +16738,17 @@ static PyObject *__pyx_fuse_5__pyx_pw_8upolygon_12draw_polygon_13draw_polygon(Py
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_paths)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 1); __PYX_ERR(0, 271, __pyx_L3_error)
         }
         CYTHON_FALLTHROUGH;
         case  2:
         if (likely((values[2] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_value)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 268, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, 2); __PYX_ERR(0, 271, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 268, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "draw_polygon") < 0)) __PYX_ERR(0, 271, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 3) {
       goto __pyx_L5_argtuple_error;
@@ -16717,19 +16757,19 @@ static PyObject *__pyx_fuse_5__pyx_pw_8upolygon_12draw_polygon_13draw_polygon(Py
       values[1] = PyTuple_GET_ITEM(__pyx_args, 1);
       values[2] = PyTuple_GET_ITEM(__pyx_args, 2);
     }
-    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_PY_LONG_LONG(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_mask = __Pyx_PyObject_to_MemoryviewSlice_dsds_PY_LONG_LONG(values[0], PyBUF_WRITABLE); if (unlikely(!__pyx_v_mask.memview)) __PYX_ERR(0, 271, __pyx_L3_error)
     __pyx_v_paths = ((PyObject*)values[1]);
-    __pyx_v_value = __Pyx_PyInt_As_PY_LONG_LONG(values[2]); if (unlikely((__pyx_v_value == (PY_LONG_LONG)-1) && PyErr_Occurred())) __PYX_ERR(0, 268, __pyx_L3_error)
+    __pyx_v_value = __Pyx_PyInt_As_PY_LONG_LONG(values[2]); if (unlikely((__pyx_v_value == (PY_LONG_LONG)-1) && PyErr_Occurred())) __PYX_ERR(0, 271, __pyx_L3_error)
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 268, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("draw_polygon", 1, 3, 3, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 271, __pyx_L3_error)
   __pyx_L3_error:;
   __Pyx_AddTraceback("upolygon.draw_polygon.draw_polygon", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (unlikely(!__Pyx_ArgTypeTest(((PyObject *)__pyx_v_paths), (&PyList_Type), 1, "paths", 1))) __PYX_ERR(0, 271, __pyx_L1_error)
   __pyx_r = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon(__pyx_self, __pyx_v_mask, __pyx_v_paths, __pyx_v_value);
 
   /* function exit code */
@@ -16742,7 +16782,7 @@ static PyObject *__pyx_fuse_5__pyx_pw_8upolygon_12draw_polygon_13draw_polygon(Py
 }
 static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5(__pyx_CoroutineObject *__pyx_generator, CYTHON_UNUSED PyThreadState *__pyx_tstate, PyObject *__pyx_sent_value); /* proto */
 
-/* "upolygon/draw_polygon.pyx":281
+/* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
@@ -16762,7 +16802,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_15genexpr(PyOb
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_11_genexpr *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16770,7 +16810,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon_15genexpr(PyOb
   __Pyx_INCREF(((PyObject *)__pyx_cur_scope->__pyx_outer_scope));
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_outer_scope);
   {
-    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_5draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_CoroutineObject *gen = __Pyx_Generator_New((__pyx_coroutine_body_t) __pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5, NULL, (PyObject *) __pyx_cur_scope, __pyx_n_s_genexpr, __pyx_n_s_pyx_fuse_5draw_polygon_locals, __pyx_n_s_upolygon_draw_polygon); if (unlikely(!gen)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_DECREF(__pyx_cur_scope);
     __Pyx_RefNannyFinishContext();
     return (PyObject *) gen;
@@ -16807,27 +16847,27 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5(_
     return NULL;
   }
   __pyx_L3_first_run:;
-  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
-  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 281, __pyx_L1_error) }
+  if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
+  if (unlikely(!__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths)) { __Pyx_RaiseClosureNameError("paths"); __PYX_ERR(0, 284, __pyx_L1_error) }
   if (unlikely(__pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 281, __pyx_L1_error)
+    __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __pyx_t_1 = __pyx_cur_scope->__pyx_outer_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_1); __pyx_t_2 = 0;
   for (;;) {
     if (__pyx_t_2 >= PyList_GET_SIZE(__pyx_t_1)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PyList_GET_ITEM(__pyx_t_1, __pyx_t_2); __Pyx_INCREF(__pyx_t_3); __pyx_t_2++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
     #else
-    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_3 = PySequence_ITEM(__pyx_t_1, __pyx_t_2); __pyx_t_2++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     #endif
     __Pyx_XGOTREF(__pyx_cur_scope->__pyx_v_path);
     __Pyx_XDECREF_SET(__pyx_cur_scope->__pyx_v_path, __pyx_t_3);
     __Pyx_GIVEREF(__pyx_t_3);
     __pyx_t_3 = 0;
-    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 281, __pyx_L1_error)
-    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 281, __pyx_L1_error)
+    __pyx_t_4 = PyObject_Length(__pyx_cur_scope->__pyx_v_path); if (unlikely(__pyx_t_4 == ((Py_ssize_t)-1))) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_3 = PyInt_FromSsize_t(__Pyx_div_Py_ssize_t(__pyx_t_4, 2)); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 284, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_3);
     __pyx_r = __pyx_t_3;
     __pyx_t_3 = 0;
@@ -16845,7 +16885,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5(_
     __pyx_cur_scope->__pyx_t_0 = 0;
     __Pyx_XGOTREF(__pyx_t_1);
     __pyx_t_2 = __pyx_cur_scope->__pyx_t_1;
-    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 281, __pyx_L1_error)
+    if (unlikely(!__pyx_sent_value)) __PYX_ERR(0, 284, __pyx_L1_error)
   }
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   CYTHON_MAYBE_UNUSED_VAR(__pyx_cur_scope);
@@ -16868,7 +16908,7 @@ static PyObject *__pyx_gb_8upolygon_12draw_polygon_12draw_polygon_17generator5(_
   return __pyx_r;
 }
 
-/* "upolygon/draw_polygon.pyx":268
+/* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -16910,7 +16950,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
   if (unlikely(!__pyx_cur_scope)) {
     __pyx_cur_scope = ((struct __pyx_obj_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon *)Py_None);
     __Pyx_INCREF(Py_None);
-    __PYX_ERR(0, 268, __pyx_L1_error)
+    __PYX_ERR(0, 271, __pyx_L1_error)
   } else {
     __Pyx_GOTREF(__pyx_cur_scope);
   }
@@ -16918,23 +16958,23 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
   __Pyx_INCREF(__pyx_cur_scope->__pyx_v_paths);
   __Pyx_GIVEREF(__pyx_cur_scope->__pyx_v_paths);
 
-  /* "upolygon/draw_polygon.pyx":281
+  /* "upolygon/draw_polygon.pyx":284
  *         triangle_mask = draw_polygon(np.zeroes(100,100), [[0,50, 50, 0, 50, 50]], 255)
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)             # <<<<<<<<<<<<<<
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  */
-  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_15genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_1 = __pyx_pf_8upolygon_12draw_polygon_12draw_polygon_15genexpr(((PyObject*)__pyx_cur_scope)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_CallOneArg(__pyx_builtin_sum, __pyx_t_1); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 281, __pyx_L1_error)
+  __pyx_t_3 = __Pyx_PyInt_As_int(__pyx_t_2); if (unlikely((__pyx_t_3 == (int)-1) && PyErr_Occurred())) __PYX_ERR(0, 284, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   __pyx_v_edges_length = __pyx_t_3;
 
-  /* "upolygon/draw_polygon.pyx":282
+  /* "upolygon/draw_polygon.pyx":285
  *     """
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -16943,7 +16983,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":283
+  /* "upolygon/draw_polygon.pyx":286
  *     cdef int edges_length = sum(len(path) // 2 for path in paths)
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0             # <<<<<<<<<<<<<<
@@ -16952,7 +16992,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges_so_far = 0;
 
-  /* "upolygon/draw_polygon.pyx":284
+  /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -16961,31 +17001,31 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   if (unlikely(__pyx_cur_scope->__pyx_v_paths == Py_None)) {
     PyErr_SetString(PyExc_TypeError, "'NoneType' object is not iterable");
-    __PYX_ERR(0, 284, __pyx_L1_error)
+    __PYX_ERR(0, 287, __pyx_L1_error)
   }
   __pyx_t_2 = __pyx_cur_scope->__pyx_v_paths; __Pyx_INCREF(__pyx_t_2); __pyx_t_4 = 0;
   for (;;) {
     if (__pyx_t_4 >= PyList_GET_SIZE(__pyx_t_2)) break;
     #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PyList_GET_ITEM(__pyx_t_2, __pyx_t_4); __Pyx_INCREF(__pyx_t_1); __pyx_t_4++; if (unlikely(0 < 0)) __PYX_ERR(0, 287, __pyx_L1_error)
     #else
-    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 284, __pyx_L1_error)
+    __pyx_t_1 = PySequence_ITEM(__pyx_t_2, __pyx_t_4); __pyx_t_4++; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 287, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     #endif
     __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
     __pyx_t_1 = 0;
 
-    /* "upolygon/draw_polygon.pyx":285
+    /* "upolygon/draw_polygon.pyx":288
  *     cdef int edges_so_far = 0
  *     for path in paths:
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)             # <<<<<<<<<<<<<<
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  */
-    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 285, __pyx_L1_error)
+    if (!(likely(PyList_CheckExact(__pyx_v_path))||((__pyx_v_path) == Py_None)||(PyErr_Format(PyExc_TypeError, "Expected %.16s, got %.200s", "list", Py_TYPE(__pyx_v_path)->tp_name), 0))) __PYX_ERR(0, 288, __pyx_L1_error)
     __pyx_v_edges_so_far = (__pyx_v_edges_so_far + __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_find_edges((__pyx_v_edges + __pyx_v_edges_so_far), ((PyObject*)__pyx_v_path), __pyx_v_mask, __pyx_v_value));
 
-    /* "upolygon/draw_polygon.pyx":284
+    /* "upolygon/draw_polygon.pyx":287
  *     cdef s_edge* edges = <s_edge*>malloc(sizeof(s_edge) * edges_length)
  *     cdef int edges_so_far = 0
  *     for path in paths:             # <<<<<<<<<<<<<<
@@ -16995,7 +17035,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
   }
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":287
+  /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -17005,7 +17045,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
   __pyx_t_5 = ((__pyx_v_edges_so_far == 0) != 0);
   if (__pyx_t_5) {
 
-    /* "upolygon/draw_polygon.pyx":288
+    /* "upolygon/draw_polygon.pyx":291
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:
  *         free(edges)             # <<<<<<<<<<<<<<
@@ -17014,7 +17054,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
     free(__pyx_v_edges);
 
-    /* "upolygon/draw_polygon.pyx":289
+    /* "upolygon/draw_polygon.pyx":292
  *     if edges_so_far == 0:
  *         free(edges)
  *         return mask.base             # <<<<<<<<<<<<<<
@@ -17022,16 +17062,16 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  *     edges_length = edges_so_far
  */
     __Pyx_XDECREF(__pyx_r);
-    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_PY_LONG_LONG, (int (*)(char *, PyObject *)) __pyx_memview_set_PY_LONG_LONG, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_2 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_PY_LONG_LONG, (int (*)(char *, PyObject *)) __pyx_memview_set_PY_LONG_LONG, 0);; if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_2);
-    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 289, __pyx_L1_error)
+    __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_2, __pyx_n_s_base); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 292, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
     __pyx_r = __pyx_t_1;
     __pyx_t_1 = 0;
     goto __pyx_L0;
 
-    /* "upolygon/draw_polygon.pyx":287
+    /* "upolygon/draw_polygon.pyx":290
  *         edges_so_far += find_edges(edges + edges_so_far, path, mask, value)
  *     # no point in continuing if there are no edges
  *     if edges_so_far == 0:             # <<<<<<<<<<<<<<
@@ -17040,7 +17080,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   }
 
-  /* "upolygon/draw_polygon.pyx":291
+  /* "upolygon/draw_polygon.pyx":294
  *         return mask.base
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far             # <<<<<<<<<<<<<<
@@ -17049,7 +17089,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edges_length = __pyx_v_edges_so_far;
 
-  /* "upolygon/draw_polygon.pyx":292
+  /* "upolygon/draw_polygon.pyx":295
  *     # edges_so_far can be smaller than edges_length if there are straight lines
  *     edges_length = edges_so_far
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)             # <<<<<<<<<<<<<<
@@ -17058,7 +17098,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   qsort(__pyx_v_edges, __pyx_v_edges_so_far, (sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_edge)), (&__pyx_f_8upolygon_12draw_polygon_cmp_edges));
 
-  /* "upolygon/draw_polygon.pyx":294
+  /* "upolygon/draw_polygon.pyx":297
  *     qsort(edges, edges_so_far, sizeof(s_edge), &cmp_edges)
  * 
  *     cdef int active_edge_length = 0             # <<<<<<<<<<<<<<
@@ -17067,7 +17107,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_active_edge_length = 0;
 
-  /* "upolygon/draw_polygon.pyx":296
+  /* "upolygon/draw_polygon.pyx":299
  *     cdef int active_edge_length = 0
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0             # <<<<<<<<<<<<<<
@@ -17076,7 +17116,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_edge_dead_offset = 0;
 
-  /* "upolygon/draw_polygon.pyx":297
+  /* "upolygon/draw_polygon.pyx":300
  *     # keep an offset of which edges we have already processed, this way we can skip them.
  *     cdef int edge_dead_offset = 0
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)             # <<<<<<<<<<<<<<
@@ -17085,7 +17125,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_active_edges = ((struct __pyx_t_8upolygon_12draw_polygon_s_active_edge *)malloc(((sizeof(struct __pyx_t_8upolygon_12draw_polygon_s_active_edge)) * __pyx_v_edges_length)));
 
-  /* "upolygon/draw_polygon.pyx":299
+  /* "upolygon/draw_polygon.pyx":302
  *     cdef s_active_edge* active_edges = <s_active_edge*>malloc(sizeof(s_active_edge) * edges_length)
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)             # <<<<<<<<<<<<<<
@@ -17094,7 +17134,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_scanline_y = ((int)round((__pyx_v_edges[0]).y_min));
 
-  /* "upolygon/draw_polygon.pyx":300
+  /* "upolygon/draw_polygon.pyx":303
  *     cdef s_active_edge edge
  *     cdef int scanline_y = <int>round(edges[0].y_min)
  *     cdef int max_scanline_y = mask.shape[0]             # <<<<<<<<<<<<<<
@@ -17103,7 +17143,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   __pyx_v_max_scanline_y = (__pyx_v_mask.shape[0]);
 
-  /* "upolygon/draw_polygon.pyx":303
+  /* "upolygon/draw_polygon.pyx":306
  *     cdef int i, j
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:             # <<<<<<<<<<<<<<
@@ -17128,7 +17168,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     __pyx_L8_bool_binop_done:;
     if (!__pyx_t_5) break;
 
-    /* "upolygon/draw_polygon.pyx":304
+    /* "upolygon/draw_polygon.pyx":307
  * 
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):             # <<<<<<<<<<<<<<
@@ -17140,7 +17180,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = __pyx_v_edge_dead_offset; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":305
+      /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -17150,7 +17190,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":306
+        /* "upolygon/draw_polygon.pyx":309
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max             # <<<<<<<<<<<<<<
@@ -17160,7 +17200,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).y_max;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).y_max = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":307
+        /* "upolygon/draw_polygon.pyx":310
  *             if edges[i].y_min == scanline_y:
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val             # <<<<<<<<<<<<<<
@@ -17170,7 +17210,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).x_val;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).x_val = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":308
+        /* "upolygon/draw_polygon.pyx":311
  *                 active_edges[active_edge_length].y_max = edges[i].y_max
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -17180,7 +17220,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         __pyx_t_9 = (__pyx_v_edges[__pyx_v_i]).m_inv;
         (__pyx_v_active_edges[__pyx_v_active_edge_length]).m_inv = __pyx_t_9;
 
-        /* "upolygon/draw_polygon.pyx":309
+        /* "upolygon/draw_polygon.pyx":312
  *                 active_edges[active_edge_length].x_val = edges[i].x_val
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1             # <<<<<<<<<<<<<<
@@ -17189,7 +17229,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length + 1);
 
-        /* "upolygon/draw_polygon.pyx":310
+        /* "upolygon/draw_polygon.pyx":313
  *                 active_edges[active_edge_length].m_inv = edges[i].m_inv
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1             # <<<<<<<<<<<<<<
@@ -17198,7 +17238,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_edge_dead_offset = (__pyx_v_edge_dead_offset + 1);
 
-        /* "upolygon/draw_polygon.pyx":305
+        /* "upolygon/draw_polygon.pyx":308
  *     while (edge_dead_offset < edges_length or active_edge_length > 0) and scanline_y < max_scanline_y:
  *         for i in range(edge_dead_offset, edges_length):
  *             if edges[i].y_min == scanline_y:             # <<<<<<<<<<<<<<
@@ -17208,7 +17248,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         goto __pyx_L13;
       }
 
-      /* "upolygon/draw_polygon.pyx":311
+      /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -17218,7 +17258,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_edges[__pyx_v_i]).y_min > __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":312
+        /* "upolygon/draw_polygon.pyx":315
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:
  *                 break             # <<<<<<<<<<<<<<
@@ -17227,7 +17267,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         goto __pyx_L12_break;
 
-        /* "upolygon/draw_polygon.pyx":311
+        /* "upolygon/draw_polygon.pyx":314
  *                 active_edge_length += 1
  *                 edge_dead_offset += 1
  *             elif edges[i].y_min > scanline_y:             # <<<<<<<<<<<<<<
@@ -17239,7 +17279,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     }
     __pyx_L12_break:;
 
-    /* "upolygon/draw_polygon.pyx":316
+    /* "upolygon/draw_polygon.pyx":319
  *         # When an active edge is outside the scanline it can be retired
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):             # <<<<<<<<<<<<<<
@@ -17249,7 +17289,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_3 = __pyx_v_active_edge_length-1; __pyx_t_3 >= 0; __pyx_t_3-=1) {
       __pyx_v_i = __pyx_t_3;
 
-      /* "upolygon/draw_polygon.pyx":317
+      /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -17259,7 +17299,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       __pyx_t_5 = (((__pyx_v_active_edges[__pyx_v_i]).y_max == __pyx_v_scanline_y) != 0);
       if (__pyx_t_5) {
 
-        /* "upolygon/draw_polygon.pyx":318
+        /* "upolygon/draw_polygon.pyx":321
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)             # <<<<<<<<<<<<<<
@@ -17268,7 +17308,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         __pyx_f_8upolygon_12draw_polygon_move_active_down(__pyx_v_active_edges, __pyx_v_i, __pyx_v_active_edge_length);
 
-        /* "upolygon/draw_polygon.pyx":319
+        /* "upolygon/draw_polygon.pyx":322
  *             if active_edges[i].y_max == scanline_y:
  *                 move_active_down(active_edges, i, active_edge_length)
  *                 active_edge_length -= 1             # <<<<<<<<<<<<<<
@@ -17277,7 +17317,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         __pyx_v_active_edge_length = (__pyx_v_active_edge_length - 1);
 
-        /* "upolygon/draw_polygon.pyx":317
+        /* "upolygon/draw_polygon.pyx":320
  *         # TODO: this could probably fused with the insert sort.
  *         for i in reversed(range(active_edge_length)):
  *             if active_edges[i].y_max == scanline_y:             # <<<<<<<<<<<<<<
@@ -17287,7 +17327,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       }
     }
 
-    /* "upolygon/draw_polygon.pyx":324
+    /* "upolygon/draw_polygon.pyx":327
  *         # This is implemented as insertion sort since the list is mostly sorted
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):             # <<<<<<<<<<<<<<
@@ -17299,7 +17339,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 1; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":325
+      /* "upolygon/draw_polygon.pyx":328
  *         # only edges that cross at this specific scanline will swap places.
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]             # <<<<<<<<<<<<<<
@@ -17308,7 +17348,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
       __pyx_v_edge = (__pyx_v_active_edges[__pyx_v_i]);
 
-      /* "upolygon/draw_polygon.pyx":326
+      /* "upolygon/draw_polygon.pyx":329
  *         for i in range(1, active_edge_length):
  *             edge = active_edges[i]
  *             j = i - 1             # <<<<<<<<<<<<<<
@@ -17317,7 +17357,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
       __pyx_v_j = (__pyx_v_i - 1);
 
-      /* "upolygon/draw_polygon.pyx":327
+      /* "upolygon/draw_polygon.pyx":330
  *             edge = active_edges[i]
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:             # <<<<<<<<<<<<<<
@@ -17336,7 +17376,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         __pyx_L21_bool_binop_done:;
         if (!__pyx_t_5) break;
 
-        /* "upolygon/draw_polygon.pyx":328
+        /* "upolygon/draw_polygon.pyx":331
  *             j = i - 1
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]             # <<<<<<<<<<<<<<
@@ -17345,7 +17385,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
         (__pyx_v_active_edges[(__pyx_v_j + 1)]) = (__pyx_v_active_edges[__pyx_v_j]);
 
-        /* "upolygon/draw_polygon.pyx":329
+        /* "upolygon/draw_polygon.pyx":332
  *             while j >= 0 and edge.x_val < active_edges[j].x_val:
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1             # <<<<<<<<<<<<<<
@@ -17355,7 +17395,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
         __pyx_v_j = (__pyx_v_j - 1);
       }
 
-      /* "upolygon/draw_polygon.pyx":330
+      /* "upolygon/draw_polygon.pyx":333
  *                 active_edges[j+1] = active_edges[j]
  *                 j -= 1
  *             active_edges[j+1] = edge             # <<<<<<<<<<<<<<
@@ -17365,7 +17405,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       (__pyx_v_active_edges[(__pyx_v_j + 1)]) = __pyx_v_edge;
     }
 
-    /* "upolygon/draw_polygon.pyx":333
+    /* "upolygon/draw_polygon.pyx":336
  * 
  * 
  *         for i in range(0, active_edge_length, 2):             # <<<<<<<<<<<<<<
@@ -17377,7 +17417,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=2) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":334
+      /* "upolygon/draw_polygon.pyx":337
  * 
  *         for i in range(0, active_edge_length, 2):
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)             # <<<<<<<<<<<<<<
@@ -17387,7 +17427,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       __pyx_fuse_5__pyx_f_8upolygon_12draw_polygon_draw_straight_line((__pyx_v_active_edges[__pyx_v_i]).x_val, (__pyx_v_active_edges[(__pyx_v_i + 1)]).x_val, __pyx_v_scanline_y, __pyx_v_mask, __pyx_v_value);
     }
 
-    /* "upolygon/draw_polygon.pyx":336
+    /* "upolygon/draw_polygon.pyx":339
  *             draw_straight_line(active_edges[i].x_val, active_edges[i+1].x_val, scanline_y, mask, value)
  * 
  *         for i in range(0,active_edge_length):             # <<<<<<<<<<<<<<
@@ -17399,7 +17439,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     for (__pyx_t_8 = 0; __pyx_t_8 < __pyx_t_7; __pyx_t_8+=1) {
       __pyx_v_i = __pyx_t_8;
 
-      /* "upolygon/draw_polygon.pyx":337
+      /* "upolygon/draw_polygon.pyx":340
  * 
  *         for i in range(0,active_edge_length):
  *             active_edges[i].x_val += active_edges[i].m_inv             # <<<<<<<<<<<<<<
@@ -17410,7 +17450,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
       (__pyx_v_active_edges[__pyx_t_10]).x_val = ((__pyx_v_active_edges[__pyx_t_10]).x_val + (__pyx_v_active_edges[__pyx_v_i]).m_inv);
     }
 
-    /* "upolygon/draw_polygon.pyx":339
+    /* "upolygon/draw_polygon.pyx":342
  *             active_edges[i].x_val += active_edges[i].m_inv
  * 
  *         scanline_y += 1             # <<<<<<<<<<<<<<
@@ -17420,7 +17460,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
     __pyx_v_scanline_y = (__pyx_v_scanline_y + 1);
   }
 
-  /* "upolygon/draw_polygon.pyx":341
+  /* "upolygon/draw_polygon.pyx":344
  *         scanline_y += 1
  * 
  *     free(edges)             # <<<<<<<<<<<<<<
@@ -17429,7 +17469,7 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   free(__pyx_v_edges);
 
-  /* "upolygon/draw_polygon.pyx":342
+  /* "upolygon/draw_polygon.pyx":345
  * 
  *     free(edges)
  *     free(active_edges)             # <<<<<<<<<<<<<<
@@ -17437,22 +17477,22 @@ static PyObject *__pyx_pf_8upolygon_12draw_polygon_12draw_polygon(CYTHON_UNUSED 
  */
   free(__pyx_v_active_edges);
 
-  /* "upolygon/draw_polygon.pyx":343
+  /* "upolygon/draw_polygon.pyx":346
  *     free(edges)
  *     free(active_edges)
  *     return mask.base             # <<<<<<<<<<<<<<
  */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_PY_LONG_LONG, (int (*)(char *, PyObject *)) __pyx_memview_set_PY_LONG_LONG, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_mask, 2, (PyObject *(*)(char *)) __pyx_memview_get_PY_LONG_LONG, (int (*)(char *, PyObject *)) __pyx_memview_set_PY_LONG_LONG, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 343, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_base); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 346, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_r = __pyx_t_2;
   __pyx_t_2 = 0;
   goto __pyx_L0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
@@ -32771,10 +32811,10 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {0, 0, 0, 0, 0, 0, 0}
 };
 static CYTHON_SMALL_CODE int __Pyx_InitCachedBuiltins(void) {
-  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 105, __pyx_L1_error)
-  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 268, __pyx_L1_error)
-  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 281, __pyx_L1_error)
-  __pyx_builtin_reversed = __Pyx_GetBuiltinName(__pyx_n_s_reversed); if (!__pyx_builtin_reversed) __PYX_ERR(0, 316, __pyx_L1_error)
+  __pyx_builtin_range = __Pyx_GetBuiltinName(__pyx_n_s_range); if (!__pyx_builtin_range) __PYX_ERR(0, 108, __pyx_L1_error)
+  __pyx_builtin_TypeError = __Pyx_GetBuiltinName(__pyx_n_s_TypeError); if (!__pyx_builtin_TypeError) __PYX_ERR(0, 271, __pyx_L1_error)
+  __pyx_builtin_sum = __Pyx_GetBuiltinName(__pyx_n_s_sum); if (!__pyx_builtin_sum) __PYX_ERR(0, 284, __pyx_L1_error)
+  __pyx_builtin_reversed = __Pyx_GetBuiltinName(__pyx_n_s_reversed); if (!__pyx_builtin_reversed) __PYX_ERR(0, 319, __pyx_L1_error)
   __pyx_builtin_ValueError = __Pyx_GetBuiltinName(__pyx_n_s_ValueError); if (!__pyx_builtin_ValueError) __PYX_ERR(1, 133, __pyx_L1_error)
   __pyx_builtin_MemoryError = __Pyx_GetBuiltinName(__pyx_n_s_MemoryError); if (!__pyx_builtin_MemoryError) __PYX_ERR(1, 148, __pyx_L1_error)
   __pyx_builtin_enumerate = __Pyx_GetBuiltinName(__pyx_n_s_enumerate); if (!__pyx_builtin_enumerate) __PYX_ERR(1, 151, __pyx_L1_error)
@@ -32790,17 +32830,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_RefNannyDeclarations
   __Pyx_RefNannySetupContext("__Pyx_InitCachedConstants", 0);
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
  *     """Draws a polygon with value
  *     Args:
  */
-  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_No_matching_signature_found); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_tuple__3 = PyTuple_Pack(1, __pyx_kp_s_No_matching_signature_found); if (unlikely(!__pyx_tuple__3)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__3);
   __Pyx_GIVEREF(__pyx_tuple__3);
-  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_Function_call_with_ambiguous_arg); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_tuple__4 = PyTuple_Pack(1, __pyx_kp_s_Function_call_with_ambiguous_arg); if (unlikely(!__pyx_tuple__4)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__4);
   __Pyx_GIVEREF(__pyx_tuple__4);
 
@@ -32996,17 +33036,17 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__22);
   __Pyx_GIVEREF(__pyx_tuple__22);
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
  *     """Draws a polygon with value
  *     Args:
  */
-  __pyx_tuple__23 = PyTuple_Pack(17, __pyx_n_s_mask, __pyx_n_s_paths, __pyx_n_s_value, __pyx_n_s_edges_length, __pyx_n_s_edges, __pyx_n_s_edges_so_far, __pyx_n_s_path, __pyx_n_s_active_edge_length, __pyx_n_s_edge_dead_offset, __pyx_n_s_active_edges, __pyx_n_s_edge, __pyx_n_s_scanline_y, __pyx_n_s_max_scanline_y, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_tuple__23 = PyTuple_Pack(17, __pyx_n_s_mask, __pyx_n_s_paths, __pyx_n_s_value, __pyx_n_s_edges_length, __pyx_n_s_edges, __pyx_n_s_edges_so_far, __pyx_n_s_path, __pyx_n_s_active_edge_length, __pyx_n_s_edge_dead_offset, __pyx_n_s_active_edges, __pyx_n_s_edge, __pyx_n_s_scanline_y, __pyx_n_s_max_scanline_y, __pyx_n_s_i, __pyx_n_s_j, __pyx_n_s_genexpr, __pyx_n_s_genexpr); if (unlikely(!__pyx_tuple__23)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__23);
   __Pyx_GIVEREF(__pyx_tuple__23);
-  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_draw_polygon_pyx, __pyx_n_s_draw_polygon, 268, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_codeobj__24 = (PyObject*)__Pyx_PyCode_New(3, 0, 17, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__23, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_draw_polygon_pyx, __pyx_n_s_draw_polygon, 271, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__24)) __PYX_ERR(0, 271, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -33135,7 +33175,7 @@ static int __Pyx_modinit_type_init_code(void) {
   int __pyx_clineno = 0;
   __Pyx_RefNannySetupContext("__Pyx_modinit_type_init_code", 0);
   /*--- Type init code ---*/
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon.tp_print = 0;
   #endif
@@ -33143,7 +33183,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct____pyx_fuse_0draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr.tp_print = 0;
   #endif
@@ -33151,7 +33191,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_1_genexpr;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon.tp_print = 0;
   #endif
@@ -33159,7 +33199,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_2___pyx_fuse_1draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr.tp_print = 0;
   #endif
@@ -33167,7 +33207,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_3_genexpr;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon.tp_print = 0;
   #endif
@@ -33175,7 +33215,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_4___pyx_fuse_2draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr.tp_print = 0;
   #endif
@@ -33183,7 +33223,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_5_genexpr;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon.tp_print = 0;
   #endif
@@ -33191,7 +33231,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_6___pyx_fuse_3draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr.tp_print = 0;
   #endif
@@ -33199,7 +33239,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_7_genexpr;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon.tp_print = 0;
   #endif
@@ -33207,7 +33247,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_8___pyx_fuse_4draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr.tp_print = 0;
   #endif
@@ -33215,7 +33255,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_9_genexpr;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon.tp_print = 0;
   #endif
@@ -33223,7 +33263,7 @@ static int __Pyx_modinit_type_init_code(void) {
     __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon.tp_getattro = __Pyx_PyObject_GenericGetAttrNoDict;
   }
   __pyx_ptype_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon = &__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_10___pyx_fuse_5draw_polygon;
-  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_11_genexpr) < 0) __PYX_ERR(0, 281, __pyx_L1_error)
+  if (PyType_Ready(&__pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_11_genexpr) < 0) __PYX_ERR(0, 284, __pyx_L1_error)
   #if PY_VERSION_HEX < 0x030800B1
   __pyx_type_8upolygon_12draw_polygon___pyx_scope_struct_11_genexpr.tp_print = 0;
   #endif
@@ -33538,52 +33578,52 @@ if (!__Pyx_RefNanny) {
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "upolygon/draw_polygon.pyx":268
+  /* "upolygon/draw_polygon.pyx":271
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
  * def draw_polygon(data_type[:, :] mask, list paths, data_type value):             # <<<<<<<<<<<<<<
  *     """Draws a polygon with value
  *     Args:
  */
-  __pyx_t_2 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_2 = __Pyx_PyDict_NewPresized(6); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_8upolygon_12draw_polygon_3draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_0__pyx_mdef_8upolygon_12draw_polygon_3draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_char, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_char, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_8upolygon_12draw_polygon_5draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_1__pyx_mdef_8upolygon_12draw_polygon_5draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_unsigned_char, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_unsigned_char, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_8upolygon_12draw_polygon_7draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_2__pyx_mdef_8upolygon_12draw_polygon_7draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_int, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_int, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_8upolygon_12draw_polygon_9draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_3__pyx_mdef_8upolygon_12draw_polygon_9draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_unsigned_int, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_unsigned_int, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_4__pyx_mdef_8upolygon_12draw_polygon_11draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_4__pyx_mdef_8upolygon_12draw_polygon_11draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_double, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_n_s_double, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_5__pyx_mdef_8upolygon_12draw_polygon_13draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_fuse_5__pyx_mdef_8upolygon_12draw_polygon_13draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
-  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_long_long, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_t_2, __pyx_kp_s_long_long, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_mdef_8upolygon_12draw_polygon_1draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 268, __pyx_L1_error)
+  __pyx_t_1 = __pyx_FusedFunction_New(&__pyx_mdef_8upolygon_12draw_polygon_1draw_polygon, 0, __pyx_n_s_draw_polygon, NULL, __pyx_n_s_upolygon_draw_polygon, __pyx_d, ((PyObject *)__pyx_codeobj__24)); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __Pyx_CyFunction_SetDefaultsTuple(__pyx_t_1, __pyx_empty_tuple);
   ((__pyx_FusedFunctionObject *) __pyx_t_1)->__signatures__ = __pyx_t_2;
   __Pyx_GIVEREF(__pyx_t_2);
   __pyx_t_2 = 0;
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_draw_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 268, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_draw_polygon, __pyx_t_1) < 0) __PYX_ERR(0, 271, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "upolygon/draw_polygon.pyx":1
