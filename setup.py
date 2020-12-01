@@ -20,7 +20,7 @@ if USE_CYTHON:
 
 setuptools.setup(
     name="upolygon",
-    version="0.1.3",
+    version="0.1.4",
     author="V7",
     author_email="simon@v7labs.com",
     description="Collection of fast polygon operations for DL",
