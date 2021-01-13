@@ -28,8 +28,6 @@ def rle_encode(binary_mask):
     counts[i] = running_length
     i += 1
     return counts.base[0:i].tolist()
-    return np.array(counts[0:i], dtype=np.int)
-    # return counts[0:i] # np.array(counts[0:i])
 
 def rle_decode(counts, shape):
     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
