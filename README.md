@@ -61,3 +61,9 @@ Similar to OpenCV's `cv2.findContours` but lacking hierarchies. Also similar to 
 
 Note that currently the input mask to find_contour needs to be uint8.
 
+## rle_encode
+`rle_encode(mask: array[:,:]) -> list`
+Takes a 2-dim binary mask and generates a run length encoding according to the coco specs
+
+~ 15 times faster than written in plain python
+

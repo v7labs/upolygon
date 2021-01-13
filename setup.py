@@ -11,6 +11,7 @@ extensions = [
     setuptools.Extension("draw_polygon", ["upolygon/draw_polygon" + ext], extra_compile_args=["-O3", "-Wall"]),
     setuptools.Extension("find_contours", ["upolygon/find_contours" + ext], extra_compile_args=["-O3", "-Wall"]),
     setuptools.Extension("simplify_polygon", ["upolygon/simplify_polygon" + ext], extra_compile_args=["-O3", "-Wall"]),
+    setuptools.Extension("rle", ["upolygon/rle" + ext], extra_compile_args=["-O3", "-Wall"]),
 ]
 
 if USE_CYTHON:
@@ -20,7 +21,7 @@ if USE_CYTHON:
 
 setuptools.setup(
     name="upolygon",
-    version="0.1.4",
+    version="0.1.5",
     author="V7",
     author_email="simon@v7labs.com",
     description="Collection of fast polygon operations for DL",
