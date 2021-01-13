@@ -1852,12 +1852,12 @@ static const char __pyx_k_IndexError[] = "IndexError";
 static const char __pyx_k_ValueError[] = "ValueError";
 static const char __pyx_k_pyx_result[] = "__pyx_result";
 static const char __pyx_k_pyx_vtable[] = "__pyx_vtable__";
+static const char __pyx_k_rle_decode[] = "rle_decode";
+static const char __pyx_k_rle_encode[] = "rle_encode";
 static const char __pyx_k_MemoryError[] = "MemoryError";
 static const char __pyx_k_PickleError[] = "PickleError";
 static const char __pyx_k_binary_mask[] = "binary_mask";
 static const char __pyx_k_pyx_checksum[] = "__pyx_checksum";
-static const char __pyx_k_rle_decoding[] = "rle_decoding";
-static const char __pyx_k_rle_encoding[] = "rle_encoding";
 static const char __pyx_k_stringsource[] = "stringsource";
 static const char __pyx_k_upolygon_rle[] = "upolygon.rle";
 static const char __pyx_k_pyx_getbuffer[] = "__pyx_getbuffer";
@@ -1985,8 +1985,8 @@ static PyObject *__pyx_n_s_reduce;
 static PyObject *__pyx_n_s_reduce_cython;
 static PyObject *__pyx_n_s_reduce_ex;
 static PyObject *__pyx_n_s_reshape;
-static PyObject *__pyx_n_s_rle_decoding;
-static PyObject *__pyx_n_s_rle_encoding;
+static PyObject *__pyx_n_s_rle_decode;
+static PyObject *__pyx_n_s_rle_encode;
 static PyObject *__pyx_n_s_running_length;
 static PyObject *__pyx_n_s_setstate;
 static PyObject *__pyx_n_s_setstate_cython;
@@ -2011,8 +2011,8 @@ static PyObject *__pyx_n_s_upolygon_rle;
 static PyObject *__pyx_kp_s_upolygon_rle_pyx;
 static PyObject *__pyx_n_s_val;
 static PyObject *__pyx_n_s_zeros;
-static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_binary_mask); /* proto */
-static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_counts, PyObject *__pyx_v_shape); /* proto */
+static PyObject *__pyx_pf_8upolygon_3rle_rle_encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_binary_mask); /* proto */
+static PyObject *__pyx_pf_8upolygon_3rle_2rle_decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_counts, PyObject *__pyx_v_shape); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array___cinit__(struct __pyx_array_obj *__pyx_v_self, PyObject *__pyx_v_shape, Py_ssize_t __pyx_v_itemsize, PyObject *__pyx_v_format, PyObject *__pyx_v_mode, int __pyx_v_allocate_buffer); /* proto */
 static int __pyx_array___pyx_pf_15View_dot_MemoryView_5array_2__getbuffer__(struct __pyx_array_obj *__pyx_v_self, Py_buffer *__pyx_v_info, int __pyx_v_flags); /* proto */
 static void __pyx_array___pyx_pf_15View_dot_MemoryView_5array_4__dealloc__(struct __pyx_array_obj *__pyx_v_self); /* proto */
@@ -2097,26 +2097,26 @@ static PyObject *__pyx_codeobj__29;
 /* "upolygon/rle.pyx":9
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * def rle_encoding(binary_mask):             # <<<<<<<<<<<<<<
+ * def rle_encode(binary_mask):             # <<<<<<<<<<<<<<
  *     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
  *     # unused counts will be stripped at the end
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8upolygon_3rle_1rle_encoding(PyObject *__pyx_self, PyObject *__pyx_v_binary_mask); /*proto*/
-static PyMethodDef __pyx_mdef_8upolygon_3rle_1rle_encoding = {"rle_encoding", (PyCFunction)__pyx_pw_8upolygon_3rle_1rle_encoding, METH_O, 0};
-static PyObject *__pyx_pw_8upolygon_3rle_1rle_encoding(PyObject *__pyx_self, PyObject *__pyx_v_binary_mask) {
+static PyObject *__pyx_pw_8upolygon_3rle_1rle_encode(PyObject *__pyx_self, PyObject *__pyx_v_binary_mask); /*proto*/
+static PyMethodDef __pyx_mdef_8upolygon_3rle_1rle_encode = {"rle_encode", (PyCFunction)__pyx_pw_8upolygon_3rle_1rle_encode, METH_O, 0};
+static PyObject *__pyx_pw_8upolygon_3rle_1rle_encode(PyObject *__pyx_self, PyObject *__pyx_v_binary_mask) {
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("rle_encoding (wrapper)", 0);
-  __pyx_r = __pyx_pf_8upolygon_3rle_rle_encoding(__pyx_self, ((PyObject *)__pyx_v_binary_mask));
+  __Pyx_RefNannySetupContext("rle_encode (wrapper)", 0);
+  __pyx_r = __pyx_pf_8upolygon_3rle_rle_encode(__pyx_self, ((PyObject *)__pyx_v_binary_mask));
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_binary_mask) {
+static PyObject *__pyx_pf_8upolygon_3rle_rle_encode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_binary_mask) {
   __Pyx_memviewslice __pyx_v_counts = { 0, 0, { 0 }, { 0 }, { 0 } };
   __Pyx_memviewslice __pyx_v_mask_view = { 0, 0, { 0 }, { 0 }, { 0 } };
   char __pyx_v_last_elem;
@@ -2140,7 +2140,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("rle_encoding", 0);
+  __Pyx_RefNannySetupContext("rle_encode", 0);
 
   /* "upolygon/rle.pyx":12
  *     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
@@ -2415,7 +2415,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__
   /* "upolygon/rle.pyx":9
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * def rle_encoding(binary_mask):             # <<<<<<<<<<<<<<
+ * def rle_encode(binary_mask):             # <<<<<<<<<<<<<<
  *     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
  *     # unused counts will be stripped at the end
  */
@@ -2429,7 +2429,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__
   __Pyx_XDECREF(__pyx_t_5);
   __PYX_XDEC_MEMVIEW(&__pyx_t_6, 1);
   __PYX_XDEC_MEMVIEW(&__pyx_t_7, 1);
-  __Pyx_AddTraceback("upolygon.rle.rle_encoding", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("upolygon.rle.rle_encode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __PYX_XDEC_MEMVIEW(&__pyx_v_counts, 1);
@@ -2442,15 +2442,15 @@ static PyObject *__pyx_pf_8upolygon_3rle_rle_encoding(CYTHON_UNUSED PyObject *__
 /* "upolygon/rle.pyx":34
  *     # return counts[0:i] # np.array(counts[0:i])
  * 
- * def rle_decoding(counts, shape):             # <<<<<<<<<<<<<<
+ * def rle_decode(counts, shape):             # <<<<<<<<<<<<<<
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
  *     cdef int val = 1
  */
 
 /* Python wrapper */
-static PyObject *__pyx_pw_8upolygon_3rle_3rle_decoding(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
-static PyMethodDef __pyx_mdef_8upolygon_3rle_3rle_decoding = {"rle_decoding", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8upolygon_3rle_3rle_decoding, METH_VARARGS|METH_KEYWORDS, 0};
-static PyObject *__pyx_pw_8upolygon_3rle_3rle_decoding(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
+static PyObject *__pyx_pw_8upolygon_3rle_3rle_decode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds); /*proto*/
+static PyMethodDef __pyx_mdef_8upolygon_3rle_3rle_decode = {"rle_decode", (PyCFunction)(void*)(PyCFunctionWithKeywords)__pyx_pw_8upolygon_3rle_3rle_decode, METH_VARARGS|METH_KEYWORDS, 0};
+static PyObject *__pyx_pw_8upolygon_3rle_3rle_decode(PyObject *__pyx_self, PyObject *__pyx_args, PyObject *__pyx_kwds) {
   PyObject *__pyx_v_counts = 0;
   PyObject *__pyx_v_shape = 0;
   int __pyx_lineno = 0;
@@ -2458,7 +2458,7 @@ static PyObject *__pyx_pw_8upolygon_3rle_3rle_decoding(PyObject *__pyx_self, PyO
   int __pyx_clineno = 0;
   PyObject *__pyx_r = 0;
   __Pyx_RefNannyDeclarations
-  __Pyx_RefNannySetupContext("rle_decoding (wrapper)", 0);
+  __Pyx_RefNannySetupContext("rle_decode (wrapper)", 0);
   {
     static PyObject **__pyx_pyargnames[] = {&__pyx_n_s_counts,&__pyx_n_s_shape,0};
     PyObject* values[2] = {0,0};
@@ -2482,11 +2482,11 @@ static PyObject *__pyx_pw_8upolygon_3rle_3rle_decoding(PyObject *__pyx_self, PyO
         case  1:
         if (likely((values[1] = __Pyx_PyDict_GetItemStr(__pyx_kwds, __pyx_n_s_shape)) != 0)) kw_args--;
         else {
-          __Pyx_RaiseArgtupleInvalid("rle_decoding", 1, 2, 2, 1); __PYX_ERR(0, 34, __pyx_L3_error)
+          __Pyx_RaiseArgtupleInvalid("rle_decode", 1, 2, 2, 1); __PYX_ERR(0, 34, __pyx_L3_error)
         }
       }
       if (unlikely(kw_args > 0)) {
-        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rle_decoding") < 0)) __PYX_ERR(0, 34, __pyx_L3_error)
+        if (unlikely(__Pyx_ParseOptionalKeywords(__pyx_kwds, __pyx_pyargnames, 0, values, pos_args, "rle_decode") < 0)) __PYX_ERR(0, 34, __pyx_L3_error)
       }
     } else if (PyTuple_GET_SIZE(__pyx_args) != 2) {
       goto __pyx_L5_argtuple_error;
@@ -2499,20 +2499,20 @@ static PyObject *__pyx_pw_8upolygon_3rle_3rle_decoding(PyObject *__pyx_self, PyO
   }
   goto __pyx_L4_argument_unpacking_done;
   __pyx_L5_argtuple_error:;
-  __Pyx_RaiseArgtupleInvalid("rle_decoding", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 34, __pyx_L3_error)
+  __Pyx_RaiseArgtupleInvalid("rle_decode", 1, 2, 2, PyTuple_GET_SIZE(__pyx_args)); __PYX_ERR(0, 34, __pyx_L3_error)
   __pyx_L3_error:;
-  __Pyx_AddTraceback("upolygon.rle.rle_decoding", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("upolygon.rle.rle_decode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __Pyx_RefNannyFinishContext();
   return NULL;
   __pyx_L4_argument_unpacking_done:;
-  __pyx_r = __pyx_pf_8upolygon_3rle_2rle_decoding(__pyx_self, __pyx_v_counts, __pyx_v_shape);
+  __pyx_r = __pyx_pf_8upolygon_3rle_2rle_decode(__pyx_self, __pyx_v_counts, __pyx_v_shape);
 
   /* function exit code */
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
 }
 
-static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_counts, PyObject *__pyx_v_shape) {
+static PyObject *__pyx_pf_8upolygon_3rle_2rle_decode(CYTHON_UNUSED PyObject *__pyx_self, PyObject *__pyx_v_counts, PyObject *__pyx_v_shape) {
   PyObject *__pyx_v_img = NULL;
   int __pyx_v_val;
   int __pyx_v_n;
@@ -2531,11 +2531,11 @@ static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *_
   int __pyx_lineno = 0;
   const char *__pyx_filename = NULL;
   int __pyx_clineno = 0;
-  __Pyx_RefNannySetupContext("rle_decoding", 0);
+  __Pyx_RefNannySetupContext("rle_decode", 0);
 
   /* "upolygon/rle.pyx":35
  * 
- * def rle_decoding(counts, shape):
+ * def rle_decode(counts, shape):
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)             # <<<<<<<<<<<<<<
  *     cdef int val = 1
  *     cdef int n = 0
@@ -2576,7 +2576,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *_
   __pyx_t_5 = 0;
 
   /* "upolygon/rle.pyx":36
- * def rle_decoding(counts, shape):
+ * def rle_decode(counts, shape):
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
  *     cdef int val = 1             # <<<<<<<<<<<<<<
  *     cdef int n = 0
@@ -2687,7 +2687,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *_
   /* "upolygon/rle.pyx":34
  *     # return counts[0:i] # np.array(counts[0:i])
  * 
- * def rle_decoding(counts, shape):             # <<<<<<<<<<<<<<
+ * def rle_decode(counts, shape):             # <<<<<<<<<<<<<<
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
  *     cdef int val = 1
  */
@@ -2699,7 +2699,7 @@ static PyObject *__pyx_pf_8upolygon_3rle_2rle_decoding(CYTHON_UNUSED PyObject *_
   __Pyx_XDECREF(__pyx_t_3);
   __Pyx_XDECREF(__pyx_t_4);
   __Pyx_XDECREF(__pyx_t_5);
-  __Pyx_AddTraceback("upolygon.rle.rle_decoding", __pyx_clineno, __pyx_lineno, __pyx_filename);
+  __Pyx_AddTraceback("upolygon.rle.rle_decode", __pyx_clineno, __pyx_lineno, __pyx_filename);
   __pyx_r = NULL;
   __pyx_L0:;
   __Pyx_XDECREF(__pyx_v_img);
@@ -16577,8 +16577,8 @@ static __Pyx_StringTabEntry __pyx_string_tab[] = {
   {&__pyx_n_s_reduce_cython, __pyx_k_reduce_cython, sizeof(__pyx_k_reduce_cython), 0, 0, 1, 1},
   {&__pyx_n_s_reduce_ex, __pyx_k_reduce_ex, sizeof(__pyx_k_reduce_ex), 0, 0, 1, 1},
   {&__pyx_n_s_reshape, __pyx_k_reshape, sizeof(__pyx_k_reshape), 0, 0, 1, 1},
-  {&__pyx_n_s_rle_decoding, __pyx_k_rle_decoding, sizeof(__pyx_k_rle_decoding), 0, 0, 1, 1},
-  {&__pyx_n_s_rle_encoding, __pyx_k_rle_encoding, sizeof(__pyx_k_rle_encoding), 0, 0, 1, 1},
+  {&__pyx_n_s_rle_decode, __pyx_k_rle_decode, sizeof(__pyx_k_rle_decode), 0, 0, 1, 1},
+  {&__pyx_n_s_rle_encode, __pyx_k_rle_encode, sizeof(__pyx_k_rle_encode), 0, 0, 1, 1},
   {&__pyx_n_s_running_length, __pyx_k_running_length, sizeof(__pyx_k_running_length), 0, 0, 1, 1},
   {&__pyx_n_s_setstate, __pyx_k_setstate, sizeof(__pyx_k_setstate), 0, 0, 1, 1},
   {&__pyx_n_s_setstate_cython, __pyx_k_setstate_cython, sizeof(__pyx_k_setstate_cython), 0, 0, 1, 1},
@@ -16818,26 +16818,26 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   /* "upolygon/rle.pyx":9
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * def rle_encoding(binary_mask):             # <<<<<<<<<<<<<<
+ * def rle_encode(binary_mask):             # <<<<<<<<<<<<<<
  *     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
  *     # unused counts will be stripped at the end
  */
   __pyx_tuple__19 = PyTuple_Pack(8, __pyx_n_s_binary_mask, __pyx_n_s_counts, __pyx_n_s_mask_view, __pyx_n_s_last_elem, __pyx_n_s_elem, __pyx_n_s_running_length, __pyx_n_s_i, __pyx_n_s_j); if (unlikely(!__pyx_tuple__19)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__19);
   __Pyx_GIVEREF(__pyx_tuple__19);
-  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_rle_pyx, __pyx_n_s_rle_encoding, 9, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_codeobj__20 = (PyObject*)__Pyx_PyCode_New(1, 0, 8, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__19, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_rle_pyx, __pyx_n_s_rle_encode, 9, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__20)) __PYX_ERR(0, 9, __pyx_L1_error)
 
   /* "upolygon/rle.pyx":34
  *     # return counts[0:i] # np.array(counts[0:i])
  * 
- * def rle_decoding(counts, shape):             # <<<<<<<<<<<<<<
+ * def rle_decode(counts, shape):             # <<<<<<<<<<<<<<
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
  *     cdef int val = 1
  */
   __pyx_tuple__21 = PyTuple_Pack(6, __pyx_n_s_counts, __pyx_n_s_shape, __pyx_n_s_img, __pyx_n_s_val, __pyx_n_s_n, __pyx_n_s_pos); if (unlikely(!__pyx_tuple__21)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__21);
   __Pyx_GIVEREF(__pyx_tuple__21);
-  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_rle_pyx, __pyx_n_s_rle_decoding, 34, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_codeobj__22 = (PyObject*)__Pyx_PyCode_New(2, 0, 6, 0, CO_OPTIMIZED|CO_NEWLOCALS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__21, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_upolygon_rle_pyx, __pyx_n_s_rle_decode, 34, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__22)) __PYX_ERR(0, 34, __pyx_L1_error)
 
   /* "View.MemoryView":286
  *         return self.name
@@ -17265,25 +17265,25 @@ if (!__Pyx_RefNanny) {
   /* "upolygon/rle.pyx":9
  * @cython.wraparound(False)
  * @cython.nonecheck(False)
- * def rle_encoding(binary_mask):             # <<<<<<<<<<<<<<
+ * def rle_encode(binary_mask):             # <<<<<<<<<<<<<<
  *     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
  *     # unused counts will be stripped at the end
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_3rle_1rle_encoding, NULL, __pyx_n_s_upolygon_rle); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_3rle_1rle_encode, NULL, __pyx_n_s_upolygon_rle); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rle_encoding, __pyx_t_1) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rle_encode, __pyx_t_1) < 0) __PYX_ERR(0, 9, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "upolygon/rle.pyx":34
  *     # return counts[0:i] # np.array(counts[0:i])
  * 
- * def rle_decoding(counts, shape):             # <<<<<<<<<<<<<<
+ * def rle_decode(counts, shape):             # <<<<<<<<<<<<<<
  *     img = np.zeros(shape[0] * shape[1], dtype=np.uint8)
  *     cdef int val = 1
  */
-  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_3rle_3rle_decoding, NULL, __pyx_n_s_upolygon_rle); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
+  __pyx_t_1 = PyCFunction_NewEx(&__pyx_mdef_8upolygon_3rle_3rle_decode, NULL, __pyx_n_s_upolygon_rle); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rle_decoding, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
+  if (PyDict_SetItem(__pyx_d, __pyx_n_s_rle_decode, __pyx_t_1) < 0) __PYX_ERR(0, 34, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
   /* "upolygon/rle.pyx":1
