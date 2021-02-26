@@ -40,4 +40,4 @@ jobs:
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: |
-          twine upload dist/dist-windows-${{ matrix.python-version }}
+          twine upload dist\upolygon-*.whl
