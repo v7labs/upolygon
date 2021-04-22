@@ -15,7 +15,7 @@ cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, fl
 @cython.nonecheck(False) 
 def simplify_single_polygon(list path, float epsilon):
     # Note that we are using an iterative version of this algorithm
-    # instread of the classical recursive to prevent reaching python's
+    # instead of the classical recursive to prevent reaching python's
     # max recursion.
     cdef int length = len(path) // 2
     cdef int startIndex = 0
