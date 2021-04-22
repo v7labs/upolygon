@@ -14,23 +14,41 @@ cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, fl
 @cython.wraparound(False)
 @cython.nonecheck(False) 
 def simplify_single_polygon(list path, float epsilon):
-    if len(path) <= 1:
-        return path
+    # Note that we are using an iterative version of this algorithm
+    # instead of the classical recursive to prevent reaching python's
+    # max recursion.
+    cdef int length = len(path) // 2
+    cdef int startIndex = 0
+    cdef int endIndex = length
     cdef float max_distance = 0
     cdef int index = 0
-    cdef int end = len(path) // 2 - 1
-    for i in range(1, end):
-        distance = perpendicular_distance(path[2*i], path[2*i+1], path[0], path[1], path[2*end], path[2*end+1])
-        if distance > max_distance:
-            max_distance = distance 
-            index = i
-    
-    if max_distance > epsilon:
-        res1 = simplify_single_polygon(path[:2*index+2], epsilon) 
-        res2 = simplify_single_polygon(path[2*index:], epsilon)
-        return res1[0:len(res1)-2] + res2
-    else:
-        return [path[0], path[1], path[end*2], path[end*2+1]]
+    cdef int i
+    deleted = [False] * length
+    stack = [(startIndex,endIndex)]
+    while stack:
+        startIndex, endIndex = stack.pop()
+        if startIndex == endIndex:
+            continue
+        max_distance = 0
+        for i in range(startIndex,endIndex):
+            if deleted[i]:
+                continue
+            distance = perpendicular_distance(path[2*i], path[2*i+1], path[startIndex*2], path[startIndex*2+1], path[2*(endIndex-1)], path[2*(endIndex-1)+1])
+            if distance > max_distance:
+                max_distance = distance 
+                index = i
+        if max_distance > epsilon:
+            stack.append((startIndex,index))
+            stack.append((index, endIndex))
+        else:
+            for i in range(startIndex+1,endIndex-1):
+                deleted[i] = True
+    result = []
+    for i in range(0, length):
+        if not deleted[i]:
+            result.append(path[2*i])
+            result.append(path[2*i+1])
+    return result
 
 # Basic Ramer–Douglas–Peucker algorithm
 @cython.boundscheck(False)
