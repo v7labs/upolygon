@@ -29,7 +29,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/v7labs/upolygon",
     ext_modules=extensions,
-    install_requires=[],
+    install_requires=["numpy"],
     packages=setuptools.find_packages(),
     classifiers=["Programming Language :: Python :: 3", "License :: OSI Approved :: MIT License",],
     python_requires=">=3.6",
