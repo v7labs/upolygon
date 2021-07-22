@@ -1,4 +1,4 @@
-# uPolygon (WIP)
+# uPolygon
 Library of handy polygon related functions to speed up machine learning projects.
 
 It was born as a replacement for `cv2.fillPoly` when generating masks for instance segmentation, without having to bring in all of opencv.
