@@ -24,7 +24,9 @@ extensions = [
         extra_compile_args=["-O3", "-Wall"],
     ),
     setuptools.Extension(
-        "rle", ["upolygon/rle" + ext], extra_compile_args=["-O3", "-Wall"]
+        "run_length_encoding",
+        ["upolygon/run_length_encoding" + ext],
+        extra_compile_args=["-O3", "-Wall"],
     ),
 ]
 
@@ -35,7 +37,7 @@ if USE_CYTHON:
 
 setuptools.setup(
     name="upolygon",
-    version="0.1.6",
+    version="0.1.7",
     author="V7",
     author_email="simon@v7labs.com",
     description="Collection of fast polygon operations for DL",
