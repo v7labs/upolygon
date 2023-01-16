@@ -31,7 +31,7 @@ extensions = [
 ]
 
 if USE_CYTHON:
-    from Cython.Build import cythonize
+    from Cython.Build import cythonize # noqa
 
     extensions = cythonize(extensions)
 
