@@ -158,6 +158,6 @@ def test_supports_int32():
 
 
 def test_supports_float():
-    mask = np.zeros(triangle_mask_size, dtype=np.float)
+    mask = np.zeros(triangle_mask_size, dtype=np.floating)
     draw_polygon(mask, [triangle], 1)
     assert np.all(mask == triangle_result)
