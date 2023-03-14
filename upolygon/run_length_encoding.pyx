@@ -9,7 +9,7 @@ import numpy as np
 def rle_encode(binary_mask):
     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
     # unused counts will be stripped at the end
-    cdef long[:] counts = np.zeros(binary_mask.shape[0] * binary_mask.shape[1], dtype=np.int)
+    cdef long[:] counts = np.zeros(binary_mask.shape[0] * binary_mask.shape[1], dtype=np.int_)
     cdef char[:] mask_view = binary_mask.ravel(order="F").astype(np.int8)
 
     cdef char last_elem = 0
