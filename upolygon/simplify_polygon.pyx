@@ -2,8 +2,10 @@
 
 cimport cython
 from libc.math cimport abs, sqrt
+import logging
 
-
+logging.basicConfig(filename='example.log', encoding='utf-8', level=logging.DEBUG)
+logging.info('Started')
 cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, float by):
     cdef float dist = sqrt((by - ay) * (by - ay) + (bx - ax) * (bx - ax))
     if dist < 0.0001:
@@ -27,6 +29,7 @@ def simplify_single_polygon(list path, float epsilon):
     cdef float max_distance = 0
     cdef int index = 0
     cdef int i
+    logging.info(length)
     deleted = [False] * length
     stack = [(startIndex,endIndex)]
     while stack:
@@ -34,14 +37,14 @@ def simplify_single_polygon(list path, float epsilon):
         if startIndex == endIndex:
             continue
         max_distance = 0
-        for i in range(startIndex+1,endIndex-1):
+        for i in range(startIndex+1,endIndex):
             if deleted[i]:
                 continue
             distance = perpendicular_distance(path[2*i], path[2*i+1], path[startIndex*2], path[startIndex*2+1], path[2*(endIndex-1)], path[2*(endIndex-1)+1])
             if distance > max_distance:
                 max_distance = distance 
                 index = i
-        if max_distance > epsilon:
+        if max_distance >= epsilon:
             stack.append((startIndex,index))
             stack.append((index, endIndex))
         else:
