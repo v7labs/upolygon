@@ -14,7 +14,6 @@ cdef perpendicular_distance(float px, float py, float ax, float ay, float bx, fl
 @cython.wraparound(False)
 @cython.nonecheck(False) 
 def simplify_single_polygon(list path, float epsilon):
-    print("Test it's compiling")
     # Note that we are using an iterative version of this algorithm
     # instead of the classical recursive to prevent reaching python's
     # max recursion.
