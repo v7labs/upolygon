@@ -44,7 +44,7 @@ def simplify_single_polygon(list path, float epsilon):
             if distance > max_distance:
                 max_distance = distance 
                 index = i
-        if max_distance >= epsilon:
+        if max_distance > epsilon:
             stack.append((startIndex,index))
             stack.append((index, endIndex))
         else:

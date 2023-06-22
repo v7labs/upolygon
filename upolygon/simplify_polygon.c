@@ -2036,7 +2036,7 @@ static PyObject *__pyx_pf_16simplify_polygon_simplify_single_polygon(CYTHON_UNUS
  *             if distance > max_distance:
  *                 max_distance = distance             # <<<<<<<<<<<<<<
  *                 index = i
- *         if max_distance >= epsilon:
+ *         if max_distance > epsilon:
  */
         __pyx_t_17 = __pyx_PyFloat_AsFloat(__pyx_v_distance); if (unlikely((__pyx_t_17 == (float)-1) && PyErr_Occurred())) __PYX_ERR(0, 45, __pyx_L1_error)
         __pyx_v_max_distance = __pyx_t_17;
@@ -2045,7 +2045,7 @@ static PyObject *__pyx_pf_16simplify_polygon_simplify_single_polygon(CYTHON_UNUS
  *             if distance > max_distance:
  *                 max_distance = distance
  *                 index = i             # <<<<<<<<<<<<<<
- *         if max_distance >= epsilon:
+ *         if max_distance > epsilon:
  *             stack.append((startIndex,index))
  */
         __pyx_v_index = __pyx_v_i;
@@ -2064,16 +2064,16 @@ static PyObject *__pyx_pf_16simplify_polygon_simplify_single_polygon(CYTHON_UNUS
     /* "simplify_polygon.pyx":47
  *                 max_distance = distance
  *                 index = i
- *         if max_distance >= epsilon:             # <<<<<<<<<<<<<<
+ *         if max_distance > epsilon:             # <<<<<<<<<<<<<<
  *             stack.append((startIndex,index))
  *             stack.append((index, endIndex))
  */
-    __pyx_t_6 = ((__pyx_v_max_distance >= __pyx_v_epsilon) != 0);
+    __pyx_t_6 = ((__pyx_v_max_distance > __pyx_v_epsilon) != 0);
     if (__pyx_t_6) {
 
       /* "simplify_polygon.pyx":48
  *                 index = i
- *         if max_distance >= epsilon:
+ *         if max_distance > epsilon:
  *             stack.append((startIndex,index))             # <<<<<<<<<<<<<<
  *             stack.append((index, endIndex))
  *         else:
@@ -2094,7 +2094,7 @@ static PyObject *__pyx_pf_16simplify_polygon_simplify_single_polygon(CYTHON_UNUS
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
       /* "simplify_polygon.pyx":49
- *         if max_distance >= epsilon:
+ *         if max_distance > epsilon:
  *             stack.append((startIndex,index))
  *             stack.append((index, endIndex))             # <<<<<<<<<<<<<<
  *         else:
@@ -2118,7 +2118,7 @@ static PyObject *__pyx_pf_16simplify_polygon_simplify_single_polygon(CYTHON_UNUS
       /* "simplify_polygon.pyx":47
  *                 max_distance = distance
  *                 index = i
- *         if max_distance >= epsilon:             # <<<<<<<<<<<<<<
+ *         if max_distance > epsilon:             # <<<<<<<<<<<<<<
  *             stack.append((startIndex,index))
  *             stack.append((index, endIndex))
  */
