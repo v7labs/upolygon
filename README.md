@@ -90,3 +90,6 @@ Alternatively,
 will build and install to the working directory for importing from local. 
 
 Each change to the code needs to be rebuilt before it can be used. 
+
+### Interactive debugging
+TODO
