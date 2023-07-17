@@ -17,6 +17,10 @@ def simplify_single_polygon(list path, float epsilon):
     # Note that we are using an iterative version of this algorithm
     # instead of the classical recursive to prevent reaching python's
     # max recursion.
+    # Uses a stack to avoid recursion and iterates over the path where 
+    # path takes the form of [x1,y1,x2,y2,...,xn,yn], therefore the x,y
+    # tuple is at index 2*i and 2*i+1 respectively and the length is half of the array
+    # Iterative algorithm comparison found here: https://namekdev.net/2014/06/iterative-version-of-ramer-douglas-peucker-line-simplification-algorithm/
     cdef int length = len(path) // 2
     cdef int startIndex = 0
     cdef int endIndex = length
@@ -30,7 +34,7 @@ def simplify_single_polygon(list path, float epsilon):
         if startIndex == endIndex:
             continue
         max_distance = 0
-        for i in range(startIndex,endIndex):
+        for i in range(startIndex+1,endIndex):
             if deleted[i]:
                 continue
             distance = perpendicular_distance(path[2*i], path[2*i+1], path[startIndex*2], path[startIndex*2+1], path[2*(endIndex-1)], path[2*(endIndex-1)+1])
@@ -48,6 +52,7 @@ def simplify_single_polygon(list path, float epsilon):
         if not deleted[i]:
             result.append(path[2*i])
             result.append(path[2*i+1])
+    
     return result
 
 # Basic Ramer–Douglas–Peucker algorithm

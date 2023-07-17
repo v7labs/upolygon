@@ -67,3 +67,29 @@ Takes a 2-dim binary mask and generates a run length encoding according to the c
 
 ~ 15 times faster than written in plain python
 
+
+
+## Development
+This is a Cython project and thus has some additional development dependencies to compile code into binaries, as well as extra steps to build/use the project
+### Dependencies
+- gcc: 
+  - Ubuntu/debian: `sudo apt install build-essential`
+  - Arch: `yay -Sy base-devel`
+  - Mac/OS: `brew install gcc`
+- Cython `pip install Cython`
+
+
+### Local Testing
+To ensure building correctly, set the Cython environment variable
+`export USE_CYTHON=true`
+To install and test locally, build with the following command
+`python setup.py install`
+which will locate the virtual environment activated, build and then install the local version to that python environment.
+Alternatively, 
+`python setup.py build_ext --inplace`
+will build and install to the working directory for importing from local. 
+
+Each change to the code needs to be rebuilt before it can be used. 
+
+### Interactive debugging
+TODO
