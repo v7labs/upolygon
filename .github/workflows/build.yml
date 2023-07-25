@@ -34,7 +34,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: ${{ env.RELEASE_VERSION }}-wheels
-          retention-days: 30
+          retention-days: 15
           path: dist/*.whl
   
   build_sdist:
@@ -55,5 +55,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: ${{ env.RELEASE_VERSION }}-sdist
-          retention-days: 30
+          retention-days: 15
           path: dist/*.tar.gz
