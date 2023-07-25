@@ -17,6 +17,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.14.1
@@ -27,7 +29,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: v${{ github.ref }}/wheels
+          name: v${{ env.RELEASE_VERSION }}-wheels
           retention-days: 30
           path: dist/*.whl
   
@@ -35,6 +37,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Set env
+        run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -46,6 +50,6 @@ jobs:
           python setup.py sdist
       - uses: actions/upload-artifact@v2
         with:
-          name: v${{ github.ref }}/sdist
+          name: v${{ env.RELEASE_VERSION }}-sdist
           retention-days: 30
           path: dist/*.tar.gz
