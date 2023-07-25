@@ -6,6 +6,10 @@ on:
       - "v*.*.*"
       - "test-*"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build_wheels:
     name: Build wheels on ${{ matrix.os }}
@@ -29,7 +33,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: v${{ env.RELEASE_VERSION }}-wheels
+          name: ${{ env.RELEASE_VERSION }}-wheels
           retention-days: 30
           path: dist/*.whl
   
@@ -50,6 +54,6 @@ jobs:
           python setup.py sdist
       - uses: actions/upload-artifact@v2
         with:
-          name: v${{ env.RELEASE_VERSION }}-sdist
+          name: ${{ env.RELEASE_VERSION }}-sdist
           retention-days: 30
           path: dist/*.tar.gz
