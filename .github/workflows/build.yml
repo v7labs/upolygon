@@ -1,6 +1,10 @@
 name: Build
 
-on: [push, pull_request]
+on:
+  push:
+    tags:
+      - "v*.*.*"
+      - "test-*"
 
 jobs:
   build_wheels:
@@ -9,7 +13,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.6, 3.7, 3.8, 3.9, '3.10']
+        python-version: [3.6, 3.7, 3.8, 3.9, '3.10', '3.11']
 
     steps:
       - uses: actions/checkout@v3
@@ -18,9 +22,30 @@ jobs:
         uses: pypa/cibuildwheel@v2.14.1
         with:
           package-dir: .
-          output-dir: wheelhouse
+          output-dir: dist
           config-file: "{package}/pyproject.toml"
 
       - uses: actions/upload-artifact@v3
         with:
-          path: ./wheelhouse/*.whl
+          name: v${{ github.ref }}/wheels
+          retention-days: 30
+          path: dist/*.whl
+  
+  build_sdist:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install setuptools wheel twine
+          python setup.py sdist
+      - uses: actions/upload-artifact@v2
+        with:
+          name: v${{ github.ref }}/sdist
+          retention-days: 30
+          path: dist/*.tar.gz

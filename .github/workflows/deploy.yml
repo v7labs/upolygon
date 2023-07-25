@@ -1,0 +1,77 @@
+name: Deploy
+
+on:
+    release:
+      types: [created]
+    workflow_dispatch:
+
+jobs:
+  check_release_name_is_valid:
+    runs-on: ubuntu-latest
+    env:
+      IS_TEST_RELEASE: 'false'
+    steps:
+      - name: Check release name is valid
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const releaseName = context.payload.release.name;
+            if (releaseName === undefined) {
+              core.setFailed('Release name is undefined');
+            } else if (releaseName.match(/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/)) || releaseName.match(/^test-[a-z0-9_]+$/i) {
+              core.info('Release name is valid');
+            } else {
+              core.setFailed('Release name is invalid');
+            }
+
+            if releaseName.match(/^test-[a-z0-9_]+$/i) {
+              core.info('Release name is a test release');
+              core.exportVariable('IS_TEST_RELEASE', 'true');
+            }
+      - name: Ensure artifacts exist for this release name
+        uses: actions/github-script@v4
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const releaseName = context.payload.release.name;
+            const artifacts = await github.repos.listReleaseAssets({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              release_id: context.payload.release.id,
+            });
+            const artifactNames = artifacts.data.map((artifact) => artifact.name);
+            if (artifactNames.length === 0) {
+              core.setFailed('No artifacts found for release');
+            } else if (artifactNames.includes(`${releaseName}.tar.gz`) && artifactNames.includes(`${releaseName}-py3-none-any.whl`)) {
+              core.info('Artifacts found for release');
+            } else {
+              core.setFailed('Artifacts found for release, but not the expected ones');
+            }
+      - name: Retrieve wheel artifacts for release
+        uses: actions/download-artifact@v3
+        with:
+          name: v${{ github.event.release.name }}/wheels
+          path: dist/*.whl
+      - name: Retrieve SDIST artifacts for release
+        uses: actions/download-artifact@v3
+        with:
+          name: v${{ github.event.release.name }}/wheels
+          path: dist/*.tar.gz
+      - name: Release code as new release on Pypi
+        if: ${{ env.IS_TEST_RELEASE != 'true' }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_PASSWORD }}
+          repository-url: https://upload.pypi.org/legacy/
+          verbose: true
+      
+      - name: "TEST: Release code as new release on Test Pypi"
+        if: ${{ env.IS_TEST_RELEASE == 'true' }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_TEST_PASSWORD }}
+          repository-url: https://test.pypi.org/legacy/
+          verbose: true
