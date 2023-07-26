@@ -13,20 +13,22 @@ jobs:
       - name: Retrieve wheel artifacts for release
         uses: dawidd6/action-download-artifact@v2
         with:
-          name: ${{ github.event.release.name }}-wheels
+          # name: ${{ github.event.release.name }}-wheels
+          repo: ${{ github.repository }}
           workflow: build.yml
-          path: dist
+          path: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Retrieve SDIST artifacts for release
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          name: ${{ github.event.release.name }}-sdist
-          workflow: build.yml
-          path: dist
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Retrieve SDIST artifacts for release
+      #   uses: dawidd6/action-download-artifact@v2
+      #   with:
+      #     name: ${{ github.event.release.name }}-sdist
+      #     repo: ${{ github.repository }}
+      #     workflow: build.yml
+      #     path: ./dist
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display structure of downloaded files
         run: ls -R
-        working-directory: dist
+        working-directory: ./dist
 
   deploy:
     needs: retrieve_artifacts
