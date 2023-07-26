@@ -32,8 +32,8 @@ jobs:
           config-file: "{package}/pyproject.toml"
 
       - uses: actions/upload-artifact@v3
+        if: ${{ env.RELEASE_VERSION != ''}}
         with:
-          if: ${{ env.RELEASE_VERSION != ''}}
           name: ${{ env.RELEASE_VERSION }}-wheels
           retention-days: 15
           path: dist/*.whl
@@ -54,8 +54,8 @@ jobs:
           pip install setuptools wheel twine
           python setup.py sdist
       - uses: actions/upload-artifact@v2
+        if: ${{ env.RELEASE_VERSION != ''}}
         with:
-          if: ${{ env.RELEASE_VERSION != ''}}
           name: ${{ env.RELEASE_VERSION }}-sdist
           retention-days: 15
           path: dist/*.tar.gz
