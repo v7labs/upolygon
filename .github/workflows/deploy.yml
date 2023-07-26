@@ -1,0 +1,44 @@
+name: Deploy
+
+on:
+  release:
+    types: [created]
+  workflow_dispatch:
+
+jobs:
+  
+  retrieve_artifacts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve wheel artifacts for release
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ github.event.release.name }}-wheels
+          path: dist/*.whl
+      - name: Retrieve SDIST artifacts for release
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ github.event.release.name }}-sdist
+          path: dist/*.tar.gz
+
+  deploy:
+    needs: retrieve_artifacts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release code as new release on Pypi
+        if: ${{ startsWith(github.event.release.name,'v') }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_PASSWORD }}
+          repository-url: https://PREVENTFORTESTING.upload.pypi.org/legacy/
+          verbose: true
+      
+      - name: "TEST: Release code as new release on Test Pypi"
+        if: ${{ startsWith(github.event.release.name,'test-') }}
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          user: __token__
+          password: ${{ secrets.PYPI_TEST_PASSWORD }}
+          repository-url: https://test.pypi.org/legacy/
+          verbose: true
