@@ -11,49 +11,14 @@ jobs:
     env:
       IS_TEST_RELEASE: 'false'
     steps:
-      - name: Check release name is valid
-        uses: actions/github-script@v4
+      - name: Ensure wheels exist for this release name
+        uses: xSAVIKx/artifact-exists-action@v0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-              core.debug(JSON.stringify(context, null, 2));
-              const releaseName = "context.payload.release.name";
-              //const releaseName = context.payload.release.name;
-              console.log(`Release name is ${releaseName}`)
-              const SEMVER_REGEX = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
-              const TEST_RELEASE_REGEX = /^test-[a-z0-9_]+$/i;
-              
-              if (releaseName === undefined) {
-                core.setFailed('Release name is undefined');
-              } else if (releaseName.match(SEMVER_REGEX) || releaseName.match(TEST_RELEASE_REGEX)) {
-                core.info('Release name is valid');
-              } else {
-                core.setFailed('Release name is invalid');
-              }
-              
-              if (releaseName.match(TEST_RELEASE_REGEX)) {
-                core.info('Release name is a test release');
-                core.exportVariable('IS_TEST_RELEASE', 'true');
-              }
-      - name: Ensure artifacts exist for this release name
-        uses: actions/github-script@v4
+          name: ${{ github.event.release.name }}-wheels
+      - name: Ensure SDIST exists for this release name
+        uses: xSAVIKx/artifact-exists-action@v0
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const releaseName = context.payload.release.name;
-            const artifacts = await github.repos.listReleaseAssets({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              release_id: context.payload.release.id,
-            });
-            const artifactNames = artifacts.data.map((artifact) => artifact.name);
-            if (artifactNames.length === 0) {
-              core.setFailed('No artifacts found for release');
-            } else if (artifactNames.includes(`${releaseName}.tar.gz`) && artifactNames.includes(`${releaseName}-py3-none-any.whl`)) {
-              core.info('Artifacts found for release');
-            } else {
-              core.setFailed('Artifacts found for release, but not the expected ones');
-            }
+          name: ${{ github.event.release.name }}-sdist
       - name: Retrieve wheel artifacts for release
         uses: actions/download-artifact@v3
         with:
@@ -65,7 +30,7 @@ jobs:
           name: ${{ github.event.release.name }}-sdist
           path: dist/*.tar.gz
       - name: Release code as new release on Pypi
-        if: ${{ env.IS_TEST_RELEASE != 'true' }}
+        if: ${{ startsWith(github.event.release.name,'v') }}
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
@@ -74,7 +39,7 @@ jobs:
           verbose: true
       
       - name: "TEST: Release code as new release on Test Pypi"
-        if: ${{ env.IS_TEST_RELEASE == 'true' }}
+        if: ${{ startsWith(github.event.release.name,'test-') }}
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
