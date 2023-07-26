@@ -11,15 +11,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Retrieve wheel artifacts for release
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
         with:
           name: ${{ github.event.release.name }}-wheels
+          workflow: build.yml
           path: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Retrieve SDIST artifacts for release
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
         with:
           name: ${{ github.event.release.name }}-sdist
+          workflow: build.yml
           path: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: dist
