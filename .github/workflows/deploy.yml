@@ -64,7 +64,7 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_PASSWORD }}
-          repository-url: https://upload.pypi.org/legacy/
+          repository-url: https://PREVENTFORTESTING.upload.pypi.org/legacy/
           verbose: true
       
       - name: "TEST: Release code as new release on Test Pypi"
