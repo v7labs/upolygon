@@ -16,19 +16,21 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const releaseName = context.payload.release.name;
-            if (releaseName === undefined) {
-              core.setFailed('Release name is undefined');
-            } else if (releaseName.match(/^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/)) || releaseName.match(/^test-[a-z0-9_]+$/i) {
-              core.info('Release name is valid');
-            } else {
-              core.setFailed('Release name is invalid');
-            }
+              const releaseName = context.payload.release.name;
+              const SEMVER_REGEX = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
+              const TEST_RELEASE_REGEX = /^test-[a-z0-9_]+$/i;
+              if (releaseName === undefined) {
+                core.setFailed('Release name is undefined');
+              } else if (releaseName.match(SEMVER_REGEX) || releaseName.match(TEST_RELEASE_REGEX) {
+                core.info('Release name is valid');
+              } else {
+                core.setFailed('Release name is invalid');
+              }
 
-            if releaseName.match(/^test-[a-z0-9_]+$/i) {
-              core.info('Release name is a test release');
-              core.exportVariable('IS_TEST_RELEASE', 'true');
-            }
+              if releaseName.match(/^test-[a-z0-9_]+$/i) {
+                core.info('Release name is a test release');
+                core.exportVariable('IS_TEST_RELEASE', 'true');
+              }
       - name: Ensure artifacts exist for this release name
         uses: actions/github-script@v4
         with:
