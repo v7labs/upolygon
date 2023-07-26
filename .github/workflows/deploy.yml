@@ -19,15 +19,16 @@ jobs:
               const releaseName = context.payload.release.name;
               const SEMVER_REGEX = /^(0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\.(?:0|[1-9]\d*|\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\+([0-9a-zA-Z-]+(?:\.[0-9a-zA-Z-]+)*))?$/;
               const TEST_RELEASE_REGEX = /^test-[a-z0-9_]+$/i;
+              
               if (releaseName === undefined) {
                 core.setFailed('Release name is undefined');
-              } else if (releaseName.match(SEMVER_REGEX) || releaseName.match(TEST_RELEASE_REGEX) {
+              } else if (releaseName.match(SEMVER_REGEX) || releaseName.match(TEST_RELEASE_REGEX)) {
                 core.info('Release name is valid');
               } else {
                 core.setFailed('Release name is invalid');
               }
-
-              if releaseName.match(/^test-[a-z0-9_]+$/i) {
+              
+              if (releaseName.match(TEST_RELEASE_REGEX)) {
                 core.info('Release name is a test release');
                 core.exportVariable('IS_TEST_RELEASE', 'true');
               }
