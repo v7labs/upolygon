@@ -14,12 +14,15 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: ${{ github.event.release.name }}-wheels
-          path: dist/*.whl
+          path: dist
       - name: Retrieve SDIST artifacts for release
         uses: actions/download-artifact@v3
         with:
           name: ${{ github.event.release.name }}-sdist
-          path: dist/*.tar.gz
+          path: dist
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: dist
 
   deploy:
     needs: retrieve_artifacts
