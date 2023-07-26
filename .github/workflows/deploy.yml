@@ -3,9 +3,7 @@ name: Deploy
 on:
   release:
     types: [created]
-  pull_request:
-      branches:
-        - master
+  workflow_dispatch:
 
 jobs:
   check_release_name_is_valid:
