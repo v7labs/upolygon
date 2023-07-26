@@ -1,9 +1,9 @@
 name: Deploy
 
 on:
-    release:
-      types: [created]
-    workflow_dispatch:
+  release:
+    types: [created]
+  workflow_dispatch:
 
 jobs:
   check_release_name_is_valid:
