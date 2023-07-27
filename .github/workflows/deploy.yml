@@ -6,16 +6,21 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Current issues:
+  # - The release name recovered seems to be wrong sometimes
+  # - The structure of a release is wrong to automate releasing - consider Twine instead
   
   retrieve_artifacts:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Retrieve wheel artifacts for release
         uses: dawidd6/action-download-artifact@v2
         with:
-          # name: ${{ github.event.release.name }}-wheels
+          name: ${{ github.event.release.name }}-wheels
           repo: ${{ github.repository }}
           workflow: build.yml
           path: ./dist
@@ -48,7 +53,7 @@ jobs:
         working-directory: ./dist
 
       - name: Release code as new release on Pypi
-        if: ${{ startsWith(github.event.release.name,'v') }}
+        if: ${{ startsWith('v', github.event.release.name) }}
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
@@ -57,7 +62,7 @@ jobs:
           verbose: true
       
       - name: "TEST: Release code as new release on Test Pypi"
-        if: ${{ startsWith(github.event.release.name,'test-') }}
+        if: ${{ startsWith('test-',github.event.release.name) }}
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           user: __token__
