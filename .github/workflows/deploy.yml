@@ -58,3 +58,7 @@ jobs:
           repository-url: https://test.pypi.org/legacy/
           verbose: true
           packages-dir: ./dist
+
+      # TODO: Slack announcement
+
+      # TODO: Update linear labels?
