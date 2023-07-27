@@ -28,6 +28,21 @@ jobs:
           workflow: build.yml
           path: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
+      
+      # Test step for debugging
+      - name: Display structure of downloaded files
+        run: ls -R
+        working-directory: ./dist
+          
+      - name: Move contents of directories to root of dist
+        run: |
+          mv -f ./dist/${{ github.event.release.name }}-wheels/* ./dist
+          rm -rf ./dist/${{ github.event.release.name }}-wheels
+          mv -f ./dist/${{ github.event.release.name }}-sdist/* ./dist
+          rm -rf ./dist/${{ github.event.release.name }}-sdist
+          working-directory: ./dist
+          
+      # Test step for debugging
       - name: Display structure of downloaded files
         run: ls -R
         working-directory: ./dist
