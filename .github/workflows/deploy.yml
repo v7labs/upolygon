@@ -47,6 +47,7 @@ jobs:
           password: ${{ secrets.PYPI_PASSWORD }}
           repository-url: https://PREVENTFORTESTING.upload.pypi.org/legacy/
           verbose: true
+          packages-dir: ./dist
       
       - name: "TEST: Release code as new release on Test Pypi"
         if: ${{ startsWith('test-',github.event.release.name) }}
@@ -56,3 +57,4 @@ jobs:
           password: ${{ secrets.PYPI_TEST_PASSWORD }}
           repository-url: https://test.pypi.org/legacy/
           verbose: true
+          packages-dir: ./dist
