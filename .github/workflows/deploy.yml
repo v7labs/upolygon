@@ -34,7 +34,7 @@ jobs:
           workflow: build.yml
           path: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Retrieve SDIST artifacts for release
         uses: dawidd6/action-download-artifact@v2
         with:
@@ -55,7 +55,7 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_PASSWORD }}
-          repository-url: https://PREVENTFORTESTING.upload.pypi.org/legacy/
+          repository-url: https://upload.pypi.org/legacy/
           verbose: true
           packages-dir: ./dist
       
