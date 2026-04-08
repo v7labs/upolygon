@@ -18,17 +18,16 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        python-version: [3.9]
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
       - name: Build wheels
         env:
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
-        uses: pypa/cibuildwheel@v2.14.1
+        uses: pypa/cibuildwheel@v3.4.0
         with:
           package-dir: .
           output-dir: dist
@@ -37,25 +36,26 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ env.RELEASE_VERSION != ''}}
         with:
-          name: ${{ env.RELEASE_VERSION }}-wheels
+          name: ${{ env.RELEASE_VERSION }}-wheels-${{ matrix.os }}
           retention-days: 15
           path: dist/*.whl
-  
+
   build_sdist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.12"
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install setuptools wheel twine
-          python setup.py sdist
+          pip install build
+      - name: Build sdist
+        run: python -m build --sdist
       - uses: actions/upload-artifact@v4
         if: ${{ env.RELEASE_VERSION != ''}}
         with:

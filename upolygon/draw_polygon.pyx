@@ -109,7 +109,7 @@ cdef inline void draw_straight_line(float x1, float x2, int y, data_type[:, :] m
         mask[y][i] = value
 
 # Sort edges first by y_min and then by x_val
-cdef int cmp_edges(const void* a, const void* b) nogil:
+cdef int cmp_edges(const void* a, const void* b) noexcept nogil:
     cdef s_edge a_v = (<s_edge*>a)[0]
     cdef s_edge b_v = (<s_edge*>b)[0]
     if a_v.y_min < b_v.y_min:

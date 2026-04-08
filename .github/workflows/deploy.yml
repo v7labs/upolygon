@@ -6,33 +6,31 @@ on:
   workflow_dispatch:
 
 jobs:
-  # Current issues:
-  # - The release name recovered seems to be wrong sometimes
-  # - The structure of a release is wrong to automate releasing - consider Twine instead
-  
   retrieve_artifacts:
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 1
     steps:
-     
+
       - name: Display tag name
         run: echo "Tag name is ${{ github.event.release.name }}"
-     
+
       - name: Is TEST RELEASE
         if: ${{ startsWith('test-',github.event.release.name) }}
         run: echo "Is test release ${{ startsWith('test-',github.event.release.name) }}"
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Retrieve wheel artifacts for release
         uses: dawidd6/action-download-artifact@v6
         with:
-          name: ${{ github.event.release.name }}-wheels
+          name: ${{ github.event.release.name }}-wheels-.*
+          name_is_regexp: true
           repo: ${{ github.repository }}
           workflow: build.yml
           path: ./dist
+          merge_multiple: true
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Retrieve SDIST artifacts for release
@@ -43,7 +41,7 @@ jobs:
           workflow: build.yml
           path: ./dist
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          
+
       # Test step for debugging
       - name: Display structure of downloaded files
         run: ls -laR
@@ -58,7 +56,7 @@ jobs:
           repository-url: https://upload.pypi.org/legacy/
           verbose: true
           packages-dir: ./dist
-      
+
       - name: "TEST: Release code as new release on Test Pypi"
         if: ${{ startsWith('test-',github.event.release.name) }}
         uses: pypa/gh-action-pypi-publish@release/v1
@@ -68,7 +66,3 @@ jobs:
           repository-url: https://test.pypi.org/legacy/
           verbose: true
           packages-dir: ./dist
-
-      # TODO: Slack announcement
-
-      # TODO: Update linear labels?
