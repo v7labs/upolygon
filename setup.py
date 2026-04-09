@@ -46,7 +46,7 @@ if USE_CYTHON:
 
 setuptools.setup(
     name="upolygon",
-    version="0.2.0",
+    version="0.2.1",
     author="V7",
     author_email="simon@v7labs.com",
     description="Collection of fast polygon operations for DL",
