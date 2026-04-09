@@ -29,8 +29,7 @@ jobs:
           name_is_regexp: true
           repo: ${{ github.repository }}
           workflow: build.yml
-          path: ./dist
-          merge_multiple: true
+          path: ./dist-raw
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Retrieve SDIST artifacts for release
@@ -39,10 +38,15 @@ jobs:
           name: ${{ github.event.release.name }}-sdist
           repo: ${{ github.repository }}
           workflow: build.yml
-          path: ./dist
+          path: ./dist-raw
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Test step for debugging
+      - name: Flatten artifacts into dist
+        run: |
+          mkdir -p ./dist
+          find ./dist-raw -name '*.whl' -exec mv {} ./dist/ \;
+          find ./dist-raw -name '*.tar.gz' -exec mv {} ./dist/ \;
+
       - name: Display structure of downloaded files
         run: ls -laR
         working-directory: ./dist
