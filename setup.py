@@ -4,7 +4,16 @@ import os
 with open("README.md", "r") as f:
     long_description = f.read()
 
-USE_CYTHON = os.getenv("USE_CYTHON") in ["TRUE", "true"]
+USE_CYTHON = os.getenv("USE_CYTHON", "").lower() == "true"
+
+if not USE_CYTHON:
+    try:
+        from Cython.Build import cythonize  # noqa
+
+        USE_CYTHON = True
+    except ImportError:
+        pass
+
 ext = ".pyx" if USE_CYTHON else ".c"
 
 extensions = [
@@ -31,13 +40,13 @@ extensions = [
 ]
 
 if USE_CYTHON:
-    from Cython.Build import cythonize # noqa
+    from Cython.Build import cythonize  # noqa
 
     extensions = cythonize(extensions)
 
 setuptools.setup(
     name="upolygon",
-    version="0.1.11",
+    version="0.2.0",
     author="V7",
     author_email="simon@v7labs.com",
     description="Collection of fast polygon operations for DL",
@@ -45,11 +54,15 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/v7labs/upolygon",
     ext_modules=extensions,
-    install_requires=["numpy"],
+    install_requires=["numpy>=1.25"],
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Programming Language :: Python :: 3.12",
+        "Programming Language :: Python :: 3.13",
         "License :: OSI Approved :: MIT License",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.10",
 )
