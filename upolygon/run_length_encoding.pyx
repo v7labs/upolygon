@@ -1,5 +1,7 @@
 #cython: language_level=3
 
+from libc.stdint cimport int64_t
+
 cimport cython
 import numpy as np
 
@@ -9,12 +11,15 @@ import numpy as np
 def rle_encode(binary_mask):
     # at most there can be len(binary_mask) different values, therefor we prealloace an array of that size
     # unused counts will be stripped at the end
-    cdef long[:] counts = np.zeros(binary_mask.shape[0] * binary_mask.shape[1], dtype=np.int_)
+    #
+    # Use int64 for counts, not C long + np.int_: on Windows, long is 32-bit while NumPy 2's np.int_
+    # is 64-bit, so a typed long[:] view is incompatible with the array; Linux/macOS often have 64-bit long.
+    cdef int64_t[:] counts = np.zeros(binary_mask.shape[0] * binary_mask.shape[1], dtype=np.int64)
     cdef char[:] mask_view = binary_mask.ravel(order="F").astype(np.int8)
 
     cdef char last_elem = 0
     cdef char elem
-    cdef long running_length = 0
+    cdef int64_t running_length = 0
     cdef int i = 0
     cdef int j = 0
      
