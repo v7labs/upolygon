@@ -17,7 +17,7 @@ cdef int* directions_y = [0, 1, 1,  1,  0, -1, -1, -1]
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:, :] image, char[:, :] labels) nogil:
+cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:, :] image, signed char[:, :] labels) nogil:
     # move two steps clockwise from the previous entry in the trace
     cdef int start_index = (old_index + 2) % 8
     cdef int i
@@ -39,7 +39,7 @@ cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:
 @cython.boundscheck(False)
 @cython.wraparound(False)
 @cython.nonecheck(False)
-cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, char[:,:] labels, int inner):
+cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, signed char[:,:] labels, int inner):
         cdef int sx = px 
         cdef int sy = py
         cdef int nx, ny, tx, ty
@@ -77,7 +77,7 @@ def find_contours(unsigned char[:,:] image):
     cdef int width = image.shape[1] - 1
     cdef int height = image.shape[0] - 1
     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
-    cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
+    cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
     inner_paths = []
     outer_paths = []
 

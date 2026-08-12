@@ -2756,11 +2756,11 @@ static CYTHON_INLINE PyObject *__pyx_memview_get_unsigned_char(const char *itemp
 static CYTHON_INLINE int __pyx_memview_set_unsigned_char(char *itemp, PyObject *obj);
 
 /* ObjectToMemviewSlice.proto */
-static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dsds_char(PyObject *, int writable_flag);
+static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dsds_signed_char(PyObject *, int writable_flag);
 
 /* MemviewDtypeToObject.proto */
-static CYTHON_INLINE PyObject *__pyx_memview_get_char(const char *itemp);
-static CYTHON_INLINE int __pyx_memview_set_char(char *itemp, PyObject *obj);
+static CYTHON_INLINE PyObject *__pyx_memview_get_signed_char(const char *itemp);
+static CYTHON_INLINE int __pyx_memview_set_signed_char(char *itemp, PyObject *obj);
 
 /* MemviewSliceCopy.proto */
 static __Pyx_memviewslice
@@ -2785,10 +2785,10 @@ static CYTHON_INLINE PyObject* __Pyx_PyLong_From_unsigned_char(unsigned char val
 static CYTHON_INLINE unsigned char __Pyx_PyLong_As_unsigned_char(PyObject *);
 
 /* CIntToPy.proto */
-static CYTHON_INLINE PyObject* __Pyx_PyLong_From_char(char value);
+static CYTHON_INLINE PyObject* __Pyx_PyLong_From_signed_char(signed char value);
 
 /* CIntFromPy.proto */
-static CYTHON_INLINE char __Pyx_PyLong_As_char(PyObject *);
+static CYTHON_INLINE signed char __Pyx_PyLong_As_signed_char(PyObject *);
 
 /* PyObjectCall2Args.proto (used by PyObjectCallMethod1) */
 static CYTHON_INLINE PyObject* __Pyx_PyObject_Call2Args(PyObject* function, PyObject* arg1, PyObject* arg2);
@@ -2804,6 +2804,9 @@ static CYTHON_INLINE int __Pyx_CheckUnpickleChecksum(long checksum, long checksu
 
 /* CIntFromPy.proto */
 static CYTHON_INLINE long __Pyx_PyLong_As_long(PyObject *);
+
+/* CIntFromPy.proto */
+static CYTHON_INLINE char __Pyx_PyLong_As_char(PyObject *);
 
 /* FormatTypeName.proto */
 #if CYTHON_COMPILING_IN_LIMITED_API
@@ -2952,7 +2955,7 @@ static void __pyx_memoryview__slice_assign_scalar(char *, Py_ssize_t *, Py_ssize
 static PyObject *__pyx_unpickle_Enum__set_state(struct __pyx_MemviewEnum_obj *, PyObject *); /*proto*/
 /* #### Code section: typeinfo ### */
 static const __Pyx_TypeInfo __Pyx_TypeInfo_unsigned_char = { "unsigned char", NULL, sizeof(unsigned char), { 0 }, 0, __PYX_IS_UNSIGNED(unsigned char) ? 'U' : 'I', __PYX_IS_UNSIGNED(unsigned char), 0 };
-static const __Pyx_TypeInfo __Pyx_TypeInfo_char = { "char", NULL, sizeof(char), { 0 }, 0, 'H', __PYX_IS_UNSIGNED(char), 0 };
+static const __Pyx_TypeInfo __Pyx_TypeInfo_signed_char = { "signed char", NULL, sizeof(signed char), { 0 }, 0, __PYX_IS_UNSIGNED(signed char) ? 'U' : 'I', __PYX_IS_UNSIGNED(signed char), 0 };
 /* #### Code section: before_global_var ### */
 #define __Pyx_MODULE_NAME "find_contours"
 extern int __pyx_module_is_main_find_contours;
@@ -3223,7 +3226,7 @@ static __pyx_mstatetype * const __pyx_mstate_global = &__pyx_mstate_global_stati
 #define __pyx_n_u_width __pyx_string_tab[129]
 #define __pyx_n_u_x __pyx_string_tab[130]
 #define __pyx_n_u_zeros __pyx_string_tab[131]
-#define __pyx_kp_b_iso88591_U_Ba_e6_Rq_Bd_7_CuL8H_BfBe6_e6 __pyx_string_tab[132]
+#define __pyx_kp_b_iso88591_U_Ba_e6_Rq_Bd_7_CuL8H_2V2U_U_fT __pyx_string_tab[132]
 #define __pyx_n_b_O __pyx_string_tab[133]
 #define __pyx_int_0 __pyx_number_tab[0]
 #define __pyx_int_neg_1 __pyx_number_tab[1]
@@ -16593,7 +16596,7 @@ static int __pyx_f_13find_contours_tracer(int __pyx_v_px, int __pyx_v_py, int __
   int __pyx_t_6;
 
   /* "find_contours.pyx":22
- * cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:, :] image, char[:, :] labels) nogil:
+ * cdef int tracer(int px, int py, int old_index, int *nx, int *ny, unsigned char[:, :] image, signed char[:, :] labels) nogil:
  *     # move two steps clockwise from the previous entry in the trace
  *     cdef int start_index = (old_index + 2) % 8             # <<<<<<<<<<<<<<
  *     cdef int i
@@ -16717,7 +16720,7 @@ static int __pyx_f_13find_contours_tracer(int __pyx_v_px, int __pyx_v_py, int __
     /*else*/ {
       __pyx_t_5 = __pyx_v_tmpy;
       __pyx_t_4 = __pyx_v_tmpx;
-      *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_5 * __pyx_v_labels.strides[0]) ) + __pyx_t_4 * __pyx_v_labels.strides[1]) )) = -1;
+      *((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_5 * __pyx_v_labels.strides[0]) ) + __pyx_t_4 * __pyx_v_labels.strides[1]) )) = -1;
     }
   }
 
@@ -16771,7 +16774,7 @@ static PyObject *__pyx_f_13find_contours_contour_trace(int __pyx_v_px, int __pyx
 
   /* "find_contours.pyx":43
  * @cython.nonecheck(False)
- * cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, char[:,:] labels, int inner):
+ * cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, signed char[:,:] labels, int inner):
  *         cdef int sx = px             # <<<<<<<<<<<<<<
  *         cdef int sy = py
  *         cdef int nx, ny, tx, ty
@@ -16779,7 +16782,7 @@ static PyObject *__pyx_f_13find_contours_contour_trace(int __pyx_v_px, int __pyx
   __pyx_v_sx = __pyx_v_px;
 
   /* "find_contours.pyx":44
- * cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, char[:,:] labels, int inner):
+ * cdef contour_trace(int px, int py, int c, unsigned char[:, :]image, signed char[:,:] labels, int inner):
  *         cdef int sx = px
  *         cdef int sy = py             # <<<<<<<<<<<<<<
  *         cdef int nx, ny, tx, ty
@@ -16933,7 +16936,7 @@ static PyObject *__pyx_f_13find_contours_contour_trace(int __pyx_v_px, int __pyx
 */
   __pyx_t_8 = __pyx_v_ny;
   __pyx_t_9 = __pyx_v_nx;
-  *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_8 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
+  *((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_8 * __pyx_v_labels.strides[0]) ) + __pyx_t_9 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
   /* "find_contours.pyx":61
  * 
@@ -17032,7 +17035,7 @@ static PyObject *__pyx_f_13find_contours_contour_trace(int __pyx_v_px, int __pyx
 */
     __pyx_t_9 = __pyx_v_ny;
     __pyx_t_8 = __pyx_v_nx;
-    *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_8 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
+    *((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_9 * __pyx_v_labels.strides[0]) ) + __pyx_t_8 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
     /* "find_contours.pyx":68
  *             path.append(ny-1)
@@ -17248,7 +17251,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
  *     cdef int width = image.shape[1] - 1
  *     cdef int height = image.shape[0] - 1             # <<<<<<<<<<<<<<
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
- *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
+ *     cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
 */
   __pyx_v_height = ((__pyx_v_image.shape[0]) - 1);
 
@@ -17256,7 +17259,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
  *     cdef int width = image.shape[1] - 1
  *     cdef int height = image.shape[0] - 1
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)             # <<<<<<<<<<<<<<
- *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
+ *     cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []
 */
   __pyx_t_2 = NULL;
@@ -17304,7 +17307,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
   /* "find_contours.pyx":80
  *     cdef int height = image.shape[0] - 1
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
- *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)             # <<<<<<<<<<<<<<
+ *     cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)             # <<<<<<<<<<<<<<
  *     inner_paths = []
  *     outer_paths = []
 */
@@ -17357,7 +17360,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
     if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 80, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_1);
   }
-  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_dsds_char(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 80, __pyx_L1_error)
+  __pyx_t_9 = __Pyx_PyObject_to_MemoryviewSlice_dsds_signed_char(__pyx_t_1, PyBUF_WRITABLE); if (unlikely(!__pyx_t_9.memview)) __PYX_ERR(0, 80, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __pyx_v_labels = __pyx_t_9;
   __pyx_t_9.memview = NULL;
@@ -17365,7 +17368,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 
   /* "find_contours.pyx":81
  *     image = np.pad(image, pad_width=1, mode='constant', constant_values=0)
- *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
+ *     cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []             # <<<<<<<<<<<<<<
  *     outer_paths = []
  * 
@@ -17376,7 +17379,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
   __pyx_t_1 = 0;
 
   /* "find_contours.pyx":82
- *     cdef char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
+ *     cdef signed char[:,:] labels = np.zeros((image.shape[0], image.shape[1]), dtype=np.int8)
  *     inner_paths = []
  *     outer_paths = []             # <<<<<<<<<<<<<<
  * 
@@ -17459,7 +17462,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 */
       __pyx_t_11 = __pyx_v_py;
       __pyx_t_12 = __pyx_v_px;
-      __pyx_t_13 = ((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))) == 0);
+      __pyx_t_13 = ((*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))) == 0);
       if (__pyx_t_13) {
       } else {
         __pyx_t_10 = __pyx_t_13;
@@ -17481,7 +17484,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 */
         __pyx_t_11 = __pyx_v_py;
         __pyx_t_12 = __pyx_v_px;
-        *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
+        *((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) )) = __pyx_v_c;
 
         /* "find_contours.pyx":92
  *             if labels[py][px] == 0 and image[py-1][px] == 0:
@@ -17540,7 +17543,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 */
       __pyx_t_12 = (__pyx_v_py + 1);
       __pyx_t_11 = __pyx_v_px;
-      __pyx_t_13 = ((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))) != -1L);
+      __pyx_t_13 = ((*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))) != -1L);
       if (__pyx_t_13) {
       } else {
         __pyx_t_10 = __pyx_t_13;
@@ -17571,7 +17574,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 */
         __pyx_t_12 = __pyx_v_py;
         __pyx_t_11 = __pyx_v_px;
-        __pyx_t_10 = ((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))) == 0);
+        __pyx_t_10 = ((*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))) == 0);
         if (__pyx_t_10) {
 
           /* "find_contours.pyx":101
@@ -17583,7 +17586,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
 */
           __pyx_t_11 = __pyx_v_py;
           __pyx_t_12 = (__pyx_v_px - 1);
-          __pyx_t_1 = __pyx_f_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
+          __pyx_t_1 = __pyx_f_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 101, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
           __pyx_t_1 = 0;
@@ -17608,7 +17611,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
         /*else*/ {
           __pyx_t_12 = __pyx_v_py;
           __pyx_t_11 = __pyx_v_px;
-          __pyx_t_1 = __pyx_f_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
+          __pyx_t_1 = __pyx_f_13find_contours_contour_trace(__pyx_v_px, __pyx_v_py, (*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) ))), __pyx_v_image, __pyx_v_labels, 1); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 103, __pyx_L1_error)
           __Pyx_GOTREF(__pyx_t_1);
           __Pyx_XDECREF_SET(__pyx_v_path, __pyx_t_1);
           __pyx_t_1 = 0;
@@ -17648,7 +17651,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
       }
       __pyx_t_11 = __pyx_v_py;
       __pyx_t_12 = __pyx_v_px;
-      __pyx_t_13 = ((*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))) == 0);
+      __pyx_t_13 = ((*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_11 * __pyx_v_labels.strides[0]) ) + __pyx_t_12 * __pyx_v_labels.strides[1]) ))) == 0);
       __pyx_t_10 = __pyx_t_13;
       __pyx_L18_bool_binop_done:;
       if (__pyx_t_10) {
@@ -17664,7 +17667,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
         __pyx_t_11 = (__pyx_v_px - 1);
         __pyx_t_15 = __pyx_v_py;
         __pyx_t_16 = __pyx_v_px;
-        *((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_15 * __pyx_v_labels.strides[0]) ) + __pyx_t_16 * __pyx_v_labels.strides[1]) )) = (*((char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) )));
+        *((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_15 * __pyx_v_labels.strides[0]) ) + __pyx_t_16 * __pyx_v_labels.strides[1]) )) = (*((signed char *) ( /* dim=1 */ (( /* dim=0 */ (__pyx_v_labels.data + __pyx_t_12 * __pyx_v_labels.strides[0]) ) + __pyx_t_11 * __pyx_v_labels.strides[1]) )));
 
         /* "find_contours.pyx":106
  *                 inner_paths.append(path)
@@ -17737,7 +17740,7 @@ static PyObject *__pyx_pf_13find_contours_find_contours(CYTHON_UNUSED PyObject *
  *     return labels, simplify_polygon(outer_paths, 0), simplify_polygon(inner_paths, 0)             # <<<<<<<<<<<<<<
 */
   __Pyx_XDECREF(__pyx_r);
-  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_labels, 2, (PyObject *(*)(char *)) __pyx_memview_get_char, (int (*)(char *, PyObject *)) __pyx_memview_set_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
+  __pyx_t_1 = __pyx_memoryview_fromslice(__pyx_v_labels, 2, (PyObject *(*)(char *)) __pyx_memview_get_signed_char, (int (*)(char *, PyObject *)) __pyx_memview_set_signed_char, 0);; if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 114, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
   __pyx_t_2 = NULL;
   __Pyx_GetModuleGlobalName(__pyx_t_6, __pyx_mstate_global->__pyx_n_u_simplify_polygon); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 114, __pyx_L1_error)
@@ -19895,25 +19898,25 @@ static int __Pyx_InitCachedConstants(__pyx_mstatetype *__pyx_mstate) {
 static int __Pyx_InitConstants(__pyx_mstatetype *__pyx_mstate) {
   CYTHON_UNUSED_VAR(__pyx_mstate);
   {
-    const struct { const unsigned int length: 9; } index[] = {{2},{68},{35},{54},{37},{60},{24},{52},{26},{34},{29},{33},{45},{22},{15},{179},{37},{30},{32},{1},{1},{1},{1},{1},{8},{5},{6},{15},{23},{25},{7},{6},{2},{6},{35},{9},{30},{50},{8},{20},{32},{22},{30},{37},{26},{5},{8},{20},{8},{15},{3},{15},{18},{4},{1},{9},{17},{18},{8},{15},{5},{8},{5},{15},{6},{9},{5},{13},{5},{6},{7},{8},{12},{7},{6},{2},{5},{10},{5},{11},{4},{13},{5},{8},{6},{8},{7},{4},{10},{4},{8},{4},{7},{2},{5},{3},{11},{4},{3},{9},{4},{3},{2},{2},{14},{11},{10},{19},{14},{12},{10},{17},{13},{8},{12},{10},{12},{19},{5},{16},{4},{5},{4},{4},{6},{8},{6},{6},{6},{5},{1},{5},{475},{1}};
-    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (1519 bytes) */
-const char* const cstring = "BZh91AY&SY\212)\335\327\000\000\276\377\377\377\335\377\234o\367\377\327\277g\377\000\277\377\377\362@@@@@@@@@@@@@\000@\000P\005x=n\334\010\202\205P=\343\206\250jC\324\362\233P\366\211\264\324M\244\360\247\250\310\320\0004\000\000d\006\200\321\3524\3203I\241\303\320\200\320\036\246\200\032\000\000\000\000\000\000\000\000\000\000\006\200\204h\232MO&\223i\006i2\006\201\240\000\001\240\000\000\r\0324\364\230OHT \0004\000\000\006\200\000\000\000\001\240\003@\0324\000\001)\244L\232\020\310C\021\243Sj\0324M\244\365\033H4\032\000\000\0004\000\r\006\204%\340\"\376b\330\033x\223d\036\320\307\214\001)T77h8\001;\226\205$\300o\031\205\362w\000 \252\253S\307Z5%\023\212\356\325\231 \357:\222\242\234i\231\241;\n\224\016\010\177\216\260\304>\201q.\271\375\2656\"\332\213\016\262j\316\032\355)\310%P31\336Q\016u\010)\t\252\222\243r\023\010\254\332\322J\316\262>\276\337\017\270\322\267\337\203\273L\"~\354\230j\320\323\373\005;a\306\326B\322\030\326\312\351\014(\266\273\221s\332\2425$\344h\261\riM\025HE\342\355b\306\273\255\226u\311\310m6\220c\251\332z\217\371w\246U\tO\2049#\035}?\2274\300\346\337\320S\005\326a\034\031yYRg\031\211\204\326\261U\353\227\202\013\327\375\276h\273\362\340\305)`\n2\364cu\345\356\260\227,\n\252\211\367\241\nn\246\252\367\223$\310$\204\027^\301\244\314\016_(\242\223S#\221/\212\265Uf\335\352\001\302\022\000)B\204qz\t\264\n\305(\220$\222\000\220t\311\n@\201\236\261\233\237\030n\213G\020B\211@\231\261k\244\002Y\232\240\005^\002\221\036\026-\023\264\274\210\207p\220U\001\263\351E\007*t\232\211!\343kl-\211\001'C\255\256\354I\025*\253-\2031Z\243\247y\251\331\016,^D+d\255R\267\303\316c\027\336\260\261\177>\"\206~\347\351\023\020tv2\025\260B\001\332\216R!Vr\031o\274*\232\231\271\232\361Q\235H\216Z4v\036\002\3059#\207\223gWcc\337\362ME\303\357\367\001\300\200lT\247F\255<\030\236\306\2627\003\335-\030\211UR\251G\325\240\362\343\321\376s\231d%\305\236\005\314\306##\216\232\004\214\335\275\335\031&\302c\301D\343\250@\3149\003\212\026\361>\361[(\346P&\025\343\214\"\354F""\003\262dtAVH\0344\014\007\226\013,\346W\235\216\300\247\236\230\022\373\031\350)eA\241z;\370\231\341H\014\330;\206\222$\014\362[\010\013BZ2\377\0303\001\322\205IRY\267\351h\241\312@Me\016J\005y\301.=\271\025\203d\031!\034\255\332\270\356\010\324\307+\210\206\016\263G\245*'\271\252\323.B\334P\315\212\310\315\267RQ\326\315Z(kF\263\372[u\353\274<\274\315\235\213\302\357\313\177\013\205\313\226\030O\217\217;b\333.Y\305x\345\017\032qkZ\274@\355\277\245\3065-{N\037\014\267\"&%\316L\361$\204\245,\267M\264\324X\230\216<\255,!\250\210\350,\250\236<\230u\255t\322BS\230\305A[F\204a\227z\330R\371W\230\214\240\333ZK\023\027\343\215\361\013\344\034\3134\361A\253\262\302\272O\273\263\315\220E\253{M.fh\315\2143\203\275\221v@\031\005`N\267Z$N'\005(\037R\221DP\314\0326J\2530\235\322\231\342\221\216\326\2145\252\330+6\246\223\270BC\334\257RAk)1II$$\"S\024\302\203)\242\272\240A\210\343Y\255#\206\220\265\005\227\027b\306\335sqh\220C\021m\010\366\036\3473\242\021\357\216\021\254\n\361\313\200V=EC\22739\031\332\311\t\r\313\223\200\245\246\363]\315a\273\256\334\3343\317\272Y\217S#\210\302P\215uR\021k\265Q\r\354\357\330\262\224SNd8Q\343\351\351uS\215\317\256&F\013,\003--\201\276a\224c&FUR\203S\252\360\206\313^\006\246}\321@!'f\354\334k\322\342@\304\021%\200\340\217\006\013J\004\203aD0\302\220\323g\026\254+t\34713\323\276\270l\334\014\363\213\325p\330<\005yb1\331N\206C\243b\235\231u\235\270\020\316\260M\244A\034\370\021\211D\370&m\212\370<\354{+\252\311\366jf\262\251J\010Hi\321\312\330\205\234\364\202\273<\311\227\261\265\215Qe\275\221\260\241U\267\252\001t\313\262\021\210\334\212\251M\245-\325^!\337f\314\377\355\304\302\212\027\234\207\366\210\340N\366\356\365\272w\031\005\306\334])R\2468\327\244\233\257qf\216\030-\007\013RS\346\255\202\026\314\202\324r@\240\223\036\263\233\200\215h\351u8*B\334~\023\277\027+\325Q\222\250\344\254n\367\030Q\252\2611\272M\300\203\036\320@\007\001Z\274\014%-\201;\333\3447\243\357\010\001\364X \027\220M0\376\362\026p\004fPB\310jNI\242\300\215\256$\232\353\242""\330\372\001\277\272\326\237\3759\315\347g\245\360\333y\204d@e\230\r\\e\210#\224\230\257\211*\004D\363\032\270\346\205\270\016,\264kO\026\235F\020]\342\322z\201]-f\001A]\026\341X\366\316(\234\340\347\023\215H\314\370\257\236\226\014_\330\030\363\234\313\303\271\034U\037q\024P,(\244@\221IA\264\210\n aX\340z\t/\370\273\222)\302\204\204QN\356\270";
-    PyObject *data = __Pyx_DecompressString(cstring, 1519, 2);
+    const struct { const unsigned int length: 9; } index[] = {{2},{68},{35},{54},{37},{60},{24},{52},{26},{34},{29},{33},{45},{22},{15},{179},{37},{30},{32},{1},{1},{1},{1},{1},{8},{5},{6},{15},{23},{25},{7},{6},{2},{6},{35},{9},{30},{50},{8},{20},{32},{22},{30},{37},{26},{5},{8},{20},{8},{15},{3},{15},{18},{4},{1},{9},{17},{18},{8},{15},{5},{8},{5},{15},{6},{9},{5},{13},{5},{6},{7},{8},{12},{7},{6},{2},{5},{10},{5},{11},{4},{13},{5},{8},{6},{8},{7},{4},{10},{4},{8},{4},{7},{2},{5},{3},{11},{4},{3},{9},{4},{3},{2},{2},{14},{11},{10},{19},{14},{12},{10},{17},{13},{8},{12},{10},{12},{19},{5},{16},{4},{5},{4},{4},{6},{8},{6},{6},{6},{5},{1},{5},{477},{1}};
+    #if (CYTHON_COMPRESS_STRINGS) == 2 /* compression: bz2 (1530 bytes) */
+const char* const cstring = "BZh91AY&SY\223\001Of\000\000\277\377\377\377\335\377\230o\367\377\327\277g\377\200\277\377\377\362@@@@@@@@@@@@@\000@\000P\005~\\\216\316u\204\022*\250a\206\243I=\t\211O\033Jx\024\323\031I\372\247\212hz\217H\017Ph4\003\321\017SM\250\323\324\365=4\324\3651\242z\207\017S\324\003@b\000h\000\000\000\000\000\000\000\000\032\000\001\246\204\021\250d\214\232&\207\251\232M4\320\006@\000\000\000\000\000\0004\320\034\000\000\r\000\000\031\032\031\000\000\000\000\000\310\310\000\003 Jj\002d\004\020\310&\024\365=\021\243C\320\232h\3104\000\000\000\000\00654\362\222\263\334f\376\377\316\371\341\377N\373\371\205\003\237\234\013,\270\361tQH-\317\201V\200h\204\r\246\214@qu\330]s\350\322R\177E\273\226\021\215mu\255\225\326[\205\356{N'C\303\200\373x\306\201\304\021\241\031\317\217w\372\272\333\250M\362\310\322s\254\303L\002m'9\307\245\0017\231!D\026B\235[1\240Vw\371Mn\233\250y\237\275N\213\316\336\244a\007\240U\372Y@\367T\257\346,m\020\033\027\332\260\345\254\273XqU\255\263(\035\212\245qi2\255 \367\230\2532\tBP{\031v\033i*=\253B\310\262\020a<\345@j=\371\330\tY}\200\010\231\236\266\316\0250\000\267$!\252\250\312\260^H\341\205\205\250\rr\230\350p6\362\236\004bz\014?\025\323B\352V4\200\342.\265\005PNZB8\300\340h\\d\033\004\2545My\034Y`\247\271 rA\260\333-\321\254\30262U\265K\201\252\311\324\003\303\214\001S\n\214@\222ch\026\004\240\302\220@\005\034\371\261\325\001\026\260\271@\020\222\264\311\360\204\240\340. qj\031f}\360\240\020\277\240\300\006ll\210r:n\216Spd!\000\261f\001\364\256\253\003:\370\017T\310W\242n\005\0340%HS\221U\004H\201\204\305\031\020L\324\245]5:\277\202\376\313\354d\255R\267\301\3300\027\350\263Ux\177\342\206\236\327\363\002\360\364:\270\2260=\341\326\206r\001\035#\363\345\220Fjf\306\214\205Fr\221\014\364hq\237\201U9!b\305y\3455(\357\010\203`\243\333\000\200\010\002\271\331g\275\02428TMEf\300&\323\003\202Q\212\212\207\265A\322\342\325\342\3453\310K\177K\313\231\213\314\\93\311\032<\355\235X\315\202\203\327QP\245\230e\205\0141\2651\256!4/\226XH\t\336vu@\354\025\n\021""\305fi\250\200x\220!<\373,\326\273\243\375\2601\322\\\365\304\344\351\262f\305\343\206[y\023\221b4#\010\007\232\254I\314|\2005Kx\247\360\202@\202\324\313:\323C\025o%3\230\024i\307\206\241\241H\256T-\232X?@\242\241\235\267\262\241\000\205\210\326\335\251\006\352tj\353\211\354m\332g\304\266\367\350\276\260\233l\244\241\274\315b(o#x\346^6\001\333\314\331\330\300+\373\353\306\242\362r~3\342\3653\265\374r\352\316\013\224\241\326\234\032\326\262\360sk\332p\306\245\271\302n\370%\261\0011.\2713\262\222\022\224\263\3356\327\022\251\210a\235\245\231\373d\007 \254I\341\216nK\\\232HJs\030\210X\320\241\007\347\332\265\364\312Vh!'\267\013I^\306XC(\006R\0175h\235\357k+R\312O\267\301\334\220A\254u\246\267\032\021\344\204<\001\303\177\004\300(\031\302A\260<\221 )\026H\236]b\251) \253\3463:\002\252L\206\314E\352#\266\330\315\000\230\310R*\2404B\3346\230\220(\312LRRI\t\010\224\3050\240\312h\262/\036\3040Z-!\233XZ\202\267\027_\203t\315\205\252@\373\313hC\310u\3164\241\360\365\207\004,\002\314%\272*\272$G\02738\204\355d\204\206\352c\272R\323i\256\362\352l\357[\243\245=;%p\333B1\220\265+\340e\214\237\005\312\243\235LV4\347%\327\242\r\314\265u\370GW\213r%\010L\340&\324\331\033fY\2060\301\224iA\251\343\271\357\337\265\3175\263\266\004\360|\234\315\327\270\332\346\250\230\"*\263\332\030\254\"\341\253P\261}\025R\034V\036\217\001z\304\266\275\007G\215wn\033F\343:ptn\0333\236,\212\243\n\323\317d9\033\352u\317\272v\036?J\276S8\020\037\005\360\356*+|\242c6\262\312\265\256p\256[\310\"W\010\305\210$$\350\342\306\037^Z=]\246d\314\230\342cn\014\266\261l\324#nJ\200]2\354H@nE\031M\245-\225e\343\235\301\301\247\236\342aD\374\216C\231\020\314O&\355t\370\3561\027\023o\360\312\221c\211w\223u.+\253\244\365\250\3515%9\260:\262\036\265\234\217,\022c\333q\244\021\272\216\016=\310\241iv\361\336\203\2135\304\3060\306\301\273\234!F\215S\033\001}\222\235\256\034C\000\315\370\345\234\267?&\265\217\230\3677\262\030\037<D5\361e\334?Nj\227\301X\3445N\354\271~u\206q\245\377Y?\207\261\010\320\004?~yya\326\342\346\337""\224>\375\324:&\326r\250;\332\235wJ\2228\346\350\232c\333\202\014\303\341\325\206h\207;\360i\341V\366\373\306S\262\253\307-\305;\215A\321n\310rx\272\033\210E\265\024B\021^\010/\277\212\256\331T\352t\323\247n\365\332_\3558\360xg\226\266\243\231\352G%\201ZF\324d\201\204D\206s\023\246\263\377\213\271\"\234(HI\200\247\263\000";
+    PyObject *data = __Pyx_DecompressString(cstring, 1530, 2);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (1402 bytes) */
-const char* const cstring = "x\332}TMo\333F\020\215\023\2475Z\243\265b'\006\232\036Vp\022%E\242\306\255\353\030\205\343\302r\\\324@\223\370+\275\022+\356H\332\206\334\245\270KY\014P\240G\035y\344\221G\036u\324\321G\037}\3241?!?\241\263K\312\262\353\242\200M-\227\2633\357\275y\263?\223m\317#\214\373 \024\227B\221 \004\027\030\027\355\351&y\310\210\037)M\232@\270`\320\007F\250`DHM\224\3071\274\021\265Z\020\222\036\207\023\302$(\373\t\372\201T@\224\0169\003\265C\005\221\302\213\211\033\002\325@(i\026\207t\207j\302\025q\245\320\274\035\311Ha\021\342\203/\303\270\216\247L*\252\024o\013\242%\301\303\354\231\315SD\230\222eP\231\370$\344\2326=(\003\nP\255P\372\377w\326\322\"'\\w\210\216\003 \265r_\207T(Kcz\244\010\303\023\034\245\322\227\264{uY0^\210P\004\355\372\201\216\211\352PL\255\243\000\301\265dH\334Xw\244\250\3230\244\361\236\005 #Md\2134e$\230\"\217i\037\263<dO\366\256\327*\304\217\202@\206\032\330\236\350Q\217c\227$\203\247Fx\014\306&\325\334\032\301:5,f\210\324\236\2226\236\232\004\027pPk[f\363\265%\370\207!\210\020\336H\224\322\266f\307\2424|\030x\274\t!\212\214\022\232\266b\021\333?A\366w\367\237\255m\254Y[\204\360'\226W\210\256\351z\3309\264\203\341\024qOc1#\257\252\223\275\026\211eD\004 Llk\200q\227\017\350\016\010\242@\233\005\251\331^P\215\274\035<\216\336\254\225\272\362\036\230\323\277ROA\375\355\025\361\020ri0\352\272\240&j\036i\010\210Oc\253\037\372\371\003\204r*\364;a\235\203)\321\215=\010\321\030\032|\363.\233\206T}\253\366\344\027\312\230#\214<\206,A\205\236\367]\351y\006\0166\246N\233\356\346%/\233\240\002\354\326\277\267'\026\332b\\\231\272`\253\267]\362\330\264\251m\335c\030\230a\204\276\006\241\355hL\347\222\253\342\0103(\025\377\000d\363%y~\315[Bb\353Z4\3624q\234\020X\344\202\343\020\026Y\242B\212g\330\312\036\247\036~u\271\340\032?\026t\2676\213\341eWX\\\3373&\273 s\345\373\305nt\241,\365<\351\332\033\300`#\214jZ\377\217\257\205;M\216\362\002\251G\201\364\342\266\024\337\2670\253c\264\224Q\250\352A\334\337>\332\331\333\333\365<\036(\256\034g?\356\343\377+\264\247\363\006u;""\204\326\021t#\020.\030w\327\247F\307VM\3529\205Y\250\212\205\313e\335\225!\316\"\027\240\232T\201\213\302\030c:\316d\321\006m47\257\030\344p4fH]hR\367=\002S\232\n=\371up\332\"P.\332\022\225e\006\225\303\314\024\330\207\203\200\013\261\021\037N/\210\310\267#\006a(\303+L[\036m+\354\255Ou9\320\216\323\212\204kP!\036,\2064\034\234F\206\216\350\000ow4G\257\3206\356r\337\\\024\370k\256\031.\004\204N@uGq\2417\014\204\013\276\205\223J;y\264\t\036\262\366)\022t\360\0064\327\237\271c\360E\262\310\303_A\375\351\023\253\341\023N\360\021 \217 Ff\230vR,@u\002\312\360\3179\341Lw\314f \203\240\037\304\216\203mt\334\016\270\357U\344\027o%!\263\264J\331U$\002\356\276\307\312\273b\022\327\263\327\275Q\241\033Q\257\2002\365\371\305\252\230\210K\033\3207\3136W\006\240\203\227MI\003W\345\270\330u\t\343\322z\222\311ZT\241\264\036o\305N\351N\243\033\206\205\030\013\201\322\022\377\303\310\364\\\343\266c\360\243\nQ\200\266\207\302\030V\212\276\271\207\324\3373\237\346n\334^L\252\343\331;\027\217\273\311\273\364Q6\223-f\215\214\216g\357%\220\256g\225l%;\314\272\343\331\371Ac\300\222j\362\"\375.\333\311\242\374\367\363\215\337\316f\306\263\337\246\215\264\205' _\037V\206\017\2060Z?\255\234><\355\235\035\236u\247\351?\316~1X\031\034\016\272\343\271\257\006\255d'\351\246\263\351N\032fK\331Q~3\257\216\347M\344\334\227\203\365d1\331N\216\323\305t{<\177/\241\037\347\277\036\234$nZI\037\244nv'[\313z\371a\336\035\336\034V\207kC5\252\216\027\226\023\225V\rV\263\374+\333\316\216\363\245\374h\370\371\260?\352\216\027\356\247/\262j\266:^\270\233\034\214\027\276I\253E\306f:\223\336IW\323W\331,\242g\371#\233\361\207\341\301\220\215VFe\344\302\"\362]I\017R\2062\034\214\227\356\247/\363\031L~<\\\036\335\032\255\216\032#:\322\247/\316\036\237\037\036}\274\366u\367t\371l\356|\377\340\002\203\251\254\223\215t-=\311\334\274\222?\310\335ae\212\1779\277\225\257\346\215\234\346V%j\344\370q\320Ln'\007\t\035\317W\222\212y,&\215\204~\372\354\306\355\371\301\306\371\342J\266\232\275\036.\235\377\264{zp\352\237\037""\035\277\375\007\313\245\2468";
-    PyObject *data = __Pyx_DecompressString(cstring, 1402, 1);
+    #elif (CYTHON_COMPRESS_STRINGS) != 0 /* compression: zlib (1407 bytes) */
+const char* const cstring = "x\332}T\317o\3336\024n\332t\013\266`\313\2576\300z\241\2216n\207\326k\272\254\r\2064C\222fX\200\265\215\363kG\202&i\233\253D*\"\225X\005\006\354\350\243\216:\352\250\243\217>\346\230\243\217>\366O\350\237\260GJ\216\223e\030\220\310\024\365\370\336\367}\357{\374\031mz\036b\302\347R\013%5\nBN9\023\2625\336D\217\030\362#mP\203#!\031\357p\206\210dH*\203\264' |+j6y\210N\005?CLq\355>\361N\2404G\332\204\202q\275M$R\322\213\021\r91\034\021\324(\016\23161HhD\2254\242\025\251HC\021\344s_\205q\rN\331TDk\321\222\310(\004\207\3313\227\247\210\260%\313\2402\361Y(\014ix\274\014(@5C\345\377\337YG\013\235\t\323F&\0168\252\226\373&$R;\032\343#E\030\234\020 \225\271\242\335\233\253\202\211B\204\"h\307\017L\214t\233@j\023\005\000\256\251BDc\323V\262F\302\220\304\273\016\200\212\014RM\324P\221d\032=&\035\310\362\210=\331\275Y\253\020?\n\002\025\032\316v\345)\361\004tI1\376\324\n\017\301\320\244*\255\"\250S\205b\226H\365)j\301\251Qp\001\007\264ve\326\337:\202\307\226 @x\247@J\327\232m\207\322\362a\334\023\r\036\202\310 \241m+\024q\375\223hog\357\331\352\332\252\263E\310\377\204\362\032\3205\250\007\235\003;XN\221\360\014\024\263\362\352\032\332m\242XEHr\200\tm\r \356\352\001\323\346\022in\354\002U]/\210\001\336\030\216\2037\253\245\256\342\224\333\323\277\022O\363\332\373k\342\001\344\322`\204R\256Gj\036\030\036 \237\304N?\360\363G\036\252\261\320G\3229\007R\202\033Oy\010\3060\334\267\357\252aI\3256\252O~!\214ai\345\261d\021(\364\274C\225\347Y8\320\230\032i\320\365+^\266A\005\330\215\177o\217,\264\301\204\266u\271\253\336\242\350\261mS\313\271\3072\260\303\310;\206K\343Fc<\227B\027G\230E\251\305G\216\326_\243\3477\274%\025\264\256I\"\317 \214C\316\"\3121F,rD\245\222\317\240\225\247\202x\360\225\n)\014|,\350n\254\027\303\313\256\261\270\271gMvI\346\332\367\313\335\350RY\342y\212\272\033\300bC\214\030R\373\217\257\205;m\216\362\002\251E\201\362\342\226\222?4!+\266Z\252(\324\265 \356l\036l\357\356\356x\236\010\264\320\030\357\305\035\370\177\003\366\304\357@\267}\336<\340'\021\227\224[w""\327\306F\207V\215\352\341\302,D\307\222\nU\243*\204Y\024\222\353\006\321\234\2020\326\230\030\217\026-n\254\346\366\025\202\260\000c\206\204\362\006\241\037\000\2306D\232\321/\206i\213\270\246`KP\226YT\230\331)p\017\014\200\013\261\001\037L/\227\221\357F\214\207\241\n\2571mz\244\245\241\267>1\345@c\334\214$\265\250\000\017\024\003\032\030\246\221\201#\332\\\264\332F\200WH\013v\205o/\n\370\265\327\214\220\222\2078 \246\255\2054k\026\302%\337\302I\245\235<\322\340\036\260\366\t\020\304p\003\332\353\317\3361\360\242X\344\301\257$\376\370\t\325\340\311\317\340\021\000\217 \006f\220vT,\000u\002\302\340\017\237\tf\332v3PA\320\tb\214\241\215\230\2669\375\240#\277x+\t\331\245S\312\255\"\031\010\372\001*\357\310Q\334\251\273\356\255\n'\021\361\n(c\237_\256\212\211\270\262\301;v\331\022\332\002\304p\331\2244`U\216\213[\2270\256\254G\231\234E5H\353\211f\214KwZ\335 ,\204X\036h\243\340?\214l\317\rlc\213\037T\210\002\260=/\214\341\244\350\330{H\377=\361y\352\326\335\371\2442\234\234\273|\334K\216\322\345l\"\233\317\26622\234\274\237\360\364e6\233-e\373\331\311pr\272\273\325eI%y\225~\237mgQ\376\373`\355\267\213\211\341\344R\366\";\316_\344G\275\345\376D\177\241\177t\276|1qq\357\24298<\036\034\3771.\360i\362\253\356Rw\277{2\234\372\246\333L\266\223\223t2\335N\303l!;\310o\347\225\341\264\215\234\372\272\3732\231O6\223\303t>\335\034N\337O\310\247\351o\273g\tMg\323\207)\315\346\262\325\3544\337\317Oz\267{\225\336jO\367+\303\231\305D\247\025\213\326.\377\3126\263\303|!?\350}\331\353\364O\2063\017\322WY%[\031\316\334K\352\303\231\357\322J\221\261\221N\244s\351J\372&\233\004\306,_v\031_\364\352=\326_\352\227\2213\363\300x)\255\247\014\204\250\017\027\036\244\257\363\tH~\330[\354\337\351\257\364\267\372\244o\316_]<\036\354\037|\272\361u\347|\361bj\260W\277\304`+\233d-]M\3172\232\317\346\017s\332\233\035\343_\314\357\344+\371VNr\247\022\261r\374\330m$w\223zB\206\323\263\311\254}\314'[\t\371\374\305\255\273\323\335\265\301\374R\266\222\275\355-\014~\3329\257\237\373\203\203\303\367\377""\000S\325\246\203";
+    PyObject *data = __Pyx_DecompressString(cstring, 1407, 1);
     if (unlikely(!data)) __PYX_ERR(0, 1, __pyx_L1_error)
     const char* const bytes = __Pyx_PyBytes_AsString(data);
     #if !CYTHON_ASSUME_SAFE_MACROS
     if (likely(bytes)); else { Py_DECREF(data); __PYX_ERR(0, 1, __pyx_L1_error) }
     #endif
-    #else /* compression: none (2409 bytes) */
-const char* const bytes = ": All dimensions preceding dimension %d must be indexed and not slicedBuffer view does not expose stridesCan only create a buffer that is contiguous in memory.Cannot assign to read-only memoryviewCannot create writable memory view from read-only memoryviewCannot index with type 'Cannot transpose memoryview with indirect dimensionsDimension %d is not directEmpty shape tuple for cython.arrayIndex out of bounds (axis %d)Indirect dimensions not supportedInvalid mode, expected 'c' or 'fortran', got Invalid shape in axis <MemoryView of Note that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Out of bounds on buffer access (axis Step may not be zero (axis %d)Unable to convert item to object.>')?add_note and  at 0xcollections.abc<contiguous and direct><contiguous and indirect>disableenablegc (got got differing extents in dimension isenableditemsize <= 0 for cython.arrayno default __reduce__ due to non-trivial __cinit__ object><strided and direct><strided and direct or indirect><strided and indirect>unable to allocate array data.unable to allocate shape and strides.upolygon/find_contours.pyxASCIIEllipsis__Pyx_PyDict_NextRefSequenceView.MemoryViewabcallocate_bufferasyncio.coroutinesbasec__class____class_getitem__cline_in_tracebackconstantconstant_valuescount__dict__dtypedtype_is_objectencodeenumerateerrorfind_contoursflagsformatfortran__func____getstate__handledheightidimage__import__indexinner_pathsint8_is_coroutineitemsitemsizelabels__main__memviewmode__module__name__name__ndim__new__npnumpyobjouter_pathspackpadpad_widthpathpoppxpy__pyx_checksum__pyx_state__pyx_type__pyx_unpickle_Enum__pyx_vtable____qualname____reduce____reduce_cython____reduce_ex__register__set_name__setdefault__setstate____setstate_cython__shapesimplify_polygonsizestartstepstopstruct__test__unpackupdatevalueswidthxzeros\200\001\360\010\000\005\023\220!\330\004\022\220!\330\004\022\220!""\330\004\025\220U\230&\240\001\240\023\240B\240a\330\004\026\220e\2306\240\021\240#\240R\240q\330\004\014\210B\210d\220!\2207\230*\240C\240u\250L\3208H\310\001\330\004\034\230B\230f\240B\240e\2506\260\021\260$\260e\2706\300\021\300%\300v\310R\310q\330\004\022\220!\330\004\022\220!\340\004\n\210#\210R\210q\330\010\016\210f\220C\220q\230\004\230C\230r\240\024\240S\250\002\250!\330\014\022\220!\330\010\013\2106\220\023\220A\220T\230\023\230A\330\014\026\220a\340\014\017\210w\220c\230\021\230$\230c\240\022\2404\240v\250R\250q\260\002\260!\2604\260s\270!\330\020\027\220s\230!\2306\240\021\330\020\027\220}\240A\240T\250\024\250S\260\007\260x\270q\330\020\033\2307\240!\2401\330\020\025\220Q\330\020\032\230!\340\014\017\210w\220b\230\001\230\022\2301\230D\240\004\240B\240d\250&\260\002\260!\2602\260Q\260d\270#\270Q\330\020\032\230!\340\020\023\2207\230#\230Q\230d\240#\240Q\330\024\033\230=\250\001\250\024\250T\260\027\270\003\2701\270B\270a\270t\3007\310(\320RS\340\024\033\230=\250\001\250\024\250T\260\027\270\003\2701\270E\300\027\310\010\320PQ\330\020\033\2307\240!\2401\340\014\017\210t\2208\2304\230w\240c\250\021\250$\250c\260\021\330\020\027\220s\230!\2306\240\027\250\003\2501\250B\250a\250q\330\010\016\210a\330\010\013\2103\210b\220\005\220Q\220a\330\014\021\220\021\330\014\021\220\023\220B\220a\360\006\000\005\014\2108\320\023#\2401\240M\260\024\3205E\300Q\300m\320STO";
+    #else /* compression: none (2411 bytes) */
+const char* const bytes = ": All dimensions preceding dimension %d must be indexed and not slicedBuffer view does not expose stridesCan only create a buffer that is contiguous in memory.Cannot assign to read-only memoryviewCannot create writable memory view from read-only memoryviewCannot index with type 'Cannot transpose memoryview with indirect dimensionsDimension %d is not directEmpty shape tuple for cython.arrayIndex out of bounds (axis %d)Indirect dimensions not supportedInvalid mode, expected 'c' or 'fortran', got Invalid shape in axis <MemoryView of Note that Cython is deliberately stricter than PEP-484 and rejects subclasses of builtin types. If you need to pass subclasses then set the 'annotation_typing' directive to False.Out of bounds on buffer access (axis Step may not be zero (axis %d)Unable to convert item to object.>')?add_note and  at 0xcollections.abc<contiguous and direct><contiguous and indirect>disableenablegc (got got differing extents in dimension isenableditemsize <= 0 for cython.arrayno default __reduce__ due to non-trivial __cinit__ object><strided and direct><strided and direct or indirect><strided and indirect>unable to allocate array data.unable to allocate shape and strides.upolygon/find_contours.pyxASCIIEllipsis__Pyx_PyDict_NextRefSequenceView.MemoryViewabcallocate_bufferasyncio.coroutinesbasec__class____class_getitem__cline_in_tracebackconstantconstant_valuescount__dict__dtypedtype_is_objectencodeenumerateerrorfind_contoursflagsformatfortran__func____getstate__handledheightidimage__import__indexinner_pathsint8_is_coroutineitemsitemsizelabels__main__memviewmode__module__name__name__ndim__new__npnumpyobjouter_pathspackpadpad_widthpathpoppxpy__pyx_checksum__pyx_state__pyx_type__pyx_unpickle_Enum__pyx_vtable____qualname____reduce____reduce_cython____reduce_ex__register__set_name__setdefault__setstate____setstate_cython__shapesimplify_polygonsizestartstepstopstruct__test__unpackupdatevalueswidthxzeros\200\001\360\010\000\005\023\220!\330\004\022\220!\330\004\022\220!""\330\004\025\220U\230&\240\001\240\023\240B\240a\330\004\026\220e\2306\240\021\240#\240R\240q\330\004\014\210B\210d\220!\2207\230*\240C\240u\250L\3208H\310\001\330\004#\2402\240V\2502\250U\260&\270\001\270\024\270U\300&\310\001\310\025\310f\320TV\320VW\330\004\022\220!\330\004\022\220!\340\004\n\210#\210R\210q\330\010\016\210f\220C\220q\230\004\230C\230r\240\024\240S\250\002\250!\330\014\022\220!\330\010\013\2106\220\023\220A\220T\230\023\230A\330\014\026\220a\340\014\017\210w\220c\230\021\230$\230c\240\022\2404\240v\250R\250q\260\002\260!\2604\260s\270!\330\020\027\220s\230!\2306\240\021\330\020\027\220}\240A\240T\250\024\250S\260\007\260x\270q\330\020\033\2307\240!\2401\330\020\025\220Q\330\020\032\230!\340\014\017\210w\220b\230\001\230\022\2301\230D\240\004\240B\240d\250&\260\002\260!\2602\260Q\260d\270#\270Q\330\020\032\230!\340\020\023\2207\230#\230Q\230d\240#\240Q\330\024\033\230=\250\001\250\024\250T\260\027\270\003\2701\270B\270a\270t\3007\310(\320RS\340\024\033\230=\250\001\250\024\250T\260\027\270\003\2701\270E\300\027\310\010\320PQ\330\020\033\2307\240!\2401\340\014\017\210t\2208\2304\230w\240c\250\021\250$\250c\260\021\330\020\027\220s\230!\2306\240\027\250\003\2501\250B\250a\250q\330\010\016\210a\330\010\013\2103\210b\220\005\220Q\220a\330\014\021\220\021\330\014\021\220\023\220B\220a\360\006\000\005\014\2108\320\023#\2401\240M\260\024\3205E\300Q\300m\320STO";
     PyObject *data = NULL;
     CYTHON_UNUSED_VAR(__Pyx_DecompressString);
     #endif
@@ -20024,7 +20027,7 @@ static int __Pyx_CreateCodeObjects(__pyx_mstatetype *__pyx_mstate) {
   {
     const __Pyx_PyCode_New_function_description descr = {1, 0, 0, 11, (unsigned int)(CO_OPTIMIZED|CO_NEWLOCALS), 70};
     PyObject* const varnames[] = {__pyx_mstate->__pyx_n_u_image, __pyx_mstate->__pyx_n_u_px, __pyx_mstate->__pyx_n_u_py, __pyx_mstate->__pyx_n_u_c, __pyx_mstate->__pyx_n_u_width, __pyx_mstate->__pyx_n_u_height, __pyx_mstate->__pyx_n_u_labels, __pyx_mstate->__pyx_n_u_inner_paths, __pyx_mstate->__pyx_n_u_outer_paths, __pyx_mstate->__pyx_n_u_handled, __pyx_mstate->__pyx_n_u_path};
-    __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_upolygon_find_contours_pyx, __pyx_mstate->__pyx_n_u_find_contours, __pyx_mstate->__pyx_kp_b_iso88591_U_Ba_e6_Rq_Bd_7_CuL8H_BfBe6_e6, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
+    __pyx_mstate_global->__pyx_codeobj_tab[0] = __Pyx_PyCode_New(descr, varnames, __pyx_mstate->__pyx_kp_u_upolygon_find_contours_pyx, __pyx_mstate->__pyx_n_u_find_contours, __pyx_mstate->__pyx_kp_b_iso88591_U_Ba_e6_Rq_Bd_7_CuL8H_2V2U_U_fT, tuple_dedup_map); if (unlikely(!__pyx_mstate_global->__pyx_codeobj_tab[0])) goto bad;
   }
   Py_DECREF(tuple_dedup_map);
   return 0;
@@ -26290,7 +26293,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
   }
   
 /* ObjectToMemviewSlice */
-  static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dsds_char(PyObject *obj, int writable_flag) {
+  static CYTHON_INLINE __Pyx_memviewslice __Pyx_PyObject_to_MemoryviewSlice_dsds_signed_char(PyObject *obj, int writable_flag) {
       __Pyx_memviewslice result = __Pyx_MEMSLICE_INIT;
       __Pyx_BufFmt_StackElem stack[1];
       int axes_specs[] = { (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_STRIDED), (__Pyx_MEMVIEW_DIRECT | __Pyx_MEMVIEW_STRIDED) };
@@ -26301,7 +26304,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
       }
       retcode = __Pyx_ValidateAndInit_memviewslice(axes_specs, 0,
                                                    PyBUF_RECORDS_RO | writable_flag, 2,
-                                                   &__Pyx_TypeInfo_char, stack,
+                                                   &__Pyx_TypeInfo_signed_char, stack,
                                                    &result, obj);
       if (unlikely(retcode == -1))
           goto __pyx_fail;
@@ -26313,14 +26316,14 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
   }
   
 /* MemviewDtypeToObject */
-  static CYTHON_INLINE PyObject *__pyx_memview_get_char(const char *itemp) {
-      return (PyObject *) __Pyx_PyLong_From_char(*(char const *) itemp);
+  static CYTHON_INLINE PyObject *__pyx_memview_get_signed_char(const char *itemp) {
+      return (PyObject *) __Pyx_PyLong_From_signed_char(*(signed char const *) itemp);
   }
-  static CYTHON_INLINE int __pyx_memview_set_char(char *itemp, PyObject *obj) {
-      char value = __Pyx_PyLong_As_char(obj);
-      if (unlikely((value == (char)-1) && PyErr_Occurred()))
+  static CYTHON_INLINE int __pyx_memview_set_signed_char(char *itemp, PyObject *obj) {
+      signed char value = __Pyx_PyLong_As_signed_char(obj);
+      if (unlikely((value == (signed char)-1) && PyErr_Occurred()))
           return 0;
-      *(char *) itemp = value;
+      *(signed char *) itemp = value;
       return 1;
   }
   
@@ -27105,30 +27108,30 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
   }
   
 /* CIntToPy */
-  static CYTHON_INLINE PyObject* __Pyx_PyLong_From_char(char value) {
+  static CYTHON_INLINE PyObject* __Pyx_PyLong_From_signed_char(signed char value) {
   #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wconversion"
   #endif
-      const char neg_one = (char) -1, const_zero = (char) 0;
+      const signed char neg_one = (signed char) -1, const_zero = (signed char) 0;
   #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
   #pragma GCC diagnostic pop
   #endif
       const int is_unsigned = neg_one > const_zero;
       if (is_unsigned) {
-          if (sizeof(char) < sizeof(long)) {
+          if (sizeof(signed char) < sizeof(long)) {
               return PyLong_FromLong((long) value);
-          } else if (sizeof(char) <= sizeof(unsigned long)) {
+          } else if (sizeof(signed char) <= sizeof(unsigned long)) {
               return PyLong_FromUnsignedLong((unsigned long) value);
   #if !CYTHON_COMPILING_IN_PYPY
-          } else if (sizeof(char) <= sizeof(unsigned PY_LONG_LONG)) {
+          } else if (sizeof(signed char) <= sizeof(unsigned PY_LONG_LONG)) {
               return PyLong_FromUnsignedLongLong((unsigned PY_LONG_LONG) value);
   #endif
           }
       } else {
-          if (sizeof(char) <= sizeof(long)) {
+          if (sizeof(signed char) <= sizeof(long)) {
               return PyLong_FromLong((long) value);
-          } else if (sizeof(char) <= sizeof(PY_LONG_LONG)) {
+          } else if (sizeof(signed char) <= sizeof(PY_LONG_LONG)) {
               return PyLong_FromLongLong((PY_LONG_LONG) value);
           }
       }
@@ -27142,7 +27145,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           }
   #elif !CYTHON_COMPILING_IN_LIMITED_API && PY_VERSION_HEX < 0x030d0000
           int one = 1; int little = (int)*(unsigned char *)&one;
-          return _PyLong_FromByteArray(bytes, sizeof(char),
+          return _PyLong_FromByteArray(bytes, sizeof(signed char),
                                        little, !is_unsigned);
   #else
           int one = 1; int little = (int)*(unsigned char *)&one;
@@ -27150,7 +27153,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           PyObject *py_bytes = NULL, *order_str = NULL;
           from_bytes = PyObject_GetAttrString((PyObject*)&PyLong_Type, "from_bytes");
           if (!from_bytes) return NULL;
-          py_bytes = PyBytes_FromStringAndSize((char*)bytes, sizeof(char));
+          py_bytes = PyBytes_FromStringAndSize((char*)bytes, sizeof(signed char));
           if (!py_bytes) goto limited_bad;
           order_str = PyUnicode_FromString(little ? "little" : "big");
           if (!order_str) goto limited_bad;
@@ -27174,21 +27177,21 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
   }
   
 /* CIntFromPy */
-  static CYTHON_INLINE char __Pyx_PyLong_As_char(PyObject *x) {
+  static CYTHON_INLINE signed char __Pyx_PyLong_As_signed_char(PyObject *x) {
   #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wconversion"
   #endif
-      const char neg_one = (char) -1, const_zero = (char) 0;
+      const signed char neg_one = (signed char) -1, const_zero = (signed char) 0;
   #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
   #pragma GCC diagnostic pop
   #endif
       const int is_unsigned = neg_one > const_zero;
       if (unlikely(!PyLong_Check(x))) {
-          char val;
+          signed char val;
           PyObject *tmp = __Pyx_PyNumber_Long(x);
-          if (!tmp) return (char) -1;
-          val = __Pyx_PyLong_As_char(tmp);
+          if (!tmp) return (signed char) -1;
+          val = __Pyx_PyLong_As_signed_char(tmp);
           Py_DECREF(tmp);
           return val;
       }
@@ -27197,35 +27200,35 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           if (unlikely(__Pyx_PyLong_IsNeg(x))) {
               goto raise_neg_overflow;
           } else if (__Pyx_PyLong_IsCompact(x)) {
-              __PYX_VERIFY_RETURN_INT(char, __Pyx_compact_upylong, __Pyx_PyLong_CompactValueUnsigned(x))
+              __PYX_VERIFY_RETURN_INT(signed char, __Pyx_compact_upylong, __Pyx_PyLong_CompactValueUnsigned(x))
           } else {
               const digit* digits = __Pyx_PyLong_Digits(x);
               assert(__Pyx_PyLong_DigitCount(x) > 1);
               switch (__Pyx_PyLong_DigitCount(x)) {
                   case 2:
-                      if ((8 * sizeof(char) > 1 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 1 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) >= 2 * PyLong_SHIFT)) {
-                              return (char) (((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) >= 2 * PyLong_SHIFT)) {
+                              return (signed char) (((((signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0]));
                           }
                       }
                       break;
                   case 3:
-                      if ((8 * sizeof(char) > 2 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 2 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) >= 3 * PyLong_SHIFT)) {
-                              return (char) (((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) >= 3 * PyLong_SHIFT)) {
+                              return (signed char) (((((((signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0]));
                           }
                       }
                       break;
                   case 4:
-                      if ((8 * sizeof(char) > 3 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 3 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) >= 4 * PyLong_SHIFT)) {
-                              return (char) (((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) >= 4 * PyLong_SHIFT)) {
+                              return (signed char) (((((((((signed char)digits[3]) << PyLong_SHIFT) | (signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0]));
                           }
                       }
                       break;
@@ -27240,89 +27243,89 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           {
               int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
               if (unlikely(result < 0))
-                  return (char) -1;
+                  return (signed char) -1;
               if (unlikely(result == 1))
                   goto raise_neg_overflow;
           }
   #endif
-          if ((sizeof(char) <= sizeof(unsigned long))) {
-              __PYX_VERIFY_RETURN_INT_EXC(char, unsigned long, PyLong_AsUnsignedLong(x))
-          } else if ((sizeof(char) <= sizeof(unsigned PY_LONG_LONG))) {
-              __PYX_VERIFY_RETURN_INT_EXC(char, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
+          if ((sizeof(signed char) <= sizeof(unsigned long))) {
+              __PYX_VERIFY_RETURN_INT_EXC(signed char, unsigned long, PyLong_AsUnsignedLong(x))
+          } else if ((sizeof(signed char) <= sizeof(unsigned PY_LONG_LONG))) {
+              __PYX_VERIFY_RETURN_INT_EXC(signed char, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
           }
       } else {
   #if CYTHON_USE_PYLONG_INTERNALS
           if (__Pyx_PyLong_IsCompact(x)) {
-              __PYX_VERIFY_RETURN_INT(char, __Pyx_compact_pylong, __Pyx_PyLong_CompactValue(x))
+              __PYX_VERIFY_RETURN_INT(signed char, __Pyx_compact_pylong, __Pyx_PyLong_CompactValue(x))
           } else {
               const digit* digits = __Pyx_PyLong_Digits(x);
               assert(__Pyx_PyLong_DigitCount(x) > 1);
               switch (__Pyx_PyLong_SignedDigitCount(x)) {
                   case -2:
-                      if ((8 * sizeof(char) - 1 > 1 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) - 1 > 1 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
-                              return (char) (((char)-1)*(((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 2 * PyLong_SHIFT)) {
+                              return (signed char) (((signed char)-1)*(((((signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
                   case 2:
-                      if ((8 * sizeof(char) > 1 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 1 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
-                              return (char) ((((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 2 * PyLong_SHIFT)) {
+                              return (signed char) ((((((signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
                   case -3:
-                      if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) - 1 > 2 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
-                              return (char) (((char)-1)*(((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 3 * PyLong_SHIFT)) {
+                              return (signed char) (((signed char)-1)*(((((((signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
                   case 3:
-                      if ((8 * sizeof(char) > 2 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 2 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
-                              return (char) ((((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 3 * PyLong_SHIFT)) {
+                              return (signed char) ((((((((signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
                   case -4:
-                      if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) - 1 > 3 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 4 * PyLong_SHIFT)) {
-                              return (char) (((char)-1)*(((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 4 * PyLong_SHIFT)) {
+                              return (signed char) (((signed char)-1)*(((((((((signed char)digits[3]) << PyLong_SHIFT) | (signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
                   case 4:
-                      if ((8 * sizeof(char) > 3 * PyLong_SHIFT)) {
+                      if ((8 * sizeof(signed char) > 3 * PyLong_SHIFT)) {
                           if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
-                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
-                          } else if ((8 * sizeof(char) - 1 > 4 * PyLong_SHIFT)) {
-                              return (char) ((((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                              __PYX_VERIFY_RETURN_INT(signed char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(signed char) - 1 > 4 * PyLong_SHIFT)) {
+                              return (signed char) ((((((((((signed char)digits[3]) << PyLong_SHIFT) | (signed char)digits[2]) << PyLong_SHIFT) | (signed char)digits[1]) << PyLong_SHIFT) | (signed char)digits[0])));
                           }
                       }
                       break;
               }
           }
   #endif
-          if ((sizeof(char) <= sizeof(long))) {
-              __PYX_VERIFY_RETURN_INT_EXC(char, long, PyLong_AsLong(x))
-          } else if ((sizeof(char) <= sizeof(PY_LONG_LONG))) {
-              __PYX_VERIFY_RETURN_INT_EXC(char, PY_LONG_LONG, PyLong_AsLongLong(x))
+          if ((sizeof(signed char) <= sizeof(long))) {
+              __PYX_VERIFY_RETURN_INT_EXC(signed char, long, PyLong_AsLong(x))
+          } else if ((sizeof(signed char) <= sizeof(PY_LONG_LONG))) {
+              __PYX_VERIFY_RETURN_INT_EXC(signed char, PY_LONG_LONG, PyLong_AsLongLong(x))
           }
       }
       {
-          char val;
+          signed char val;
           int ret = -1;
   #if PY_VERSION_HEX >= 0x030d00A6 && !CYTHON_COMPILING_IN_LIMITED_API
           Py_ssize_t bytes_copied = PyLong_AsNativeBytes(
@@ -27348,14 +27351,14 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
               v = __Pyx_NewRef(x);
           } else {
               v = PyNumber_Long(x);
-              if (unlikely(!v)) return (char) -1;
+              if (unlikely(!v)) return (signed char) -1;
               assert(PyLong_CheckExact(v));
           }
           {
               int result = PyObject_RichCompareBool(v, Py_False, Py_LT);
               if (unlikely(result < 0)) {
                   Py_DECREF(v);
-                  return (char) -1;
+                  return (signed char) -1;
               }
               is_negative = result == 1;
           }
@@ -27366,15 +27369,15 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
               stepval = PyNumber_Invert(v);
               Py_DECREF(v);
               if (unlikely(!stepval))
-                  return (char) -1;
+                  return (signed char) -1;
           } else {
               stepval = v;
           }
           v = NULL;
-          val = (char) 0;
+          val = (signed char) 0;
           mask = PyLong_FromLong((1L << chunk_size) - 1); if (unlikely(!mask)) goto done;
           shift = PyLong_FromLong(chunk_size); if (unlikely(!shift)) goto done;
-          for (bits = 0; bits < (int) sizeof(char) * 8 - chunk_size; bits += chunk_size) {
+          for (bits = 0; bits < (int) sizeof(signed char) * 8 - chunk_size; bits += chunk_size) {
               PyObject *tmp, *digit;
               long idigit;
               digit = PyNumber_And(stepval, mask);
@@ -27382,7 +27385,7 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
               idigit = PyLong_AsLong(digit);
               Py_DECREF(digit);
               if (unlikely(idigit < 0)) goto done;
-              val |= ((char) idigit) << bits;
+              val |= ((signed char) idigit) << bits;
               tmp = PyNumber_Rshift(stepval, shift);
               if (unlikely(!tmp)) goto done;
               Py_DECREF(stepval); stepval = tmp;
@@ -27392,13 +27395,13 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           {
               long idigit = PyLong_AsLong(stepval);
               if (unlikely(idigit < 0)) goto done;
-              remaining_bits = ((int) sizeof(char) * 8) - bits - (is_unsigned ? 0 : 1);
+              remaining_bits = ((int) sizeof(signed char) * 8) - bits - (is_unsigned ? 0 : 1);
               if (unlikely(idigit >= (1L << remaining_bits)))
                   goto raise_overflow;
-              val |= ((char) idigit) << bits;
+              val |= ((signed char) idigit) << bits;
           }
           if (!is_unsigned) {
-              if (unlikely(val & (((char) 1) << (sizeof(char) * 8 - 1))))
+              if (unlikely(val & (((signed char) 1) << (sizeof(signed char) * 8 - 1))))
                   goto raise_overflow;
               if (is_negative)
                   val = ~val;
@@ -27410,17 +27413,17 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
           Py_XDECREF(stepval);
   #endif
           if (unlikely(ret))
-              return (char) -1;
+              return (signed char) -1;
           return val;
       }
   raise_overflow:
       PyErr_SetString(PyExc_OverflowError,
-          "value too large to convert to char");
-      return (char) -1;
+          "value too large to convert to signed char");
+      return (signed char) -1;
   raise_neg_overflow:
       PyErr_SetString(PyExc_OverflowError,
-          "can't convert negative value to char");
-      return (char) -1;
+          "can't convert negative value to signed char");
+      return (signed char) -1;
   }
   
 /* PyObjectCall2Args (used by PyObjectCallMethod1) */
@@ -27786,6 +27789,256 @@ static const char* __Pyx_BufFmt_CheckString(__Pyx_BufFmt_Context* ctx, const cha
       return (long) -1;
   }
   
+/* CIntFromPy */
+  static CYTHON_INLINE char __Pyx_PyLong_As_char(PyObject *x) {
+  #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+  #pragma GCC diagnostic push
+  #pragma GCC diagnostic ignored "-Wconversion"
+  #endif
+      const char neg_one = (char) -1, const_zero = (char) 0;
+  #ifdef __Pyx_HAS_GCC_DIAGNOSTIC
+  #pragma GCC diagnostic pop
+  #endif
+      const int is_unsigned = neg_one > const_zero;
+      if (unlikely(!PyLong_Check(x))) {
+          char val;
+          PyObject *tmp = __Pyx_PyNumber_Long(x);
+          if (!tmp) return (char) -1;
+          val = __Pyx_PyLong_As_char(tmp);
+          Py_DECREF(tmp);
+          return val;
+      }
+      if (is_unsigned) {
+  #if CYTHON_USE_PYLONG_INTERNALS
+          if (unlikely(__Pyx_PyLong_IsNeg(x))) {
+              goto raise_neg_overflow;
+          } else if (__Pyx_PyLong_IsCompact(x)) {
+              __PYX_VERIFY_RETURN_INT(char, __Pyx_compact_upylong, __Pyx_PyLong_CompactValueUnsigned(x))
+          } else {
+              const digit* digits = __Pyx_PyLong_Digits(x);
+              assert(__Pyx_PyLong_DigitCount(x) > 1);
+              switch (__Pyx_PyLong_DigitCount(x)) {
+                  case 2:
+                      if ((8 * sizeof(char) > 1 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) >= 2 * PyLong_SHIFT)) {
+                              return (char) (((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                          }
+                      }
+                      break;
+                  case 3:
+                      if ((8 * sizeof(char) > 2 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) >= 3 * PyLong_SHIFT)) {
+                              return (char) (((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                          }
+                      }
+                      break;
+                  case 4:
+                      if ((8 * sizeof(char) > 3 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) >= 4 * PyLong_SHIFT)) {
+                              return (char) (((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0]));
+                          }
+                      }
+                      break;
+              }
+          }
+  #endif
+  #if CYTHON_COMPILING_IN_CPYTHON && PY_VERSION_HEX < 0x030C00A7
+          if (unlikely(Py_SIZE(x) < 0)) {
+              goto raise_neg_overflow;
+          }
+  #else
+          {
+              int result = PyObject_RichCompareBool(x, Py_False, Py_LT);
+              if (unlikely(result < 0))
+                  return (char) -1;
+              if (unlikely(result == 1))
+                  goto raise_neg_overflow;
+          }
+  #endif
+          if ((sizeof(char) <= sizeof(unsigned long))) {
+              __PYX_VERIFY_RETURN_INT_EXC(char, unsigned long, PyLong_AsUnsignedLong(x))
+          } else if ((sizeof(char) <= sizeof(unsigned PY_LONG_LONG))) {
+              __PYX_VERIFY_RETURN_INT_EXC(char, unsigned PY_LONG_LONG, PyLong_AsUnsignedLongLong(x))
+          }
+      } else {
+  #if CYTHON_USE_PYLONG_INTERNALS
+          if (__Pyx_PyLong_IsCompact(x)) {
+              __PYX_VERIFY_RETURN_INT(char, __Pyx_compact_pylong, __Pyx_PyLong_CompactValue(x))
+          } else {
+              const digit* digits = __Pyx_PyLong_Digits(x);
+              assert(__Pyx_PyLong_DigitCount(x) > 1);
+              switch (__Pyx_PyLong_SignedDigitCount(x)) {
+                  case -2:
+                      if ((8 * sizeof(char) - 1 > 1 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
+                              return (char) (((char)-1)*(((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+                  case 2:
+                      if ((8 * sizeof(char) > 1 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 2 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
+                              return (char) ((((((char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+                  case -3:
+                      if ((8 * sizeof(char) - 1 > 2 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
+                              return (char) (((char)-1)*(((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+                  case 3:
+                      if ((8 * sizeof(char) > 2 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 3 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
+                              return (char) ((((((((char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+                  case -4:
+                      if ((8 * sizeof(char) - 1 > 3 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, long, -(long) (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 4 * PyLong_SHIFT)) {
+                              return (char) (((char)-1)*(((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+                  case 4:
+                      if ((8 * sizeof(char) > 3 * PyLong_SHIFT)) {
+                          if ((8 * sizeof(unsigned long) > 4 * PyLong_SHIFT)) {
+                              __PYX_VERIFY_RETURN_INT(char, unsigned long, (((((((((unsigned long)digits[3]) << PyLong_SHIFT) | (unsigned long)digits[2]) << PyLong_SHIFT) | (unsigned long)digits[1]) << PyLong_SHIFT) | (unsigned long)digits[0])))
+                          } else if ((8 * sizeof(char) - 1 > 4 * PyLong_SHIFT)) {
+                              return (char) ((((((((((char)digits[3]) << PyLong_SHIFT) | (char)digits[2]) << PyLong_SHIFT) | (char)digits[1]) << PyLong_SHIFT) | (char)digits[0])));
+                          }
+                      }
+                      break;
+              }
+          }
+  #endif
+          if ((sizeof(char) <= sizeof(long))) {
+              __PYX_VERIFY_RETURN_INT_EXC(char, long, PyLong_AsLong(x))
+          } else if ((sizeof(char) <= sizeof(PY_LONG_LONG))) {
+              __PYX_VERIFY_RETURN_INT_EXC(char, PY_LONG_LONG, PyLong_AsLongLong(x))
+          }
+      }
+      {
+          char val;
+          int ret = -1;
+  #if PY_VERSION_HEX >= 0x030d00A6 && !CYTHON_COMPILING_IN_LIMITED_API
+          Py_ssize_t bytes_copied = PyLong_AsNativeBytes(
+              x, &val, sizeof(val), Py_ASNATIVEBYTES_NATIVE_ENDIAN | (is_unsigned ? Py_ASNATIVEBYTES_UNSIGNED_BUFFER | Py_ASNATIVEBYTES_REJECT_NEGATIVE : 0));
+          if (unlikely(bytes_copied == -1)) {
+          } else if (unlikely(bytes_copied > (Py_ssize_t) sizeof(val))) {
+              goto raise_overflow;
+          } else {
+              ret = 0;
+          }
+  #elif PY_VERSION_HEX < 0x030d0000 && !(CYTHON_COMPILING_IN_PYPY || CYTHON_COMPILING_IN_LIMITED_API) || defined(_PyLong_AsByteArray)
+          int one = 1; int is_little = (int)*(unsigned char *)&one;
+          unsigned char *bytes = (unsigned char *)&val;
+          ret = _PyLong_AsByteArray((PyLongObject *)x,
+                                      bytes, sizeof(val),
+                                      is_little, !is_unsigned);
+  #else
+          PyObject *v;
+          PyObject *stepval = NULL, *mask = NULL, *shift = NULL;
+          int bits, remaining_bits, is_negative = 0;
+          int chunk_size = (sizeof(long) < 8) ? 30 : 62;
+          if (likely(PyLong_CheckExact(x))) {
+              v = __Pyx_NewRef(x);
+          } else {
+              v = PyNumber_Long(x);
+              if (unlikely(!v)) return (char) -1;
+              assert(PyLong_CheckExact(v));
+          }
+          {
+              int result = PyObject_RichCompareBool(v, Py_False, Py_LT);
+              if (unlikely(result < 0)) {
+                  Py_DECREF(v);
+                  return (char) -1;
+              }
+              is_negative = result == 1;
+          }
+          if (is_unsigned && unlikely(is_negative)) {
+              Py_DECREF(v);
+              goto raise_neg_overflow;
+          } else if (is_negative) {
+              stepval = PyNumber_Invert(v);
+              Py_DECREF(v);
+              if (unlikely(!stepval))
+                  return (char) -1;
+          } else {
+              stepval = v;
+          }
+          v = NULL;
+          val = (char) 0;
+          mask = PyLong_FromLong((1L << chunk_size) - 1); if (unlikely(!mask)) goto done;
+          shift = PyLong_FromLong(chunk_size); if (unlikely(!shift)) goto done;
+          for (bits = 0; bits < (int) sizeof(char) * 8 - chunk_size; bits += chunk_size) {
+              PyObject *tmp, *digit;
+              long idigit;
+              digit = PyNumber_And(stepval, mask);
+              if (unlikely(!digit)) goto done;
+              idigit = PyLong_AsLong(digit);
+              Py_DECREF(digit);
+              if (unlikely(idigit < 0)) goto done;
+              val |= ((char) idigit) << bits;
+              tmp = PyNumber_Rshift(stepval, shift);
+              if (unlikely(!tmp)) goto done;
+              Py_DECREF(stepval); stepval = tmp;
+          }
+          Py_DECREF(shift); shift = NULL;
+          Py_DECREF(mask); mask = NULL;
+          {
+              long idigit = PyLong_AsLong(stepval);
+              if (unlikely(idigit < 0)) goto done;
+              remaining_bits = ((int) sizeof(char) * 8) - bits - (is_unsigned ? 0 : 1);
+              if (unlikely(idigit >= (1L << remaining_bits)))
+                  goto raise_overflow;
+              val |= ((char) idigit) << bits;
+          }
+          if (!is_unsigned) {
+              if (unlikely(val & (((char) 1) << (sizeof(char) * 8 - 1))))
+                  goto raise_overflow;
+              if (is_negative)
+                  val = ~val;
+          }
+          ret = 0;
+      done:
+          Py_XDECREF(shift);
+          Py_XDECREF(mask);
+          Py_XDECREF(stepval);
+  #endif
+          if (unlikely(ret))
+              return (char) -1;
+          return val;
+      }
+  raise_overflow:
+      PyErr_SetString(PyExc_OverflowError,
+          "value too large to convert to char");
+      return (char) -1;
+  raise_neg_overflow:
+      PyErr_SetString(PyExc_OverflowError,
+          "can't convert negative value to char");
+      return (char) -1;
+  }
+
 /* FormatTypeName */
   #if CYTHON_COMPILING_IN_LIMITED_API && __PYX_LIMITED_VERSION_HEX < 0x030d0000
   static __Pyx_TypeName
