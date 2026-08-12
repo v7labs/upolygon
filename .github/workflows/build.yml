@@ -17,7 +17,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        include:
+          - os: ubuntu-latest
+            cibw_archs_linux: x86_64
+          - os: ubuntu-24.04-arm
+            cibw_archs_linux: aarch64
+          - os: windows-latest
+          - os: macos-latest
 
     steps:
       - uses: actions/checkout@v4
@@ -25,14 +31,9 @@ jobs:
         shell: bash
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
 
-      - uses: docker/setup-qemu-action@v4
-        if: runner.os == 'Linux'
-        with:
-          platforms: arm64
-
       - name: Build wheels
         env:
-          CIBW_ARCHS_LINUX: "x86_64 aarch64"
+          CIBW_ARCHS_LINUX: ${{ matrix.cibw_archs_linux }}
           CIBW_ARCHS_MACOS: "x86_64 universal2 arm64"
         uses: pypa/cibuildwheel@v3.4.0
         with:
